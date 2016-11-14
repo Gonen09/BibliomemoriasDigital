@@ -22,6 +22,9 @@
   - Acerca ingecomp [Listo]
   - Acerca docente [Listo]
   - Agrandar ventanas modales [Listo]
-  - Registrarse
+  - Registrarse [Eliminado]
   - Login
-  - Ver estructuras pagina
+  - Estructura home[Listo]
+  
+ 4) Busqueda
+   - Estructura busqueda [Listo] 

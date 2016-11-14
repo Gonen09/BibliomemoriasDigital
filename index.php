@@ -20,6 +20,7 @@
 
 <body>
 
+  <!-- Header -->
   <header>
       <img src="image/banner.png" class="img-responsive" id="banner">
   </header>
@@ -40,23 +41,21 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Inicio</a></li>
-                  <li><a href="#">Buscar Tesis</a></li>
-                  <li><a href="#">Administar</a></li>
+                  <li class="active"><a href="index.php">Inicio</a></li>
+                  <li><a href="busqueda.php">Buscar Tesis</a></li>
                   <li><a href="#">Formulario contacto</a></li>
                   <li data-toggle="modal" onclick="$('#myModal1').modal()"><a href="#">Institución</a></li>
                   <li data-toggle="modal" onclick="$('#myModal2').modal()"><a href="#">Docente</a></li>
                   <li data-toggle="modal" onclick="$('#myModal3').modal()"><a href="#">Sobre nosotros</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
-                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Iniciar sesión</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
                 </ul>
             </div> <!-- /.navbar-collapse -->
       </div> <!-- /.container -->
     </nav>
 
-    <!-- Modal -->
+    <!-- Modal  1 -->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     	<div class="modal-dialog modal-sm" role="document">
     		<div class="modal-content">
@@ -76,6 +75,7 @@
     	</div>
     </div>
 
+    <!-- Modal  2 -->
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
@@ -95,6 +95,7 @@
       </div>
     </div>
 
+    <!-- Modal  3 -->
     <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     	<div class="modal-dialog modal-sm" role="document">
     		<div class="modal-content">
@@ -114,16 +115,15 @@
     </div>
 
     <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
+    <div class="container-fluid">
+        <div class="row content">
 
             <!-- Blog Entries Column -->
-            <div class="col-md-8">
+            <div class="col-sm-9">
 
                 <h1 class="page-header">
-                    Page Heading
-                    <small>Secondary Text</small>
+                    Recuperación de la Información
+                    <small> Electivo III</small>
                 </h1>
 
                 <!-- First Blog Post -->
@@ -177,21 +177,21 @@
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="previous">
-                        <a href="#">&larr; Older</a>
+                        <a href="#">&larr; Anteriores</a>
                     </li>
                     <li class="next">
-                        <a href="#">Newer &rarr;</a>
+                        <a href="#">Nuevos &rarr;</a>
                     </li>
                 </ul>
 
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <div class="col-md-3">
 
                 <!-- Blog Search Well -->
                 <div class="well">
-                    <h4>Blog Search</h4>
+                    <h4>Búsqueda</h4>
                     <div class="input-group">
                         <input type="text" class="form-control">
                         <span class="input-group-btn">
@@ -205,30 +205,18 @@
 
                 <!-- Blog Categories Well -->
                 <div class="well">
-                    <h4>Blog Categories</h4>
+                    <h4>Categorias</h4>
                     <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
                         <!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
+                                <li><a href="#">Ingeniería de Software</a>
                                 </li>
-                                <li><a href="#">Category Name</a>
+                                <li><a href="#">Inteligencia Artificial</a>
                                 </li>
-                                <li><a href="#">Category Name</a>
+                                <li><a href="#">Base de datos</a>
                                 </li>
-                                <li><a href="#">Category Name</a>
+                                <li><a href="#">Telecomunicaciones</a>
                                 </li>
                             </ul>
                         </div>
@@ -246,7 +234,8 @@
         </div>
         <!-- /.row -->
         <hr>
-    </div>
+    </div>     <!-- /.container -->
+
     <!-- Footer -->
     <footer>
         <div class="row">
@@ -257,11 +246,9 @@
         </div>
         <!-- /.row -->
     </footer>
-    <!-- /.container -->
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 </body>
