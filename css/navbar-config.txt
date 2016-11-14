@@ -1,0 +1,15 @@
+bootstrapdesigntools.com/tools/bootstrap-menu-builder/
+
+background styles : #001f90
+default styles : #001f90
+hover styles : #5370e6
+active styles : #eee8ff
+font styles : 
+			 - brand : #ffffff
+			 - font : #ffffff
+			 - hover font : #11f0e1
+			 - active font : #001f90
+			 - size : 16px
+border styles :
+			   - width : 0px
+			   - radius : 0px
