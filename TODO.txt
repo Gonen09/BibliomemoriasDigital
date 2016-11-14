@@ -14,8 +14,14 @@
   - Linkiar pagina inicial [Listo]
   - Banner centrarlo y quitar padding-top [Listo]
   - Centrar footer [Listo]
-  - Estructura navbar, clasificar en grupos, minimizar en celular e iconos
+  - Estructura navbar [Listo]
+  - Clasificar en grupos navbar [Listo]
+  - Minimizar en celular e iconos navbar [Listo]
+  - Color navbar [Listo]
   - Acerca de uls [Listo]
   - Acerca ingecomp [Listo]
-  - registrarse y login
+  - Acerca docente [Listo]
+  - Agrandar ventanas modales [Listo]
+  - Registrarse
+  - Login
   - Ver estructuras pagina
