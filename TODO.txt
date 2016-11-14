@@ -1,0 +1,21 @@
+1) Inicio
+   - Hacer banner pagina en photoshop [Listo]
+   - Hace footer pagina en photoshop [Listo]
+   - Crear repositorio github [Listo]
+
+2) Bootstrap
+   - Descargar Bootstrap [Listo]
+   - Descargar Jquery [Listo]
+   - Descargar plantillas Bootstrap [Listo]
+   - Temas Bootstrap [Listo]
+   - Estructura Bootstrap [Listo]
+
+3) Home
+  - Linkiar pagina inicial [Listo]
+  - Banner centrarlo y quitar padding-top [Listo]
+  - Centrar footer [Listo]
+  - Estructura navbar, clasificar en grupos, minimizar en celular e iconos
+  - Acerca de uls [Listo]
+  - Acerca ingecomp [Listo]
+  - registrarse y login
+  - Ver estructuras pagina
