@@ -22,8 +22,12 @@
 
   <!-- Header -->
   <header>
-      <img src="image/banner.png" class="img-responsive" id="banner">
-  </header>
+      <div class="row">
+        <div align="center" class="col-lg-12">
+              <img src="image/banner.png" class="img-responsive" id="banner">
+        </div> <!-- /.col-lg-12 -->
+      </div>  <!-- /.row -->
+  </header> <!-- Header -->
 
   <!-- Navigation -->
   <nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation">
@@ -49,7 +53,7 @@
                   <li data-toggle="modal" onclick="$('#myModal3').modal()"><a href="#">Sobre nosotros</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
+                  <li><a href="http://localhost/Admin/"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
                 </ul>
             </div> <!-- /.navbar-collapse -->
       </div> <!-- /.container -->

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 
       <meta charset="utf-8">
@@ -15,29 +15,18 @@
 
       <!-- Custom CSS -->
       <link href="css/general.css" rel="stylesheet">
-
-  <style>
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 550px}
-
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-
-    /* On small screens, set height to 'auto' for the grid */
-    @media screen and (max-width: 767px) {
-      .row.content {height: auto;}
-    }
-  </style>
+      <link href="css/busqueda.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- Header -->
   <header>
-      <img src="image/banner.png" class="img-responsive" id="banner">
-  </header>
+      <div class="row">
+        <div align="center" class="col-lg-12">
+              <img src="image/banner.png" class="img-responsive" id="banner">
+        </div> <!-- /.col-lg-12 -->
+      </div>  <!-- /.row -->
+  </header> <!-- Header -->
 
   <!-- Navigation -->
   <nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation">
@@ -63,7 +52,7 @@
                   <li data-toggle="modal" onclick="$('#myModal3').modal()"><a href="#">Sobre nosotros</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
+                  <li><a href="http://localhost/Admin/"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
                 </ul>
             </div> <!-- /.navbar-collapse -->
       </div> <!-- /.container -->
@@ -132,71 +121,202 @@
   <div class="row content">
 
     <div class="col-sm-9">
-      <div class="well">
-        <h4>Dashboard</h4>
-        <p>Some text..</p>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Users</h4>
-            <p>1 Million</p>
-          </div>
+        <div class="well">
+          <h4>Busqueda avanzada</h4>
+          <form>
+            <div class="input-group">
+                <input type="text" id="busqueda" class="form-control" placeholder="Buscar ...." name="q">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="button"
+                    onclick="buscarProducto()"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Titulo</option>
+                     <option>Autor</option>
+                     <option>Profesor guia</option>
+                     <option>Año</option>
+                     <option>Topico</option>
+                 </select>
+               </div>
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Es</option>
+                     <option>Contiene</option>
+                 </select>
+               </div>
+               <div class="col-sm-4">
+                 <div class="form-group">
+                   <input type="text" class="form-control" id="usr">
+                 </div>
+               </div>
+               <div class="col-sm-2 container">
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Titulo</option>
+                     <option>Autor</option>
+                     <option>Profesor guia</option>
+                     <option>Año</option>
+                     <option>Topico</option>
+                 </select>
+               </div>
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Es</option>
+                     <option>Contiene</option>
+                 </select>
+               </div>
+               <div class="col-sm-4">
+                 <div class="form-group">
+                   <input type="text" class="form-control" id="usr">
+                 </div>
+               </div>
+               <div class="col-sm-2 container">
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Titulo</option>
+                     <option>Autor</option>
+                     <option>Profesor guia</option>
+                     <option>Año</option>
+                     <option>Topico</option>
+                 </select>
+               </div>
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Es</option>
+                     <option>Contiene</option>
+                 </select>
+               </div>
+               <div class="col-sm-4">
+                 <div class="form-group">
+                   <input type="text" class="form-control" id="usr">
+                 </div>
+               </div>
+               <div class="col-sm-2 container">
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Titulo</option>
+                     <option>Autor</option>
+                     <option>Profesor guia</option>
+                     <option>Año</option>
+                     <option>Topico</option>
+                 </select>
+               </div>
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Es</option>
+                     <option>Contiene</option>
+                 </select>
+               </div>
+               <div class="col-sm-4">
+                 <div class="form-group">
+                   <input type="text" class="form-control" id="usr">
+                 </div>
+               </div>
+               <div class="col-sm-2 container">
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Titulo</option>
+                     <option>Autor</option>
+                     <option>Profesor guia</option>
+                     <option>Año</option>
+                     <option>Topico</option>
+                 </select>
+               </div>
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Es</option>
+                     <option>Contiene</option>
+                 </select>
+               </div>
+               <div class="col-sm-4">
+                 <div class="form-group">
+                   <input type="text" class="form-control" id="usr">
+                 </div>
+               </div>
+               <div class="col-sm-2 container">
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Titulo</option>
+                     <option>Autor</option>
+                     <option>Profesor guia</option>
+                     <option>Año</option>
+                     <option>Topico</option>
+                 </select>
+               </div>
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Es</option>
+                     <option>Contiene</option>
+                 </select>
+               </div>
+               <div class="col-sm-4">
+                 <div class="form-group">
+                   <input type="text" class="form-control" id="usr">
+                 </div>
+               </div>
+               <div class="col-sm-2 container">
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Titulo</option>
+                     <option>Autor</option>
+                     <option>Profesor guia</option>
+                     <option>Año</option>
+                     <option>Topico</option>
+                 </select>
+               </div>
+               <div class="col-sm-3">
+                 <select class="form-control">
+                     <option>Es</option>
+                     <option>Contiene</option>
+                 </select>
+               </div>
+               <div class="col-sm-4">
+                 <div class="form-group">
+                   <input type="text" class="form-control" id="usr">
+                 </div>
+               </div>
+               <div class="col-sm-2 container">
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
+                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
+               </div>
+            </div>
+          </form>
+
         </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Pages</h4>
-            <p>100 Million</p>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Sessions</h4>
-            <p>10 Million</p>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Bounce</h4>
-            <p>30%</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p>
-            <p>Text</p>
-            <p>Text</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p>
-            <p>Text</p>
-            <p>Text</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p>
-            <p>Text</p>
-            <p>Text</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="well">
-            <p>Text</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p>
-          </div>
-        </div>
-      </div>
     </div> <!-- col-sm-9 -->
 
     <div class="col-sm-3" style="heigth = 100%;">
@@ -242,12 +362,10 @@
             <h4>Side Widget Well</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
         </div>
-
     </div> <!-- col-sm-3 -->
-
   </div> <!-- row content -->
 
-  <div class="row content"> <!-- yo -->
+  <div class="row content">
       <div class="col-sm-6">
           <h2>Side</h2>
           <div class="panel panel-default">
@@ -268,18 +386,17 @@
           <ul class="list-inline"><li><a href="#">2 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li></ul>
 
       </div> <!-- col-sm-6 -->
-  </div>
-</div> <!-- row content -->
+  </div> <!-- row content -->
+</div> <!-- container-fluid -->
+
   <!-- Footer -->
   <footer>
       <div class="row">
         <div align="center" class="col-lg-12">
               <img src="image/footer_uls.png" id="foot" class="img-responsive"/>
-          </div>
-          <!-- /.col-lg-12 -->
-      </div>
-      <!-- /.row -->
-  </footer>
+        </div> <!-- /.col-lg-12 -->
+      </div>  <!-- /.row -->
+  </footer>  <!-- Footer -->
 
   <!-- jQuery -->
   <script src="js/jquery.min.js"></script>
