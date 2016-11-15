@@ -53,7 +53,7 @@
                   <li data-toggle="modal" onclick="$('#myModal3').modal()"><a href="#">Sobre nosotros</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
+                  <li><a href="http://localhost/Admin/"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
                 </ul>
             </div> <!-- /.navbar-collapse -->
       </div> <!-- /.container -->
