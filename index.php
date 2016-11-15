@@ -22,8 +22,12 @@
 
   <!-- Header -->
   <header>
-      <img src="image/banner.png" class="img-responsive" id="banner">
-  </header>
+      <div class="row">
+        <div align="center" class="col-lg-12">
+              <img src="image/banner.png" class="img-responsive" id="banner">
+        </div> <!-- /.col-lg-12 -->
+      </div>  <!-- /.row -->
+  </header> <!-- Header -->
 
   <!-- Navigation -->
   <nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation">

@@ -2,6 +2,7 @@
    - Hacer banner pagina en photoshop [Listo]
    - Hace footer pagina en photoshop [Listo]
    - Crear repositorio github [Listo]
+   - Mejorada estructura header [Listo]
 
 2) Bootstrap
    - Descargar Bootstrap [Listo]
@@ -24,7 +25,12 @@
   - Agrandar ventanas modales [Listo]
   - Registrarse [Eliminado]
   - Login
-  - Estructura home[Listo]
-  
+  - Estructura home [Listo]
+
  4) Busqueda
-   - Estructura busqueda [Listo] 
+   - Estructura busqueda [Listo]
+   - Crear css busqueda [Listo]
+   - Agregar botones de busqueda
+   - Crear motor agregar o quitar botones de busqueda
+   - Obtener consulta botones de busqueda
+   - Enviar datos botones de busqueda
