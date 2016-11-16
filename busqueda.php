@@ -9,6 +9,9 @@
       <meta name="author" content="Electivo III">
 
       <title>BiblioMemorias Digital ULS</title>
+      
+      <!-- IMPORTACIÓN JS -->
+      <script src="js/add_campo.js"></script>
 
       <!-- Bootstrap Core CSS -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -123,16 +126,16 @@
     <div class="col-sm-9">
         <div class="well">
           <h4>Busqueda avanzada</h4>
-          <form>
+          <form id="formulario">
             <div class="input-group">
                 <input type="text" id="busqueda" class="form-control" placeholder="Buscar ...." name="q">
                 <div class="input-group-btn">
-                    <button class="btn btn-default" type="button"
-                    onclick="buscarProducto()"><i class="glyphicon glyphicon-search"></i></button>
+                    <button class="btn btn-default" type="submit"
+                    onclick="enviar_formulario()"><i class="glyphicon glyphicon-search"></i></button>
                 </div>
             </div>
             <hr>
-            <div class="row">
+            <div id="criterios" class="row">
                <div class="col-sm-3">
                  <select class="form-control">
                      <option>Titulo</option>
@@ -154,164 +157,8 @@
                  </div>
                </div>
                <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Titulo</option>
-                     <option>Autor</option>
-                     <option>Profesor guia</option>
-                     <option>Año</option>
-                     <option>Topico</option>
-                 </select>
-               </div>
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Es</option>
-                     <option>Contiene</option>
-                 </select>
-               </div>
-               <div class="col-sm-4">
-                 <div class="form-group">
-                   <input type="text" class="form-control" id="usr">
-                 </div>
-               </div>
-               <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Titulo</option>
-                     <option>Autor</option>
-                     <option>Profesor guia</option>
-                     <option>Año</option>
-                     <option>Topico</option>
-                 </select>
-               </div>
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Es</option>
-                     <option>Contiene</option>
-                 </select>
-               </div>
-               <div class="col-sm-4">
-                 <div class="form-group">
-                   <input type="text" class="form-control" id="usr">
-                 </div>
-               </div>
-               <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Titulo</option>
-                     <option>Autor</option>
-                     <option>Profesor guia</option>
-                     <option>Año</option>
-                     <option>Topico</option>
-                 </select>
-               </div>
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Es</option>
-                     <option>Contiene</option>
-                 </select>
-               </div>
-               <div class="col-sm-4">
-                 <div class="form-group">
-                   <input type="text" class="form-control" id="usr">
-                 </div>
-               </div>
-               <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Titulo</option>
-                     <option>Autor</option>
-                     <option>Profesor guia</option>
-                     <option>Año</option>
-                     <option>Topico</option>
-                 </select>
-               </div>
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Es</option>
-                     <option>Contiene</option>
-                 </select>
-               </div>
-               <div class="col-sm-4">
-                 <div class="form-group">
-                   <input type="text" class="form-control" id="usr">
-                 </div>
-               </div>
-               <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Titulo</option>
-                     <option>Autor</option>
-                     <option>Profesor guia</option>
-                     <option>Año</option>
-                     <option>Topico</option>
-                 </select>
-               </div>
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Es</option>
-                     <option>Contiene</option>
-                 </select>
-               </div>
-               <div class="col-sm-4">
-                 <div class="form-group">
-                   <input type="text" class="form-control" id="usr">
-                 </div>
-               </div>
-               <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Titulo</option>
-                     <option>Autor</option>
-                     <option>Profesor guia</option>
-                     <option>Año</option>
-                     <option>Topico</option>
-                 </select>
-               </div>
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Es</option>
-                     <option>Contiene</option>
-                 </select>
-               </div>
-               <div class="col-sm-4">
-                 <div class="form-group">
-                   <input type="text" class="form-control" id="usr">
-                 </div>
-               </div>
-               <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
-                 <button type="button" class="btn btn-default btn-md"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
+                 <button type="button" class="btn btn-default btn-md" onClick="add_campo(this);"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
+                 <button type="button" class="btn btn-default btn-md" onClick="delete_campo(this);"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
                </div>
             </div>
           </form>
