@@ -25,12 +25,13 @@
   - Agrandar ventanas modales [Listo]
   - Registrarse [Eliminado]
   - Login
+  - Formulario de contacto
   - Estructura home [Listo]
 
  4) Busqueda
    - Estructura busqueda [Listo]
    - Crear css busqueda [Listo]
-   - Agregar botones de busqueda
-   - Crear motor agregar o quitar botones de busqueda
-   - Obtener consulta botones de busqueda
-   - Enviar datos botones de busqueda
+   - Agregar botones de busqueda [Listo]
+   - Crear motor agregar o quitar botones de busqueda [Re-Asignado]
+   - Obtener consulta botones de busqueda [Re-Asignado]
+   - Enviar datos botones de busqueda [Re-Asignado]

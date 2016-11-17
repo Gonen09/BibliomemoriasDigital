@@ -48,12 +48,12 @@
                   <li class="active"><a href="index.php">Inicio</a></li>
                   <li><a href="busqueda.php">Buscar Tesis</a></li>
                   <li><a href="#">Formulario contacto</a></li>
-                  <li data-toggle="modal" onclick="$('#myModal1').modal()"><a href="#">Institución</a></li>
-                  <li data-toggle="modal" onclick="$('#myModal2').modal()"><a href="#">Docente</a></li>
-                  <li data-toggle="modal" onclick="$('#myModal3').modal()"><a href="#">Sobre nosotros</a></li>
+                  <li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
+                  <li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
+                  <li data-toggle="modal" data-target="#myModal3"><a href="#">Sobre nosotros</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="http://localhost/Admin/"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
+                  <li data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
                 </ul>
             </div> <!-- /.navbar-collapse -->
       </div> <!-- /.container -->
@@ -118,6 +118,55 @@
     	</div>
     </div>
 
+    <!-- Modal Login -->
+    <div class="modal fade modal-ext" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Header-->
+                <div class="modal-header" align="center">
+                    <img class="img-rounded" id="img_logo" src="image/login.png">
+                </div>
+
+                <!--Body-->
+                <div class="modal-body" align="center">
+
+                    <h3 class="text-center"><i class="fa fa-user"></i> Iniciar sesión</h3>
+
+                    <div class="md-form">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="nombre de usuario o correo">
+                      </div>
+                    </div>
+
+                    <div class="md-form">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="login-password" type="password" class="form-control" name="password" placeholder="contraseña">
+                      </div>
+                    </div>
+
+                    <div class="text-xs-center">
+                        <p><a href="#">¿Olvidó la contraseña?</a></p>
+                        <button class="btn btn-primary btn-md center-block"> Ingresar</button>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer text-center">
+                    <div class="options">
+                        <p>¿No es un miembro? <a href="#"> Registrate</a></p>
+                        <p><a href="#">¿Olvidó la contraseña?</a></p>
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
     <!-- Page Content -->
     <div class="container-fluid">
         <div class="row content">
@@ -139,7 +188,7 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
                 <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <img class="img-responsive" src="image/900x300.png" alt="">
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -155,7 +204,7 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
                 <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <img class="img-responsive" src="image/900x300.png" alt="">
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!</p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -171,7 +220,7 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
                 <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <img class="img-responsive" src="image/900x300.png" alt="">
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
