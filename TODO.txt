@@ -24,8 +24,19 @@
   - Acerca docente [Listo]
   - Agrandar ventanas modales [Listo]
   - Registrarse [Eliminado]
-  - Login
-  - Formulario de contacto
+  - Login [Listo]
+    - Banner login [Listo]
+    - Determinar diseño login [Listo]
+    - Estructura login [Listo]
+    - Agregar componentes [Listo]
+    - Alinear botones y texto [Listo]
+    - Evitar cierre modal sin boton [Listo]
+  - Formulario de contacto [Listo]
+    - Banner contacto [Listo]
+    - Estructura contacto [Listo]
+    - Agregar componentes [Listo]
+    - Evitar cierre modal sin boton [Listo]
+    - Evitar redimensionar area texto [Listo]
   - Estructura home [Listo]
 
  4) Busqueda
