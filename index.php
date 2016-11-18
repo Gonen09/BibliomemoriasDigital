@@ -47,7 +47,7 @@
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="index.php">Inicio</a></li>
                   <li><a href="busqueda.php">Buscar Tesis</a></li>
-                  <li><a href="#">Formulario contacto</a></li>
+                  <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
                   <li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
                   <li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
                   <li data-toggle="modal" data-target="#myModal3"><a href="#">Sobre nosotros</a></li>
@@ -58,6 +58,65 @@
             </div> <!-- /.navbar-collapse -->
       </div> <!-- /.container -->
     </nav>
+
+    <!-- Modal Contact -->
+    <div class="modal fade modal-ext" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Body-->
+                <div class="modal-body">
+                    <img class="img-rounded img-responsive" id="img_contacto" src="image/principal/contacto.png">
+                    <br>
+                    <div class="md-form">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="nombre" value="" placeholder="Nombre completo">
+                      </div>
+                    </div>
+                    <br>
+                    <div class="md-form">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="correo" value="" placeholder="Correo electrónico">
+                      </div>
+                    </div>
+                    <br>
+                    <div class="md-form">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Telefono">
+                      </div>
+                    </div>
+                    <br>
+                    <div class="md-form">
+                      <div class="form-group">
+                       <label for="sel1">Motivo contacto:</label>
+                       <select class="form-control" id="sel1">
+                         <option>Sugerencia</option>
+                         <option>Felicitación</option>
+                         <option>Reclamo</option>
+                         <option>Otros</option>
+                       </select>
+                      </div>
+                    </div>
+                    <div class="md-form">
+                        <div class="form-group">
+                         <label for="comment">Comentarios:</label>
+                         <textarea type="text" class="form-control md-textarea" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                  <div class="col-md-8 center-block">
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal  1 -->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -127,7 +186,7 @@
                 <div class="modal-body" align="center">
 
                     <div class="container-fluid">
-                      <img class="img-rounded img-responsive" id="img_logo" src="image/principal/login.png">
+                      <img class="img-rounded img-responsive" id="img_login" src="image/principal/login.png">
                       <br>
                       <div class="md-form">
                         <div class="input-group">
