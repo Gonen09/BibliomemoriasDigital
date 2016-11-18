@@ -24,7 +24,7 @@
   <header>
       <div class="row">
         <div align="center" class="col-lg-12">
-              <img src="image/banner.png" class="img-responsive" id="banner">
+              <img src="image/principal/banner.png" class="img-responsive" id="banner">
         </div> <!-- /.col-lg-12 -->
       </div>  <!-- /.row -->
   </header> <!-- Header -->
@@ -47,17 +47,77 @@
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="index.php">Inicio</a></li>
                   <li><a href="busqueda.php">Buscar Tesis</a></li>
-                  <li><a href="#">Formulario contacto</a></li>
-                  <li data-toggle="modal" onclick="$('#myModal1').modal()"><a href="#">Institución</a></li>
-                  <li data-toggle="modal" onclick="$('#myModal2').modal()"><a href="#">Docente</a></li>
-                  <li data-toggle="modal" onclick="$('#myModal3').modal()"><a href="#">Sobre nosotros</a></li>
+                  <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
+                  <li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
+                  <li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
+                  <li data-toggle="modal" data-target="#myModal3"><a href="#">Sobre nosotros</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="http://localhost/Admin/"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
+                  <li data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
                 </ul>
             </div> <!-- /.navbar-collapse -->
       </div> <!-- /.container -->
     </nav>
+
+
+    <!-- Modal Contact -->
+    <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Body-->
+                <div class="modal-body">
+                    <img class="img-rounded img-responsive" id="img_contacto" src="image/principal/contacto.png">
+                    <br>
+                    <div class="md-form">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="nombre" value="" placeholder="Nombre completo">
+                      </div>
+                    </div>
+                    <br>
+                    <div class="md-form">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="correo" value="" placeholder="Correo electrónico">
+                      </div>
+                    </div>
+                    <br>
+                    <div class="md-form">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Telefono">
+                      </div>
+                    </div>
+                    <br>
+                    <div class="md-form">
+                      <div class="form-group">
+                       <label for="sel1">Motivo contacto:</label>
+                       <select class="form-control" id="sel1">
+                         <option>Sugerencia</option>
+                         <option>Felicitación</option>
+                         <option>Reclamo</option>
+                         <option>Otros</option>
+                       </select>
+                      </div>
+                    </div>
+                    <div class="md-form">
+                        <div class="form-group">
+                         <label for="comment">Comentarios:</label>
+                         <textarea type="text" class="form-control md-textarea" style="resize: none;" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                  <div class="col-md-8 center-block">
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal  1 -->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -68,7 +128,7 @@
     				<h4 class="modal-title" id="myModalLabel1">Contacto</h4>
     			</div>
     			<div class="modal-body text-center">
-    				<img src="image/uls-logo.png" class="img-responsive center-block" id ="logo-uls"><br>
+    				<img src="image/principal/uls-logo.png" class="img-responsive center-block" id ="logo-uls"><br>
     				<p><strong>Universidad de la Serena</strong><br> Departamento de Matematicas<br>
     					 Avenida Cisternas Nº 1200<br> La Serena <br> Teléfono: 51 2 204102 / 51 2 204103</p>
     			</div>
@@ -88,7 +148,7 @@
             <h4 class="modal-title" id="myModalLabel2">Docente</h4>
           </div>
           <div class="modal-body text-center">
-            <img src="image/jeltsch.jpg" class="img-responsive center-block img-rounded" id ="jeltsh"><br>
+            <img src="image/principal/jeltsch.jpg" class="img-responsive center-block img-rounded" id ="jeltsh"><br>
             <p><strong>Dr. Eric Jeltsch F.</strong><br> Depto. de Matemáticas <br>Av. Cisternas 1200, La Serena, CHILE.
               <br>2º Piso, Of. 215<br>Fono: (+56)-51-2-334732 <br>e-mail: ejeltsch@userena.cl</p>
           </div>
@@ -108,7 +168,7 @@
     				<h4 class="modal-title" id="myModalLabel3">Sobre nosotros</h4>
     			</div>
     			<div class="modal-body text-center">
-    				<img src="image/comp-logo.jpg" class="img-responsive center-block" id ="logo-comp"><br>
+    				<img src="image/principal/comp-logo.jpg" class="img-responsive center-block" id ="logo-comp"><br>
     				<p><strong>Electivo III<br>Recuperación de la Información</strong> <br> Ingeniería en Computación<br> Universidad de la Serena</p>
     			</div>
     			<div class="modal-footer">
@@ -116,6 +176,44 @@
     			</div>
     		</div>
     	</div>
+    </div>
+
+    <!-- Modal Login -->
+    <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Body-->
+                <div class="modal-body" align="center">
+                      <img class="img-rounded img-responsive" id="img_login" src="image/principal/login.png">
+                      <br>
+                      <div class="md-form">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                          <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Usuario">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="md-form">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                          <input id="login-password" type="password" class="form-control" name="password" placeholder="Contraseña">
+                        </div>
+                      </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer">
+                      <div class="pull-left">
+                          <p><a href="#">¿Olvidó la contraseña?</a></p>
+                      </div>
+                      <div class="pull-right">
+                            <button type="button" class="btn btn-primary">Ingresar</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                      </div>
+                </div>
+            </div> <!--Modal content-->
+        </div>
     </div>
 
     <!-- Page Content -->
@@ -139,7 +237,7 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
                 <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <img class="img-responsive" src="image/900x300.png" alt="">
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -155,7 +253,7 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
                 <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <img class="img-responsive" src="image/900x300.png" alt="">
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!</p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -171,7 +269,7 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
                 <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <img class="img-responsive" src="image/900x300.png" alt="">
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -244,7 +342,7 @@
     <footer>
         <div class="row">
           <div align="center" class="col-lg-12">
-                <img src="image/footer_uls.png" id="foot" class="img-responsive"/>
+                <img src="image/principal/footer_uls.png" id="foot" class="img-responsive"/>
             </div>
             <!-- /.col-lg-12 -->
         </div>

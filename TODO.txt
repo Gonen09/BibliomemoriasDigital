@@ -24,13 +24,25 @@
   - Acerca docente [Listo]
   - Agrandar ventanas modales [Listo]
   - Registrarse [Eliminado]
-  - Login
+  - Login [Listo]
+    - Banner login [Listo]
+    - Determinar diseño login [Listo]
+    - Estructura login [Listo]
+    - Agregar componentes [Listo]
+    - Alinear botones y texto [Listo]
+    - Evitar cierre modal sin boton [Listo]
+  - Formulario de contacto [Listo]
+    - Banner contacto [Listo]
+    - Estructura contacto [Listo]
+    - Agregar componentes [Listo]
+    - Evitar cierre modal sin boton [Listo]
+    - Evitar redimensionar area texto [Listo]
   - Estructura home [Listo]
 
  4) Busqueda
    - Estructura busqueda [Listo]
    - Crear css busqueda [Listo]
-   - Agregar botones de busqueda
-   - Crear motor agregar o quitar botones de busqueda
-   - Obtener consulta botones de busqueda
-   - Enviar datos botones de busqueda
+   - Agregar botones de busqueda [Listo]
+   - Crear motor agregar o quitar botones de busqueda [Re-Asignado]
+   - Obtener consulta botones de busqueda [Re-Asignado]
+   - Enviar datos botones de busqueda [Re-Asignado]
