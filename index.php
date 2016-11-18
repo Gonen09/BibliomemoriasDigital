@@ -185,8 +185,6 @@
             <div class="modal-content">
                 <!--Body-->
                 <div class="modal-body" align="center">
-
-                    <div class="container-fluid">
                       <img class="img-rounded img-responsive" id="img_login" src="image/principal/login.png">
                       <br>
                       <div class="md-form">
@@ -202,12 +200,10 @@
                           <input id="login-password" type="password" class="form-control" name="password" placeholder="Contraseña">
                         </div>
                       </div>
-                    </div>
                 </div>
 
                 <!--Footer-->
                 <div class="modal-footer">
-                  <div class="inline container-fluid">
                       <div class="pull-left">
                           <p><a href="#">¿Olvidó la contraseña?</a></p>
                       </div>
@@ -215,7 +211,6 @@
                             <button type="button" class="btn btn-primary">Ingresar</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                       </div>
-                  </div>
                 </div>
             </div> <!--Modal content-->
         </div>
