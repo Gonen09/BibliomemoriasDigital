@@ -24,7 +24,7 @@
   <header>
       <div class="row">
         <div align="center" class="col-lg-12">
-              <img src="image/banner.png" class="img-responsive" id="banner">
+              <img src="image/principal/banner.png" class="img-responsive" id="banner">
         </div> <!-- /.col-lg-12 -->
       </div>  <!-- /.row -->
   </header> <!-- Header -->
@@ -68,7 +68,7 @@
     				<h4 class="modal-title" id="myModalLabel1">Contacto</h4>
     			</div>
     			<div class="modal-body text-center">
-    				<img src="image/uls-logo.png" class="img-responsive center-block" id ="logo-uls"><br>
+    				<img src="image/principal/uls-logo.png" class="img-responsive center-block" id ="logo-uls"><br>
     				<p><strong>Universidad de la Serena</strong><br> Departamento de Matematicas<br>
     					 Avenida Cisternas Nº 1200<br> La Serena <br> Teléfono: 51 2 204102 / 51 2 204103</p>
     			</div>
@@ -88,7 +88,7 @@
             <h4 class="modal-title" id="myModalLabel2">Docente</h4>
           </div>
           <div class="modal-body text-center">
-            <img src="image/jeltsch.jpg" class="img-responsive center-block img-rounded" id ="jeltsh"><br>
+            <img src="image/principal/jeltsch.jpg" class="img-responsive center-block img-rounded" id ="jeltsh"><br>
             <p><strong>Dr. Eric Jeltsch F.</strong><br> Depto. de Matemáticas <br>Av. Cisternas 1200, La Serena, CHILE.
               <br>2º Piso, Of. 215<br>Fono: (+56)-51-2-334732 <br>e-mail: ejeltsch@userena.cl</p>
           </div>
@@ -108,7 +108,7 @@
     				<h4 class="modal-title" id="myModalLabel3">Sobre nosotros</h4>
     			</div>
     			<div class="modal-body text-center">
-    				<img src="image/comp-logo.jpg" class="img-responsive center-block" id ="logo-comp"><br>
+    				<img src="image/principal/comp-logo.jpg" class="img-responsive center-block" id ="logo-comp"><br>
     				<p><strong>Electivo III<br>Recuperación de la Información</strong> <br> Ingeniería en Computación<br> Universidad de la Serena</p>
     			</div>
     			<div class="modal-footer">
@@ -123,47 +123,41 @@
         <div class="modal-dialog" role="document">
             <!--Content-->
             <div class="modal-content">
-
-                <!--Header-->
-                <div class="modal-header" align="center">
-                    <img class="img-rounded" id="img_logo" src="image/login.png">
-                </div>
-
                 <!--Body-->
                 <div class="modal-body" align="center">
 
-                    <h3 class="text-center"><i class="fa fa-user"></i> Iniciar sesión</h3>
-
-                    <div class="md-form">
-                      <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="nombre de usuario o correo">
+                    <div class="container-fluid">
+                      <img class="img-rounded img-responsive" id="img_logo" src="image/principal/login.png">
+                      <br>
+                      <div class="md-form">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                          <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Usuario">
+                        </div>
                       </div>
-                    </div>
-
-                    <div class="md-form">
-                      <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="login-password" type="password" class="form-control" name="password" placeholder="contraseña">
+                      <br>
+                      <div class="md-form">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                          <input id="login-password" type="password" class="form-control" name="password" placeholder="Contraseña">
+                        </div>
                       </div>
-                    </div>
-
-                    <div class="text-xs-center">
-                        <p><a href="#">¿Olvidó la contraseña?</a></p>
-                        <button class="btn btn-primary btn-md center-block"> Ingresar</button>
                     </div>
                 </div>
 
                 <!--Footer-->
-                <div class="modal-footer text-center">
-                    <div class="options">
-                        <p>¿No es un miembro? <a href="#"> Registrate</a></p>
-                        <p><a href="#">¿Olvidó la contraseña?</a></p>
-                    </div>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <div class="modal-footer">
+                  <div class="inline container-fluid">
+                      <div class="pull-left">
+                          <p><a href="#">¿Olvidó la contraseña?</a></p>
+                      </div>
+                      <div class="pull-right">
+                            <button type="button" class="btn btn-primary">Ingresar</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                      </div>
+                  </div>
                 </div>
-            </div>
-            <!--/.Content-->
+            </div> <!--Modal content-->
         </div>
     </div>
 
@@ -293,7 +287,7 @@
     <footer>
         <div class="row">
           <div align="center" class="col-lg-12">
-                <img src="image/footer_uls.png" id="foot" class="img-responsive"/>
+                <img src="image/principal/footer_uls.png" id="foot" class="img-responsive"/>
             </div>
             <!-- /.col-lg-12 -->
         </div>
