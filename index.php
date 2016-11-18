@@ -168,7 +168,7 @@
     				<h4 class="modal-title" id="myModalLabel3">Sobre nosotros</h4>
     			</div>
     			<div class="modal-body text-center">
-    				<img src="image/principal/comp-logo.jpg" class="img-responsive center-block" id ="logo-comp"><br>
+    				<img src="image/principal/comp-logo.png" class="img-responsive center-block" id ="logo-comp"><br>
     				<p><strong>Electivo III<br>Recuperación de la Información</strong> <br> Ingeniería en Computación<br> Universidad de la Serena</p>
     			</div>
     			<div class="modal-footer">

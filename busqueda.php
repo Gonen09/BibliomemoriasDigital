@@ -9,7 +9,7 @@
       <meta name="author" content="Electivo III">
 
       <title>BiblioMemorias Digital ULS</title>
-      
+
       <!-- IMPORTACIÓN JS -->
       <script src="js/add_campo.js"></script>
 
@@ -170,7 +170,7 @@
     				<h4 class="modal-title" id="myModalLabel3">Sobre nosotros</h4>
     			</div>
     			<div class="modal-body text-center">
-    				<img src="image/principal/comp-logo.jpg" class="img-responsive center-block" id ="logo-comp"><br>
+    				<img src="image/principal/comp-logo.png" class="img-responsive center-block" id ="logo-comp"><br>
     				<p><strong>Electivo III<br>Recuperación de la Información</strong> <br> Ingeniería en Computación<br> Universidad de la Serena</p>
     			</div>
     			<div class="modal-footer">
@@ -251,12 +251,12 @@
                </div>
                <div class="col-sm-4">
                  <div class="form-group">
-                   <input type="text" class="form-control" id="usr">
+                   <input type="text" class="form-control" id="usr" placeholder="Contenido">
                  </div>
                </div>
                <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-default btn-md" onClick="add_campo(this);"><a href="#"><span class="glyphicon glyphicon-plus-sign"></span></a></button>
-                 <button type="button" class="btn btn-default btn-md" onClick="delete_campo(this);"><a href="#"><span class="glyphicon glyphicon-minus-sign"></span></a></button>
+                 <button type="button" class="btn btn-success btn-md" onClick="add_campo(this);"><a href="#"><span class="glyphicon glyphicon-plus-sign" style="color:#fff;"></span></a></button>
+                 <button type="button" class="btn btn-danger btn-md" onClick="delete_campo(this);"><a href="#"><span class="glyphicon glyphicon-minus-sign" style="color:#fff;"></span></a></button>
                </div>
             </div>
           </form>
