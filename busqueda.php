@@ -264,7 +264,7 @@
         </div>
     </div> <!-- col-sm-9 -->
 
-    <div class="col-sm-3" style="heigth = 100%;">
+    <div class="col-sm-3">
 
         <!-- Blog Search Well -->
         <div class="well">
@@ -311,27 +311,47 @@
   </div> <!-- row content -->
 
   <div class="row content">
-      <div class="col-sm-6">
+      <div class="col-sm-6"> <!-- Panal resultados -->
+        <div class="well">
           <h2>Side</h2>
           <div class="panel panel-default">
               <div class="panel-heading">Title</div>
               <div class="panel-body">Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
               Aliquam in felis sit amet augue.</div>
           </div>
+        </div>
       </div> <!-- col-sm-6 -->
 
-      <div class="col-sm-6">
-          <h2>Article Heading</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-            Aliquam in felis sit amet augue.</p>
-          <p class="lead"><button class="btn btn-default">Read More</button></p>
-          <p class="pull-right"><span class="label label-default">keyword</span> <span class="label label-default">tag</span> <span class="label label-default">post</span></p>
-          <ul class="list-inline"><li><a href="#">2 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li></ul>
+      <div class="col-sm-6"> <!-- Resultados busqueda -->
+        <div class="well">
+          <div class="container-fluid">
+            <div class="row">
+                <hr>
+                <div class="col-sm-1">
+                    <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                    <br>
+                    <p class="text-center"><a href="#">Ver</a></p>
+                </div>
 
+                <div class="col-sm-7 well">
+
+                </div>
+
+                <div class="col-sm-4 well">
+
+                </div>
+                <hr>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 well">
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div> <!-- col-sm-6 -->
-  </div> <!-- row content -->
+    </div> <!-- row content -->
 </div> <!-- container-fluid -->
 
   <!-- Footer -->
