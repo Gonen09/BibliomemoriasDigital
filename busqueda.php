@@ -10,9 +10,6 @@
 
       <title>BiblioMemorias Digital ULS</title>
 
-      <!-- IMPORTACIÓN JS -->
-      <script src="js/add_campo.js"></script>
-
       <!-- Bootstrap Core CSS -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -485,9 +482,11 @@
       </div>  <!-- /.row -->
   </footer>  <!-- Footer -->
 
+  <!-- Agregar boton de busqueda -->
+  <script src="js/add_campo.js"></script>
   <!-- jQuery -->
-  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap/jquery.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
 </body>
 </html>
