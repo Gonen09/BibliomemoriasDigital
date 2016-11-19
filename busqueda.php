@@ -19,6 +19,7 @@
       <!-- Custom CSS -->
       <link href="css/general.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -255,8 +256,8 @@
                  </div>
                </div>
                <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-success btn-md" onClick="add_campo(this);"><a href="#"><span class="glyphicon glyphicon-plus-sign" style="color:#fff;"></span></a></button>
-                 <button type="button" class="btn btn-danger btn-md" onClick="delete_campo(this);"><a href="#"><span class="glyphicon glyphicon-minus-sign" style="color:#fff;"></span></a></button>
+                 <button type="button" class="btn btn-success btn-md" onClick="add_campo(this);"><a href="#"><span id="icono-mas" class="glyphicon glyphicon-plus-sign"></span></a></button>
+                 <button type="button" class="btn btn-danger btn-md" onClick="delete_campo(this);"><a href="#"><span id="icono-menos" class="glyphicon glyphicon-minus-sign"></span></a></button>
                </div>
             </div>
           </form>
@@ -323,33 +324,154 @@
       </div> <!-- col-sm-6 -->
 
       <div class="col-sm-6"> <!-- Resultados busqueda -->
-        <div class="well">
-          <div class="container-fluid">
-            <div class="row">
-                <hr>
-                <div class="col-sm-1">
-                    <img src="image/pdf.png" alt="pdf" class="img-responsive">
-                    <br>
-                    <p class="text-center"><a href="#">Ver</a></p>
-                </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #001f90;"><h4 class="text-center"style="color:white;">Resultados</h4></div>
+            <div class="panel-body">
+               <div class="table-responsive">
+                 <table class="table table-condensed table-hover table-borderless">
+                   <tbody>
 
-                <div class="col-sm-7 well">
+                     <div id="resultado">
+                       <tr>
+                         <td class="col-sm-1">
+                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                           <br>
+                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
+                         </td>
+                         <td class="col-sm-7">
+                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
+                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
+                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
+                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
+                         </td>
+                         <td class="col-sm-4">
+                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                         </td>
+                       </tr>
+                     </div>
 
-                </div>
+                     <div id="resultado">
+                       <tr>
+                         <td class="col-sm-1">
+                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                           <br>
+                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
+                         </td>
+                         <td class="col-sm-7">
+                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
+                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
+                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
+                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
+                         </td>
+                         <td class="col-sm-4">
+                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                         </td>
+                       </tr>
+                     </div>
 
-                <div class="col-sm-4 well">
+                     <div id="resultado">
+                       <tr>
+                         <td class="col-sm-1">
+                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                           <br>
+                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
+                         </td>
+                         <td class="col-sm-7">
+                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
+                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
+                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
+                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
+                         </td>
+                         <td class="col-sm-4">
+                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                         </td>
+                       </tr>
+                     </div>
 
-                </div>
-                <hr>
-            </div>
+                     <div id="resultado">
+                       <tr>
+                         <td class="col-sm-1">
+                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                           <br>
+                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
+                         </td>
+                         <td class="col-sm-7">
+                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
+                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
+                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
+                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
+                         </td>
+                         <td class="col-sm-4">
+                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                         </td>
+                       </tr>
+                     </div>
 
-            <div class="row">
-              <div class="col-sm-12 well">
+                     <div id="resultado">
+                       <tr>
+                         <td class="col-sm-1">
+                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                           <br>
+                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
+                         </td>
+                         <td class="col-sm-7">
+                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
+                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
+                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
+                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
+                         </td>
+                         <td class="col-sm-4">
+                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                         </td>
+                       </tr>
+                     </div>
 
+                     <div id="resultado">
+                       <tr>
+                         <td class="col-sm-1">
+                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                           <br>
+                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
+                         </td>
+                         <td class="col-sm-7">
+                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
+                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
+                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
+                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
+                         </td>
+                         <td class="col-sm-4">
+                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                         </td>
+                       </tr>
+                     </div>
+
+                    </tbody>
+                  </table>
+               </div>
+              <hr>
+              <div align="center">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination">
+                    <li>
+                      <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                      <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
-        </div>
       </div> <!-- col-sm-6 -->
     </div> <!-- row content -->
 </div> <!-- container-fluid -->

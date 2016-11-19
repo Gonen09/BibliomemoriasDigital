@@ -46,3 +46,22 @@
    - Crear motor agregar o quitar botones de busqueda [Re-Asignado]
    - Obtener consulta botones de busqueda [Re-Asignado]
    - Enviar datos botones de busqueda [Re-Asignado]
+
+  5) Resultados
+    - Estructura resultados [Listo]
+    - Componentes Resultados [Listo]
+      - Estructura panel [Listo]
+      - Color titulo [Listo]
+      - Crear tabla [Listo]
+        - Centrar elementos horizontalmente [Listo]
+        - Centrar elementos verticalmente [Listo]
+        - Eliminar bordes [Listo]
+        - Animacion sobre tabla [Listo]
+      - Insertar imagenes [Listo]
+      - Informacion tesis [Listo]
+      - Insertar grafico tesis
+    - Crear motor agregar resultados
+    - Hacer paginacion
+      - insertar navegacion [Listo]
+      - centrar navegacion [Listo]
+      - ajustar tamaño navegacion
