@@ -10,15 +10,13 @@
 
       <title>BiblioMemorias Digital ULS</title>
 
-      <!-- IMPORTACIÓN JS -->
-      <script src="js/add_campo.js"></script>
-
       <!-- Bootstrap Core CSS -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
 
       <!-- Custom CSS -->
       <link href="css/general.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
+      <link href="css/grafico-arana.css" rel="stylesheet">
 
 </head>
 <body>
@@ -219,6 +217,30 @@
         </div>
     </div>
 
+    <!-- Modal Grafico -->
+    <div class="modal fade modal-md" id="modal-grafico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!--Content-->
+            <div class="modal-content">
+
+                <div class="modal-header text-center">
+                  <h3 class="modal-title text-primary" id="myModalLabel3">Grafico tesis</h3>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                  <div id="body-chart">
+                    <div id="chart"></div>
+                  </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger center-block" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div> <!--Modal content-->
+        </div>
+    </div>
+
 <div class="container-fluid">
   <div class="row content">
 
@@ -314,12 +336,7 @@
   <div class="row content">
       <div class="col-sm-6"> <!-- Panal resultados -->
         <div class="well">
-          <h2>Side</h2>
-          <div class="panel panel-default">
-              <div class="panel-heading">Title</div>
-              <div class="panel-body">Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-              Aliquam in felis sit amet augue.</div>
-          </div>
+          <h2>Grafico Panal</h2>
         </div>
       </div> <!-- col-sm-6 -->
 
@@ -338,14 +355,16 @@
                            <br>
                            <p class="text-center"><a href="#" id="archivo">Ver</a></p>
                          </td>
-                         <td class="col-sm-7">
+                         <td class="col-sm-10">
                            <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
                            <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
                            <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
                            <h4><strong>Año: </strong><i id="ano">2016</i></h4>
                          </td>
-                         <td class="col-sm-4">
-                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                         <td class="col-sm-1">
+                           <img src="image/chart.png" alt="grafico" class="img-responsive">
+                           <br>
+                           <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
                          </td>
                        </tr>
                      </div>
@@ -357,14 +376,16 @@
                            <br>
                            <p class="text-center"><a href="#" id="archivo">Ver</a></p>
                          </td>
-                         <td class="col-sm-7">
+                         <td class="col-sm-10">
                            <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
                            <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
                            <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
                            <h4><strong>Año: </strong><i id="ano">2016</i></h4>
                          </td>
-                         <td class="col-sm-4">
-                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                         <td class="col-sm-1">
+                           <img src="image/chart.png" alt="grafico" class="img-responsive">
+                           <br>
+                           <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
                          </td>
                        </tr>
                      </div>
@@ -376,14 +397,16 @@
                            <br>
                            <p class="text-center"><a href="#" id="archivo">Ver</a></p>
                          </td>
-                         <td class="col-sm-7">
+                         <td class="col-sm-10">
                            <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
                            <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
                            <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
                            <h4><strong>Año: </strong><i id="ano">2016</i></h4>
                          </td>
-                         <td class="col-sm-4">
-                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                         <td class="col-sm-1">
+                           <img src="image/chart.png" alt="grafico" class="img-responsive">
+                           <br>
+                           <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
                          </td>
                        </tr>
                      </div>
@@ -395,52 +418,16 @@
                            <br>
                            <p class="text-center"><a href="#" id="archivo">Ver</a></p>
                          </td>
-                         <td class="col-sm-7">
+                         <td class="col-sm-10">
                            <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
                            <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
                            <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
                            <h4><strong>Año: </strong><i id="ano">2016</i></h4>
                          </td>
-                         <td class="col-sm-4">
-                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
-                         </td>
-                       </tr>
-                     </div>
-
-                     <div id="resultado">
-                       <tr>
                          <td class="col-sm-1">
-                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                           <img src="image/chart.png" alt="grafico" class="img-responsive">
                            <br>
-                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
-                         </td>
-                         <td class="col-sm-7">
-                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
-                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
-                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
-                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
-                         </td>
-                         <td class="col-sm-4">
-                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
-                         </td>
-                       </tr>
-                     </div>
-
-                     <div id="resultado">
-                       <tr>
-                         <td class="col-sm-1">
-                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
-                           <br>
-                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
-                         </td>
-                         <td class="col-sm-7">
-                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
-                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
-                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
-                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
-                         </td>
-                         <td class="col-sm-4">
-                           <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                           <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
                          </td>
                        </tr>
                      </div>
@@ -485,9 +472,15 @@
       </div>  <!-- /.row -->
   </footer>  <!-- Footer -->
 
+  <!-- Agregar boton de busqueda -->
+  <script src="js/add_campo.js"></script>
   <!-- jQuery -->
-  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap/jquery.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <!-- Grafico araña -->
+  <script src="js/grafico-arana/d3.v3.min.js"></script>
+  <script src="js/grafico-arana/RadarChart.js"></script>
+  <script src="js/grafico-arana/webchart.js"></script>
 </body>
 </html>
