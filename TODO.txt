@@ -59,9 +59,13 @@
         - Animacion sobre tabla [Listo]
       - Insertar imagenes [Listo]
       - Informacion tesis [Listo]
-      - Insertar grafico tesis
+      - Insertar grafico tesis [Listo]
+        - Ajustar tamaño [Listo]
+        - Ajustar componentes [Listo]
+        - Insertar en modal reacomodar [Listo]
     - Crear motor agregar resultados
     - Hacer paginacion
       - insertar navegacion [Listo]
       - centrar navegacion [Listo]
       - ajustar tamaño navegacion
+      - crear moto paginacion
