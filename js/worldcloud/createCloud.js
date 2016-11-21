@@ -3,14 +3,13 @@
 var words = [
 	"WEB HTML XML CSS JavaScript PHP Bootstrap JQuery MySQL ODBC JSON AJAX Solr D3 Git Hub",
 	"Assembly Pascal C Java C# Python Prolog LaTeX",
-	"Introducci髇 Inform醫ica Programaci髇 Estructurada Estructura Datos Fundamentos Inform醫ica te髍ica Programaci髇 orientada Objetos ",
-	"Dise駉 An醠isis Algoritmos Teor韆 de Aut髆atas Lenguajes Formales Programaci髇 Avanzada Software I Software II Inteligencia Artificial",
+	"Introducci贸n Inform谩tica Programaci贸n Estructurada Estructura Datos Fundamentos Inform谩tica te贸rica Programaci贸n orientada Objetos ",
+	"Dise帽o An谩lisis Algoritmos Teor铆a de Aut贸matas Lenguajes Formales Programaci贸n Avanzada Software I Software II Inteligencia Artificial",
 	"SWI-PROLOG Dev-Pascal Dev-C CodeBlocks Eclipse NetBeans Visual Studio MonoDevelop PyCharm Ninja PyScript Notepad++ Atom Brackets SublimeText Assembler Gedit",
 	"VirtualBox XAMPP TeamViewer Git Bash FileZilla Firefox Chrome MariaDb Postgres Oracle Clementine"
 ]
 
-// Elemento en donde insertar el wordcloud 
-
+// Elemento en donde insertar el wordcloud
 var myWordCloud = wordCloud('#cloud');
 
 //Start cycling through the demo data
