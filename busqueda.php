@@ -342,7 +342,9 @@
 
       <div class="col-sm-6"> <!-- Resultados busqueda -->
           <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: #001f90;"><h4 class="text-center"style="color:white;">Resultados</h4></div>
+            <div class="panel-heading" id="cabezera-panel">
+              <h4 class="text-center">Resultados</h4>
+            </div>
             <div class="panel-body">
                <div class="table-responsive">
                  <table class="table table-condensed table-hover table-borderless">
