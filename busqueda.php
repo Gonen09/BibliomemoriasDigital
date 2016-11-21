@@ -479,7 +479,7 @@
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap/bootstrap.min.js"></script>
   <!-- Grafico araña -->
-  <script src="js/grafico-arana/d3.v3.min.js"></script>
+  <script src="js/D3/d3.v3.min.js"></script>
   <script src="js/grafico-arana/RadarChart.js"></script>
   <script src="js/grafico-arana/webchart.js"></script>
 </body>
