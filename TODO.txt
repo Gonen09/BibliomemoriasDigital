@@ -37,7 +37,13 @@
     - Agregar componentes [Listo]
     - Evitar cierre modal sin boton [Listo]
     - Evitar redimensionar area texto [Listo]
-  - Estructura home [Listo]
+  - Estructura home global [Listo]
+    - Estructura info inicial
+    - Estructura world-cloud
+      - Crear wordl-cloud [Listo]
+      - Importar y ordenar dependencias [Listo]
+      - Ajustar tamaño
+      - Ajustar valores [Listo]
 
  4) Busqueda
    - Estructura busqueda [Listo]

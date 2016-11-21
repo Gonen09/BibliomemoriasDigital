@@ -16,7 +16,6 @@
       <!-- Custom CSS -->
       <link href="css/general.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
-      <link href="css/grafico-arana.css" rel="stylesheet">
 
 </head>
 <body>
@@ -342,7 +341,9 @@
 
       <div class="col-sm-6"> <!-- Resultados busqueda -->
           <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: #001f90;"><h4 class="text-center"style="color:white;">Resultados</h4></div>
+            <div class="panel-heading" id="cabezera-panel">
+              <h4 class="text-center">Resultados</h4>
+            </div>
             <div class="panel-body">
                <div class="table-responsive">
                  <table class="table table-condensed table-hover table-borderless">
@@ -479,7 +480,7 @@
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap/bootstrap.min.js"></script>
   <!-- Grafico araña -->
-  <script src="js/grafico-arana/d3.v3.min.js"></script>
+  <script src="js/D3/d3.v3.min.js"></script>
   <script src="js/grafico-arana/RadarChart.js"></script>
   <script src="js/grafico-arana/webchart.js"></script>
 </body>
