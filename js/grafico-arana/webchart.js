@@ -1,6 +1,50 @@
-var w = 500, h = 500;
+var w = 500,
+	h = 500;
 
 var colorscale = d3.scale.category10();
+
+//Legend titles
+var LegendOptions = ['ACM','Perfil de la tesis'];
+
+//Data
+var d = [
+		  [
+			{axis: "Inteligencia Artificial",value:0.59},
+			{axis: "Base de Datos",value:0.6},
+			{axis: "Ingeniería de Software",value:0.32},
+			{axis: "Comunicación de Datos y Redes",value:0.34},
+			{axis: "Computing Science",value: 0.4},
+			{axis: "Software Engineering",value: 0.11},
+			{axis: "Information System",value: 0.27},
+			{axis: "Computer Engineering", value: 0.36},
+			{axis: "Information Technology", value: 0.12}
+		  ],
+		  [
+			{axis: "Inteligencia Artificial",value:0.59},
+			{axis: "Base de Datos",value:0.56},
+			{axis: "Ingeniería de Software",value:0.42},
+			{axis: "Comunicación de Datos y Redes",value:0.34},
+			{axis: "Computing Science",value: 0.48},
+			{axis: "Software Engineering",value: 0.41},
+			{axis: "Information System",value: 0.27},
+			{axis: "Computer Engineering", value: 0.3},
+			{axis: "Information Technology", value: 0.12}
+		  ]
+		];
+
+//Opciones para el grafico araña, si no se configuran se cargaran las por defecto,
+//para cambiar de posicion el grafico configurar RadarChart.js
+var mycfg = {
+  w: 300,													// Tamaño grafico horizontal
+  h: 300,													// Tamaño grafico vertical
+  maxValue: 0.6,
+  levels: 6,
+  ExtraWidthX: 300
+}
+
+//Call function to draw the Radar chart
+//Will expect that data is in %'s
+RadarChart.draw("#chart", d, mycfg);
 
 ////////////////////////////////////////////
 /////////// Initiate legend ////////////////
@@ -11,7 +55,7 @@ var svg = d3.select('#body-chart')
 	.append('svg')
 	.attr("width", w+300)
 	.attr("height", h)
-;
+
 //Create the title for the legend
 var text = svg.append("text")
 	.attr("class", "title")
@@ -22,14 +66,14 @@ var text = svg.append("text")
 	.attr("font-style","italic")										// Cursiva
 	.attr("font-weight","bold")											// Negrita
 	.attr("fill", "#404040")
-	.text("Perfil del alumno VS Perfiles de ACM"); // CAMBIAR EL TITULO DEL GRÁFICO
+	.text("Perfil del alumno VS Perfiles de ACM");  // Cambiar titulo
 
 //Initiate Legend
 var legend = svg.append("g")
 	.attr("class", "legend")
 	.attr("height", 100)
 	.attr("width", 200)
-	.attr('transform', 'translate(-200,20)') // Posicion leyenda (x,y) : x- = izquierda , x+ = derecha ; y- = arriba , y+ = abajo
+	.attr('transform', 'translate(-200,20)')	// Posicion leyenda (x,y) : x- = izquierda , x+ = derecha ; y- = arriba , y+ = abajo
 	;
 	//Create colour squares
 	legend.selectAll('rect')
