@@ -221,38 +221,44 @@
         <div class="row content">
             <!-- Blog Entries Column -->
             <div class="col-sm-9">
-                <div class="row content">
-                  <h1 class="page-header">
-                      Recuperación de la Información
-                      <small> Electivo III</small>
-                  </h1>
+                <div class="row" id="inicio">
+                  <div class="col-sm-12">
+                    <h1 class="page-header">
+                        Recuperación de la Información
+                        <small> Electivo III</small>
+                    </h1>
+                  </div>
                 </div>
                 <hr>
-                <div class="row content">
-                  <!-- First Blog Post -->
-                  <h2>
-                      <a href="#">Blog Post Title</a>
-                  </h2>
-                  <p class="lead">
-                      by <a href="index.php">Start Bootstrap</a>
-                  </p>
-                  <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
-                  <hr>
-                  <img class="img-responsive" src="image/900x300.png" alt="">
-                  <hr>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                  <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <div class="row" id="blog">
+                  <div class="col-sm-12">
+                    <!-- First Blog Post -->
+                    <h2>
+                        <a href="#">Blog Post Title</a>
+                    </h2>
+                    <p class="lead">
+                        by <a href="index.php">Start Bootstrap</a>
+                    </p>
+                    <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
+                    <hr>
+                    <img class="img-responsive" src="image/900x300.png" alt="">
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
+                    <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                  </div>
                 </div>
                 <hr>
-                <div class="row content">
-                  <div class="panel panel-default">
-                    <div class="panel-heading" id="cabezera-panel">
-                      <h4 class="text-center">BiblioMemorias Digital WorldCloud</h4>
-                    </div>
-                    <div class="panel-body">
-                        <div id="cloud">
+                <div class="row" id="worldcloud">
+                  <div class="col-sm-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading" id="cabezera-panel">
+                        <h4 class="text-center">BiblioMemorias Digital WorldCloud</h4>
+                      </div>
+                      <div class="panel-body">
+                          <div id="cloud">
 
-                        </div>
+                          </div>
+                      </div>
                     </div>
                   </div>
                 </div>

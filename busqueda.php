@@ -16,7 +16,6 @@
       <!-- Custom CSS -->
       <link href="css/general.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
-      <link href="css/grafico-arana.css" rel="stylesheet">
 
 </head>
 <body>
@@ -484,5 +483,6 @@
   <script src="js/D3/d3.v3.min.js"></script>
   <script src="js/grafico-arana/RadarChart.js"></script>
   <script src="js/grafico-arana/webchart.js"></script>
+  <script src="js/grafico-arana/createWeb.js"></script>
 </body>
 </html>
