@@ -221,44 +221,41 @@
         <div class="row content">
             <!-- Blog Entries Column -->
             <div class="col-sm-9">
-
-                <h1 class="page-header">
-                    Recuperación de la Información
-                    <small> Electivo III</small>
-                </h1>
-
-                <!-- First Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
+                <div class="row content">
+                  <h1 class="page-header">
+                      Recuperación de la Información
+                      <small> Electivo III</small>
+                  </h1>
+                </div>
                 <hr>
-                <img class="img-responsive" src="image/900x300.png" alt="">
+                <div class="row content">
+                  <!-- First Blog Post -->
+                  <h2>
+                      <a href="#">Blog Post Title</a>
+                  </h2>
+                  <p class="lead">
+                      by <a href="index.php">Start Bootstrap</a>
+                  </p>
+                  <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
+                  <hr>
+                  <img class="img-responsive" src="image/900x300.png" alt="">
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
+                  <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
                 <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <div class="row content">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" id="cabezera-panel">
+                      <h4 class="text-center">BiblioMemorias Digital WorldCloud</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div id="cloud">
 
-                <hr>
-
-                <!-- Second Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
-                <hr>
-                <img class="img-responsive" src="image/900x300.png" alt="">
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                <hr>
-
+                        </div>
+                    </div>
+                  </div>
+                </div>
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
@@ -324,5 +321,12 @@
     <script src="js/bootstrap/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- Graficos -->
+    <script src="js/D3/d3.v3.min.js"></script>
+    <!-- worldcloud-->
+    <script src="js/worldcloud/d3.layout.cloud.js"></script>
+    <script src="js/worldcloud/worldcloud.js"></script>
+    <script src="js/worldcloud/createCloud.js"></script>
+
 </body>
 </html>
