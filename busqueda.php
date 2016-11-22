@@ -16,6 +16,7 @@
       <!-- Custom CSS -->
       <link href="css/general.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
+      <link href="css/common.css" rel="stylesheet">
 
 </head>
 <body>
@@ -321,8 +322,26 @@
 
   <div class="row content">
       <div class="col-sm-6"> <!-- Panal resultados -->
-        <div class="well">
-          <h2>Grafico Panal</h2>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="panel panel-default">
+              <div class="panel-heading" id="cabezera-panel">
+                <h4 class="text-center">Panal</h4>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-12"> <!-- Agregar contenido para agrandar el grafico flotante -->
+                    <br><br><br><br><br><br>
+                    <br><br><br><br><br><br>
+                    <br><br><br><br><br><br>
+                    <br><br><br><br><br><br>
+                    <br><br><br><br>
+                    <div id="visualization"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div> <!-- col-sm-6 -->
 
@@ -332,6 +351,7 @@
               <h4 class="text-center">Resultados</h4>
             </div>
             <div class="panel-body">
+
                <div class="table-responsive">
                  <table class="table table-condensed table-hover table-borderless">
                    <tbody>
@@ -399,30 +419,10 @@
                        </tr>
                      </div>
 
-                     <div id="resultado">
-                       <tr>
-                         <td class="col-sm-1">
-                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
-                           <br>
-                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
-                         </td>
-                         <td class="col-sm-10">
-                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
-                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
-                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
-                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
-                         </td>
-                         <td class="col-sm-1">
-                           <img src="image/chart.png" alt="grafico" class="img-responsive">
-                           <br>
-                           <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
-                         </td>
-                       </tr>
-                     </div>
-
                     </tbody>
                   </table>
                </div>
+            </div>
               <hr>
               <div align="center">
                 <nav aria-label="Page navigation">
@@ -466,6 +466,10 @@
   <script src="js/bootstrap/jquery.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap/bootstrap.min.js"></script>
+  <!-- Grafico panal -->
+  <script src="js/panal/carrotsearch.foamtree.js"></script>
+  <script src="js/panal/hammer.min.js"></script>
+  <script src="js/panal/ejemplo1.js"></script>
   <!-- Grafico araña -->
   <script src="js/D3/d3.v3.min.js"></script>
   <script src="js/grafico-arana/RadarChart.js"></script>
