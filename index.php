@@ -40,13 +40,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">BiblioMemorias Digital</a>
+                <a class="navbar-brand">BiblioMemorias Digital</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="index.php">Inicio</a></li>
-                  <li><a href="busqueda.php">Buscar Tesis</a></li>
+                  <li><a href="busqueda.php">Buscar Memorias</a></li>
                   <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
                   <li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
                   <li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
@@ -218,7 +218,7 @@
 
     <!-- Page Content -->
     <div class="container-fluid">
-        <div class="row content">
+        <div class="row content" id="canvas">
             <div class="container-fluid">
               <h1 class="page-header text-primary">
                   Recuperación de la Información
@@ -355,6 +355,8 @@
     <script src="js/bootstrap/jquery.min.js"></script>
     <!-- Tooltip -->
     <script src="js/live.js"></script>
+    <script src="js/fireworks.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- Graficos -->
