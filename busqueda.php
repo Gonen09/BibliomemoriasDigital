@@ -288,20 +288,6 @@
 
     <div class="col-sm-3">
 
-        <!-- Blog Search Well -->
-        <div class="well">
-            <h4>Búsqueda</h4>
-            <div class="input-group">
-                <input type="text" class="form-control">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">
-                        <span class="glyphicon glyphicon-search"></span>
-                </button>
-                </span>
-            </div>
-            <!-- /.input-group -->
-        </div>
-
         <!-- Blog Categories Well -->
         <div class="well">
             <h4>Categorias</h4>
@@ -309,14 +295,10 @@
                 <!-- /.col-lg-6 -->
                 <div class="col-lg-12">
                     <ul class="list-unstyled">
-                        <li><a href="#">Ingeniería de Software</a>
-                        </li>
-                        <li><a href="#">Inteligencia Artificial</a>
-                        </li>
-                        <li><a href="#">Base de datos</a>
-                        </li>
-                        <li><a href="#">Telecomunicaciones</a>
-                        </li>
+                      <li><a href="#">Ingeniería de Software</a></li>
+                      <li><a href="#">Inteligencia Artificial</a></li>
+                      <li><a href="#">Base de datos</a></li>
+                      <li><a href="#">Telecomunicaciones</a></li>
                     </ul>
                 </div>
                 <!-- /.col-lg-6 -->
@@ -326,8 +308,13 @@
 
         <!-- Side Widget Well -->
         <div class="well">
-            <h4>Side Widget Well</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+          <h4>Sitios de interes</h4>
+          <ul class="list-unstyled">
+              <li><a href="http://www.userena.cl/">Universidad de La Serena</a></li>
+              <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
+              <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
+              <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
+          </ul>
         </div>
     </div> <!-- col-sm-3 -->
   </div> <!-- row content -->

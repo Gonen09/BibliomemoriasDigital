@@ -219,37 +219,50 @@
     <!-- Page Content -->
     <div class="container-fluid">
         <div class="row content">
-            <!-- Blog Entries Column -->
+            <div class="container-fluid">
+              <h1 class="page-header text-primary">
+                  Recuperación de la Información
+                  <small> Electivo III</small>
+              </h1>
+            </div>
             <div class="col-sm-9">
                 <div class="row" id="inicio">
                   <div class="col-sm-12">
-                    <h1 class="page-header">
-                        Recuperación de la Información
-                        <small> Electivo III</small>
-                    </h1>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" id="cabezera-panel">
+                        <h4 class="text-center">BiblioMemorias Digital Universidad de La Serena</h4>
+                      </div>
+                      <div class="panel-body">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="well col-sm-8">
+                              <h3>El Electivo III <strong class="text-primary"data-toggle="tooltip" data-placement="right" title="vivo!!!">esta vivo !!!</strong></h3>
+                              <br>
+                              <p>
+                                Bienvenido a nuestro repositorio de <strong>Memorias de Titulo</strong> de la carrera <strong>Ingeniería en
+                                Computación e Informática</strong> de la <strong>Universidad de La Serena</strong>.
+                              </p>
+                              <p>
+                                El proposito de este repositorio es administrar de manera eficiente las <strong>memorias de titulo</strong>
+                                de la carrera, subiendo de forma digital las memorias de titulo,
+                                con un <strong>formato definido</strong> por la escuela de ingeniería en computación, para que los estudiantes,
+                                academicos u persona interesada en trabajos en el area de <strong>Redes y telecominicaciones</strong>, <strong>Base de Datos</strong>
+                                <strong>Ingeniería de Software</strong> e <strong>Inteligencia Artificial</strong> puedan obtener información para su uso personal.
+                              </p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img class="img-responsive img-rounded" src="image/biblio.png" alt="biblio-digital">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <hr>
-                <div class="row" id="blog">
-                  <div class="col-sm-12">
-                    <!-- First Blog Post -->
-                    <h2>
-                        <a href="#">Blog Post Title</a>
-                    </h2>
-                    <p class="lead">
-                        by <a href="index.php">Start Bootstrap</a>
-                    </p>
-                    <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
-                    <hr>
-                    <img class="img-responsive" src="image/900x300.png" alt="">
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                    <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-                  </div>
-                </div>
+
                 <hr>
                 <div class="row" id="worldcloud">
-                  <div class="col-sm-12">
+                  <div class="col-sm-6">
                     <div class="panel panel-default">
                       <div class="panel-heading" id="cabezera-panel">
                         <h4 class="text-center">BiblioMemorias Digital WorldCloud</h4>
@@ -258,6 +271,20 @@
                           <div id="cloud">
 
                           </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading" id="cabezera-panel">
+                        <h4 class="text-center">BiblioMemorias Digital Estadisticas</h4>
+                      </div>
+                      <div class="panel-body">
+                        <br>
+                        <h2 class="text-center text-primary">Memorias subidas al sitio</h2>
+                        <br>
+                        <img class="img-responsive" src="image/web-graph.png" alt="grafico-web">
+                        <br>
                       </div>
                     </div>
                   </div>
@@ -286,16 +313,12 @@
                     <h4>Categorias</h4>
                     <div class="row">
                         <!-- /.col-lg-6 -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <ul class="list-unstyled">
-                                <li><a href="#">Ingeniería de Software</a>
-                                </li>
-                                <li><a href="#">Inteligencia Artificial</a>
-                                </li>
-                                <li><a href="#">Base de datos</a>
-                                </li>
-                                <li><a href="#">Telecomunicaciones</a>
-                                </li>
+                                <li><a href="#">Ingeniería de Software</a></li>
+                                <li><a href="#">Inteligencia Artificial</a></li>
+                                <li><a href="#">Base de datos</a></li>
+                                <li><a href="#">Telecomunicaciones</a></li>
                             </ul>
                         </div>
                         <!-- /.col-lg-6 -->
@@ -305,8 +328,13 @@
 
                 <!-- Side Widget Well -->
                 <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                    <h4>Sitios de interes</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
+                        <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
+                        <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
+                        <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
+                    </ul>
                 </div>
             </div>
         </div>   <!-- /.row -->
@@ -325,6 +353,8 @@
 
     <!-- jQuery -->
     <script src="js/bootstrap/jquery.min.js"></script>
+    <!-- Tooltip -->
+    <script src="js/live.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- Graficos -->
