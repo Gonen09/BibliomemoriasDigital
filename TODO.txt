@@ -12,7 +12,7 @@
    - Estructura Bootstrap [Listo]
 
 3) Home
-  - Linkiar pagina inicial [Listo]
+  - Vincular pagina inicial [Listo]
   - Banner centrarlo y quitar padding-top [Listo]
   - Centrar footer [Listo]
   - Estructura navbar [Listo]
@@ -42,7 +42,7 @@
     - Estructura info inicial [Listo]
       - Agregar info [Listo]
       - Agregar imagen [Listo]
-    - Estructura world-cloud
+    - Estructura grafico world-cloud
       - Crear wordl-cloud [Listo]
       - Importar y ordenar dependencias [Listo]
       - Ajustar tamaño
@@ -62,11 +62,40 @@
 
  4) Busqueda
    - Estructura busqueda [Listo]
+    - Busqueda avanzada [Listo]
+        - Agregar botones de busqueda [Listo]
+        - Crear motor agregar o quitar botones de busqueda [Re-Asignado]
+        - Obtener consulta botones de busqueda [Re-Asignado]
+        - Enviar datos botones de busqueda [Re-Asignado]
+    - facets
+      - Categorias [Listo]
+        - Contenido [Listo]
+        - Referencias
+      - Sitios de interes [Listo]
+        - Contenido [Listo]
+        - Referencias [Listo]
+    - Estructura panal
+      - Estructura panel [Listo]
+    - Estructura resultados
+      - Estructura panel [Listo]
+      - Estructura tabla
+        - Componentes [Listo]
+          - PDF [Listo]
+            - Imagen y referencia [Listo]
+          - Informacion memoria  [Listo]
+          - grafico araña [Listo]
+            - Imagen y referencia [Listo]
+            - Crear araña [Listo]
+            - Importar y ordenar dependencias [Listo]
+            - Ajustar tamaño [Listo]
+              - tamaño grafico [Listo]
+              - tamaño leyenda [Listo]
+              - posicion grafico [Listo]
+              - posicion leyenda [Listo]
+            - Ajustar datos [Listo]
+            - crear ventana modal [Listo]
+              - estructura modal [Listo]
    - Crear css busqueda [Listo]
-   - Agregar botones de busqueda [Listo]
-   - Crear motor agregar o quitar botones de busqueda [Re-Asignado]
-   - Obtener consulta botones de busqueda [Re-Asignado]
-   - Enviar datos botones de busqueda [Re-Asignado]
 
   5) Resultados
     - Estructura resultados [Listo]
