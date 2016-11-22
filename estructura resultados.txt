@@ -1,0 +1,25 @@
+          <div class="container-fluid">
+            <div class="row center-block row-eq-height">
+
+                <div class="col-sm-1" style="vertical-align: middle;">
+                    <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                    <p class="text-center"><a href="#">Ver</a></p>
+                </div>
+
+                <div class="col-sm-7">
+                    <h3>Titulo Tesis FDFDFFD</h3>
+                    <p><i>Autores</i> </p>
+                    <p><span class="glyphicon glyphicon-time"></span> 18/11/2016</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
+                </div>
+
+                <div class="col-sm-4">
+                      <img src="image/web-graph.png" alt="grafico" class="img-responsive img-thumbnail">
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 well">
+
+              </div>
+            </div>
+          </div>
