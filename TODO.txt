@@ -56,9 +56,9 @@
       - Categorias
         - Contenido [Listo]
         - Referencias
-      - Sitios de interes
-        - Contenido
-        - Referencias
+      - Sitios de interes [Listo]
+        - Contenido [Listo]
+        - Referencias [Listo]
 
  4) Busqueda
    - Estructura busqueda [Listo]
