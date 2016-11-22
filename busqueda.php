@@ -41,13 +41,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">BiblioMemorias Digital</a>
+                <a class="navbar-brand">BiblioMemorias Digital</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                   <li><a href="index.php">Inicio</a></li>
-                  <li class="active"><a href="#">Buscar Tesis</a></li>
+                  <li class="active"><a href="#">Buscar Memorias</a></li>
                   <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
                   <li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
                   <li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
@@ -257,22 +257,18 @@
             </div>
             <hr>
             <div id="criterios" class="row">
-               <div class="col-sm-3">
+               <div class="col-sm-5">
                  <select class="form-control">
                      <option>Titulo</option>
                      <option>Autor</option>
                      <option>Profesor guia</option>
                      <option>Año</option>
                      <option>Topico</option>
+                     <option>Abstract</option>
+                     <option>Contenido</option>
                  </select>
                </div>
-               <div class="col-sm-3">
-                 <select class="form-control">
-                     <option>Es</option>
-                     <option>Contiene</option>
-                 </select>
-               </div>
-               <div class="col-sm-4">
+               <div class="col-sm-5">
                  <div class="form-group">
                    <input type="text" class="form-control" id="usr" placeholder="Contenido">
                  </div>
@@ -356,69 +352,75 @@
                  <table class="table table-condensed table-hover table-borderless">
                    <tbody>
 
-                     <div id="resultado">
-                       <tr>
-                         <td class="col-sm-1">
-                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
-                           <br>
-                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
-                         </td>
-                         <td class="col-sm-10">
-                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
-                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
-                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
-                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
-                         </td>
-                         <td class="col-sm-1">
-                           <img src="image/chart.png" alt="grafico" class="img-responsive">
-                           <br>
-                           <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
-                         </td>
-                       </tr>
-                     </div>
-
-                     <div id="resultado">
-                       <tr>
-                         <td class="col-sm-1">
-                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
-                           <br>
-                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
-                         </td>
-                         <td class="col-sm-10">
-                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
-                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
-                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
-                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
-                         </td>
-                         <td class="col-sm-1">
-                           <img src="image/chart.png" alt="grafico" class="img-responsive">
-                           <br>
-                           <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
-                         </td>
-                       </tr>
-                     </div>
-
-                     <div id="resultado">
-                       <tr>
-                         <td class="col-sm-1">
-                           <img src="image/pdf.png" alt="pdf" class="img-responsive">
-                           <br>
-                           <p class="text-center"><a href="#" id="archivo">Ver</a></p>
-                         </td>
-                         <td class="col-sm-10">
-                           <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
-                           <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
-                           <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
-                           <h4><strong>Año: </strong><i id="ano">2016</i></h4>
-                         </td>
-                         <td class="col-sm-1">
-                           <img src="image/chart.png" alt="grafico" class="img-responsive">
-                           <br>
-                           <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
-                         </td>
-                       </tr>
-                     </div>
-
+                       <div id="resultado" class="row">
+                         <tr>
+                           <td class="col-sm-1">
+                             <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                             <br>
+                             <p class="text-center"><a href="#" id="archivo">Ver</a></p>
+                           </td>
+                           <td class="col-sm-1">
+                             <img src="image/chart.png" alt="grafico" class="img-responsive">
+                             <br>
+                             <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
+                           </td>
+                           <td class="col-sm-1">
+                             <hr>
+                           </td>
+                           <td class="col-sm-9">
+                             <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
+                             <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
+                             <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
+                             <h4><strong>Año: </strong><i id="ano">2016</i></h4>
+                           </td>
+                         </tr>
+                       </div>
+                       <div id="resultado" class="row">
+                         <tr>
+                           <td class="col-sm-1">
+                             <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                             <br>
+                             <p class="text-center"><a href="#" id="archivo">Ver</a></p>
+                           </td>
+                           <td class="col-sm-1">
+                             <img src="image/chart.png" alt="grafico" class="img-responsive">
+                             <br>
+                             <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
+                           </td>
+                           <td class="col-sm-1">
+                             <hr>
+                           </td>
+                           <td class="col-sm-9">
+                             <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
+                             <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
+                             <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
+                             <h4><strong>Año: </strong><i id="ano">2016</i></h4>
+                           </td>
+                         </tr>
+                       </div>
+                       <div id="resultado" class="row">
+                         <tr>
+                           <td class="col-sm-1">
+                             <img src="image/pdf.png" alt="pdf" class="img-responsive">
+                             <br>
+                             <p class="text-center"><a href="#" id="archivo">Ver</a></p>
+                           </td>
+                           <td class="col-sm-1">
+                             <img src="image/chart.png" alt="grafico" class="img-responsive">
+                             <br>
+                             <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
+                           </td>
+                           <td class="col-sm-1">
+                             <hr>
+                           </td>
+                           <td class="col-sm-9">
+                             <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
+                             <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
+                             <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
+                             <h4><strong>Año: </strong><i id="ano">2016</i></h4>
+                           </td>
+                         </tr>
+                       </div>
                     </tbody>
                   </table>
                </div>
