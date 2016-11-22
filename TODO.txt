@@ -38,12 +38,27 @@
     - Evitar cierre modal sin boton [Listo]
     - Evitar redimensionar area texto [Listo]
   - Estructura home global [Listo]
-    - Estructura info inicial
+    - Alinear encabezado pagina con la estructura [listo]
+    - Estructura info inicial [Listo]
+      - Agregar info [Listo]
+      - Agregar imagen [Listo]
     - Estructura world-cloud
       - Crear wordl-cloud [Listo]
       - Importar y ordenar dependencias [Listo]
       - Ajustar tamaño
       - Ajustar valores [Listo]
+    - Estructura estadisticas [Listo]
+      - Agregar grafico
+    - Estructura facets
+      - Busqueda
+        - Contenido [Listo]
+        - Motor busqueda
+      - Categorias
+        - Contenido [Listo]
+        - Referencias
+      - Sitios de interes
+        - Contenido
+        - Referencias
 
  4) Busqueda
    - Estructura busqueda [Listo]
