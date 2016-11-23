@@ -245,42 +245,71 @@
   <div class="row content">
 
     <div class="col-sm-9">
-        <div class="well">
-          <h4>Busqueda avanzada</h4>
-          <form id="formulario">
-            <div class="input-group">
-                <input type="text" id="busqueda" class="form-control" placeholder="Buscar ...." name="q">
-                <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit"
-                    onclick="enviar_formulario()"><i class="glyphicon glyphicon-search"></i></button>
-                </div>
-            </div>
-            <hr>
-            <div id="criterios" class="row">
-               <div class="col-sm-5">
-                 <select class="form-control">
-                     <option>Titulo</option>
-                     <option>Autor</option>
-                     <option>Profesor guia</option>
-                     <option>Año</option>
-                     <option>Topico</option>
-                     <option>Abstract</option>
-                     <option>Contenido</option>
-                 </select>
-               </div>
-               <div class="col-sm-5">
-                 <div class="form-group">
-                   <input type="text" class="form-control" id="usr" placeholder="Contenido">
-                 </div>
-               </div>
-               <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-success btn-md" onClick="add_campo(this);"><a href="#"><span id="icono-mas" class="glyphicon glyphicon-plus-sign"></span></a></button>
-                 <button type="button" class="btn btn-danger btn-md" onClick="delete_campo(this);"><a href="#"><span id="icono-menos" class="glyphicon glyphicon-minus-sign"></span></a></button>
-               </div>
-            </div>
-          </form>
-
+      <div class="panel panel-default">
+        <div class="panel-heading" id="cabezera-panel">
+          <h4 class="text-center">Búsquedas</h4>
         </div>
+        <div class="panel-body">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <form id="formulario">
+                <h3 class="text-primary"><strong>Búsqueda simple</strong></h3>
+                <div class="input-group">
+                    <input type="text" id="busqueda" class="form-control" placeholder="Buscar contenido" name="q">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit" onclick="enviar_formulario()"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="text-primary text-center"><strong>Búsqueda avanzada</strong></h3>
+              <br>
+              <div class="container">
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-xs-2 col-form-label">Titulo</label>
+                    <div class="col-xs-10">
+                      <input class="form-control" type="text" placeholder="Titulo memoria" id="example-text-input">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="example-search-input" class="col-xs-2 col-form-label">Autor(es)</label>
+                    <div class="col-xs-10">
+                      <input class="form-control" type="text" placeholder="Autor(es) memoria" id="example-search-input">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="example-email-input" class="col-xs-2 col-form-label">Profesor(es)</label>
+                    <div class="col-xs-10">
+                      <input class="form-control" type="text" placeholder="Profesor(es) memoria" id="example-email-input">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="example-url-input" class="col-xs-2 col-form-label">Año</label>
+                    <div class="col-xs-10">
+                      <input class="form-control" type="number" value="2000" id="example-number-input">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="example-tel-input" class="col-xs-2 col-form-label">Abstract</label>
+                    <div class="col-xs-10">
+                      <input class="form-control" type="text" placeholder="Resumen memoria" id="example-tel-input">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                      <button type="submit" class="btn btn-primary">Consultar</button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div> <!-- col-sm-9 -->
 
     <div class="col-sm-3">
