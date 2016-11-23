@@ -271,36 +271,54 @@
               <div class="form-group row">
                   <label for="example-text-input" class="col-xs-1 col-form-label">Titulo</label>
                   <div class="col-xs-11">
-                    <input class="form-control" type="text" placeholder="Titulo memoria" id="example-text-input">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Titulo memoria" id="example-text-input">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="example-search-input" class="col-xs-1 col-form-label">Autor</label>
                   <div class="col-xs-11">
-                    <input class="form-control" type="text" placeholder="Autor(es) memoria" id="example-search-input">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Autor(es) memoria" id="example-search-input">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="example-email-input" class="col-xs-1 col-form-label">Profesor</label>
                   <div class="col-xs-11">
-                    <input class="form-control" type="text" placeholder="Profesor(es) memoria" id="example-email-input">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Profesor(es) memoria" id="example-email-input">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="example-url-input" class="col-xs-1 col-form-label">Año</label>
                   <div class="col-xs-11">
-                    <input class="form-control" type="number" value="2000" id="example-number-input">
+                    <div class="input-group">
+                      <input class="form-control" type="number" value="2000" id="example-number-input">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="example-tel-input" class="col-xs-1 col-form-label">Abstract</label>
                   <div class="col-xs-11">
-                    <input class="form-control" type="text" placeholder="Resumen memoria" id="example-tel-input">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Resumen memoria" id="example-tel-input">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-xs-6 col-xs-offset-6">
-                    <button type="submit" class="btn btn-primary">Consultar</button>
+                    <button type="submit" class="btn btn-primary">
+                      <i class="glyphicon glyphicon-search"></i>
+                      Consultar
+                    </button>
                   </div>
                 </div>
             </div>
