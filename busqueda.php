@@ -111,7 +111,7 @@
                 </div>
                 <!--Footer-->
                 <div class="modal-footer">
-                  <div class="col-md-8 center-block">
+                  <div class="col-xs-8 col-xs-offset-4 center-block">
                     <button type="button" class="btn btn-primary">Enviar</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                   </div>
@@ -250,7 +250,6 @@
           <h4 class="text-center">Búsquedas</h4>
         </div>
         <div class="panel-body">
-
           <div class="row">
             <div class="col-sm-12">
               <form id="formulario">
@@ -266,46 +265,49 @@
           </div>
           <hr>
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-8" aling="center">
               <h3 class="text-primary text-center"><strong>Búsqueda avanzada</strong></h3>
               <br>
-              <div class="container">
+              <div class="form-group row">
+                  <label for="example-text-input" class="col-xs-1 col-form-label">Titulo</label>
+                  <div class="col-xs-11">
+                    <input class="form-control" type="text" placeholder="Titulo memoria" id="example-text-input">
+                  </div>
+                </div>
                 <div class="form-group row">
-                    <label for="example-text-input" class="col-xs-2 col-form-label">Titulo</label>
-                    <div class="col-xs-10">
-                      <input class="form-control" type="text" placeholder="Titulo memoria" id="example-text-input">
-                    </div>
+                  <label for="example-search-input" class="col-xs-1 col-form-label">Autor</label>
+                  <div class="col-xs-11">
+                    <input class="form-control" type="text" placeholder="Autor(es) memoria" id="example-search-input">
                   </div>
-                  <div class="form-group row">
-                    <label for="example-search-input" class="col-xs-2 col-form-label">Autor(es)</label>
-                    <div class="col-xs-10">
-                      <input class="form-control" type="text" placeholder="Autor(es) memoria" id="example-search-input">
-                    </div>
+                </div>
+                <div class="form-group row">
+                  <label for="example-email-input" class="col-xs-1 col-form-label">Profesor</label>
+                  <div class="col-xs-11">
+                    <input class="form-control" type="text" placeholder="Profesor(es) memoria" id="example-email-input">
                   </div>
-                  <div class="form-group row">
-                    <label for="example-email-input" class="col-xs-2 col-form-label">Profesor(es)</label>
-                    <div class="col-xs-10">
-                      <input class="form-control" type="text" placeholder="Profesor(es) memoria" id="example-email-input">
-                    </div>
+                </div>
+                <div class="form-group row">
+                  <label for="example-url-input" class="col-xs-1 col-form-label">Año</label>
+                  <div class="col-xs-11">
+                    <input class="form-control" type="number" value="2000" id="example-number-input">
                   </div>
-                  <div class="form-group row">
-                    <label for="example-url-input" class="col-xs-2 col-form-label">Año</label>
-                    <div class="col-xs-10">
-                      <input class="form-control" type="number" value="2000" id="example-number-input">
-                    </div>
+                </div>
+                <div class="form-group row">
+                  <label for="example-tel-input" class="col-xs-1 col-form-label">Abstract</label>
+                  <div class="col-xs-11">
+                    <input class="form-control" type="text" placeholder="Resumen memoria" id="example-tel-input">
                   </div>
-                  <div class="form-group row">
-                    <label for="example-tel-input" class="col-xs-2 col-form-label">Abstract</label>
-                    <div class="col-xs-10">
-                      <input class="form-control" type="text" placeholder="Resumen memoria" id="example-tel-input">
-                    </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-xs-6 col-xs-offset-6">
+                    <button type="submit" class="btn btn-primary">Consultar</button>
                   </div>
-                  <div class="form-group row">
-                    <div class="offset-sm-2 col-sm-10">
-                      <button type="submit" class="btn btn-primary">Consultar</button>
-                    </div>
-                  </div>
-              </div>
+                </div>
+            </div>
+            <div class="col-sm-4" align="center">
+                <br><br><br>
+                <img class="img-rounded img-responsive" src="image/find-advanced.png" alt="busqueda-avanzada">
+                <br><br><br>
             </div>
           </div>
         </div>

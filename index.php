@@ -110,7 +110,7 @@
                 </div>
                 <!--Footer-->
                 <div class="modal-footer">
-                  <div class="col-md-8 center-block">
+                  <div class="col-xs-8 col-xs-offset-4 center-block">
                     <button type="button" class="btn btn-primary">Enviar</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                   </div>
