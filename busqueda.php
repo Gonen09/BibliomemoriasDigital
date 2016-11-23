@@ -111,7 +111,7 @@
                 </div>
                 <!--Footer-->
                 <div class="modal-footer">
-                  <div class="col-md-8 center-block">
+                  <div class="col-xs-8 col-xs-offset-4 center-block">
                     <button type="button" class="btn btn-primary">Enviar</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                   </div>
@@ -245,42 +245,91 @@
   <div class="row content">
 
     <div class="col-sm-9">
-        <div class="well">
-          <h4>Busqueda avanzada</h4>
-          <form id="formulario">
-            <div class="input-group">
-                <input type="text" id="busqueda" class="form-control" placeholder="Buscar ...." name="q">
-                <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit"
-                    onclick="enviar_formulario()"><i class="glyphicon glyphicon-search"></i></button>
+      <div class="panel panel-default">
+        <div class="panel-heading" id="cabezera-panel">
+          <h4 class="text-center">Búsquedas</h4>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12">
+              <form id="formulario">
+                <h3 class="text-primary"><strong>Búsqueda simple</strong></h3>
+                <div class="input-group">
+                    <input type="text" id="busqueda" class="form-control" placeholder="Buscar contenido" name="q">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit" onclick="enviar_formulario()"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-8" aling="center">
+              <h3 class="text-primary text-center"><strong>Búsqueda avanzada</strong></h3>
+              <br>
+              <div class="form-group row">
+                  <label for="example-text-input" class="col-xs-2 col-form-label text-right">Titulo</label>
+                  <div class="col-xs-10">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Titulo memoria" id="example-text-input">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="example-search-input" class="col-xs-2 col-form-label text-right">Autor</label>
+                  <div class="col-xs-10">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Autor(es) memoria" id="example-search-input">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="example-email-input" class="col-xs-2 col-form-label text-right">Profesor</label>
+                  <div class="col-xs-10">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Profesor(es) memoria" id="example-email-input">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="example-url-input" class="col-xs-2 col-form-label text-right">Año</label>
+                  <div class="col-xs-10">
+                    <div class="input-group">
+                      <input class="form-control" type="number" value="2000" id="example-number-input">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="example-tel-input" class="col-xs-2 col-form-label text-right">Abstract</label>
+                  <div class="col-xs-10">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Resumen memoria" id="example-tel-input">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-xs-6 col-xs-offset-6">
+                    <button type="submit" class="btn btn-primary">
+                      <i class="glyphicon glyphicon-search"></i>
+                      Consultar
+                    </button>
+                  </div>
                 </div>
             </div>
-            <hr>
-            <div id="criterios" class="row">
-               <div class="col-sm-5">
-                 <select class="form-control">
-                     <option>Titulo</option>
-                     <option>Autor</option>
-                     <option>Profesor guia</option>
-                     <option>Año</option>
-                     <option>Topico</option>
-                     <option>Abstract</option>
-                     <option>Contenido</option>
-                 </select>
-               </div>
-               <div class="col-sm-5">
-                 <div class="form-group">
-                   <input type="text" class="form-control" id="usr" placeholder="Contenido">
-                 </div>
-               </div>
-               <div class="col-sm-2 container">
-                 <button type="button" class="btn btn-success btn-md" onClick="add_campo(this);"><a href="#"><span id="icono-mas" class="glyphicon glyphicon-plus-sign"></span></a></button>
-                 <button type="button" class="btn btn-danger btn-md" onClick="delete_campo(this);"><a href="#"><span id="icono-menos" class="glyphicon glyphicon-minus-sign"></span></a></button>
-               </div>
+            <div class="col-sm-4" align="center">
+                <br><br><br>
+                <img class="img-rounded img-responsive" src="image/find-advanced.png" alt="busqueda-avanzada">
+                <br><br><br>
             </div>
-          </form>
-
+          </div>
         </div>
+      </div>
     </div> <!-- col-sm-9 -->
 
     <div class="col-sm-3">
