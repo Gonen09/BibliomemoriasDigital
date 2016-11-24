@@ -16,7 +16,7 @@
       <!-- Custom CSS -->
       <link href="css/general.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
-      <link href="css/common.css" rel="stylesheet">
+      <link href="css/panal.css" rel="stylesheet">
 
 </head>
 <body>
@@ -533,8 +533,6 @@
       </div>  <!-- /.row -->
   </footer>  <!-- Footer -->
 
-  <!-- Agregar boton de busqueda -->
-  <script src="js/add_campo.js"></script>
   <!-- jQuery -->
   <script src="js/bootstrap/jquery.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
