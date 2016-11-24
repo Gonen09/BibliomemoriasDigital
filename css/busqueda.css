@@ -21,6 +21,11 @@
   background-color: #001f90;
   color: white;
 }
+
+#busqueda-avanzada {
+    color: #0645AD;
+}
+
 /*Quitar bordes tabla resultados*/
  .table-borderless tbody tr td,
  .table-borderless tbody tr th,
