@@ -12,9 +12,24 @@
  }
 
 /*Colores botones + y -*/
- #icono-mas, #icono-menos{
+ #icono-mas, #icono-menos {
    color:#fff;
  }
+
+/*busqueda-simple*/
+#busqueda-simple {
+  width: 50%;
+}
+/*busqueda avanzada*/
+#busqueda-avanzada:hover {
+  background-color: #001f90;
+  color: white;
+}
+
+#busqueda-avanzada {
+    color: #0645AD;
+}
+
 
 /*Quitar bordes tabla resultados*/
  .table-borderless tbody tr td,
