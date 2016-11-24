@@ -245,25 +245,34 @@
   </div>
 
 <div class="container-fluid">
-  <div class="row content">
-
+  <div class="row">
     <div class="col-sm-9">
       <div class="panel panel-default">
         <div class="panel-heading" id="cabezera-panel">
           <h4 class="text-center">Búsquedas</h4>
         </div>
         <div class="panel-body">
-          <div class="row">
-            <div class="col-sm-12">
-              <form id="formulario">
-                <h3 class="text-primary"><strong>Búsqueda simple</strong></h3>
-                <div class="input-group">
-                    <input type="text" id="busqueda" class="form-control" placeholder="Buscar contenido" name="q">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit" onclick="enviar_formulario()"><i class="glyphicon glyphicon-search"></i></button>
+          <div class="container" aling="center">
+            <div class="row">
+              <div class="col-md-12">
+                <form id="formulario">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <h3 class="text-primary"><strong>Búsqueda simple</strong></h3>
+                        <br>
+                        <div class="input-group">
+                          <input type="text" id="busqueda" class="form-control" placeholder="Buscar contenido" name="q">
+                          <div class="input-group-btn">
+                              <button class="btn btn-default" type="submit" onclick="enviar_formulario()"><i class="glyphicon glyphicon-search"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4" align="center">
+                        <img class="img-rounded" src="image/find-simple.png" alt="busqueda-simple"  id="busqueda-simple">
+                      </div>
                     </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
           <hr>
@@ -378,7 +387,7 @@
     </div> <!-- col-sm-3 -->
   </div> <!-- row content -->
 
-  <div class="row content">
+  <div class="row">
       <div class="col-sm-6"> <!-- Panal resultados -->
         <div class="row">
           <div class="col-sm-12">
