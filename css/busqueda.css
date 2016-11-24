@@ -12,10 +12,15 @@
  }
 
 /*Colores botones + y -*/
- #icono-mas, #icono-menos{
+ #icono-mas, #icono-menos {
    color:#fff;
  }
 
+/*busqueda avanzada*/
+#busqueda-avanzada:hover {
+  background-color: #001f90;
+  color: white;
+}
 /*Quitar bordes tabla resultados*/
  .table-borderless tbody tr td,
  .table-borderless tbody tr th,
