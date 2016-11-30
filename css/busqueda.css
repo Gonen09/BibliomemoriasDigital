@@ -30,6 +30,10 @@
     color: #0645AD;
 }
 
+/*Paginacion resultados*/
+.search-pagination {
+  padding: 0px;
+}
 
 /*Quitar bordes tabla resultados*/
  .table-borderless tbody tr td,
