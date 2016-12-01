@@ -1,0 +1,1 @@
+ INSERT INTO administradores VALUES(null,'18754386k','1fe98223f1bbc4b93a1246a9fd9065f0',1);
