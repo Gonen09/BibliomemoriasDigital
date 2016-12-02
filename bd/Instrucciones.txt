@@ -1,0 +1,14 @@
+Administrar BD: phpMyAdmin
+
+XAMPP Control Panel -> [MySQL] - Admin
+
+Crear nueva base datos: - Nombre = memoteca
+                        - codificacion: utf8_spanish_ci
+
+Importar scripts SQL: [Con la base de datos seleccionada ir a "Importar"]
+
+----- LOGIN -----
+
+1) administradores.sql
+2) crear_admin_sitio.sql
+3) usuario_bd.sql
