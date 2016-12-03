@@ -184,11 +184,12 @@
 					<div class="sidebar content-box" style="display: block;">
 						<ul class="nav">
 							<!-- Main menu -->
-							<li class="current"><a href="subir_tesis.html"><i class="glyphicon glyphicon-upload"></i> Subir tesis </a></li>
-							<li><a href="dashboard.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
-							<li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Estadísticas (Gráficos)</a></li>
+							<li><a href="dashboard.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
+							<li class="current"><a href="subir_memoria.php"><i class="glyphicon glyphicon-upload"></i> Subir memorias </a></li>
+							<li><a href="listar_memorias.php"><i class="glyphicon glyphicon-list-alt"></i> Lista de memorias</a></li>
+						</ul>
 					</div>
-				</div> <!-- col-md-2 -->
+				</div> <!-- col-md32 -->
 
 				<div class="col-md-10">
 					<div class="container">
@@ -256,7 +257,7 @@
 
 										  <legend>Archivo PDF</legend>
 											<div class="form-group">
-												<label class="col-md-1 control-label">Ingrese archivo PDF	</label>
+												<label class="col-md-1 control-label"> Ingrese archivo PDF	</label>
 												<div class="col-md-11">
 													<div class="input-group">
 														<span class="input-group-addon"><i class="glyphicon glyphicon-open-file"></i></span>
@@ -269,9 +270,9 @@
 					  			</div>
 			  				</div>
 						</div><!--col-md-12-->
-					</div><!--row-->
-				</div><!--col-md-10-->
-			</div> <!-- row -->
+				</div><!--row-->
+			</div><!--col-md-9-->
+		</div> <!-- row -->
 
 		<!-- Footer -->
 		<footer>
@@ -286,6 +287,6 @@
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/bootstrap/bootstrap.min.js"></script>
-		<script src="js/administrador/custom.js"></script>
+		<script src="js/administrador/custom.js"></script
 	  </body>
 </html>

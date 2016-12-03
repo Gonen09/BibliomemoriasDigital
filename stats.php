@@ -183,9 +183,9 @@
                 <div class="sidebar content-box" style="display: block;">
                     <ul class="nav">
                         <!-- Main menu -->
-                        <li><a href="subir_tesis.html"><i class="glyphicon glyphicon-upload"></i> Subir tesis </a></li>
-                        <li><a href="dashboard.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
-                        <li class="current"><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Estadísticas (Gráfocps)</a></li>
+                        <li><a href="subir_memoria.php"><i class="glyphicon glyphicon-upload"></i> Subir memorias </a></li>
+                        <li><a href="dashboard.php"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                        <li class="current"><a href="stats.php"><i class="glyphicon glyphicon-stats"></i> Estadísticas (Gráfocps)</a></li>
                     </ul>
                  </div>
               </div>
