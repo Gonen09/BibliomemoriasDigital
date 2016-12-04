@@ -38,6 +38,13 @@
         - Crear usuario [Listo]
       - Archivos de conexion
       - Integracion
+        - Validar datos login
+        - Direccionar pagina [Listo]
+        - Error login
+        - Iniciar sesion [Listo]
+        - Seguridad login con MD5
+        - Cerrar session
+        - Sesiones php
   - Formulario de contacto [Listo]
     - Banner contacto [Listo]
     - Estructura contacto [Listo]

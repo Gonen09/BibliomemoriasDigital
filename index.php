@@ -184,6 +184,8 @@
   <!-- Modal Login -->
   <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
+        <!-- <form action="JavaScript:enviar_consulta('login-modal','respuesta')" method="post" id="login-modal"> -->
+        <form action="php/consulta_login.php" method="post" id="login-modal">
           <!--Content-->
           <div class="modal-content">
               <!--Body-->
@@ -193,7 +195,7 @@
                     <div class="md-form">
                       <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Usuario">
+                        <input id="login-username" type="text" class="form-control" name="user" placeholder="Usuario">
                       </div>
                     </div>
                     <br>
@@ -211,11 +213,12 @@
                         <p><a href="#">¿Olvidó la contraseña?</a></p>
                     </div>
                     <div class="pull-right">
-                          <button type="button" class="btn btn-primary">Ingresar</button>
+                          <button type="submit" class="btn btn-primary">Ingresar</button>
                           <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                     </div>
               </div>
           </div> <!--Modal content-->
+        </form>
       </div>
   </div>
 
@@ -226,6 +229,7 @@
               <h1 class="page-header text-primary">
                   Recuperación de la Información
                   <small> Electivo III</small>
+                  <small id ="respuesta"></small>
               </h1>
             </div>
             <div class="col-sm-9">
@@ -354,12 +358,13 @@
 
     <!-- jQuery -->
     <script src="js/bootstrap/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- Login -->
+    <script src="js/iniciar_sesion.js"></script>
     <!-- Tooltip -->
     <script src="js/live.js"></script>
     <script src="js/fireworks.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- Graficos -->
     <script src="js/D3/d3.v3.min.js"></script>
     <!-- worldcloud-->
