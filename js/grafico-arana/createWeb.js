@@ -1,5 +1,5 @@
 //Legend titles
-var LegendOptions = ['ACM','Perfil de la tesis'];
+//var LegendOptions = ['ACM','Perfil de la tesis'];
 
 //Data
 var d = [

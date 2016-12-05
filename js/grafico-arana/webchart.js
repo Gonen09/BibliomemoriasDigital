@@ -1,3 +1,5 @@
+
+
 var w = 500,
 	h = 500;
 
@@ -24,7 +26,7 @@ var text = svg.append("text")
 	.attr("font-weight","bold")											// Negrita
 	.attr("fill", "#404040")
 	.text("Perfil del alumno VS Perfiles de ACM");  // Cambiar titulo
-
+var LegendOptions = ['ACM','Perfil de la tesis'];
 //Initiate Legend
 var legend = svg.append("g")
 	.attr("class", "legend")
