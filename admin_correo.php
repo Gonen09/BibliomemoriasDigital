@@ -154,6 +154,16 @@
 						  </div>
 						</div>
 						<div class="md-form">
+							<div class="form-group">
+							 <label for="comment">Comentarios:</label>
+							 <textarea type="text" class="form-control md-textarea" style="resize: none;" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
+							</div>
+						</div>
+					</div>
+					<!--Footer-->
+					<div class="modal-footer">
+					  <div class="col-md-8 center-block">
+						<button type="button" class="btn btn-primary">Enviar</button>
 						<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
 					  </div>
 					</div>
