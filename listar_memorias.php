@@ -187,9 +187,10 @@
 					<div class="sidebar content-box" style="display: block;">
 						<ul class="nav">
 							<!-- Main menu -->
-							<li><a href="dashboard.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
+							<li><a href="administrador.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
 							<li><a href="subir_memoria.php"><i class="glyphicon glyphicon-upload"></i> Subir memorias </a></li>
 							<li class="current" ><a href="listar_memorias.php"><i class="glyphicon glyphicon-list-alt"></i> Lista de memorias</a></li>
+							<li><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
 					</div>
 				</div>
 
