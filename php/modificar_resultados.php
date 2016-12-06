@@ -11,10 +11,12 @@ while ($post = each($_POST))
 {
 	$info_campos = $info_campos."|".$post[0] . " = " . $post[1];
 }
+$info_campos = $info_campos."|||";
+echo $info_campos ;
 /**/	
 //}
+
 $texto_consulta = $_COOKIE ["ultima_consulta"];
-//echo $_COOKIE ["ultima_consulta"];
 $pag_elegida = 1;
 $documento_inicial = 0;
 if (isset($_POST["pagina"])){
@@ -31,32 +33,46 @@ $options = array
 );
 
 $client = new SolrClient($options);
-
 $query = new SolrQuery();
-
 $query->setQuery($texto_consulta);
 
 
 //$query->setQuery('alumno:patricio OR alumno:carmen');
 //$query->setQuery('*:*');
-//$q = $_GET["texto_busqueda"];
-/*
-$q = 'alumno:patricio OR alumno:carmen';
-if  ($query_text == '')
-	exit;
-$query->setQuery($query_text);
-*/
 
+
+//Agregando filtro de busqueda
+$campo_filtro = "";
+$filtro_query = "";
+
+if (isset($_POST["ano"])){
+	if ($_POST["ano"] != ""){
+		$filtro_query = "ano";
+		$filtro_query = "ano:".$_POST["ano"];
+		$query->addFilterQuery($filtro_query);
+	}	
+}
+if (isset($_POST["id_memoria"])){
+	if ($_POST["id_memoria"] != ""){
+		$filtro_query = "id_memoria";
+		$filtro_query = "id_tesis:".$_POST["id_memoria"];
+		$query->addFilterQuery($filtro_query);
+	}	
+}
+if (isset($_POST["profesor"])){
+	if ($_POST["profesor"] != ""){
+		$filtro_query = "profesor";
+		$filtro_query = "profesor:".$_POST["profesor"];
+		$query->addFilterQuery($filtro_query);
+	}	
+}
 
 $query->setStart($documento_inicial);
-
 $query->setRows(3);
-
 $query->addField('id_tesis')->addField('ano')->addField('alumno')->addField('score')->addField('titulo_tesis')->addField('profesor');
 $query->setFacet(true);
 $query->addFacetField('ano')->addFacetField('profesor')->addFacetField('id_tesis');
-//$query->addFacetQuery('profesor')->addFacetQuery('ano');
-
+	
 $query_response = $client->query($query);
 $response = $query_response->getResponse();
 
@@ -64,8 +80,6 @@ $response = $query_response->getResponse();
 //echo '-->'.$query.'<--';	
 /**/
 ?>
-
-
 	<div class="panel panel-default">
 		<div class="panel-heading" id="cabezera-panel">
 			<h4 class="text-center">Resultados</h4>
@@ -83,7 +97,6 @@ if($response->response->numFound > 0) {
 	foreach ($docs as $documento_actual) {
 		//$documento_actual = $docs[$i];						
 ?>						
-
 						<div id="<?php print $documento_actual['id_tesis'];?>" name="publicacion" class="row">
 							<tr>
 								<td class="col-sm-1">
@@ -156,7 +169,12 @@ if($response->response->numFound > 0) {
 								?>
 								<li>
 									<a  aria-label="Previous">
-										<span aria-hidden="true" onclick="<?php echo "cambiarPagina(".($pag_elegida-1).")";?>">&laquo;</span>
+										<span aria-hidden="true" onclick="<?php 
+											if ($filtro_query == "")
+												echo "cambiarPagina(".($pag_elegida-1).")";
+											else
+												echo "modificarResultados('".$campo_filtro."|".$filtro_query."',".($pag_elegida-1).")";
+										?>">&laquo;</span>
 									</a>
 								</li>
 								<?php
@@ -166,8 +184,12 @@ if($response->response->numFound > 0) {
 								if ($c == $pag_elegida)
 									echo 'class="active"';
 								echo '><a onclick="';
-								if ($n_pag > 1)
-									echo "cambiarPagina(".$c.")";
+								if ($n_pag > 1){
+									if ($filtro_query == "")
+										echo "cambiarPagina(".$c.")";
+									else
+										echo "modificarResultados('".$campo_filtro."|".$filtro_query."',".$c.")";
+								}
 								echo '">';
 								echo $c;
 								echo "</a></li>";
@@ -176,14 +198,20 @@ if($response->response->numFound > 0) {
 							if ($pag_elegida != $n_pag && $n_pag > 1){
 								?>
 								<li>
-								<a  onclick= "<?php echo "cambiarPagina(".($pag_elegida+1).")";?>"aria-label="Next">
-									<span aria-hidden="true">&raquo;</span>
-								</a>
+									<a  onclick= "
+									<?php 
+										if ($filtro_query == "")
+											echo "cambiarPagina(".($pag_elegida+1).")";
+										else
+											echo "modificarResultados('".$campo_filtro."|".$filtro_query."',".($pag_elegida+1).")";
+										?>
+										"aria-label="Next">
+										<span aria-hidden="true">&raquo;</span>
+									</a>
 								</li>
 								<?php
 							}
 						?>
-						
 					</ul>
 				</nav>
 			</div>

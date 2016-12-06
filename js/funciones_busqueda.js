@@ -1,7 +1,3 @@
-
-
-
-
 function enviarFormulario(){
 	
 	var url = "php/resultados.php"; // El script a dónde se realizará la petición.
@@ -54,35 +50,64 @@ function enviarFormulario(){
 				//alert (data);
 				var scs=data.extractScript();    //capturamos los scripts 
 				scs.___evalScript();       //interpretación  scripts
-				
-				
            }
     });	
-	
 }
-
 function cambiarPagina(pagina){
 	modificarResultados(null,pagina);
 	//alert(pagina);
 	//modificarResultados(null,pagina);
 }
 
+function agregarFiltro(filtro){
+	modificarResultados(filtro,null);
+}
 
 function modificarResultados(facet,pagina){
 	var adata = new Array();
+	var ano = '';
+	var id_memoria = '';
+	var profesor = '';
+	if(facet != null){
+		var opciones = facet.split('|');
+		switch(opciones[0]){
+			case 'ano':
+				ano = opciones[1];
+			break;
+			case 'id_memoria':
+				id_memoria = opciones[1];
+			break;
+			case 'profesor':
+				profesor = opciones[1];
+			break;
+		}
+	}
+	
+	
+		
+	
 	
 	if (facet == null){//cambiando pagina
 		adata = {'pagina':pagina};
 	}
+	else
+	if (pagina == null){
+		adata = {'ano':ano,'id_memoria':id_memoria,'profesor':profesor};
+	}
+	else{
+		adata = {'pagina':pagina,'ano':ano,'id_memoria':id_memoria,'profesor':profesor};
+	}
+	
+	//adata = {'pagina':pagina,'ano':'2010','id_memoria':'','profesor':''};
+	//adata = {'busqueda':'inicial','busquedaa':'inicial','abusdsqueda':'inicial'};
 	var url = "php/modificar_resultados.php"; // El script a dónde se realizará la petición.
 	$.ajax({
            type: "POST",
            url: url,
            data: adata,//.serialize(), // Adjuntar los campos del formulario enviado.
 			success: function(data)
-           {
+            {
 			 	document.getElementById("panel_resultados").innerHTML = data;
 			}
     });	
-	
 }

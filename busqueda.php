@@ -19,7 +19,9 @@
       <link href="css/panal.css" rel="stylesheet">
 
 </head>
-<body>
+
+
+<body  <?php  if (isset($_POST["busqueda-normal"])) echo 'onload="alert();"' ?>    >
 
   <!-- Header -->
   <header>
@@ -337,8 +339,8 @@
                           </div>
                           <div class="form-group row">
                             <div class="col-xs-6 col-xs-offset-6">
-                              <button type="submit" class="btn btn-primary" onclick="enviarFormulario()">
-                                <i class="glyphicon glyphicon-search"></i>
+								<button type="submit" class="btn btn-primary" onclick="enviarFormulario()">
+								<i class="glyphicon glyphicon-search"></i>
                                 Consultar
                               </button>
                             </div>
