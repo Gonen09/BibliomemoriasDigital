@@ -13,81 +13,14 @@ while ($post = each($_POST))
 }
 /**/	
 //}
-
-function limpiarTexto  ($texto){
-	$texto = str_replace(":","",$texto);
-	$texto = str_replace("*","",$texto);
-	$texto = str_replace(".","",$texto);
-	$texto = str_replace(",","",$texto);
-	$texto = str_replace("?","",$texto);
-	$texto = str_replace("=","",$texto);
-	$texto = str_replace("&","",$texto);
-	$texto = str_replace("?","",$texto);
-	$retorno = "";
-	$palabras = explode(" ",$texto);
-	$primera = true;
-	foreach ($palabras as $p) {
-		if ($p != ""){
-			if (!$primera){
-				$retorno = $retorno." ";
-			}		
-			$retorno = $retorno.$p;
-			$primera = false;
-		}
-	}
-	return $retorno;
+$texto_consulta = $_COOKIE ["ultima_consulta"];
+//echo $_COOKIE ["ultima_consulta"];
+$pag_elegida = 1;
+$documento_inicial = 0;
+if (isset($_POST["pagina"])){
+	$pag_elegida = $_POST["pagina"];
+	$documento_inicial = 3 * ($pag_elegida-1);
 }
-//Formando consulta 
-$texto_consulta = "";
-if ($_POST["busqueda"] == 'inicial' ){
-	$contenido = limpiarTexto($_POST["contenido"]);
-	if ($contenido != "")
-		$texto_consulta = " contenido: ".$contenido;
-	if (isset($_POST["titulo"])){
-		$titulo = limpiarTexto($_POST["titulo"]);
-		if ($titulo != ""){
-			if ($texto_consulta != "")
-				$texto_consulta = $texto_consulta." OR ";
-			$texto_consulta = $texto_consulta." titulo_tesis: ".$titulo;
-		}
-	}
-	if (isset($_POST["autor"])){
-		$autor = limpiarTexto($_POST["autor"]);
-		if ($autor != ""){
-			if ($texto_consulta != "")
-				$texto_consulta = $texto_consulta." OR ";
-			$texto_consulta = $texto_consulta." alumno: ".$autor;
-		}
-	}
-	if (isset($_POST["profesor"])){
-		$profesor = limpiarTexto($_POST["profesor"]);
-		if ($profesor != ""){
-			if ($texto_consulta != "")
-				$texto_consulta = $texto_consulta." OR ";
-			$texto_consulta = $texto_consulta." profesor: ".$profesor;
-		}
-	}
-	if (isset($_POST["ano"])){
-		$ano = limpiarTexto($_POST["ano"]);
-		if ($ano != ""){
-			if ($texto_consulta != "")
-				$texto_consulta = $texto_consulta." OR ";
-			$texto_consulta = $texto_consulta." ano: ".$ano;
-		}
-	}
-	if (isset($_POST["abs"])){
-		$abs = limpiarTexto($_POST["abs"]);
-		if ($abs != ""){
-			if ($texto_consulta != "")
-				$texto_consulta = $texto_consulta." OR ";
-			$texto_consulta = $texto_consulta." abstract: ".$abs;
-		}
-	}
-	
-}
-Setcookie("ultima_consulta", $texto_consulta);
-$globals= array('USERNAME' => 'john', 'USERID' => '18068416846');
-// echo "--->".$texto_consulta."<---";
 $options = array
 (
     'hostname' => 'localhost',
@@ -115,7 +48,7 @@ $query->setQuery($query_text);
 */
 
 
-$query->setStart(0);
+$query->setStart($documento_inicial);
 
 $query->setRows(3);
 
@@ -132,31 +65,7 @@ $response = $query_response->getResponse();
 /**/
 ?>
 
-<div class="col-sm-6"> <!-- Panal resultados -->
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="panel panel-default">
-				<div class="panel-heading" id="cabezera-panel">
-				<h4 class="text-center">Panal</h4>
-				</div>
-				<div class="panel-body">
-					<div class="row">
-						<div class="col-sm-12"> <!-- Agregar contenido para agrandar el grafico flotante -->
-							<br><br><br><br><br><br>
-							<br><br><br><br><br><br>
-							<br><br><br><br><br><br>
-							<br><br><br><br><br><br>
-							<br><br><br><br>
-							<div id="visualization"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
- </div> <!-- col-sm-6 --> <!-- End panal resultados-->
 
-<div class="col-sm-6" id="panel_resultados"  > <!-- Resultados busqueda -->
 	<div class="panel panel-default">
 		<div class="panel-heading" id="cabezera-panel">
 			<h4 class="text-center">Resultados</h4>
@@ -237,13 +146,12 @@ if($response->response->numFound > 0) {
 						-->
 						<?php
 							$n_doc = $response->response->numFound; // maximo de documento
+							
 							$n_pag = floor($n_doc/3);
 							$restante= $n_doc % 3;
 							if ($restante > 0)
 								$n_pag++;
 							$c = 1;
-							$pag_elegida = 1;
-							
 							if ($pag_elegida != 1){
 								?>
 								<li>
@@ -282,124 +190,6 @@ if($response->response->numFound > 0) {
 		</div>
 	</div>
 </div> <!-- End resultados -->
-
-<script>
-//alert('<?php //echo $info_campos; ?>');
-  if (CarrotSearchFoamTree.supported) {
-  var foamtree = new CarrotSearchFoamTree({
-	id: "visualization",
-	dataObject: {
-	  groups: [
-		{   id: "1", 
-			label: "Profesores Guía", 
-			groups: [
-					<?php
-					$facet_profesores = $response->facet_counts->facet_fields->profesor;
-					$primero_p = true;
-					$i = 1;
-					foreach ($facet_profesores as $clave => $valor) {
-						if ($valor > 0){
-							if(!$primero_p)
-								echo ',';
-							echo '{ id:';
-							echo '"1.'.$i.'" , label: "';
-							echo $clave;
-							echo '" }';
-							$primero_p = false;
-							$i++;
-						}
-					}
-					?>			
-			]
-		},
-		{   id: "2", 
-			label: "Año", 
-			groups: [
-					<?php
-					$facet_anos = $response->facet_counts->facet_fields->ano;
-					$primero = true;
-					$i = 1;
-					foreach ($facet_anos as $clave => $valor) {
-						if ($valor > 0){
-							if(!$primero)
-								echo ',';
-							echo '{ id:';
-							echo '"2.'.$i.'" , label: "';
-							echo $clave;
-							echo '" }';
-							$primero = false;
-							$i++;
-						}
-					}
-					?>
-			]
-		},
-		{
-			id: "3", 
-			label: "Id memorias", 
-			groups: [
-					<?php
-					$facet_id = $response->facet_counts->facet_fields->id_tesis;
-					$primero_id = true;
-					$i = 1;
-					foreach ($facet_id as $clave => $valor) {
-						if ($valor > 0){
-							if(!$primero_id)
-								echo ',';
-							echo '{ id:';
-							echo '"3.'.$i.'" , label: "';
-							echo $clave;
-							echo '" }';
-							$primero_id = false;
-							$i++;
-						}
-					}
-					?>				
-
-				  /*
-				  { id: "1.1", label: "Ingeniería de Software" },
-				  { id: "1.2", label: "Base de Datos" },
-				  { id: "1.3", label: "Comunicación de Datos y Redes"},
-				  { id: "1.4", label: "Inteligencia Artificial"}
-				  /**/
-			]
-		}
-	  ]
-	}
-  });
-} else {
-  console.log("Visualization not supported.");
-}
-/**/
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
