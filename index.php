@@ -15,11 +15,11 @@
 
     <!-- Custom CSS -->
     <link href="css/general.css" rel="stylesheet">
+    <link href="css/reloj.css" rel="stylesheet">
 
 </head>
 
-<body>
-
+<body onload="cargarReloj()">
   <!-- Header -->
   <header>
     <div class="row">
@@ -34,30 +34,36 @@
     <div class="col-lg-12">
       <nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation">
           <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand">BiblioMemorias Digital</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                      <li class="active"><a href="index.php">Inicio</a></li>
-                      <li><a href="busqueda.php">Buscar Memorias</a></li>
-                      <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">BiblioMemorias Digital</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="index.php">Inicio</a></li>
+                  <li><a href="busqueda.php">Buscar Memorias</a></li>
+                  <li><a href="#">Administrar</a></li>
+                  <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    Acerca <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
                       <li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
                       <li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
                       <li data-toggle="modal" data-target="#myModal3"><a href="#">Sobre nosotros</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                      <li data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
-                    </ul>
-                </div> <!-- /.navbar-collapse -->
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-user"></span> Iniciar sesión</a></li>
+                </ul>
+            </div> <!-- /.navbar-collapse -->
           </div> <!-- /.container -->
         </nav>
     </div>
@@ -300,50 +306,58 @@
 
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-3">
-
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Búsqueda</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
-
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Categorias</h4>
-                    <div class="row">
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-12">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Ingeniería de Software</a></li>
-                                <li><a href="#">Inteligencia Artificial</a></li>
-                                <li><a href="#">Base de datos</a></li>
-                                <li><a href="#">Telecomunicaciones</a></li>
-                            </ul>
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Blog Search Well -->
+                    <div class="well">
+                        <h4>Búsqueda</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                            </span>
                         </div>
-                        <!-- /.col-lg-6 -->
                     </div>
-                    <!-- /.row -->
+                  </div>
                 </div>
-
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Sitios de interes</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
-                        <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
-                        <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
-                        <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
-                    </ul>
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Well Reloj  -->
+                    <div class="well">
+                      <div class="well clock-box">
+                        <article class="clock">
+                          <div class="hours-container">
+                            <div class="hours"></div>
+                          </div>
+                          <div class="minutes-container">
+                            <div class="minutes"></div>
+                          </div>
+                          <div class="seconds-container">
+                            <div class="seconds"></div>
+                          </div>
+                        </article>
+                      </div>
+                      <p class="text-center"><i id="date-box">Fecha</i></p>
+                    </div>
+                  </div>
                 </div>
-            </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Side Widget Well -->
+                    <div class="well">
+                        <h4>Sitios de interes</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
+                            <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
+                            <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
+                            <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+            </div> <!-- col-md-3 -->
         </div>   <!-- /.row -->
     </div> <!-- /.container -->
 
@@ -365,6 +379,8 @@
     <!-- Tooltip -->
     <script src="js/live.js"></script>
     <script src="js/fireworks.js"></script>
+    <!-- Reloj -->
+    <script src="js/reloj.js"></script>
     <!-- Graficos -->
     <script src="js/D3/d3.v3.min.js"></script>
     <!-- worldcloud-->
