@@ -15,11 +15,11 @@
 
     <!-- Custom CSS -->
     <link href="css/general.css" rel="stylesheet">
+    <link href="css/reloj.css" rel="stylesheet">
 
 </head>
 
-<body>
-
+<body  onload="cargarReloj()">
   <!-- Header -->
   <header>
     <div class="row">
@@ -323,20 +323,22 @@
 
                 <!-- Blog Categories Well -->
                 <div class="well">
-                    <h4>Categorias</h4>
-                    <div class="row">
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-12">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Ingeniería de Software</a></li>
-                                <li><a href="#">Inteligencia Artificial</a></li>
-                                <li><a href="#">Base de datos</a></li>
-                                <li><a href="#">Telecomunicaciones</a></li>
-                            </ul>
-                        </div>
-                        <!-- /.col-lg-6 -->
-                    </div>
-                    <!-- /.row -->
+                  <div class="well clock-box">
+                    <!-- Reloj -->
+                    <article class="clock">
+                      <div class="hours-container">
+                        <div class="hours"></div>
+                      </div>
+                      <div class="minutes-container">
+                        <div class="minutes"></div>
+                      </div>
+                      <div class="seconds-container">
+                        <div class="seconds"></div>
+                      </div>
+                    </article>
+                    <!-- Reloj -->
+                  </div>
+                  <p class="text-center">La Serena, 10 de Diciembre del 2016</p>
                 </div>
 
                 <!-- Side Widget Well -->
@@ -371,6 +373,8 @@
     <!-- Tooltip -->
     <script src="js/live.js"></script>
     <script src="js/fireworks.js"></script>
+    <!-- Reloj -->
+    <script src="js/reloj.js"></script>
     <!-- Graficos -->
     <script src="js/D3/d3.v3.min.js"></script>
     <!-- worldcloud-->
