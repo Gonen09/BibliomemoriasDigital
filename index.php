@@ -15,11 +15,11 @@
 
     <!-- Custom CSS -->
     <link href="css/general.css" rel="stylesheet">
+    <link href="css/reloj.css" rel="stylesheet">
 
 </head>
 
-<body>
-
+<body onload="cargarReloj()">
   <!-- Header -->
   <header>
     <div class="row">
@@ -306,50 +306,58 @@
 
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-3">
-
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Búsqueda</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
-
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Categorias</h4>
-                    <div class="row">
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-12">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Ingeniería de Software</a></li>
-                                <li><a href="#">Inteligencia Artificial</a></li>
-                                <li><a href="#">Base de datos</a></li>
-                                <li><a href="#">Telecomunicaciones</a></li>
-                            </ul>
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Blog Search Well -->
+                    <div class="well">
+                        <h4>Búsqueda</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                            </span>
                         </div>
-                        <!-- /.col-lg-6 -->
                     </div>
-                    <!-- /.row -->
+                  </div>
                 </div>
-
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Sitios de interes</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
-                        <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
-                        <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
-                        <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
-                    </ul>
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Well Reloj  -->
+                    <div class="well">
+                      <div class="well clock-box">
+                        <article class="clock">
+                          <div class="hours-container">
+                            <div class="hours"></div>
+                          </div>
+                          <div class="minutes-container">
+                            <div class="minutes"></div>
+                          </div>
+                          <div class="seconds-container">
+                            <div class="seconds"></div>
+                          </div>
+                        </article>
+                      </div>
+                      <p class="text-center"><i id="date-box">Fecha</i></p>
+                    </div>
+                  </div>
                 </div>
-            </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Side Widget Well -->
+                    <div class="well">
+                        <h4>Sitios de interes</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
+                            <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
+                            <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
+                            <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+            </div> <!-- col-md-3 -->
         </div>   <!-- /.row -->
     </div> <!-- /.container -->
 
@@ -371,6 +379,8 @@
     <!-- Tooltip -->
     <script src="js/live.js"></script>
     <script src="js/fireworks.js"></script>
+    <!-- Reloj -->
+    <script src="js/reloj.js"></script>
     <!-- Graficos -->
     <script src="js/D3/d3.v3.min.js"></script>
     <!-- worldcloud-->
