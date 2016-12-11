@@ -12,11 +12,11 @@
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- styles -->
+		<!-- Estilo pagina CSS -->
+		<link href="css/general.css" rel="stylesheet">
+		<!-- Estilo vista admin -->
 		<link href="css/administrador/styles.css" rel="stylesheet">
 
-		<!-- Custom CSS -->
-		<link href="css/general.css" rel="stylesheet">
 	</head>
 
 	<body>

@@ -11,17 +11,17 @@
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-		<!-- Ionicons -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
-		<!-- Custom CSS -->
+		<!-- Estilo pagina CSS -->
 		<link href="css/general.css" rel="stylesheet">
-		<!-- styles -->
+		<!-- Estilo vista admin -->
 		<link href="css/administrador/styles.css" rel="stylesheet">
 		<link href="css/administrador/style_mail.css" rel="stylesheet">
 		<link href="css/administrador/AdminLTE.min.css" rel="stylesheet">
+		<!-- Font Awesome -->
+		<link href="css/administrador/font-awesome.min.css" rel="stylesheet">
+		<!-- Ionicons -->
+		<link href="css/administrador/ionicons.min.css" rel="stylesheet">
+
 	</head>
 
 	<body>
@@ -243,7 +243,7 @@
 		                    <li><a href="listar_memorias.php"><i class="glyphicon glyphicon-list-alt"></i> Lista de memorias</a></li>
 	                    	<li class="current"><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
 	                	</ul>
-						
+
 					</div>
 				</div> <!-- col-md-2 -->
 
@@ -421,7 +421,7 @@
 					</div>
 				</div><!--col-md-9-->
 			</div> <!-- row -->
-			
+
 		</div>
 		<!-- Footer -->
 		<footer>

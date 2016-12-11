@@ -12,12 +12,12 @@
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- Data Tables -->
-		<link href="css/administrador/dataTables.bootstrap.css" rel="stylesheet">
+		<!-- Estilo pagina CSS -->
+		<link href="css/general.css" rel="stylesheet">
 		<!-- Estilo vista admin -->
 		<link href="css/administrador/styles.css" rel="stylesheet">
-		<!-- Custom CSS -->
-		<link href="css/general.css" rel="stylesheet">
+		<!-- Data Tables -->
+		<link href="css/administrador/dataTables.bootstrap.css" rel="stylesheet">
 
 	</head>
 
@@ -200,7 +200,7 @@
 						<div class="panel-heading">
 							<div class="panel-title">Lista de memorias</div>
 						</div> <!-- panel-heading -->
-						
+
 						<div class="panel-body">
 							<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%" id="tablaMemoria">
 								<thead>
@@ -406,7 +406,7 @@
 										<td>2020</td>
 										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
 									</tr>
-									
+
 								</tbody>
 							</table>
 						</div><!-- panel-body -->
@@ -414,7 +414,7 @@
 				</div>
 			</div> <!-- row -->
 		</div>
-		
+
 		<!-- Footer -->
 		<footer>
 			<div class="row">
@@ -439,6 +439,6 @@
 		<!-- Custom JS -->
 		<script src="js/administrador/cargar_dataTable.js"></script>
 		<script src="js/live.js"></script>
-		
+
 	  </body>
 </html>

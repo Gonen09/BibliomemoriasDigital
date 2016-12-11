@@ -12,11 +12,12 @@
 
       <!-- Bootstrap Core CSS -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
-
-      <!-- Custom CSS -->
+	    <!-- Estilo pagina CSS -->
       <link href="css/general.css" rel="stylesheet">
-      <link href="css/reloj.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
+      <!-- Reloj -->
+      <link href="css/reloj.css" rel="stylesheet">
+      <!-- Panal -->
       <link href="css/panal.css" rel="stylesheet">
 
 </head>
