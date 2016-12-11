@@ -414,6 +414,7 @@
 				</div>
 			</div> <!-- row -->
 		</div>
+		
 		<!-- Footer -->
 		<footer>
 			<div class="row">
@@ -437,7 +438,6 @@
 		<script type="text/javascript" src="js/administrador/dataTables.bootstrap.js"></script>
 		<!-- Custom JS -->
 		<script src="js/administrador/cargar_dataTable.js"></script>
-
 		<script src="js/live.js"></script>
 		
 	  </body>
