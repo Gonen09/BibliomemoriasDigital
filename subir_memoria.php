@@ -15,7 +15,7 @@
 		<!-- Estilo pagina CSS -->
 		<link href="css/general.css" rel="stylesheet">
 		<!-- Estilo vista admin -->
-		<link href="css/administrador/styles.css" rel="stylesheet">
+		<link href="css/administrador/admin_style.css" rel="stylesheet">
 
 	</head>
 

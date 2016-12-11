@@ -14,13 +14,9 @@
 		<!-- Estilo pagina CSS -->
 		<link href="css/general.css" rel="stylesheet">
 		<!-- Estilo vista admin -->
-		<link href="css/administrador/styles.css" rel="stylesheet">
-		<link href="css/administrador/style_mail.css" rel="stylesheet">
+		<link href="css/administrador/admin_style.css" rel="stylesheet">
+		<link href="css/administrador/navbar_login.css" rel="stylesheet">
 		<link href="css/administrador/AdminLTE.min.css" rel="stylesheet">
-		<!-- Font Awesome -->
-		<link href="css/administrador/font-awesome.min.css" rel="stylesheet">
-		<!-- Ionicons -->
-		<link href="css/administrador/ionicons.min.css" rel="stylesheet">
 
 	</head>
 
