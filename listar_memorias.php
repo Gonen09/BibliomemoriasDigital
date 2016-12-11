@@ -421,24 +421,19 @@
 			  <div align="center" class="col-lg-12">
 					<img src="image/principal/footer_uls.png" id="foot" class="img-responsive"/>
 				</div>
-				<!-- /.col-lg-12 -->
 			</div>
-			<!-- /.row -->
 		</footer>
-
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/bootstrap/jquery.min.js"></script>
+		<!-- jQuery -->
+    <script src="js/bootstrap/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
 		<!-- DataTable plugin -->
 		<script src="js/administrador/jquery.dataTables.min.js"></script>
-		<!--<script src="js/administrador/jconfirmaction.jquery.js"></script>-->
-		<!-- Bootstrap plugin -->
-		<script src="js/bootstrap/bootstrap.min.js"></script>
-		<!-- dataTable Boostrap -->
-		<script type="text/javascript" src="js/administrador/dataTables.bootstrap.js"></script>
-		<!-- Custom JS -->
+		<!-- DataTable Boostrap -->
+		<script src="js/administrador/dataTables.bootstrap.js"></script>
+		<!-- Cargar Tabla -->
 		<script src="js/administrador/cargar_dataTable.js"></script>
-		<script src="js/live.js"></script>
-
+		<!-- Tooltip -->
+		<script src="js/tooltip.js"></script>
 	  </body>
 </html>

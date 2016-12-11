@@ -235,7 +235,6 @@
               <h1 class="page-header text-primary">
                   Recuperación de la Información
                   <small> Electivo III</small>
-                  <small id ="respuesta"></small>
               </h1>
             </div>
             <div class="col-sm-9">
@@ -249,7 +248,7 @@
                         <div class="container-fluid">
                           <div class="row">
                             <div class="well col-sm-8">
-                              <h3>El Electivo III <strong class="text-primary"data-toggle="tooltip" data-placement="right" title="vivo!!!">esta vivo !!!</strong></h3>
+                              <h3>El Electivo III <strong class="text-primary" data-toggle="tooltip" data-placement="right" title="vivo!!!">esta vivo !!!</strong></h3>
                               <br>
                               <p>
                                 Bienvenido a nuestro repositorio de <strong>Memorias de Titulo</strong> de la carrera <strong>Ingeniería en
@@ -377,7 +376,7 @@
     <!-- Login -->
     <script src="js/iniciar_sesion.js"></script>
     <!-- Tooltip -->
-    <script src="js/live.js"></script>
+    <script src="js/tooltip.js"></script>
     <script src="js/fireworks.js"></script>
     <!-- Reloj -->
     <script src="js/reloj.js"></script>

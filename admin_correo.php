@@ -428,10 +428,11 @@
 			</div><!-- /.row -->
 		</footer>
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/bootstrap/jquery.min.js"></script>
-		<script src="js/bootstrap/bootstrap.min.js"></script>
-		<script src="js/administrador/custom.js"></script>
-		<script src="js/live.js"></script>
+		<!-- jQuery -->
+    <script src="js/bootstrap/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+		<!-- Tooltip -->
+		<script src="js/tooltip.js"></script>
 	</body>
 </html>

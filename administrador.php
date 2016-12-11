@@ -349,8 +349,11 @@
             <!-- /.row -->
         </footer>
 
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="js/bootstrap/bootstrap.min.js"></script>
-	    <script src="js/administrador/custom.js"></script>
+			<!-- jQuery -->
+			<script src="js/bootstrap/jquery.min.js"></script>
+			<!-- Bootstrap Core JavaScript -->
+			<script src="js/bootstrap/bootstrap.min.js"></script>
+			<!-- Administrador -->
+			<script src="js/administrador/custom.js"></script>
 	  </body>
 </html>
