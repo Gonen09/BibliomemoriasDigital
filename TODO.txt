@@ -66,6 +66,12 @@
       - Ajustar valores [Listo]
     - Estructura estadisticas [Listo]
       - Agregar grafico
+    - Reloj [Listo]
+      - Estructura contenedor [Listo]
+      - Estructura reloj [Listo]
+      - Visual reloj [Listo]
+      - Motor reloj [Listo]
+      - Fecha [Listo]
     - Estructura facets
       - Busqueda
         - Contenido [Listo]

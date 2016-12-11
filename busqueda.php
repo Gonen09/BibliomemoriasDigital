@@ -15,11 +15,12 @@
 
       <!-- Custom CSS -->
       <link href="css/general.css" rel="stylesheet">
+      <link href="css/reloj.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
       <link href="css/panal.css" rel="stylesheet">
 
 </head>
-<body>
+<body onload="cargarReloj()">
 
   <!-- Header -->
   <header>
@@ -365,34 +366,29 @@
     </div> <!-- col-sm-9 -->
 
     <div class="col-sm-3">
-        <!-- Blog Categories Well -->
-        <div class="well">
-            <h4>Categorias</h4>
-            <div class="row">
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-12">
-                    <ul class="list-unstyled">
-                      <li><a href="#">Ingeniería de Software</a></li>
-                      <li><a href="#">Inteligencia Artificial</a></li>
-                      <li><a href="#">Base de datos</a></li>
-                      <li><a href="#">Telecomunicaciones</a></li>
-                    </ul>
-                </div>
-                <!-- /.col-lg-6 -->
+      <div class="row">
+          <div class="col-lg-12">
+            <div class="well">
+              <!-- Well Reloj  -->
+              <div class="well clock-box">
+                <!-- Reloj -->
+                <article class="clock">
+                  <div class="hours-container">
+                    <div class="hours"></div>
+                  </div>
+                  <div class="minutes-container">
+                    <div class="minutes"></div>
+                  </div>
+                  <div class="seconds-container">
+                    <div class="seconds"></div>
+                  </div>
+                </article>
+                <!-- Reloj -->
+              </div>
+              <p class="text-center"><i id="date-box">Fecha</i></p>
             </div>
-            <!-- /.row -->
-        </div>
-
-        <!-- Side Widget Well -->
-        <div class="well">
-          <h4>Sitios de interes</h4>
-          <ul class="list-unstyled">
-              <li><a href="http://www.userena.cl/">Universidad de La Serena</a></li>
-              <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
-              <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
-              <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
-          </ul>
-        </div>
+          </div>
+      </div>
     </div> <!-- col-sm-3 -->
   </div> <!-- row content -->
 
@@ -544,6 +540,8 @@
   <script src="js/bootstrap/jquery.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap/bootstrap.min.js"></script>
+  <!-- Reloj -->
+  <script src="js/reloj.js"></script>
   <!-- Grafico panal -->
   <script src="js/panal/carrotsearch.foamtree.js"></script>
   <script src="js/panal/hammer.min.js"></script>

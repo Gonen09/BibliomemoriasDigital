@@ -81,10 +81,24 @@ function moveSecondHands() {
   }, 1000);
 }
 
+function getDate(){
+  var tday = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+  var tmonth = new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+
+  var d = new Date();
+  var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear=d.getYear();
+
+  if(nyear<1000)
+    nyear+=1900;
+
+  document.getElementById('date-box').innerHTML="La Serena, "+tday[nday]+" "+ndate+" de "+tmonth[nmonth]+" de "+nyear;
+}
+
 function cargarReloj(){
-  //alert("Carcando reloj");
+  //alert("Cargando reloj");
   initLocalClocks();
   setUpMinuteHands();
   moveMinuteHands();
   moveSecondHands();
+  getDate();
 }
