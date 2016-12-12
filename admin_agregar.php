@@ -224,7 +224,7 @@
 		<div class="page-content">
 			<div class="row">
 				<div class="col-md-2">
-					<div class="sidebar content-box" style="display: block;">
+					<div class="sidebar content-box">
 							<!-- Menú principal -->
 	            <ul class="nav">
 	                <li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
