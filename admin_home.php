@@ -7,15 +7,15 @@
 		<meta name="description" content="Sitio para subir y buscar memorias de titulo de ingenieria en computacion">
     <meta name="author" content="Electivo III">
 
-        <title>Administrador de BiblioMemorias Digital</title>
+    <title>Administrador de BiblioMemorias Digital</title>
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- Estilo vista admin -->
-		<link href="css/administrador/styles.css" rel="stylesheet">
-
-		<!-- Custom CSS -->
+		<!-- Estilo pagina CSS -->
 		<link href="css/general.css" rel="stylesheet">
+		<!-- Estilo vista admin -->
+		<link href="css/administrador/admin_style.css" rel="stylesheet">
+		<link href="css/administrador/navbar_login.css" rel="stylesheet">
 
 	</head>
 
@@ -29,167 +29,209 @@
 	        </div>  <!-- /.row -->
 	    </header> <!-- Header -->
 
-      <!-- Navigation -->
-      <nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation">
-          <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand">BiblioMemorias Digital</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                      <li><a href="index.php">Inicio</a></li>
-                      <li><a href="busqueda.php">Buscar Memorias</a></li>
-                      <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
-                      <li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
-                      <li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
-                      <li data-toggle="modal" data-target="#myModal3"><a href="#">Sobre nosotros</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                      <li  class="active" data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-cog"></span> Administrar</a></li>
-                    </ul>
-                </div> <!-- /.navbar-collapse -->
-          </div> <!-- /.container -->
-        </nav>
+			<!-- Navigation -->
+		  <div class="row">
+		    <div class="col-lg-12">
+		      <nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation">
+		          <div class="container-fluid">
+		            <!-- Brand and toggle get grouped for better mobile display -->
+		            <div class="navbar-header">
+		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+		                <a class="navbar-brand">BiblioMemorias Digital</a>
+		            </div>
+		            <!-- Collect the nav links, forms, and other content for toggling -->
+		            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		                <ul class="nav navbar-nav">
+		                  <li><a href="index.php">Inicio</a></li>
+		                  <li><a href="busqueda.php">Buscar Memorias</a></li>
+                  		<li class="active"><a href="admin_home.php">Administrar</a></li>
+		                  <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
+		                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		                    Acerca <span class="caret"></span></a>
+		                    <ul class="dropdown-menu">
+		                      <li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
+		                      <li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
+		                      <li data-toggle="modal" data-target="#myModal3"><a href="#">Sobre nosotros</a></li>
+		                    </ul>
+		                  </li>
+		                </ul>
+										<!-- Menu del administrador -->
+										<ul class="nav navbar-nav navbar-right">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Admin <span class="caret"></span></a>
+												<ul class="dropdown-menu">
+													<li>
+														<div class="navbar-login">
+															<div class="row">
+																<div class="col-lg-4">
+																	<p class="text-center">
+																		<img src="image/principal/uls_logo_hd.png" class="img-responsive">
+																	</p>
+																</div>
+																<div class="col-lg-8">
+																	<p class="text-left"><strong>Administrador</strong></p>
+																	<p class="text-left small">BiblioMemorias Digital</p>
+																	<p class="text-left small">Universidad de La Serena</p>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="divider"></li>
+													<li>
+														<div class="navbar-login navbar-login-session">
+															<div class="row">
+																<div class="col-lg-12">
+																	<p>
+																		<a href="#" class="btn btn-danger btn-block">Cerrar sesión</a>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+										</ul>
+		            </div> <!-- /.navbar-collapse -->
+		          </div> <!-- /.container -->
+		        </nav>
+		    </div>
+		  </div>
 
-
-        <!-- Modal Contact -->
-        <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <!--Content-->
-                <div class="modal-content">
-                    <!--Body-->
-                    <div class="modal-body">
-                        <img class="img-rounded img-responsive" id="img_contacto" src="image/principal/contacto.png">
-                        <br>
-                        <div class="md-form">
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="login-username" type="text" class="form-control" name="nombre" value="" placeholder="Nombre completo">
-                          </div>
+      <!-- Modal Contact -->
+      <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <!--Content-->
+              <div class="modal-content">
+                  <!--Body-->
+                  <div class="modal-body">
+                      <img class="img-rounded img-responsive" id="img_contacto" src="image/principal/contacto.png">
+                      <br>
+                      <div class="md-form">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                          <input id="login-username" type="text" class="form-control" name="nombre" value="" placeholder="Nombre completo">
                         </div>
-                        <br>
-                        <div class="md-form">
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input id="login-username" type="text" class="form-control" name="correo" value="" placeholder="Correo electrónico">
-                          </div>
-                        </div>
-                        <br>
-                        <div class="md-form">
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                            <input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Telefono">
-                          </div>
-                        </div>
-                        <br>
-                        <div class="md-form">
-                          <div class="form-group">
-                           <label for="sel1">Motivo contacto:</label>
-                           <select class="form-control" id="sel1">
-                             <option>Sugerencia</option>
-                             <option>Felicitación</option>
-                             <option>Reclamo</option>
-                             <option>Otros</option>
-                           </select>
-                          </div>
-                        </div>
-                        <div class="md-form">
-                            <div class="form-group">
-                             <label for="comment">Comentarios:</label>
-                             <textarea type="text" class="form-control md-textarea" style="resize: none;" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Footer-->
-                    <div class="modal-footer">
-                      <div class="col-md-8 center-block">
-                        <button type="button" class="btn btn-primary">Enviar</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                       </div>
+                      <br>
+                      <div class="md-form">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                          <input id="login-username" type="text" class="form-control" name="correo" value="" placeholder="Correo electrónico">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="md-form">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                          <input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Telefono">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="md-form">
+                        <div class="form-group">
+                         <label for="sel1">Motivo contacto:</label>
+                         <select class="form-control" id="sel1">
+                           <option>Sugerencia</option>
+                           <option>Felicitación</option>
+                           <option>Reclamo</option>
+                           <option>Otros</option>
+                         </select>
+                        </div>
+                      </div>
+                      <div class="md-form">
+                          <div class="form-group">
+                           <label for="comment">Comentarios:</label>
+                           <textarea type="text" class="form-control md-textarea" style="resize: none;" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Footer-->
+                  <div class="modal-footer">
+                    <div class="col-md-8 center-block">
+                      <button type="button" class="btn btn-primary">Enviar</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                     </div>
-                </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Modal  1: Contacto -->
+      <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      	<div class="modal-dialog modal-sm" role="document">
+      		<div class="modal-content">
+      			<div class="modal-header text-center">
+      				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      				<h4 class="modal-title" id="myModalLabel1">Contacto</h4>
+      			</div>
+      			<div class="modal-body text-center">
+      				<img src="image/principal/uls-logo.png" class="img-responsive center-block" id ="logo-uls"><br>
+      				<p><strong>Universidad de la Serena</strong><br> Departamento de Matematicas<br>
+      					 Avenida Cisternas Nº 1200<br> La Serena <br> Teléfono: 51 2 204102 / 51 2 204103</p>
+      			</div>
+      			<div class="modal-footer">
+      				<button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+
+      <!-- Modal  2: Docente -->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel2">Docente</h4>
             </div>
-        </div>
-
-        <!-- Modal  1: Contacto -->
-        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        	<div class="modal-dialog modal-sm" role="document">
-        		<div class="modal-content">
-        			<div class="modal-header text-center">
-        				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        				<h4 class="modal-title" id="myModalLabel1">Contacto</h4>
-        			</div>
-        			<div class="modal-body text-center">
-        				<img src="image/principal/uls-logo.png" class="img-responsive center-block" id ="logo-uls"><br>
-        				<p><strong>Universidad de la Serena</strong><br> Departamento de Matematicas<br>
-        					 Avenida Cisternas Nº 1200<br> La Serena <br> Teléfono: 51 2 204102 / 51 2 204103</p>
-        			</div>
-        			<div class="modal-footer">
-        				<button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
-        			</div>
-        		</div>
-        	</div>
-        </div>
-
-        <!-- Modal  2: Docente -->
-        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-              <div class="modal-header text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel2">Docente</h4>
-              </div>
-              <div class="modal-body text-center">
-                <img src="image/principal/jeltsch.jpg" class="img-responsive center-block img-rounded" id ="jeltsh"><br>
-                <p><strong>Dr. Eric Jeltsch F.</strong><br> Depto. de Matemáticas <br>Av. Cisternas 1200, La Serena, CHILE.
-                  <br>2º Piso, Of. 215<br>Fono: (+56)-51-2-334732 <br>e-mail: ejeltsch@userena.cl</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
-              </div>
+            <div class="modal-body text-center">
+              <img src="image/principal/jeltsch.jpg" class="img-responsive center-block img-rounded" id ="jeltsh"><br>
+              <p><strong>Dr. Eric Jeltsch F.</strong><br> Depto. de Matemáticas <br>Av. Cisternas 1200, La Serena, CHILE.
+                <br>2º Piso, Of. 215<br>Fono: (+56)-51-2-334732 <br>e-mail: ejeltsch@userena.cl</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Modal  3: Sobre nosotros -->
-        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        	<div class="modal-dialog modal-sm" role="document">
-        		<div class="modal-content">
-        			<div class="modal-header text-center">
-        				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        				<h4 class="modal-title" id="myModalLabel3">Sobre nosotros</h4>
-        			</div>
-        			<div class="modal-body text-center">
-        				<img src="image/principal/comp-logo.png" class="img-responsive center-block" id ="logo-comp"><br>
-        				<p><strong>Electivo III<br>Recuperación de la Información</strong> <br> Ingeniería en Computación<br> Universidad de la Serena</p>
-        			</div>
-        			<div class="modal-footer">
-        				<button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
-        			</div>
-        		</div>
-        	</div>
-        </div>
+      <!-- Modal  3: Sobre nosotros -->
+      <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      	<div class="modal-dialog modal-sm" role="document">
+      		<div class="modal-content">
+      			<div class="modal-header text-center">
+      				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      				<h4 class="modal-title" id="myModalLabel3">Sobre nosotros</h4>
+      			</div>
+      			<div class="modal-body text-center">
+      				<img src="image/principal/comp-logo.png" class="img-responsive center-block" id ="logo-comp"><br>
+      				<p><strong>Electivo III<br>Recuperación de la Información</strong> <br> Ingeniería en Computación<br> Universidad de la Serena</p>
+      			</div>
+      			<div class="modal-footer">
+      				<button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
+      			</div>
+      		</div>
+      	</div>
+      </div>
 
 	    <div class="page-content">
 	    	<div class="row">
 			  <div class="col-md-2">
-			  	<div class="sidebar content-box" style="display: block;">
-	                <ul class="nav">
-	                    <!-- Main menu -->
-	                    <li class="current"><a href="administrador.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
-	                    <li><a href="subir_memoria.php"><i class="glyphicon glyphicon-upload"></i> Subir memorias </a></li>
-	                    <li><a href="listar_memorias.php"><i class="glyphicon glyphicon-list-alt"></i> Lista de memorias</a></li>
-                      <li><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
-	                </ul>
-	             </div>
+			  	<div class="sidebar content-box">
+							<!-- Menú principal -->
+	            <ul class="nav">
+	                <li class="current"><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
+	                <li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
+	                <li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Borrar memorias</a></li>
+	                <li><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
+	            </ul>
+	        </div>
 			  </div>
 			  <div class="col-md-10">
 			  	<div class="row">
@@ -197,14 +239,14 @@
 			  			<div class="content-box-large">
 			  				<div class="panel-heading">
 								<div class="panel-title">New vs Returning Visitors</div>
-								
+
 								<div class="panel-options">
 									<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
 									<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
 								</div>
 							</div> <!-- panel-heading -->
 			  				<div class="panel-body">
-			  					Ut tristique adipiscing mauris, sit amet suscipit metus porta quis. Donec dictum tincidunt erat, eu blandit ligula. Nam sit amet dolor sapien. Quisque velit erat, congue sed suscipit vel, feugiat sit amet enim. Suspendisse interdum enim at mi tempor commodo. Sed tincidunt sed tortor eu scelerisque. Donec luctus malesuada vulputate. Nunc vel auctor metus, vel adipiscing odio. Aliquam aliquet rhoncus libero, at varius nisi pulvinar nec. Aliquam erat volutpat. Donec ut neque mi. Praesent enim nisl, bibendum vitae ante et, placerat pharetra magna. Donec facilisis nisl turpis, eget facilisis turpis semper non. Maecenas luctus ligula tincidunt iasdsd vitae ante et, 
+			  					Ut tristique adipiscing mauris, sit amet suscipit metus porta quis. Donec dictum tincidunt erat, eu blandit ligula. Nam sit amet dolor sapien. Quisque velit erat, congue sed suscipit vel, feugiat sit amet enim. Suspendisse interdum enim at mi tempor commodo. Sed tincidunt sed tortor eu scelerisque. Donec luctus malesuada vulputate. Nunc vel auctor metus, vel adipiscing odio. Aliquam aliquet rhoncus libero, at varius nisi pulvinar nec. Aliquam erat volutpat. Donec ut neque mi. Praesent enim nisl, bibendum vitae ante et, placerat pharetra magna. Donec facilisis nisl turpis, eget facilisis turpis semper non. Maecenas luctus ligula tincidunt iasdsd vitae ante et,
 					  			<br /><br />
 					  			Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sed consectetur erat. Maecenas in elementum libero. Sed consequat pellentesque ultricies. Ut laoreet vehicula nisl sed placerat. Duis posuere lectus n, eros et hendrerit pellentesque, ante magna condimentum sapien, eget ultrices eros libero non orci. Etiam varius diam lectus.
 								<br /><br />
@@ -217,14 +259,14 @@
 			  				<div class="col-md-12">
 			  					<div class="content-box-header">
 				  					<div class="panel-title">New vs Returning Visitors</div>
-									
+
 									<div class="panel-options">
 										<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
 										<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
 									</div>
 					  			</div>
 					  			<div class="content-box-large box-with-header">
-					  				
+
 						  			Pellentesque luctus quam quis consequat vulputate. Sed sit amet diam ipsum. Praesent in pellentesque diam, sit amet dignissim erat. Aliquam erat volutpat. Aenean laoreet metus leo, laoreet feugiat enim suscipit quis. Praesent mauris mauris, ornare vitae tincidunt sed, hendrerit eget augue. Nam nec vestibulum nisi, eu dignissim nulla.
 									<br /><br />
 								</div>
@@ -234,14 +276,14 @@
 			  				<div class="col-md-12">
 			  					<div class="content-box-header">
 				  					<div class="panel-title">New vs Returning Visitors</div>
-									
+
 									<div class="panel-options">
 										<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
 										<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
 									</div>
 					  			</div>
 					  			<div class="content-box-large box-with-header">
-					  				
+
 						  			Pellentesque luctus quam quis consequat vulputate. Sed sit amet diam ipsum. Praesent in pellentesque diam, sit amet dignissim erat. Aliquam erat volutpat. Aenean laoreet metus leo, laoreet feugiat enim suscipit quis. Praesent mauris mauris, ornare vitae tincidunt sed, hendrerit eget augue. Nam nec vestibulum nisi, eu dignissim nulla.
 									<br /><br />
 								</div>
@@ -254,7 +296,7 @@
 			  		<div class="col-md-12 panel-warning">
 			  			<div class="content-box-header panel-heading">
 		  					<div class="panel-title ">New vs Returning Visitors</div>
-							
+
 							<div class="panel-options">
 								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
 								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
@@ -350,8 +392,11 @@
             <!-- /.row -->
         </footer>
 
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="js/bootstrap/bootstrap.min.js"></script>
-	    <script src="js/administrador/custom.js"></script>
+			<!-- jQuery -->
+			<script src="js/bootstrap/jquery.min.js"></script>
+			<!-- Bootstrap Core JavaScript -->
+			<script src="js/bootstrap/bootstrap.min.js"></script>
+			<!-- Administrador -->
+			<script src="js/administrador/custom.js"></script>
 	  </body>
 </html>

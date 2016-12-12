@@ -11,17 +11,13 @@
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-		<!-- Ionicons -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
-		<!-- Custom CSS -->
+		<!-- Estilo pagina CSS -->
 		<link href="css/general.css" rel="stylesheet">
-		<!-- styles -->
-		<link href="css/administrador/styles.css" rel="stylesheet">
-		<link href="css/administrador/style_mail.css" rel="stylesheet">
+		<!-- Estilo vista admin -->
+		<link href="css/administrador/admin_style.css" rel="stylesheet">
+		<link href="css/administrador/navbar_login.css" rel="stylesheet">
 		<link href="css/administrador/AdminLTE.min.css" rel="stylesheet">
+
 	</head>
 
 	<body>
@@ -35,83 +31,77 @@
 		</header> <!-- Header -->
 
 		<!-- Navigation -->
-		<nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation">
-		  <div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand">BiblioMemorias Digital</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-					  <li><a href="index.php">Inicio</a></li>
-					  <li><a href="busqueda.php">Buscar Memorias</a></li>
-					  <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
-					  <li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
-					  <li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
-					  <li data-toggle="modal" data-target="#myModal3"><a href="#">Sobre nosotros</a></li>
-					</ul>
-
-					<!-- Menu del administrador -->
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								<span class="glyphicon glyphicon-user"></span>
-								<strong>Usuario</strong>
-								<!--<img src="image/kathy.PNG" class="user-image img-circle" alt="Imagen usuario">
-								<b>Kathy</b>-->
-								<span class="glyphicon glyphicon-chevron-down"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li>
-									<div class="navbar-login">
-										<div class="row">
-											<div class="col-lg-4">
-												<p class="text-center">
-													<!--<img src="image/kathy.PNG" class="img-rounded icon-size">-->
-													<span class="glyphicon glyphicon-user icon-size"></span>
-												</p>
-											</div>
-											<div class="col-lg-8">
-												<p class="text-left"><strong>Nombre del usuario</strong></p>
-												<!--<p class="text-left"><strong>Katherine Ambler</strong></p>-->
-												<p class="text-left small">correo@electronico.com</p>
-												<!--<p class="text-left small">kambler@userena.cl</p>-->
-												<!--<p class="text-left">
-													<a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Perfil</a>
-												</p>-->
-											</div>
-										</div>
-									</div>
-								</li>
-
-								<li class="divider"></li>
-								<li>
-									<div class="navbar-login navbar-login-session">
-										<div class="row">
-											<div class="col-lg-12">
-												<p>
-													<a href="#" class="btn btn-danger btn-block">Cerrar sesión</a>
-												</p>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div> <!-- /.navbar-collapse -->
-		  </div> <!-- /.container -->
-
-		</nav>
-
+		<div class="row">
+			<div class="col-lg-12">
+				<nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation">
+						<div class="container-fluid">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand">BiblioMemorias Digital</a>
+							</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<ul class="nav navbar-nav">
+										<li><a href="index.php">Inicio</a></li>
+										<li><a href="busqueda.php">Buscar Memorias</a></li>
+										<li class="active"><a href="admin_home.php">Administrar</a></li>
+										<li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
+										<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+											Acerca <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
+												<li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
+												<li data-toggle="modal" data-target="#myModal3"><a href="#">Sobre nosotros</a></li>
+											</ul>
+										</li>
+									</ul>
+									<!-- Menu del administrador -->
+									<ul class="nav navbar-nav navbar-right">
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Admin <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li>
+													<div class="navbar-login">
+														<div class="row">
+															<div class="col-lg-4">
+																<p class="text-center">
+																	<img src="image/principal/uls_logo_hd.png" class="img-responsive">
+																</p>
+															</div>
+															<div class="col-lg-8">
+																<p class="text-left"><strong>Administrador</strong></p>
+																<p class="text-left small">BiblioMemorias Digital</p>
+																<p class="text-left small">Universidad de La Serena</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="divider"></li>
+												<li>
+													<div class="navbar-login navbar-login-session">
+														<div class="row">
+															<div class="col-lg-12">
+																<p>
+																	<a href="#" class="btn btn-danger btn-block">Cerrar sesión</a>
+																</p>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+							</div> <!-- /.navbar-collapse -->
+						</div> <!-- /.container -->
+					</nav>
+			</div>
+		</div>
 
 		<!-- Modal Contact -->
 		<div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -235,16 +225,15 @@
 
 			<div class="row">
 				<div class="col-md-2">
-					<div class="sidebar content-box" style="display: block;">
-						<ul class="nav">
-		                    <!-- Main menu -->
-		                    <li><a href="administrador.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
-		                    <li><a href="subir_memoria.php"><i class="glyphicon glyphicon-upload"></i> Subir memorias </a></li>
-		                    <li><a href="listar_memorias.php"><i class="glyphicon glyphicon-list-alt"></i> Lista de memorias</a></li>
-	                    	<li class="current"><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
-	                	</ul>
-						
-					</div>
+					<div class="sidebar content-box">
+							<!-- Menú principal -->
+	            <ul class="nav">
+	                <li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
+	                <li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
+	                <li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Borrar memorias</a></li>
+	                <li class="current"><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
+	            </ul>
+	        </div>
 				</div> <!-- col-md-2 -->
 
 				<div class="col-md-10">
@@ -421,7 +410,7 @@
 					</div>
 				</div><!--col-md-9-->
 			</div> <!-- row -->
-			
+
 		</div>
 		<!-- Footer -->
 		<footer>
@@ -432,10 +421,11 @@
 			</div><!-- /.row -->
 		</footer>
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/bootstrap/jquery.min.js"></script>
-		<script src="js/bootstrap/bootstrap.min.js"></script>
-		<script src="js/administrador/custom.js"></script>
-		<script src="js/live.js"></script>
+		<!-- jQuery -->
+    <script src="js/bootstrap/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+		<!-- Tooltip -->
+		<script src="js/tooltip.js"></script>
 	</body>
 </html>
