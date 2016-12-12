@@ -4,9 +4,7 @@
 //Such as a better placement of the titles at each line end,
 //adding numbers that reflect what each circular level stands for
 //Not placing the last level and slight differences in color
-//
-//For a bit of extra information check the blog about it:
-//http://nbremer.blogspot.nl/2013/09/making-d3-radar-chart-look-bit-better.html
+
 
 var RadarChart = {
   draw: function(id, d, options){
@@ -52,7 +50,7 @@ var RadarChart = {
 
 	var tooltip;
 
-	//Circular segments
+	//Segmentos circulares
 	for(var j=0; j<cfg.levels-1; j++){
 	  var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
 	  g.selectAll(".levels")
@@ -70,7 +68,7 @@ var RadarChart = {
 	   .attr("transform", "translate(" + (cfg.w/2-levelFactor) + ", " + (cfg.h/2-levelFactor) + ")");
 	}
 
-	//Text indicating at what % each level is
+	//Texto indicango en que % está cada nivel each
 	for(var j=0; j<cfg.levels; j++){
 	  var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
 	  g.selectAll(".levels")
