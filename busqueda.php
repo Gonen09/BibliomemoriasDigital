@@ -7,7 +7,7 @@
 		  <meta name="viewport" content="width=device-width, initial-scale=1">
 		  <meta name="description" content="Sitio para subir y buscar memorias de titulo de ingenieria en computacion">
 		  <meta name="author" content="Electivo III">
-    
+
       <title>Búsqueda de BiblioMemorias Digital ULS</title>
 
       <!-- Bootstrap Core CSS -->
@@ -19,6 +19,13 @@
       <link href="css/reloj.css" rel="stylesheet">
       <!-- Panal -->
       <link href="css/panal.css" rel="stylesheet">
+
+			<?php
+				if(isset($_POST['busqueda-index']) && !empty($_POST["busqueda-index"])){
+						$indexData = $_POST['busqueda-index'];
+						print "<script>alert('Enviado desde index: ".$indexData."')</script>";
+				}
+			?>
 
 	</head>
 	<body onload="cargarReloj()">
@@ -404,13 +411,13 @@
 				  <div class="panel-body">
 					<div class="row">
 					  <div class="col-sm-12"> <!-- Agregar contenido para agrandar el grafico flotante -->
-					  
+
 						<br><br><br><br><br><br>
 						<br><br><br><br><br><br>
 						<br><br><br><br><br><br>
 						<br><br><br><br><br><br>
 						<br><br><br><br>
-						
+
 						<!-- Aquí se agrega el grafico panal -->
 						<div id="visualization"></div>
 					  </div>
