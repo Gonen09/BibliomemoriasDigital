@@ -8,7 +8,7 @@
       <meta name="description" content="Sitio para subir y buscar memorias de titulo de ingenieria en computacion">
       <meta name="author" content="Electivo III">
 
-      <title>BiblioMemorias Digital ULS</title>
+      <title>Búsqueda de BiblioMemorias Digital ULS</title>
 
       <!-- Bootstrap Core CSS -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -51,8 +51,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                   <li><a href="index.php">Inicio</a></li>
-                  <li  class="active"><a href="busqueda.php">Buscar Memorias</a></li>
-                  <li><a href="#">Administrar</a></li>
+                  <li class="active"><a href="busqueda.php">Buscar Memorias</a></li>
+                  <li><a href="admin_home.php">Administrar</a></li>
                   <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     Acerca <span class="caret"></span></a>

@@ -49,7 +49,7 @@
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="index.php">Inicio</a></li>
                   <li><a href="busqueda.php">Buscar Memorias</a></li>
-                  <li><a href="#">Administrar</a></li>
+                  <li><a href="admin_home.php">Administrar</a></li>
                   <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     Acerca <span class="caret"></span></a>
