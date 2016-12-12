@@ -273,15 +273,15 @@
 			  <div class="container" aling="center">
 				<div class="row">
 				  <div class="col-md-12">
-					<form id="formulario">
+					<form id="formulario" onsubmit="return false;">
 						<div class="row">
 						  <div class="col-md-8">
 							<h3 class="text-primary"><strong>Búsqueda simple</strong></h3>
 							<br>
 							<div class="input-group">
-							  <input type="text" id="busqueda" class="form-control" placeholder="Buscar contenido" name="q">
+							  <input type="text" id="q_contenido" class="form-control" placeholder="Buscar contenido" name="q">
 							  <div class="input-group-btn">
-								  <button class="btn btn-default" type="submit" onclick="enviar_formulario()"><i class="glyphicon glyphicon-search"></i></button>
+								  <button class="btn btn-default" type="submit" onclick="enviarFormulario()"><i class="glyphicon glyphicon-search"></i></button>
 							  </div>
 							</div>
 						  </div>
@@ -297,7 +297,7 @@
 			  <div class="panel-group" id="accordion">
 				<div class="panel panel-default">
 					<div class="panel-heading" id="busqueda-avanzada">
-						<h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><a>Búsqueda avanzada</a></h4>
+						<h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="p_avanzada"><a>Búsqueda avanzada</a></h4>
 					</div>
 					<div id="collapseOne" class="panel-collapse collapse">
 						<div class="panel-body">
@@ -309,7 +309,7 @@
 								<label for="example-text-input" class="col-xs-2 col-form-label text-right">Titulo</label>
 								<div class="col-xs-10">
 								  <div class="input-group">
-									<input class="form-control" type="text" placeholder="Titulo memoria" id="example-text-input">
+									<input class="form-control" type="text" placeholder="Titulo memoria" id="q_titulo">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
 								  </div>
 								</div>
@@ -318,7 +318,7 @@
 								<label for="example-search-input" class="col-xs-2 col-form-label text-right">Autor</label>
 								<div class="col-xs-10">
 								  <div class="input-group">
-									<input class="form-control" type="text" placeholder="Autor(es) memoria" id="example-search-input">
+									<input class="form-control" type="text" placeholder="Autor(es) memoria" id="q_autor">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 								  </div>
 								</div>
@@ -327,7 +327,7 @@
 								<label for="example-email-input" class="col-xs-2 col-form-label text-right">Profesor</label>
 								<div class="col-xs-10">
 								  <div class="input-group">
-									<input class="form-control" type="text" placeholder="Profesor(es) memoria" id="example-email-input">
+									<input class="form-control" type="text" placeholder="Profesor(es) memoria" id="q_profesor">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
 								  </div>
 								</div>
@@ -336,7 +336,7 @@
 								<label for="example-url-input" class="col-xs-2 col-form-label text-right">Año</label>
 								<div class="col-xs-10">
 								  <div class="input-group">
-									<input class="form-control" type="number" value="2000" id="example-number-input">
+									<input class="form-control" type="number" value="2000" id="q_ano">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 								  </div>
 								</div>
@@ -345,14 +345,14 @@
 								<label for="example-tel-input" class="col-xs-2 col-form-label text-right">Abstract</label>
 								<div class="col-xs-10">
 								  <div class="input-group">
-									<input class="form-control" type="text" placeholder="Resumen memoria" id="example-tel-input">
+									<input class="form-control" type="text" placeholder="Resumen memoria" id="q_abstract">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
 								  </div>
 								</div>
 							  </div>
 							  <div class="form-group row">
 								<div class="col-xs-6 col-xs-offset-6">
-								  <button type="submit" class="btn btn-primary">
+								  <button type="submit" class="btn btn-primary" onclick="enviarFormulario()">
 									<i class="glyphicon glyphicon-search"></i>
 									Consultar
 								  </button>
@@ -400,142 +400,18 @@
 		</div> <!-- col-sm-3 -->
 	  </div> <!-- row content -->
 
-	  <div class="row">
-		  <div class="col-sm-6"> <!-- Panal resultados -->
-			<div class="row">
-			  <div class="col-sm-12">
-				<div class="panel panel-default">
-				  <div class="panel-heading" id="cabezera-panel">
-					<h4 class="text-center">Panal</h4>
-				  </div>
-				  <div class="panel-body">
-					<div class="row">
-					  <div class="col-sm-12"> <!-- Agregar contenido para agrandar el grafico flotante -->
 
-						<br><br><br><br><br><br>
-						<br><br><br><br><br><br>
-						<br><br><br><br><br><br>
-						<br><br><br><br><br><br>
-						<br><br><br><br>
+<!-- 	  <div class="row">  -->
+		 
 
-						<!-- Aquí se agrega el grafico panal -->
-						<div id="visualization"></div>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			  </div>
-			</div>
+
+
+	     <div class="row" id= "contenedor_panal_y_resultados">
+		  
+		  
+
 		  </div> <!-- col-sm-6 -->
-
-		  <div class="col-sm-6"> <!-- Resultados busqueda -->
-			  <div class="panel panel-default">
-				<div class="panel-heading" id="cabezera-panel">
-				  <h4 class="text-center">Resultados</h4>
-				</div>
-				<div class="panel-body">
-				   <div class="table-responsive">
-					 <table class="table table-condensed table-hover table-borderless">
-					   <tbody>
-						   <div id="resultado" class="row">
-							 <tr>
-							   <td class="col-sm-1">
-								 <img src="image/pdf.png" alt="pdf" class="img-responsive">
-								 <br>
-								 <p class="text-center"><a href="#" id="archivo">Ver</a></p>
-							   </td>
-							   <td class="col-sm-1">
-								 <img src="image/chart.png" alt="grafico" class="img-responsive">
-								 <br>
-								 <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
-							   </td>
-							   <td class="col-sm-1">
-								 <hr>
-							   </td>
-							   <td class="col-sm-9">
-								 <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
-								 <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
-								 <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
-								 <h4><strong>Año: </strong><i id="ano">2016</i></h4>
-							   </td>
-							 </tr>
-						   </div>
-						   <div id="resultado" class="row">
-							 <tr>
-							   <td class="col-sm-1">
-								 <img src="image/pdf.png" alt="pdf" class="img-responsive">
-								 <br>
-								 <p class="text-center"><a href="#" id="archivo">Ver</a></p>
-							   </td>
-							   <td class="col-sm-1">
-								 <img src="image/chart.png" alt="grafico" class="img-responsive">
-								 <br>
-								 <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
-							   </td>
-							   <td class="col-sm-1">
-								 <hr>
-							   </td>
-							   <td class="col-sm-9">
-								 <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
-								 <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
-								 <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
-								 <h4><strong>Año: </strong><i id="ano">2016</i></h4>
-							   </td>
-							 </tr>
-						   </div>
-						   <div id="resultado" class="row">
-							 <tr>
-							   <td class="col-sm-1">
-								 <img src="image/pdf.png" alt="pdf" class="img-responsive">
-								 <br>
-								 <p class="text-center"><a href="#" id="archivo">Ver</a></p>
-							   </td>
-							   <td class="col-sm-1">
-								 <img src="image/chart.png" alt="grafico" class="img-responsive">
-								 <br>
-								 <p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
-							   </td>
-							   <td class="col-sm-1">
-								 <hr>
-							   </td>
-							   <td class="col-sm-9">
-								 <h4><strong>Titulo: </strong><i id="titulo">Titulo de la tesis</i></h4>
-								 <h4><strong>Autor: </strong><i id="autor">Autor de la tesis</i></h4>
-								 <h4><strong>Profesor: </strong><i id="profesor">Profesor de la tesis</i></h4>
-								 <h4><strong>Año: </strong><i id="ano">2016</i></h4>
-							   </td>
-							 </tr>
-						   </div>
-						</tbody>
-					  </table>
-				   </div>
-				   <hr>
-				   <div align="center">
-					 <nav aria-label="Page navigation">
-					   <ul class="pagination" class="search-pagination">
-						 <li>
-						   <a href="#" aria-label="Previous">
-							 <span aria-hidden="true">&laquo;</span>
-						   </a>
-						 </li>
-						 <li class="active"><a href="#">1</a></li>
-						 <li><a href="#">2</a></li>
-						 <li><a href="#">3</a></li>
-						 <li><a href="#">4</a></li>
-						 <li><a href="#">5</a></li>
-						 <li>
-						   <a href="#" aria-label="Next">
-							 <span aria-hidden="true">&raquo;</span>
-						   </a>
-						 </li>
-					   </ul>
-					 </nav>
-				   </div>
-				</div>
-			  </div>
-		  </div>
-		  </div> <!-- col-sm-6 -->
-		</div> <!-- row content -->
+<!--		</div> <!-- row content -->
 	</div> <!-- container-fluid -->
 
 	  <!-- Footer -->
@@ -561,5 +437,8 @@
 	  <script src="js/D3/d3.v3.min.js"></script>
 	  <script src="js/grafico-arana/RadarChart.js"></script>
 	  <script src="js/grafico-arana/webchart.js"></script>
+	    <!--Funciones de la pagina -->
+		<script src="js/interpretando_ajax.js"></script>
+		<script src="js/funciones_busqueda.js"></script
 	</body>
 </html>
