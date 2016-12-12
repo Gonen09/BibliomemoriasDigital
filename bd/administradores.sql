@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `administradores` (
   `id` int(2) unsigned NOT NULL AUTO_INCREMENT,
   `rut` varchar(9) COLLATE utf8_spanish_ci NOT NULL,
-  `pass` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `pass` varchar(32) COLLATE utf8_spanish_ci NOT NULL,
   `autorizacion` tinyint(1) unsigned NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `rut` (`rut`)
