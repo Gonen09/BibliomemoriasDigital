@@ -1,7 +1,6 @@
 <?php
-
-	include('conectar.php');
 	header('Content-Type: text/html; charset=UTF-8');
+	include('conectar.php');
 
 	$usuario = $_POST['user'];
   $pass = md5($_POST["password"]);

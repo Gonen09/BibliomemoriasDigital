@@ -20,6 +20,18 @@
 		<!-- Data Tables -->
 		<link href="css/administrador/dataTables.bootstrap.css" rel="stylesheet">
 
+		<?php
+			session_start();
+			if(!isset($_SESSION["user"])){
+				echo("<script>alert('Necesita estar logueado como administrador para acceder a este espacio.'); window.location='index.php';</script>");
+			}else{
+				//Acá se verifica que está iniciada la sesión, por lo tanto acá generamos el cambio del ícono.
+				//Cambiar Etiqueta de Botón.
+				//Cambiar Direccionamiento.
+				//Cambiar todo lo necesario para cuando se está logueado.
+			}
+		?>
+
 	</head>
 
 	<body>
