@@ -14,11 +14,20 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
 	    <!-- Estilo pagina CSS -->
       <link href="css/general.css" rel="stylesheet">
+    	<link href="css/navbar_login.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
       <!-- Reloj -->
       <link href="css/reloj.css" rel="stylesheet">
       <!-- Panal -->
       <link href="css/panal.css" rel="stylesheet">
+
+			<?php
+				require('php/login_nav.php');
+				require('php/contacto_modal.php');
+				require('php/acerca_modal.php');
+
+				session_start();
+			?>
 
 			
 
@@ -69,138 +78,26 @@
                     </ul>
                   </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                  <li data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-user"></span> Iniciar sesión</a></li>
-                </ul>
+								<?php
+                  vista_login();
+                ?>
             </div> <!-- /.navbar-collapse -->
           </div> <!-- /.container -->
         </nav>
     </div>
   </div>
 
-	  <!-- Modal Contact -->
-	  <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
-			  <!--Content-->
-			  <div class="modal-content">
-				  <!--Body-->
-				  <div class="modal-body">
-					  <img class="img-rounded img-responsive" id="img_contacto" src="image/principal/contacto.png">
-					  <br>
-					  <div class="md-form">
-						<div class="input-group">
-						  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						  <input id="login-username" type="text" class="form-control" name="nombre" value="" placeholder="Nombre completo">
-						</div>
-					  </div>
-					  <br>
-					  <div class="md-form">
-						<div class="input-group">
-						  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-						  <input id="login-username" type="text" class="form-control" name="correo" value="" placeholder="Correo electrónico">
-						</div>
-					  </div>
-					  <br>
-					  <div class="md-form">
-						<div class="input-group">
-						  <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-						  <input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Telefono">
-						</div>
-					  </div>
-					  <br>
-					  <div class="md-form">
-						<div class="form-group">
-						 <label for="sel1">Motivo contacto:</label>
-						 <select class="form-control" id="sel1">
-						   <option>Sugerencia</option>
-						   <option>Felicitación</option>
-						   <option>Reclamo</option>
-						   <option>Otros</option>
-						 </select>
-						</div>
-					  </div>
-					  <div class="md-form">
-						  <div class="form-group">
-						   <label for="comment">Comentarios:</label>
-						   <textarea type="text" class="form-control md-textarea" style="resize: none;" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
-						  </div>
-					  </div>
-				  </div>
-				  <!--Footer-->
-				  <div class="modal-footer">
-					<div class="col-xs-8 col-xs-offset-4 center-block">
-					  <button type="button" class="btn btn-primary">Enviar</button>
-					  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-					</div>
-				  </div>
-			  </div>
-		  </div>
-	  </div>
-
-	  <!-- Modal  1 -->
-	  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog modal-sm" role="document">
-			<div class="modal-content">
-				<div class="modal-header text-center">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel1">Contacto</h4>
-				</div>
-				<div class="modal-body text-center">
-					<img src="image/principal/uls-logo.png" class="img-responsive center-block" id ="logo-uls"><br>
-					<p><strong>Universidad de la Serena</strong><br> Departamento de Matematicas<br>
-						 Avenida Cisternas Nº 1200<br> La Serena <br> Teléfono: 51 2 204102 / 51 2 204103</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
-				</div>
-			</div>
-		</div>
-	  </div>
-
-	  <!-- Modal  2 -->
-	  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog modal-sm" role="document">
-		  <div class="modal-content">
-			<div class="modal-header text-center">
-			  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			  <h4 class="modal-title" id="myModalLabel2">Docente</h4>
-			</div>
-			<div class="modal-body text-center">
-			  <img src="image/principal/jeltsch.jpg" class="img-responsive center-block img-rounded" id ="jeltsh"><br>
-			  <p><strong>Dr. Eric Jeltsch F.</strong><br> Depto. de Matemáticas <br>Av. Cisternas 1200, La Serena, CHILE.
-				<br>2º Piso, Of. 215<br>Fono: (+56)-51-2-334732 <br>e-mail: ejeltsch@userena.cl</p>
-			</div>
-			<div class="modal-footer">
-			  <button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
-			</div>
-		  </div>
-		</div>
-	  </div>
-
-	  <!-- Modal  3 -->
-	  <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog modal-sm" role="document">
-			<div class="modal-content">
-				<div class="modal-header text-center">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel3">Sobre nosotros</h4>
-				</div>
-				<div class="modal-body text-center">
-					<img src="image/principal/comp-logo.png" class="img-responsive center-block" id ="logo-comp"><br>
-					<p><strong>Electivo III<br>Recuperación de la Información</strong> <br> Ingeniería en Computación<br> Universidad de la Serena</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
-				</div>
-			</div>
-		</div>
-	  </div>
+		<?php
+			modal_contacto();
+			modal_uni();
+			modal_docente();
+			modal_curso();
+		?>
 
 	  <!-- Modal Login -->
 	  <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
-			<!-- <form action="JavaScript:enviar_consulta('login-modal','respuesta')" method="post" id="login-modal"> -->
-			<form action="php/consulta_login.php" method="post" id="login-modal">
+			<form action="php/login.php" method="post" id="login-modal">
 			  <!--Content-->
 			  <div class="modal-content">
 				  <!--Body-->
@@ -210,18 +107,17 @@
 						<div class="md-form">
 						  <div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input id="login-username" type="text" class="form-control" name="user" placeholder="Usuario">
+							<input id="login-username" type="text" class="form-control" name="user" placeholder="Usuario: Rut sin puntos y sin guion" required>
 						  </div>
 						</div>
 						<br>
 						<div class="md-form">
 						  <div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-							<input id="login-password" type="password" class="form-control" name="password" placeholder="Contraseña">
+							<input id="login-password" type="password" class="form-control" name="password" placeholder="Contraseña" required>
 						  </div>
 						</div>
 				  </div>
-
 				  <!--Footer-->
 				  <div class="modal-footer">
 						<div class="pull-left">
@@ -285,10 +181,9 @@
 									$indexData = $_POST['busqueda-index'];
 									print 'value="'.$indexData.'"';
 								}
+								
 								?>
-						  
-							  
-							  >
+						        >
 							  <div class="input-group-btn">
 								  <button class="btn btn-default" type="submit" onclick="enviarFormulario()"><i class="glyphicon glyphicon-search"></i></button>
 							  </div>
@@ -412,13 +307,13 @@
 
 
 <!-- 	  <div class="row">  -->
-		 
+
 
 
 
 	     <div class="row" id= "contenedor_panal_y_resultados">
-		  
-		  
+
+
 
 		  </div> <!-- col-sm-6 -->
 <!--		</div> <!-- row content -->

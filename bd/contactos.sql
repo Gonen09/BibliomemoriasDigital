@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 27-11-2016 a las 02:34:47
+-- Tiempo de generación: 28-11-2016 a las 23:30:47
 -- Versión del servidor: 5.6.34-log
 -- Versión de PHP: 5.6.20
 
@@ -23,16 +23,22 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `administradores`
+-- Estructura de tabla para la tabla `contactos`
 --
 
-CREATE TABLE IF NOT EXISTS `administradores` (
-  `id` int(2) unsigned NOT NULL AUTO_INCREMENT,
-  `rut` varchar(9) COLLATE utf8_spanish_ci NOT NULL,
-  `pass` varchar(32) COLLATE utf8_spanish_ci NOT NULL,
-  `autorizacion` tinyint(1) unsigned NOT NULL DEFAULT '1',
+CREATE TABLE IF NOT EXISTS `contactos` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` varchar(13) COLLATE utf8_spanish_ci NOT NULL,
+  `motivo` varchar(13) COLLATE utf8_spanish_ci NOT NULL,
+  `comentario` text COLLATE utf8_spanish_ci NOT NULL,
+  `fecha` date NOT NULL,
+  `leido` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `rut` (`rut`)
+  UNIQUE KEY `id` (`id`),
+  KEY `motivo` (`motivo`,`fecha`),
+  KEY `leido` (`leido`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -14,11 +14,22 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Estilo pagina CSS -->
 		<link href="css/general.css" rel="stylesheet">
+		<link href="css/navbar_login.css" rel="stylesheet">
 		<!-- Estilo vista admin -->
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
-		<link href="css/administrador/navbar_login.css" rel="stylesheet">
 		<!-- Data Tables -->
 		<link href="css/administrador/dataTables.bootstrap.css" rel="stylesheet">
+
+		<?php
+			require('php/login_nav.php');
+			require('php/acerca_modal.php');
+
+			session_start();
+
+			if(!isset($_SESSION["user"])){
+				echo("<script>alert('Necesita iniciar sesion como administrador para acceder a este sitio.'); window.location='index.php';</script>");
+			}
+ 		?>
 
 	</head>
 
@@ -53,7 +64,6 @@
 	                  <li><a href="index.php">Inicio</a></li>
 	                  <li><a href="busqueda.php">Buscar Memorias</a></li>
                   	<li class="active"><a href="admin_home.php">Administrar</a></li>
-	                  <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
 	                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 	                    Acerca <span class="caret"></span></a>
 	                    <ul class="dropdown-menu">
@@ -63,165 +73,20 @@
 	                    </ul>
 	                  </li>
 	                </ul>
-									<!-- Menu del administrador -->
-									<ul class="nav navbar-nav navbar-right">
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Admin <span class="caret"></span></a>
-											<ul class="dropdown-menu">
-												<li>
-													<div class="navbar-login">
-														<div class="row">
-															<div class="col-lg-4">
-																<p class="text-center">
-																	<img src="image/principal/uls_logo_hd.png" class="img-responsive">
-																</p>
-															</div>
-															<div class="col-lg-8">
-																<p class="text-left"><strong>Administrador</strong></p>
-																<p class="text-left small">BiblioMemorias Digital</p>
-																<p class="text-left small">Universidad de La Serena</p>
-															</div>
-														</div>
-													</div>
-												</li>
-												<li class="divider"></li>
-												<li>
-													<div class="navbar-login navbar-login-session">
-														<div class="row">
-															<div class="col-lg-12">
-																<p>
-																	<a href="#" class="btn btn-danger btn-block">Cerrar sesión</a>
-																</p>
-															</div>
-														</div>
-													</div>
-												</li>
-											</ul>
-										</li>
-									</ul>
+									<?php
+	                  vista_login();
+	                ?>
 	            </div> <!-- /.navbar-collapse -->
 	          </div> <!-- /.container -->
 	        </nav>
 	    </div>
 	  </div>
 
-		<!-- Modal Contact -->
-		<div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<!--Content-->
-				<div class="modal-content">
-					<!--Body-->
-					<div class="modal-body">
-						<img class="img-rounded img-responsive" id="img_contacto" src="image/principal/contacto.png">
-						<br>
-						<div class="md-form">
-						  <div class="input-group">
-							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input id="login-username" type="text" class="form-control" name="nombre" value="" placeholder="Nombre completo">
-						  </div>
-						</div>
-						<br>
-						<div class="md-form">
-						  <div class="input-group">
-							<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-							<input id="login-username" type="text" class="form-control" name="correo" value="" placeholder="Correo electrónico">
-						  </div>
-						</div>
-						<br>
-						<div class="md-form">
-						  <div class="input-group">
-							<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-							<input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Telefono">
-						  </div>
-						</div>
-						<br>
-						<div class="md-form">
-						  <div class="form-group">
-						   <label for="sel1">Motivo contacto:</label>
-						   <select class="form-control" id="sel1">
-							 <option>Sugerencia</option>
-							 <option>Felicitación</option>
-							 <option>Reclamo</option>
-							 <option>Otros</option>
-						   </select>
-						  </div>
-						</div>
-						<div class="md-form">
-							<div class="form-group">
-							 <label for="comment">Comentarios:</label>
-							 <textarea type="text" class="form-control md-textarea" style="resize: none;" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
-							</div>
-						</div>
-					</div>
-					<!--Footer-->
-					<div class="modal-footer">
-					  <div class="col-md-8 center-block">
-						<button type="button" class="btn btn-primary">Enviar</button>
-						<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-					  </div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal  1: Contacto -->
-		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog modal-sm" role="document">
-				<div class="modal-content">
-					<div class="modal-header text-center">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel1">Contacto</h4>
-					</div>
-					<div class="modal-body text-center">
-						<img src="image/principal/uls-logo.png" class="img-responsive center-block" id ="logo-uls"><br>
-						<p><strong>Universidad de la Serena</strong><br> Departamento de Matematicas<br>
-							 Avenida Cisternas Nº 1200<br> La Serena <br> Teléfono: 51 2 204102 / 51 2 204103</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal  2: Docente -->
-		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		  <div class="modal-dialog modal-sm" role="document">
-			<div class="modal-content">
-			  <div class="modal-header text-center">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel2">Docente</h4>
-			  </div>
-			  <div class="modal-body text-center">
-				<img src="image/principal/jeltsch.jpg" class="img-responsive center-block img-rounded" id ="jeltsh"><br>
-				<p><strong>Dr. Eric Jeltsch F.</strong><br> Depto. de Matemáticas <br>Av. Cisternas 1200, La Serena, CHILE.
-				  <br>2º Piso, Of. 215<br>Fono: (+56)-51-2-334732 <br>e-mail: ejeltsch@userena.cl</p>
-			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
-			  </div>
-			</div>
-		  </div>
-		</div>
-
-		<!-- Modal  3: Sobre nosotros -->
-		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog modal-sm" role="document">
-				<div class="modal-content">
-					<div class="modal-header text-center">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel3">Sobre nosotros</h4>
-					</div>
-					<div class="modal-body text-center">
-						<img src="image/principal/comp-logo.png" class="img-responsive center-block" id ="logo-comp"><br>
-						<p><strong>Electivo III<br>Recuperación de la Información</strong> <br> Ingeniería en Computación<br> Universidad de la Serena</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
-					</div>
-				</div>
-			</div>
-		</div>
+		<?php
+			modal_uni();
+			modal_docente();
+			modal_curso();
+		?>
 
 		<div class="page-content">
 			<div class="row">

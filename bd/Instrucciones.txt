@@ -12,5 +12,9 @@ Importar scripts SQL: [Con la base de datos seleccionada ir a "Importar"]
 1) administradores.sql
 2) crear_admin_sitio.sql
 3) usuario_bd.sql
-    MD5 -> u1: 209034174 p1: biblio  (No funcional por ahora)
-    NO MD5 -> u2: 191913671 p2: memorias (funcional)
+    MD5 -> u1: 209034174 p1: biblio
+    MD5 -> u2: 191913671 p2: memorias
+
+----- CONTACTO -----
+
+1) contactos.sql
