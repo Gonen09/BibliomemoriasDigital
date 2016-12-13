@@ -12,6 +12,7 @@ function enviarFormulario(){
            }
     });	
 	*/
+	alert ('Indexando.....');
 	var formData = new FormData(document.getElementById("formulario"));
 	//formData.append("dato", "valor");
 	$.ajax({
@@ -24,7 +25,7 @@ function enviarFormulario(){
     processData: false
 })
     .done(function(res){
-		//alert ('Indexado'+res);
+		alert ('......Indexado');
        // $("#mensaje").html("Respuesta: " + res);
     });
 	
