@@ -25,6 +25,5 @@
 	}else{
 		echo("<script>alert('El Usuario o la Contraseña ingresadas no corresponden a un usuario registrado.'); window.history.back();</script>");
 	}
-	$conn->close();
 	exit();
 ?>

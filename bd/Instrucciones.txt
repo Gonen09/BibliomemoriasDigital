@@ -18,3 +18,4 @@ Importar scripts SQL: [Con la base de datos seleccionada ir a "Importar"]
 ----- CONTACTO -----
 
 1) contactos.sql
+2) permisos_contacto.sql

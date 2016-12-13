@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `contactos` (
   `telefono` varchar(13) COLLATE utf8_spanish_ci NOT NULL,
   `motivo` varchar(13) COLLATE utf8_spanish_ci NOT NULL,
   `comentario` text COLLATE utf8_spanish_ci NOT NULL,
-  `fecha` date NOT NULL,
+  `fecha` datetime NOT NULL,
   `leido` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
