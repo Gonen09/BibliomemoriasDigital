@@ -13,19 +13,16 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Estilo pagina CSS -->
 		<link href="css/general.css" rel="stylesheet">
+		<link href="css/navbar_login.css" rel="stylesheet">
 		<!-- Estilo vista admin -->
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
-		<link href="css/administrador/navbar_login.css" rel="stylesheet">
 
 		<?php
+			require('php/login_nav.php');
 			session_start();
+
 			if(!isset($_SESSION["user"])){
-				echo("<script>alert('Necesita estar logueado como administrador para acceder a este espacio.'); window.location='index.php';</script>");
-			}else{
-				//Acá se verifica que está iniciada la sesión, por lo tanto acá generamos el cambio del ícono.
-				//Cambiar Etiqueta de Botón.
-				//Cambiar Direccionamiento.
-				//Cambiar todo lo necesario para cuando se está logueado.
+				echo("<script>alert('Necesita iniciar sesion como administrador para acceder a este sitio.'); window.location='index.php';</script>");
 			}
  		?>
 
@@ -72,42 +69,9 @@
 		                    </ul>
 		                  </li>
 		                </ul>
-										<!-- Menu del administrador -->
-										<ul class="nav navbar-nav navbar-right">
-											<li class="dropdown">
-												<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Admin <span class="caret"></span></a>
-												<ul class="dropdown-menu">
-													<li>
-														<div class="navbar-login">
-															<div class="row">
-																<div class="col-lg-4">
-																	<p class="text-center">
-																		<img src="image/principal/uls_logo_hd.png" class="img-responsive">
-																	</p>
-																</div>
-																<div class="col-lg-8">
-																	<p class="text-left"><strong>Administrador</strong></p>
-																	<p class="text-left small">BiblioMemorias Digital</p>
-																	<p class="text-left small">Universidad de La Serena</p>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="divider"></li>
-													<li>
-														<div class="navbar-login navbar-login-session">
-															<div class="row">
-																<div class="col-lg-12">
-																	<p>
-																		<a href="php/logout.php" class="btn btn-danger btn-block">Cerrar sesión</a>
-																	</p>
-																</div>
-															</div>
-														</div>
-													</li>
-												</ul>
-											</li>
-										</ul>
+										<?php
+		                  vista_login();
+		                ?>
 		            </div> <!-- /.navbar-collapse -->
 		          </div> <!-- /.container -->
 		        </nav>

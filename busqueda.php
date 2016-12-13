@@ -14,6 +14,7 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
 	    <!-- Estilo pagina CSS -->
       <link href="css/general.css" rel="stylesheet">
+    	<link href="css/navbar_login.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
       <!-- Reloj -->
       <link href="css/reloj.css" rel="stylesheet">
@@ -21,15 +22,10 @@
       <link href="css/panal.css" rel="stylesheet">
 
 			<?php
+				require('php/login_nav.php');
 				session_start();
-				$rotulado = "";
-				if(isset($_SESSION["user"])){
-					//Acá se verifica que está iniciada la sesión, por lo tanto acá generamos el cambio del ícono.
-					//Cambiar Etiqueta de Botón.
-					//Cambiar Direccionamiento.
-					//Cambiar todo lo necesario para cuando se está logueado.
-				}
 
+				/*Busqueda realizada en index*/
 				if(isset($_POST['busqueda-index']) && !empty($_POST["busqueda-index"])){
 						$indexData = $_POST['busqueda-index'];
 						print "<script>alert('Enviado desde index: ".$indexData."')</script>";
@@ -79,9 +75,9 @@
                     </ul>
                   </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                  <li data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-user"></span> Iniciar sesión</a></li>
-                </ul>
+								<?php
+                  vista_login();
+                ?>
             </div> <!-- /.navbar-collapse -->
           </div> <!-- /.container -->
         </nav>
