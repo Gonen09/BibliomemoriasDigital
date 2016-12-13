@@ -20,10 +20,10 @@
 					echo "<h1>Sesión Iniciada con éxito</h1>";
 					header("location:../admin_home.php");
 			}else{
-					echo("<script>alert('El Rut o la Contraseña ingresadas no corresponden a un usuario registrado.'); window.history.back();</script>");
+					echo("<script>alert('El Usuario o la Contraseña ingresadas no corresponden a un usuario registrado.'); window.history.back();</script>");
 			}
 	}else{
-		echo("<script>alert('El Rut o la Contraseña ingresadas no corresponden a un usuario registrado.'); window.history.back();</script>");
+		echo("<script>alert('El Usuario o la Contraseña ingresadas no corresponden a un usuario registrado.'); window.history.back();</script>");
 	}
 	exit();
 ?>

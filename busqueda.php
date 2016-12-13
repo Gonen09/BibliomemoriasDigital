@@ -215,7 +215,7 @@
 						<div class="md-form">
 						  <div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input id="login-username" type="text" class="form-control" name="user" placeholder="Usuario" required>
+							<input id="login-username" type="text" class="form-control" name="user" placeholder="Usuario: Rut sin puntos y sin guion" required>
 						  </div>
 						</div>
 						<br>
