@@ -209,8 +209,7 @@
 	  <!-- Modal Login -->
 	  <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
-			<form action="JavaScript:enviar_consulta('login-modal','respuesta')" method="post" id="login-modal">
-			<!-- <form action="php/consulta_login.php" method="post" id="login-modal"> -->
+			<form action="php/login.php" method="post" id="login-modal">
 			  <!--Content-->
 			  <div class="modal-content">
 				  <!--Body-->
@@ -231,7 +230,6 @@
 						  </div>
 						</div>
 				  </div>
-
 				  <!--Footer-->
 				  <div class="modal-footer">
 						<div class="pull-left">
