@@ -2,10 +2,7 @@ function enviarFormulario(){
 	
 	var url = "php/resultados.php"; // El script a dónde se realizará la petición.
 	var a = document.getElementById("p_avanzada");
-	
 	var contenido = document.getElementById("q_contenido").value;
-	//alert (contenido);
-		
 	var adata = new Array();
 	if (a.getAttribute('aria-expanded') == 'false'){ //Si la busqueda es normal
 		if (contenido== ''){
@@ -37,17 +34,10 @@ function enviarFormulario(){
            type: "POST",
            url: url,
            //data: $("#formulario").serialize(), // Adjuntar los campos del formulario enviado.
-		   //data: {"parametro1" : "valor1", "parametro2" : "valor2"},//.serialize(), // Adjuntar los campos del formulario enviado.
-			//data:adata,
 			data:adata,
 			success: function(data)
            {
-			 	//if (data.length == 0)
-					//alert('no se han especificado criterios de búsqueda');
-				//else
-					document.getElementById("contenedor_panal_y_resultados").innerHTML = data;
-					//rellenar_panal();
-				//alert (data);
+				document.getElementById("contenedor_panal_y_resultados").innerHTML = data;
 				var scs=data.extractScript();    //capturamos los scripts 
 				scs.___evalScript();       //interpretación  scripts
            }
@@ -55,8 +45,6 @@ function enviarFormulario(){
 }
 function cambiarPagina(pagina){
 	modificarResultados(null,pagina);
-	//alert(pagina);
-	//modificarResultados(null,pagina);
 }
 
 function agregarFiltro(filtro){
@@ -66,7 +54,7 @@ function agregarFiltro(filtro){
 function modificarResultados(facet,pagina){
 	var adata = new Array();
 	var ano = '';
-	var id_memoria = '';
+	var clasificacion = '';
 	var profesor = '';
 	if(facet != null){
 		var opciones = facet.split('|');
@@ -74,32 +62,24 @@ function modificarResultados(facet,pagina){
 			case 'ano':
 				ano = opciones[1];
 			break;
-			case 'id_memoria':
-				id_memoria = opciones[1];
+			case 'clasificacion':
+				clasificacion = opciones[1];
 			break;
 			case 'profesor':
 				profesor = opciones[1];
 			break;
 		}
 	}
-	
-	
-		
-	
-	
 	if (facet == null){//cambiando pagina
 		adata = {'pagina':pagina};
 	}
 	else
 	if (pagina == null){
-		adata = {'ano':ano,'id_memoria':id_memoria,'profesor':profesor};
+		adata = {'ano':ano,'clasificacion':clasificacion,'profesor':profesor};
 	}
 	else{
-		adata = {'pagina':pagina,'ano':ano,'id_memoria':id_memoria,'profesor':profesor};
+		adata = {'pagina':pagina,'ano':ano,'clasificacion':clasificacion,'profesor':profesor};
 	}
-	
-	//adata = {'pagina':pagina,'ano':'2010','id_memoria':'','profesor':''};
-	//adata = {'busqueda':'inicial','busquedaa':'inicial','abusdsqueda':'inicial'};
 	var url = "php/modificar_resultados.php"; // El script a dónde se realizará la petición.
 	$.ajax({
            type: "POST",
@@ -111,3 +91,86 @@ function modificarResultados(facet,pagina){
 			}
     });	
 }
+
+
+function datosGraficos (ia,bdd,redes,sw){
+	var datos = [
+	 //Grupos para el gráfico
+		  [
+			{ axis: "Inteligencia Artificial"       , value : ia },
+			{ axis: "Base de Datos"                 , value : bdd  },
+			{ axis: "Redes"        					, value : redes },
+			{ axis: "Ingenieria de software"        , value : sw }
+		  ]
+	];
+	mostrarGrafico (datos);
+}
+
+function mostrarGrafico (datos){
+	//Opciones para el grafico araña, si no se configuran se cargaran las por defecto,
+	//para cambiar de posicion el grafico configurar RadarChart.js
+	var mi_configuracion = {
+	  w: 300,													// Tamaño grafico horizontal
+	  h: 300,													// Tamaño grafico vertical
+	  maxValue: 0.6,
+	  levels: 6,
+	  ExtraWidthX: 300
+	}
+	RadarChart.draw("#chart", datos, mi_configuracion);
+	
+	var svg = d3.select('#body-chart')
+	.selectAll('svg')
+	.append('svg')
+	.attr("width", w+300)
+	.attr("height", h)
+
+//Create the title for the legend
+var text = svg.append("text")
+	.attr("class", "title")
+	.attr('transform', 'translate(90,0)')
+	.attr("x", w - 430)															// Titulo x- = izquierda , x+ = derecha
+	.attr("y", 10)																	// Titulo y- = arriba , y+ = abajo
+	.attr("font-size", "12px")											// Tamaño titulo
+	.attr("font-style","italic")										// Cursiva
+	.attr("font-weight","bold")											// Negrita
+	.attr("fill", "#404040")
+	.text("Perfil del alumno VS Perfiles de ACM");  // Cambiar titulo
+
+//Initiate Legend
+var legend = svg.append("g")
+	.attr("class", "legend")
+	.attr("height", 100)
+	.attr("width", 200)
+	.attr('transform', 'translate(-200,20)')	// Posicion leyenda (x,y) : x- = izquierda , x+ = derecha ; y- = arriba , y+ = abajo
+	;
+	//Create colour squares
+	legend.selectAll('rect')
+	  .data(LegendOptions)
+	  .enter()
+	  .append("rect")
+	  .attr("x", w - 65)
+	  .attr("y", function(d, i){ return i * 20;})
+	  .attr("width", 10)			// Ancho cuadrito leyenda
+	  .attr("height", 10)			// Alto cuadrito leyenda
+	  .style("fill", function(d, i){ return colorscale(i);})
+	  ;
+	//Create text next to squares
+	legend.selectAll('text')
+	  .data(LegendOptions)
+	  .enter()
+	  .append("text")
+	  .attr("x", w - 52)
+	  .attr("y", function(d, i){ return i * 20 + 9;})
+	  .attr("font-size", "11px")  // Tamaño letra leyenda
+	  .attr("fill", "#737373")
+	  .text(function(d) { return d; })
+	  ;
+}
+
+
+
+
+
+
+
+

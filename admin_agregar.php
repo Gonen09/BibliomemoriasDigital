@@ -244,12 +244,13 @@
 							            <legend>Subir memorias</legend>
 							        </div>
 					  				<div class="panel-body">
-					  					<form class="form-horizontal" role="form">
+					  				<!--	<form id="formulario" class="form-horizontal" role="form" method="post" action="php/agregar_documento.php" enctype="multipart/form-data">  -->
+									<form id="formulario" class="form-horizontal" role="form" method="post" enctype="multipart/form-data" onsubmit="return false;">
 										  <div class="form-group row">
 										    <label for="idMemoria" class="col-xs-2 col-form-label text-right">ID Memoria</label>
 										    <div class="col-xs-10">
 										    	<div class="input-group">
-										    		<input class="form-control" id="idMemoria" type="text">
+										    		<input class="form-control" id="idMemoria" name="id_tesis" type="text">
 												    <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
 										    	</div>
 										    	<p class="note"><i><small>Formato ID: cXX_XXXX -> XXXX = año</small></i></p>
@@ -259,7 +260,7 @@
 										    <label for="titulo" class="col-sm-2 control-label">Título</label>
 										    <div class="col-sm-10">
 										    	<div class="input-group">
-										    		<input class="form-control" id="titulo">
+										    		<input class="form-control" id="titulo" name="titulo_tesis">
 										      		<span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
 										    	</div>
 										    </div>
@@ -268,7 +269,7 @@
 										    <label for="autorMemoria" class="col-sm-2 control-label">Autor(es)</label>
 										    <div class="col-sm-10">
 										    	<div class="input-group">
-										    		<input class="form-control" id="autorMemoria">
+										    		<input class="form-control" id="autorMemoria" name="tesistas">
 										      		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 										    	</div>
 										      <p class="note"><i><small>Si es más de un autor, separados por coma (,)</small></i></p>
@@ -278,7 +279,7 @@
 										    <label for="profesorGuia" class="col-sm-2 control-label">Profesor</label>
 										    <div class="col-sm-10">
 										    	<div class="input-group">
-										    		<input class="form-control" id="profesorGuia">
+										    		<input class="form-control" id="profesorGuia" name="profesores">
 										    		<span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
 										    	</div>
 										    </div>
@@ -287,7 +288,7 @@
 										  	<label for="anio" class="col-sm-2 control-label">Año</label>
 										    <div class="col-sm-3">
 										    	<div class="input-group">
-										    		<input class="form-control" id="anio" type="number" value="2000">
+										    		<input class="form-control" id="anio" type="number" name="ano" value="2016">
 										    		<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 										    	</div>
 										    </div>
@@ -295,7 +296,7 @@
 										  <div class="form-group">
 										    <label class="col-sm-2 control-label">Abstract</label>
 										    <div class="col-sm-10">
-										      <textarea class="form-control" placeholder="Ingrese el abstract de la memoria" rows="6"></textarea>
+										      <textarea class="form-control" placeholder="Ingrese el abstract de la memoria" rows="6" name="abstract"></textarea>
 										    </div>
 										  </div>
 
@@ -305,10 +306,12 @@
 												<div class="col-md-11">
 													<div class="input-group">
 														<span class="input-group-addon"><i class="glyphicon glyphicon-open-file"></i></span>
-														<input type="file" class="btn btn-default" id="exampleInputFile1">
+														<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis">
 													</div>
 												</div>
 											</div>
+											
+											<button onclick="enviarFormulario()" >ENVIAR</button>
 										</form><!--form-->
 					  				</div><!--panel-body-->
 					  			</div>
@@ -333,5 +336,7 @@
 		<script src="js/bootstrap/jquery.min.js"></script>
 		<!-- Bootstrap Core JavaScript -->
 		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<!-- Funciones indexacino -->
+		<script src="js/funciones_indexacion.js"></script>
 	  </body>
 </html>

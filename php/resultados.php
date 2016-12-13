@@ -1,7 +1,7 @@
-<?php
+Ôªø<?php
 /*
-$versiÛn_solr = solr_get_version();
-print $versiÛn_solr;
+$versi√≥n_solr = solr_get_version();
+print $versi√≥n_solr;
 print "<br>";
 */
 
@@ -119,9 +119,10 @@ $query->setStart(0);
 
 $query->setRows(3);
 
-$query->addField('id_tesis')->addField('ano')->addField('alumno')->addField('score')->addField('titulo_tesis')->addField('profesor');
+$query->addField('id_tesis')->addField('ano')->addField('alumno')->addField('score')->addField('titulo_tesis')->addField('profesor')->addField('valores_clasificacion');
 $query->setFacet(true);
-$query->addFacetField('ano')->addFacetField('profesor')->addFacetField('id_tesis');
+//$query->addFacetField('ano')->addFacetField('profesor')->addFacetField('id_tesis');
+$query->addFacetField('ano')->addFacetField('profesor')->addFacetField('clasificacion');
 //$query->addFacetQuery('profesor')->addFacetQuery('ano');
 
 $query_response = $client->query($query);
@@ -186,7 +187,48 @@ if($response->response->numFound > 0) {
 								<td class="col-sm-1">
 									<img src="image/chart.png" alt="grafico" class="img-responsive">
 									<br>
-									<p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
+									<?php 
+										$texto_valores_areas = $documento_actual['valores_clasificacion'];
+										$valores_areas = explode("|",$texto_valores_areas);
+										$IA = 0;
+										$SW = 0;
+										$REDES = 0;
+										$BDD = 0;
+										
+										
+										foreach ($valores_areas as $valor){
+											$aux = explode(":",$valor);
+											switch ($aux[0]) {
+												case 'Base de datos':
+													$BDD = $aux[1];
+													$BDD = $BDD / 100;
+													break;
+												case 'Ing Software':
+													$SW = $aux[1];
+													$SW = $SW / 100;
+													break;
+												case 'Inteligencia Artificial':
+													$IA = $aux[1];
+													$IA = $IA / 100;
+													break;
+												case 'Redes':
+													$REDES = $aux[1];
+													$REDES = $REDES / 100;
+													break;
+											}
+										}
+									
+									?>
+								  	<!--
+									<p data-toggle="modal" data-target="#modal-grafico" class="text-center"   onclick="datosGraficos ()" ><a href="#" id="archivo">Ver</a></p>
+									datosGraficos (ia,bdd,redes,sw)
+									<!-- -->
+									
+									<p data-toggle="modal" data-target="#modal-grafico" class="text-center"   onclick="datosGraficos (<?php echo $IA; ?>,<?php echo $BDD; ?>,<?php echo $REDES; ?>,<?php echo $SW; ?>)" ><a href="#" id="archivo">Ver</a></p> 
+									<!-- -->
+									<!--
+									<p data-toggle="modal" data-target="#modal-grafico" class="text-center"   onclick="datosGraficos (0.5000000,0.5000000,50.5000000,99.5000000)" ><a href="#" id="archivo">Ver</a></p> 
+									<!-- -->
 								</td>
 								<td class="col-sm-1">
 									<hr>
@@ -205,7 +247,7 @@ if($response->response->numFound > 0) {
 										for($ii = 0, $size = count($profesores); $ii < $size; ++$ii) {
 											print '<h4><strong>Profesor: </strong><i id="profesor">'.$profesores[$ii].'</i></h4>';
 										}
-										//aÒo
+										//a√±o
 										print '<h4><strong>A&ntildeo: </strong><i id="ano">'.$documento_actual['ano'].'</i></h4>';
 										//Id tesis
 										print '<h4><strong>Id memoria: </strong><i id="id_tesis">'.$documento_actual['id_tesis'].'</i></h4>';
@@ -291,7 +333,7 @@ if($response->response->numFound > 0) {
 	dataObject: {
 	  groups: [
 		{   id: "1", 
-			label: "Profesores GuÌa", 
+			label: "Profesores Gu√≠a", 
 			groups: [
 					<?php
 					$facet_profesores = $response->facet_counts->facet_fields->profesor;
@@ -313,7 +355,7 @@ if($response->response->numFound > 0) {
 			]
 		},
 		{   id: "2", 
-			label: "AÒo", 
+			label: "A√±o", 
 			groups: [
 					<?php
 					$facet_anos = $response->facet_counts->facet_fields->ano;
@@ -336,10 +378,10 @@ if($response->response->numFound > 0) {
 		},
 		{
 			id: "3", 
-			label: "Id memorias", 
+			label: "Clasificaci√≥n", 
 			groups: [
 					<?php
-					$facet_id = $response->facet_counts->facet_fields->id_tesis;
+					$facet_id = $response->facet_counts->facet_fields->clasificacion;
 					$primero_id = true;
 					$i = 1;
 					foreach ($facet_id as $clave => $valor) {
@@ -357,9 +399,9 @@ if($response->response->numFound > 0) {
 					?>				
 
 				  /*
-				  { id: "1.1", label: "IngenierÌa de Software" },
+				  { id: "1.1", label: "Ingenier√≠a de Software" },
 				  { id: "1.2", label: "Base de Datos" },
-				  { id: "1.3", label: "ComunicaciÛn de Datos y Redes"},
+				  { id: "1.3", label: "Comunicaci√≥n de Datos y Redes"},
 				  { id: "1.4", label: "Inteligencia Artificial"}
 				  /**/
 			]

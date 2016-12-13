@@ -1,20 +1,4 @@
 <?php
-/*
-$versión_solr = solr_get_version();
-print $versión_solr;
-print "<br>";
-*/
-
-/*
-$info_campos = "";
-while ($post = each($_POST))
-{
-	$info_campos = $info_campos."|".$post[0] . " = " . $post[1];
-}
-$info_campos = $info_campos."|||";
-echo $info_campos ;
-/**/	
-//}
 
 $texto_consulta = $_COOKIE ["ultima_consulta"];
 $pag_elegida = 1;
@@ -52,10 +36,11 @@ if (isset($_POST["ano"])){
 		$query->addFilterQuery($filtro_query);
 	}	
 }
-if (isset($_POST["id_memoria"])){
-	if ($_POST["id_memoria"] != ""){
-		$filtro_query = "id_memoria";
-		$filtro_query = "id_tesis:".$_POST["id_memoria"];
+if (isset($_POST["clasificacion"])){
+	//echo $_POST["clasificacion"];
+	if ($_POST["clasificacion"] != ""){
+		$filtro_query = "clasificacion";
+		$filtro_query = "clasificacion:".$_POST["clasificacion"];
 		$query->addFilterQuery($filtro_query);
 	}	
 }
@@ -69,9 +54,9 @@ if (isset($_POST["profesor"])){
 
 $query->setStart($documento_inicial);
 $query->setRows(3);
-$query->addField('id_tesis')->addField('ano')->addField('alumno')->addField('score')->addField('titulo_tesis')->addField('profesor');
+$query->addField('id_tesis')->addField('ano')->addField('alumno')->addField('score')->addField('titulo_tesis')->addField('profesor')->addField('valores_clasificacion');
 $query->setFacet(true);
-$query->addFacetField('ano')->addFacetField('profesor')->addFacetField('id_tesis');
+$query->addFacetField('ano')->addFacetField('profesor')->addFacetField('clasificacion');
 	
 $query_response = $client->query($query);
 $response = $query_response->getResponse();
@@ -108,7 +93,48 @@ if($response->response->numFound > 0) {
 								<td class="col-sm-1">
 									<img src="image/chart.png" alt="grafico" class="img-responsive">
 									<br>
-									<p data-toggle="modal" data-target="#modal-grafico" class="text-center"><a href="#" id="archivo">Ver</a></p>
+									<?php 
+										$texto_valores_areas = $documento_actual['valores_clasificacion'];
+										$valores_areas = explode("|",$texto_valores_areas);
+										$IA = 0;
+										$SW = 0;
+										$REDES = 0;
+										$BDD = 0;
+										
+										
+										foreach ($valores_areas as $valor){
+											$aux = explode(":",$valor);
+											switch ($aux[0]) {
+												case 'Base de datos':
+													$BDD = $aux[1];
+													$BDD = $BDD / 100;
+													break;
+												case 'Ing Software':
+													$SW = $aux[1];
+													$SW = $SW / 100;
+													break;
+												case 'Inteligencia Artificial':
+													$IA = $aux[1];
+													$IA = $IA / 100;
+													break;
+												case 'Redes':
+													$REDES = $aux[1];
+													$REDES = $REDES / 100;
+													break;
+											}
+										}
+									
+									?>
+								  	<!--
+									<p data-toggle="modal" data-target="#modal-grafico" class="text-center"   onclick="datosGraficos ()" ><a href="#" id="archivo">Ver</a></p>
+									datosGraficos (ia,bdd,redes,sw)
+									<!-- -->
+									
+									<p data-toggle="modal" data-target="#modal-grafico" class="text-center"   onclick="datosGraficos (<?php echo $IA; ?>,<?php echo $BDD; ?>,<?php echo $REDES; ?>,<?php echo $SW; ?>)" ><a href="#" id="archivo">Ver</a></p> 
+									<!-- -->
+									<!--
+									<p data-toggle="modal" data-target="#modal-grafico" class="text-center"   onclick="datosGraficos (0.5000000,0.5000000,50.5000000,99.5000000)" ><a href="#" id="archivo">Ver</a></p> 
+									<!-- -->
 								</td>
 								<td class="col-sm-1">
 									<hr>

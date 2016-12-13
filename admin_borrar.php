@@ -22,7 +22,7 @@
 
 	</head>
 
-	<body>
+	<body onload="actualizarTabla()">
 		<!-- Header -->
 		<header>
 			<div class="row">
@@ -245,214 +245,9 @@
 							<div class="panel-title">Lista de memorias</div>
 						</div> <!-- panel-heading -->
 
-						<div class="panel-body">
-							<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%" id="tablaMemoria">
-								<thead>
-									<tr>
-										<th>ID</th>
-										<th>Título memoria</th>
-										<th>Autor(es)</th>
-										<th>Profesor Guía</th>
-										<th>Año</th>
-										<th class="text-center">Eliminar memoria</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center ask"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>4</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>5</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>6</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>7</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr class="odd gradeX">
-										<td>8</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr class="odd gradeX">
-										<td>9</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>10</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>11</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>12</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>13</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>14</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr class="odd gradeX">
-										<td>15</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr class="odd gradeX">
-										<td>16</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>16</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>17</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>18</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>19</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>20</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr class="odd gradeX">
-										<td>21</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr class="odd gradeX">
-										<td>22</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
-									<tr>
-										<td>23</td>
-										<td>asdasdasd</td>
-										<td>Jorge Campos</td>
-										<td>Eric Jeltsch</td>
-										<td>2020</td>
-										<td class="text-center"><a href="#" data-rel="collapse"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar memoria"></i></a></td>
-									</tr>
+						<div class="panel-body" id="panel_tabla">
+							
 
-								</tbody>
-							</table>
 						</div><!-- panel-body -->
 					</div>
 				</div>
@@ -479,5 +274,7 @@
 		<script src="js/administrador/cargar_dataTable.js"></script>
 		<!-- Tooltip -->
 		<script src="js/tooltip.js"></script>
+		
+		<script src="js/funciones_eliminar.js"></script>
 	  </body>
 </html>

@@ -20,15 +20,14 @@
       <!-- Panal -->
       <link href="css/panal.css" rel="stylesheet">
 
-			<?php
-				if(isset($_POST['busqueda-index']) && !empty($_POST["busqueda-index"])){
-						$indexData = $_POST['busqueda-index'];
-						print "<script>alert('Enviado desde index: ".$indexData."')</script>";
-				}
-			?>
+			
 
 	</head>
-	<body onload="cargarReloj()">
+	<body onload="cargarReloj(); <?php
+								if(isset($_POST['busqueda-index']) && !empty($_POST["busqueda-index"])){
+									print 'enviarFormulario();';
+								}
+								?>">
 
 	  <!-- Header -->
 	  <header>
@@ -239,7 +238,7 @@
 	  </div>
 
 	  <!-- Modal Grafico -->
-	  <div class="modal fade modal-md" id="modal-grafico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal fade " id="modal-grafico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 			  <!--Content-->
 			  <div class="modal-content">
@@ -279,7 +278,17 @@
 							<h3 class="text-primary"><strong>Búsqueda simple</strong></h3>
 							<br>
 							<div class="input-group">
-							  <input type="text" id="q_contenido" class="form-control" placeholder="Buscar contenido" name="q">
+							  <input type="text" id="q_contenido" class="form-control" placeholder="Buscar contenido" name="q" 
+							  
+								<?php
+								if(isset($_POST['busqueda-index']) && !empty($_POST["busqueda-index"])){
+									$indexData = $_POST['busqueda-index'];
+									print 'value="'.$indexData.'"';
+								}
+								?>
+						  
+							  
+							  >
 							  <div class="input-group-btn">
 								  <button class="btn btn-default" type="submit" onclick="enviarFormulario()"><i class="glyphicon glyphicon-search"></i></button>
 							  </div>
@@ -352,7 +361,8 @@
 							  </div>
 							  <div class="form-group row">
 								<div class="col-xs-6 col-xs-offset-6">
-								  <button type="submit" class="btn btn-primary" onclick="enviarFormulario()">
+								  <!-- <button type="submit" class="btn btn-primary" onclick="enviarFormulario()"> -->
+								  <button  class="btn btn-primary" onclick="agregarFiltro('clasificacion|Inteligencia Artificial');">
 									<i class="glyphicon glyphicon-search"></i>
 									Consultar
 								  </button>

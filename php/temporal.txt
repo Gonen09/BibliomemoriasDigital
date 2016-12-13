@@ -1,0 +1,5741 @@
+
+ 
+
+ 
+
+ 
+
+Universidad de La Serena 
+Facultad de Ciencias 
+
+Departamento de Matemáticas 
+Escuela de Ingeniería en Computación 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Sistema de Gestión de 
+Incidentes Pucobre 
+
+ 
+Memoria de Título 
+
+Para obtener el título de 
+Ingeniero en Computación e Informática 
+
+ 
+ 
+ 
+ 
+
+Presenta 
+Diego Isaac Rojas Cepeda 
+
+ 
+Profesor Guía 
+
+Raúl Erasmo Gómez González 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+La Serena, Chile Diciembre del 2015 
+ 
+
+
+
+ 
+
+ 
+
+[Agradecimientos y dedicatoria, opcional] 
+
+  
+
+
+
+ 
+
+ 
+
+Resumen 
+
+La minería es un giro económico caracterizado por sus altos índice de riesgos en 
+
+su proceso productivo, no es extraño entonces que la prevención de estos genere 
+
+grandes volúmenes de información y que la naturaleza delicada de esta cree la 
+
+necesidad de buscar en la informática herramientas que permitan manejar dicha 
+
+información de forma centralizada y ordenada para su gestión y control.  
+
+El objetivo principal de este proyecto es el generar, siguiendo las metodologías de 
+
+Ingeniería de Software, una herramienta de software que, mediante el modelado 
+
+del Método de Análisis de Causas raíz de Incidentes implementados por la 
+
+empresa minera Pucobre, permita a la empresa registrar y administrar la 
+
+información recopilada ante un accidente (o cuasi accidente), la generación de 
+
+reportes de incidentes para su difusión y automatiza el control del cumplimiento 
+
+de los plazos en cada etapa del proceso. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Abstract 
+
+Mining is characterized by its high levels of risks in the production process, it is 
+
+not surprising then that risk prevention generates large volumes of information 
+
+and that the sensitive nature of this information creates the need for computer 
+
+tools to manage this information in a centralized and organized manner in order 
+
+to manage and control. 
+
+The main objective of this project is, using software engineering methodologies, 
+
+to generate a software tool that, through the modeling of the Incident Cause 
+
+Analysis Method implemented by mining company Pucobre, allows the company 
+
+to track and manage information collected before an accident (or near accident), 
+
+to generate and broadcast incident reports and to automate the enforcement of 
+
+deadlines at every stage of the process. 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+ 
+
+Índice General 
+1. Capítulo 1. Introducción ......................................................................................... 1 
+
+2. Capítulo 2. Antecedentes y definición del problema ........................................... 2 
+
+2.1. Marco Teórico ........................................................................................................................................ 2 
+
+2.1.1. Definiciones y Abreviaciones ...................................................................................................... 3 
+
+2.1.2. Aplicación web .............................................................................................................................. 7 
+
+2.1.3. Características de las Aplicaciones Web .................................................................................... 8 
+
+2.1.4. Nivel de Madurez del modelo ..................................................................................................... 9 
+
+2.1.5. ISO 9126......................................................................................................................................... 9 
+
+2.2. Definición del problema y limitaciones ............................................................................................10 
+
+2.3. Objetivos Generales y específicos .....................................................................................................11 
+
+2.3.1. Objetivos Generales ...................................................................................................................11 
+
+2.3.2. Objetivos Específicos .................................................................................................................11 
+
+3. Capítulo 3. Análisis del Sistema ............................................................................ 12 
+
+3.1. Necesidades y requerimientos ............................................................................................................12 
+
+3.1.1. Necesidad de Investigar e informar .........................................................................................12 
+
+3.1.2. Necesidad de registrar ................................................................................................................13 
+
+3.2. Plan General ..........................................................................................................................................14 
+
+3.2.1. Ciclo de vida .................................................................................................................................14 
+
+3.2.2. Ámbito ..........................................................................................................................................15 
+
+3.2.3. Meta ...............................................................................................................................................15 
+
+3.2.4. Alcance ..........................................................................................................................................15 
+
+3.2.5. Pareto y Objetivos ......................................................................................................................15 
+
+3.2.6. Actividades ...................................................................................................................................16 
+
+3.2.7. Riesgos ..........................................................................................................................................17 
+
+3.3. Modelo de Negocio .............................................................................................................................19 
+
+4. Capítulo 4. Diseño ................................................................................................. 20 
+
+4.1. Arquitectura del sistema ......................................................................................................................20 
+
+4.2. Requerimientos Funcionales ..............................................................................................................21 
+
+4.2.1. Consideraciones Generales ........................................................................................................21 
+
+4.2.2. Funcionalidades ...........................................................................................................................21 
+
+4.2.2.2. Inicio de sesión .......................................................................................................................23 
+
+4.2.2.3. Acceso a Incidentes, rol Digitador ......................................................................................23 
+
+4.2.2.4. Ingreso nuevo incidente y completar etapa preliminar de incidente ..............................24 
+
+4.2.2.5. Ingreso etapa investigación de incidente ............................................................................30 
+
+4.2.2.6. Organización de la Información ..........................................................................................31 
+
+4.2.2.7. Análisis Investigación ............................................................................................................32 
+
+4.2.2.8. Ingreso etapa informar y generación de Acciones. ...........................................................37 
+
+4.2.2.9. Acceso a Incidentes, rol Administrador de Datos ............................................................39 
+
+4.2.2.10. Edición etapa preliminar de incidente .................................................................................40 
+
+
+
+ 
+
+ 
+
+4.2.2.11. Edición etapa investigación de incidente ............................................................................41 
+
+4.2.2.12. Edición etapa informar y generación de Acciones. ...........................................................42 
+
+4.2.2.13. Avances Planes de Acción/Difusión ..................................................................................43 
+
+4.2.2.14. Lecciones Aprendidas ............................................................................................................45 
+
+4.2.2.15. Cronograma asociado a incidente ........................................................................................46 
+
+4.2.2.16. Cambios realizados información incidente.........................................................................46 
+
+4.2.2.17. Acceso a Reportes de Incidentes .........................................................................................47 
+
+4.2.2.18. Reportes de Incidente ............................................................................................................47 
+
+4.2.2.19. Mantenedores del Sistema .....................................................................................................49 
+
+4.2.2.20. Usuarios del Sistema ..............................................................................................................49 
+
+4.2.2.21. Administración de Portal de Noticias página principal. ...................................................52 
+
+4.2.2.22. Administración de Email. ......................................................................................................52 
+
+4.2.2.23. Ayuda Sistema. ........................................................................................................................53 
+
+4.2.2.24. Configuración Cuenta de Usuario. ......................................................................................53 
+
+4.2.2.25. Cerrar Sesión. ..........................................................................................................................54 
+
+4.2.3. Descomposición del requerimiento Funcional ................................................................................54 
+
+4.2.3.1. Arquitectura de interface usuario .........................................................................................54 
+
+4.2.3.2. Arquitectura Base de datos ...................................................................................................55 
+
+5. Capítulo 5 Implementación .................................................................................. 56 
+
+5.1. Portal de inicio ......................................................................................................................................56 
+
+5.2. Ingreso de nuevo incidente .................................................................................................................58 
+
+6. Conclusiones ........................................................................................................... 59 
+
+6.1. Mejoras Futuras ....................................................................................................................................61 
+
+Bibliografía ..................................................................................................................... 63 
+
+ 
+
+
+
+Capítulo 1. Introducción 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  1 
+
+1. Capítulo 1. Introducción  
+ 
+
+La Prevención de Riesgos es una actividad sumamente importante en el proceso 
+
+productivo actual, mucho más en la Minería considerada la actividad económica 
+
+con mayor índice de riesgo. La preocupación por evitar daños y lesiones es 
+
+impulsada incluso desde el gobierno por medio de leyes y decretos que establecen 
+
+la obligación por parte de las empresas mineras de contar con departamento de 
+
+prevención de riesgos, comité paritario y de investigar e informar los accidentes 
+
+por nombrar algunas. 
+
+Es justamente en la responsabilidad de investigar e informar los accidentes donde 
+
+se centra la presente memoria, el apoyo que ofrece la Informática brindando 
+
+herramientas que facilitan no sólo el proceso de registro y gestión de la 
+
+información, apoyo en la generación de reportes y difusión de estos cuando 
+
+correspondan o incluso en repetitivas como el control en los plazos establecidos. 
+
+En los capítulos a continuación trataremos el desarrollo del sistema basado en la 
+
+metodología de investigación de incidentes implementado por la empresa minera 
+
+Pucobre, tienen como finalidad presentar al lector los procesos de ingeniería 
+
+implicados en el desarrollo del sistema basado en la metodología de investigación 
+
+propuesto por la empresa minera Pucobre desde el punto de vista de ingeniería 
+
+de software.  
+
+El Capítulo 2. Antecedentes y definición del problema tiene por objetivo 
+
+introducir al lector en el contexto general del desarrollo, en este se define el 
+
+problema y el contexto en que este se ve envuelto.  
+
+El Capítulo 3 está destinado al análisis del sistema, esta sección veremos los 
+
+objetivos generales del proyecto, los requerimientos del sistema, la planificación 
+
+general y riesgos considerados en el inicio del proyecto. 
+
+El Capítulo 4 nos centraremos en la especificación detallada de las 
+
+funcionalidades del sistema. 
+
+El Capítulo 5 mostraremos pantallas implementadas en base a la definición de 
+
+funcionalidades detallada en la sección de diseño. 
+
+Y para finalizar el Capítulo 6 corresponde a la sección de conclusiones, en esa 
+
+sección nos referiremos a los resultados obtenidos de los objetivos del proyecto 
+
+expuestos en el capítulo 3.  
+
+
+
+Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  2 
+
+2. Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Los conceptos de accidente e incidente son muy importante para aquellos que 
+
+trabajan en la prevención de riesgos, los cuales centran sus esfuerzos en evitar la 
+
+ocurrencia de un accidente, la mayoría tiene interiorizado el concepto de 
+
+accidente en su lenguaje cotidiano pero definamos su significado como “Todo 
+
+suceso imprevisto, involuntario, repentino y fortuito, causado por medios 
+
+externos, que produce un daño físico o material, sobre un bien o una persona”, 
+
+por su parte la empresa minera Pucobre formaliza la definición de incidente 
+
+como a “todo evento que causo o pudo haber causado lesiones, pérdidas 
+
+materiales y/o daños al medio ambiente” que es evidentemente una extensión de 
+
+la definición de accidente, el cual posee potencial de ocurrencia de daños o 
+
+perdidas.  
+
+Parece lógico que las empresas dediquen esfuerzo en evitar accidentes y con esto 
+
+evitar que se generen perdidas si bien existe obligación legal [WEB-1] por parte 
+
+de las empresas de dar constancia de los accidentes ocurridos y de investigarlos 
+
+empresas como Pucobre cuentan con políticas proactivas al respecto, políticas 
+
+respaldadas desde gerencia y de las cuales hablaremos más adelante y establecen 
+
+como desafío el registrar, investigar y estudiar cualquier incidente cuyo potencial 
+
+de severidad media a alta. 
+
+La política de registrar todo incidente genera gran volumen de datos y es en este 
+
+punto donde la informática mediante los sistemas de información y las 
+
+aplicaciones web muestra ser una gran ayuda como herramienta de apoyo, 
+
+centralizando la información, automatizando la generación de los reportes y 
+
+homogenizando el formato de estos, e incluso ayudando a la gestión al 
+
+automatizar la monitorización del cumplimiento de los plazos establecidos en las 
+
+políticas de la empresa. 
+
+El desarrollo de este proyecto se basa en los principios establecidos en el proceso 
+
+de Ingeniería de Software, el presente capitulo nos centraremos en la etapa 
+
+temprana del desarrollo y trataremos los siguientes temas: 
+
+  Marco Teórico: sección dedicada a definiciones y conceptos importante para la 
+
+comprensión del documento. 
+
+ Contexto 
+
+ Definición del problema y limitaciones 
+
+ Objetivos Generales y específicos 
+
+2.1. Marco Teórico 
+
+La siguiente sección tiene por objetivo exponer del marco teórico en el cual se 
+
+encuentran las aplicaciones web, el modelo de investigación de incidentes 
+
+implementado por Pucobre, tocaremos el tema legal que obliga a la empresa a 
+
+investigar e informar sobre los accidentes ocurridos y hablaremos de la empresa 
+
+
+
+Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  3 
+
+en la que se desarrolla el presente proyecto con el objetivo de que quede claro 
+
+cómo las políticas de la empresa influyen en la decisión de utilizar modelos más 
+
+complejos y completos. 
+
+2.1.1. Definiciones y Abreviaciones 
+
+Esta sección incluye definiciones necesarias para entender en la primea parte el 
+
+modelo de investigación de incidentes y en la segunda parte referente a 
+
+aplicaciones web. 
+
+2.1.1.1. Definiciones superintendencia CASS  
+
+Superintendencia CASS: superintendencia de Calidad, Ambiente, Seguridad y 
+
+Salud ocupacional. 
+
+Incidente: Evento relacionado con el trabajo que dan lugar o tienen el potencial 
+
+de conducir a lesión, enfermedad (sin importar severidad) o fatalidad. 
+
+Accidente, es un incidente con lesión, enfermedad o fatalidad, que afecte a 
+
+los activos y deteriore los resultados de gestión, por ejemplo, continuidad 
+
+operacional. 
+
+Incidente, donde no existe lesión, enfermedad o fatalidad, puede 
+
+denominarse, cuasi- pérdida, alerta, evento peligroso. 
+
+No Conformidad: Incumplimiento ó insatisfacción de un estándar del sistema 
+
+de Gestión de Seguridad, Salud, Medio Ambiente y Calidad. 
+
+Acciones Preventivas: Acción tomada para eliminar la causa de una No 
+
+Conformidad potencial u otra situación potencial no deseada. 
+
+Acciones Correctivas: Acción tomada para eliminar la causa de una No 
+
+Conformidad detectada u otra situación indeseable. 
+
+Procedimiento: Forma especificada para llevar a cabo una actividad o proceso. 
+
+Enfermedad: Identificación de una condición física o mental adversa actual y/o 
+
+empeorada por una actividad del trabajo y/o una situación relacionada. 
+
+Peligro: Fuente, situación o acto con el potencial de daño en términos de lesión 
+
+o enfermedades o la combinación de estas. 
+
+Potencial de Incidente: Gravedad del Incidente determinada por las 
+
+consecuencias reales o potenciales (previsibles) del mismo.  
+
+Incidente de Alto Potencial: Aquel evento que pudo tener consecuencias 
+
+graves o fatales. Es la probabilidad que un evento igual o similar al ocurrido, se 
+
+convierta en un accidente de gravedad. 
+
+Riesgos: Combinación de la probabilidad de ocurrencia de un evento o 
+
+exposición peligrosa y la severidad de las lesiones o daño o enfermedad que se 
+
+puede provocar en el evento o la exposición. 
+
+
+
+Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  4 
+
+Registros: Documento que presenta resultados obtenidos, o proporciona 
+
+evidencia de las actividades desempeñadas. 
+
+Lesión con Tiempo Perdido (CTP): Incidente que resulta en lesión 
+
+(enmarcado en el concepto de accidente del trabajo, Art. N1 5 Ley 16.744) 
+
+motivo por el cual un trabajador no vuelve a laborar.  
+
+Lesión sin Tiempo Perdido (STP): Incidente que resulta en lesión en un 
+
+trabajador (enmarcado en el concepto de accidente del trabajo, Art. N° 5 Ley 
+
+16.744), motivo por el que, al consultar a un facultativo, este no le da reposo; es 
+
+decir, vuelve a laborar a su turno. 
+
+Primera Atención (PA): Incidente que resulta en lesión en un trabajador, 
+
+motivo por el que, al consultar a un paramédico, este no lo deriva a la 
+
+mutualidad; es decir, vuelve a laborar a su turno. 
+
+Daño a la Propiedad: Incidente que resulta en daño físico, ya sea a materiales, 
+
+equipos, instalaciones, estructura y otros. Razón por la que se generan pérdidas 
+
+de magnitud variable.  
+
+Falla Operacional (FO): Incidente que resulta en pérdida, pero no en daño 
+
+físico a la propiedad o en lesión de las personas. (Ejemplo: Hurtos - Hacer 2 
+
+veces un trabajo que debió haberse hecho una sola vez y bien - Entregar un 
+
+trabajo fuera de plazo - Producir menos que el rendimiento estándar - 
+
+Ausentismo – Sub utilizar un equipo – entre otros). 
+
+Alteración/Contaminación Ambiental: Incidente que resulta en alteración o 
+
+daño al ambiente (tierra, aire o agua) y que por lo tanto se puede o no 
+
+transformar en una amenaza para la salud humana.  
+
+Reporte de Incidentes: Actividad destinada al conocimiento de todos los 
+
+incidentes o hechos que estén afectando negativamente a los sistemas y procesos. 
+
+Investigación de Incidentes: Actividad operativa que aplica una metodología 
+
+para recopilar y evaluar toda la información relevante que está ligada a la 
+
+ocurrencia y consecuencia de un incidente, con el propósito de determinar las 
+
+causas, debilidades y/o fallas de gestión que lo provocaron e implementar 
+
+medidas pro activas conducentes a evitar la repetición de eventos similares. 
+
+Análisis de Reporte de Incidentes / Análisis de Investigación de 
+
+Incidentes: Tratamiento de los datos generados ya sea por el reporte de 
+
+incidentes o la investigación de incidentes realizadas en un periodo determinado, 
+
+a objeto de transformarlos en información válida, que permita retroalimentar o 
+
+redirigir las medidas de control sobre los riesgos operacionales, que estén 
+
+atentando contra los objetivos del negocio en un determinado escenario.  
+
+Registro Histórico de Incidentes: Actividad destinada al registro y 
+
+conservación de los incidentes reportados e investigados, ya sea para satisfacer 
+
+
+
+Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  5 
+
+requerimientos de orden legal o efectuar análisis de reporte o investigación de 
+
+incidentes.  
+
+2.1.1.2. Definiciones Informática 
+
+ASP Active Server Pages: Tecnología de Microsoft que permite crear páginas 
+
+web dinámicas en el servidor. Se puede decir que las páginas ASP son similares a 
+
+los programas CGI Las páginas ASP suelen estar programados en VBScript, 
+
+aunque también se pueden programar en otros lenguajes. 
+
+ASCII (American Standard Code for Information Interchange): Código 
+
+binario utilizado para representar letras, números, símbolos, etc. A cada carácter 
+
+se le asigna un número del 0 al 127 (7 bits). Por ejemplo, el código ASCII para la 
+
+A mayúscula es 65. Existen códigos ASCII extendidos de 256 caracteres (8 bits), 
+
+que permiten representar caracteres no ingleses como las vocales acentuadas o la 
+
+eñe. Los caracteres de la parte superior (128 a 255) de estos códigos ASCII 
+
+extendidos varían de uno a otro. Por ejemplo, uno de los más extendidos es ISO 
+
+Latin-1 (oficialmente ISO-8859-1). 
+
+CGI (Common Gateway Interface): Estándar que permite el intercambio de 
+
+información entre un servidor y un programa externo al servidor. Un programa 
+
+CGI es un programa preparado para recibir y enviar datos desde y hacia un 
+
+servidor web según este estándar. Normalmente se programan en C o en Perl, 
+
+aunque se puede usar cualquier lenguaje de propósito general. 
+
+DHTML (Dynamic HTML): Conjunto de extensiones a HTML que permiten 
+
+modificar el contenido de una página web en el cliente sin necesidad de 
+
+establecer una nueva comunicación con el servidor. Se basa en el uso de DOM 
+
+para acceder al contenido de la página. 
+
+DLL (Dynamic Link Library): Fichero que almacena funciones ejecutables o 
+
+datos que pueden ser usados por una aplicación en Microsoft Windows. Una 
+
+DLL puede ser usada por varios programas a la vez y se carga en tiempo de 
+
+ejecución (no en tiempo de compilación). 
+
+DOM (Document Object Model): Especificación que define como se puede 
+
+acceder a los objetos de un documento HTML (ventanas, imágenes, formularios) 
+
+a través de un lenguaje de script. Básicamente define una jerarquía de objetos. 
+
+DOM se encuentra en proceso de estandarización por W3C. DHTML depende 
+
+de DOM para cambiar dinámicamente el contenido de una página web. 
+
+Desgraciadamente, los dos navegadores mayoritarios poseen distintos modelos 
+
+de objetos. 
+
+ECMA (European Computer Manufacturers Association): ECMA es una 
+
+asociación internacional que establece estándares relacionados con sistemas de 
+
+comunicación y de información.  
+
+GIF (Graphics Interchange Format): Formato gráfico de mapas de bit 
+
+desarrollado por COMPUSERVE. Incorpora compresión de datos, 
+
+
+
+Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  6 
+
+transparencias y animaciones. Existen dos versiones de este estándar gráfico: 87a 
+
+y 89a. 
+
+HTML (HyperText Markup Language): Lenguaje compuesto de una serie de 
+
+etiquetas o marcas que permiten definir el contenido y la apariencia de las páginas 
+
+web. Aunque se basa en SGML, no se puede considerar que sea un subconjunto. 
+
+Existen cientos de etiquetas con diferentes atributos. W3C se encarga de su 
+
+estandarización. El sustituto de HTML es XHTML. 
+
+HTTP (HyperText Transfer Protocol): 
+
+Es el protocolo que emplea la WWW. Define cómo se tienen que crear y enviar 
+
+los mensajes y qué acciones debe tomar el servidor y el navegador en respuesta a 
+
+un comando. Es un protocolo stateless (sin estado), porque cada comando se 
+
+ejecuta independientemente de los anteriores o de los posteriores. Actualmente, 
+
+la mayoría de los servidores soportan HTTP1.1 (RFC 2616 de junio de 1999). 
+
+Una de las principales ventajas de esta versión es que soporta conexiones 
+
+persistentes: una vez que el navegador se conecta al servidor, puede recibir 
+
+múltiples ficheros a través de la misma conexión, lo que aumenta el rendimiento 
+
+de la transmisión hasta en un 20 %. 
+
+ISAPI (Internet Server Application Program Interface): Un API para el 
+
+servidor Microsoft Internet Information Server. Permite programar aplicaciones 
+
+web. 
+
+ISO (International Organization for Standards): Organización fundada en 
+
+1946, cuyos miembros son las organizaciones nacionales de normalización 
+
+(estandarización) correspondientes a los países miembros. Entre sus miembros se 
+
+incluyen a la ANSI (Estados Unidos), BSI (Gran Bretaña), AFNOR (Francia), 
+
+DIN (Alemania) y UNE (España). 
+
+JPEG (Joint Photographic Experts Group): Formato gráfico de mapas de bit. 
+
+Incorpora compresión de datos con pérdidas y permite trabajar con 24 bits de 
+
+color. 
+
+JSP (Java Server Pages): Tecnología de Sun Microsystems que permite crear 
+
+páginas dinámicas en el servidor. Equivale a la tecnología ASP de Microsoft. Se 
+
+programan en Java. 
+
+MIME (Multipurpose Internet Mail Extensions): Se usa en el correo 
+
+electrónico desde 1992 para enviar y recibir ficheros de distinto tipo. Se puede 
+
+consultar el estándar en RFC 1341, RFC 1521 y RFC 1522. 
+
+PNG (Portable Network Graphics): Formato gráfico de mapas de bit similar a 
+
+GIF. W3C ha decidido sustituir GIF por PNG debido a que el primero emplea 
+
+un algoritmo que está patentado, mientras que PNG es totalmente gratuito. 
+
+Tanto Microsoft Internet Explorer como Netscape Communicator aceptan este 
+
+formato. 
+
+
+
+Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  7 
+
+RFC (Request for Comments): Medio de publicar propuestas sobre Internet. 
+
+Cada RFC recibe un número. Algunos se convierten en un estándar de Internet. 
+
+RGB (Red Green Blue): Notación de los colores en la que cada color se 
+
+representa como una combinación de los tres colores básicos (primarios) rojo 
+
+(red), verde (green) y azul (blue). Se trata de un modelo aditivo (se parte del 
+
+negro). Mediante la combinación adecuada de los tres colores básicos se consigue 
+
+todo el espectro de colores. Además de RGB existen otras formas de representar 
+
+los colores. Otra de las más corrientes es CMYK (cyan, magenta, yellow, black), 
+
+que se trata de un modelo sustractivo. 
+
+SGML (Standard Generalized Markup Language): Lenguaje que permite 
+
+organizar y etiquetar los distintos elementos que componen un documento. Se 
+
+emplea para manejar grandes documentos que sufren constantes revisiones y se 
+
+imprimen en distintos formatos. Desarrollado y estandarizado por ISO en 1986. 
+
+TCP/IP (Transmission Control Protocol/Internet Protocol): Familia de 
+
+protocolos que se emplean en las comunicaciones de Internet. 
+
+URL (Universal Resource Locator): También conocido como Uniform 
+
+Resource Locator. Sistema de direccionamiento de máquinas y recursos en 
+
+Internet. Es decir, se trata de una dirección que permite localizar cualquier 
+
+máquina o documento que se encuentre accesible a través de Internet. 
+
+W3C (World Wide Web Consortium): Consorcio internacional de compañías 
+
+involucradas en el desarrollo de Internet y en especial de la WWW. Su propósito 
+
+es desarrollar estándares y “poner orden” en Internet. 
+
+WWW (World Wide Web): Sistema de servidores web conectados a Internet 
+
+(no todos los ordenadores conectados a Internet forman parte de la WWW). Su 
+
+protocolo de comunicación es HTTP, su lenguaje de creación de documentos 
+
+HTML y su sistema de direccionamiento de los recursos URL. Los navegadores 
+
+web (browsers) permiten navegar por la web. 
+
+XHTML (Extensible HyperText Markup Language): HTML escrito según 
+
+las normas que marca XML. Por tanto, se trata de una aplicación concreta de 
+
+XML y no tienen que confundirse entre sí. 
+
+XML (Extensible Markup Language): Metalenguaje de etiquetado basado en 
+
+SGML. Diseñado específicamente para la WWW por W3C. Permite que un 
+
+usuario diseñe sus propias etiquetas, con sus atributos y las reglas de 
+
+construcción de documentos (sintaxis). 
+
+2.1.2. Aplicación web 
+
+Las aplicaciones web son un tipo especial de aplicaciones cliente/servidor, en 
+
+Ingeniería de Software se denomina aplicación web a aquellas herramientas que 
+
+los usuarios pueden utilizar accediendo a un servidor web a través de Internet o 
+
+
+
+Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  8 
+
+de una Intranet mediante un navegador. En otras palabras, es una aplicación 
+
+software que se codifica en un lenguaje soportado por los navegadores web en la 
+
+que se confía la ejecución al navegador. 
+
+Este tipo de aplicaciones está caracterizado además por estar estructurada 
+
+normalmente como una aplicación de tres-capas. En su forma más común, el 
+
+navegador web ofrece la primera capa que constituyen las vistas, y un motor 
+
+capaz de usar alguna tecnología web dinámica, para este proyecto la primera capa 
+
+está definida por requerimiento técnico por los lenguajes ASP, ASP.NET; la capa 
+
+intermedia que es la capa de controlador por Common Gateway Interface y C#. 
+
+Por último, una base de datos constituye la tercera y última capa en la cual se 
+
+genera el modelo de negocios. 
+
+Para ser un poco más claros el navegador web manda peticiones a la capa 
+
+intermedia que ofrece servicios valiéndose de consultas y actualizaciones a la base 
+
+de datos y a su vez proporciona una interfaz de usuario.  
+
+2.1.3. Características de las Aplicaciones Web 
+
+Las Aplicaciones Web tienen tanto ventajas como desventajas, dentro de las 
+
+ventajas podemos destacar las siguientes: 
+
+ Ahorra tiempo: se pueden realizar tareas sencillas sin necesidad de descargar ni 
+
+instalar ningún programa. 
+
+ No hay problemas de compatibilidad: basta tener un navegador actualizado para 
+
+poder utilizarlas, aun así, se para disminuir el tiempo de desarrollo de la solución se 
+
+establece como navegador estándar Internet Explorer 8. 
+
+ No ocupan espacio en nuestro disco duro. Por lo menos no de forma permanente, 
+
+si utiliza espacio en los archivos temporales del Navegador 
+
+ Actualizaciones inmediatas: como el software lo gestiona el propio desarrollador, en 
+
+este caso el departamento de desarrollo de Pucobre, cuando nos conectamos estamos 
+
+usando siempre la última versión que haya lanzado. 
+
+ Consumo de recursos bajo: dado que toda (o gran parte) de la aplicación no se 
+
+encuentra en nuestra computadora, muchas de las tareas que realiza el software no 
+
+consumen recursos nuestros porque se realizan desde otra computadora. 
+
+ Multiplataforma: se pueden usar desde cualquier sistema operativo porque solamente 
+
+es necesario tener un navegador. 
+
+ Portables: es independiente de la computadora donde se utilice (PC de sobremesa, 
+
+portátil) porque se accede a través de una página web (solamente es necesario disponer 
+
+de acceso a Internet). La reciente tendencia al acceso a las aplicaciones web a través de 
+
+teléfonos móviles requiere sin embargo un diseño específico de los ficheros CSS para 
+
+no dificultar el acceso de estos usuarios. 
+
+ La disponibilidad suele ser alta porque el servicio se ofrece desde múltiples 
+
+localizaciones para asegurar la continuidad del mismo. Si bien es una funcionalidad y 
+
+virtud del modelo en este caso no aplica como requerimiento del sistema. 
+
+ Los virus no dañan los datos porque están guardados en el servidor de la aplicación. 
+
+ Colaboración: gracias a que el acceso al servicio se realiza desde una única ubicación 
+
+es sencillo el acceso y compartición de datos por parte de varios usuarios. Este es un 
+
+punto esencial en este proyecto, la investigación debe ser manejada por cada integrante 
+
+del comité conformado para la investigación 
+
+
+
+Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  9 
+
+Por otra parte, como mencionamos también presenta desventajas como son: 
+
+ Habitualmente ofrecen menos funcionalidades que las aplicaciones de escritorio. 
+
+Se debe a que las funcionalidades que se pueden realizar desde un navegador son más 
+
+limitadas que las que se pueden realizar desde el sistema operativo. 
+
+ La disponibilidad depende de un tercero, el proveedor de la conexión a internet o el 
+
+que provee el enlace entre el servidor de la aplicación y el cliente. Así que la 
+
+disponibilidad del servicio está supeditada al proveedor. Es este caso el proveedor es el 
+
+Área de Informática de la empresa, permitiendo así un tiempo de respuesta bastante 
+
+rápido en comparación a un proveedor externo. 
+
+2.1.4. Nivel de Madurez del modelo 
+
+De acuerdo a Microsoft las aplicaciones web se pueden ser clasificadas en uno de 
+
+cuatro niveles de madurez, cuyos atributos clave son la facilidad de 
+
+configuración, eficiencia a múltiples clientes, y escalabilidad. Cada nivel esta 
+
+distinguido del anterior con la adición de uno de estos tres atributos. Los niveles 
+
+descritos por Microsoft son los siguientes:  
+
+ Nivel arquitectural de madurez 1 – Ad-hoc/Personalizado: cada cliente tiene una 
+
+única y personalizada versión de la aplicación (a nivel de código fuente), la cual se 
+
+ejecuta en los servidores del proveedor.  
+
+ Nivel arquitectural de madurez 2 – Configurabilidad: en este nivel, los clientes aun 
+
+utilizan instancias separadas de la misma aplicación, aunque el proveedor satisface las 
+
+necesidades de cada cliente utilizando opciones de configuración detalladas, esto 
+
+disminuye la carga de mantención, debido a que tan solo se debe actualizar una sola 
+
+base de código.  
+
+ Nivel arquitectural de madurez 3 – Eficiencia a múltiples usuarios: el tercer nivel 
+
+de madurez agrega la capacidad para servir a múltiples usuarios al segundo nivel. Esto 
+
+resulta en una sola instancia de la aplicación que tiene la capacidad de servir a todos los 
+
+clientes del proveedor. Este enfoque permite un uso eficiente de los recursos del 
+
+servidor sin ninguna aparente diferencia para el usuario final, pero en definitiva este 
+
+nivel está limitado en su habilidad para escalar masivamente.  
+
+ Nivel arquitectural de madurez 4 – Escalabilidad: en el cuarto nivel de madurez, la 
+
+escalabilidad es agregada mediante la incorporación de una arquitectura de varios 
+
+niveles. Esta arquitectura es capaz de soportar una granja con balanceo de carga de 
+
+instancias idénticas de aplicación, ejecutándose en un número variable de servidores, 
+
+usualmente cientos o miles. La capacidad del sistema puede ser incrementada o 
+
+disminuida dinámicamente para equiparar la demanda de carga requerida mediante la 
+
+adición o sustracción de servidores, sin necesidad de alterar la arquitectura de la 
+
+aplicación de software. 
+
+2.1.5. ISO 9126 
+
+ISO 9126 es un estándar internacional para la evaluación de la calidad del 
+
+software. Está reemplazado por el proyecto SQuaRE, ISO 25000:2005, el cual 
+
+sigue los mismos conceptos. Las dimensiones necesarias para este desarrollo son:  
+
+2.1.5.1. Usabilidad  
+
+La Usabilidad es una sub-dimensión del modelo de calidad ISO 9126 la cual la 
+
+define como “Un conjunto de atributos relacionados con el esfuerzo necesario 
+
+
+
+Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  10 
+
+para su uso, y en la valoración individual de tal uso, por un establecido o 
+
+implicado conjunto de usuarios.” [Int-2] 
+
+La usabilidad está compuesta por estos 4 principios: 
+
+ Aprendizaje: Atributos del software que se relacionan al esfuerzo de los usuarios para 
+
+reconocer el concepto lógico y sus aplicaciones. 
+
+ Comprensión: Atributos del software que se relacionan al esfuerzo de los usuarios 
+
+para reconocer el concepto lógico y sus aplicaciones. 
+
+ Operatividad: Atributos del software que se relacionan con el esfuerzo del usuario 
+
+para la operación y control del software. 
+
+ Atractivo: capacidad de un producto de software para ser atractivo al usuario. 
+
+2.1.5.2. Funcionalidad  
+
+Un conjunto de atributos que se relacionan con la existencia de un conjunto de 
+
+funciones y sus propiedades específicas. Las funciones son aquellas que 
+
+satisfacen las necesidades implícitas o explícitas. 
+
+ Adecuación: Atributos del software relacionados con la presencia y aptitud de un 
+
+conjunto de funciones para tareas especificadas. 
+
+ Exactitud: Atributos del software relacionados con la disposición de resultados o 
+
+efectos correctos o acordados. 
+
+ Interoperabilidad: Atributos del software que se relacionan con su habilidad para la 
+
+interacción con sistemas especificados. 
+
+ Seguridad: Atributos del software relacionados con su habilidad para prevenir acceso 
+
+no autorizado ya sea accidental o deliberado, a programas y datos. 
+
+ Cumplimiento funcional. 
+
+2.2. Definición del problema y limitaciones 
+
+En una empresa minera como es el caso de Pucobre, la cual considera la 
+
+seguridad de sus trabajadores y el entorno como parte de los pilares 
+
+fundamentales y además como parte de su misión el registrar e investigar los 
+
+incidentes ocurridos se vuelve una actividad importante, cuanto más en un giro 
+
+económico el cual está caracterizado por su gran índice de riesgo.  
+
+Lo anterior podría suponer la generación de grandes volúmenes de información a 
+
+razón de la suma de accidentes y cuasi accidentes; información que debe ser 
+
+tratada de con el cuidado que corresponde. La gestión de cada reporte, el control 
+
+de los plazos que se deben cumplir en cada investigación e incluso el poder 
+
+eventualmente poder realizar auditorías a la información en cada etapa del 
+
+proceso se vuelve entonces una tarea de real importancia. 
+
+La necesidad de disponer de un lugar único para almacenar la información para 
+
+así poder administrarla de forma más eficiente lleva a buscar en la informática 
+
+una herramienta que les permita la gestión de los registros y la automatización de 
+
+los controles en el cumplimiento del proceso. Es por ello que se encomienda el 
+
+trabajo al área de Desarrollo de la empresa la creación de un software que de 
+
+manera centralizada almacene los incidentes, automatice la generación de los 
+
+reportes ayudando así al establecimiento de un formato estándar para la empresa 
+
+
+
+Capítulo 2. Antecedentes y definición del problema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  11 
+
+y que además permita el control sobre los plazos enviando alertas vía correo 
+
+electrónico a quienes estén incumpliendo las fechas reglamentarias. Todo esto en 
+
+base a la metodología de investigación de incidentes. 
+
+El sistema se limita sólo a la intranet de la empresa, no generando ni enviando 
+
+automáticamente los reportes que correspondan a los organismos designados por 
+
+la ley. 
+
+ 
+
+2.3. Objetivos Generales y específicos 
+
+2.3.1. Objetivos Generales 
+1) Diseñar e implementar una herramienta de software que, mediante la implementación 
+
+del modelo de investigación de incidentes ICAM, permita gestionar la información 
+
+recopilada en cada incidente. 
+
+2) Llevar a cabo el diseño e implementación en base a estándar de Ingeniería de Software 
+
+con el fin de asegurar la calidad del producto. 
+
+ 
+
+2.3.2. Objetivos Específicos 
+
+ 
+
+1) Diseñar e implementar una solución de software cumpliendo con el nivel de 
+
+madurez de la arquitectura 3 “Eficiencia a múltiples usuarios” 
+
+2) Realizar Análisis de requerimientos y planificación de recursos. 
+
+3) Generar Análisis de funcionalidades del sistema. 
+
+4) Implementa aplicación en base especificación de funcionalidades. 
+
+
+
+Capítulo 3. Análisis del Sistema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  12 
+
+3. Capítulo 3. Análisis del Sistema 
+El análisis del sistema consiste en la determinación de las necesidades y 
+
+problemáticas asociadas al proyecto, que posteriormente serán convertidas en 
+
+requerimientos, siendo estos los elementos que definirán el producto de software 
+
+a desarrollar. 
+
+Este capítulo se plantea las necesidades que sustentan el desarrollo de la 
+
+aplicación, sumando a esto el plan general de desarrollo de software. 
+
+3.1. Necesidades y requerimientos 
+
+3.1.1. Necesidad de Investigar e informar 
+
+Como ya se ha mencionado en los capítulos anteriores toda empresa tiene la 
+
+obligación legal de investigar las causas de un accidente, en particular nos 
+
+encontramos en el artículo 66 de la ley 16744 [WEB-3] la obligación del comité 
+
+paritario y/o el Departamento de Prevención de Riesgos de Investigar las causas 
+
+del accidente e indicar la adopción de medidas de higiene y seguridad, que sirvan 
+
+para la prevención de los riesgos profesionales. 
+
+Por su parte además la Ley 16744 en el artículo 76 establece la obligación de 
+
+informar al Servicio Nacional de Salud los accidentes o enfermedades que les 
+
+hubieren sido denunciados y que hubieren ocasionado incapacidad para el trabajo 
+
+o la muerte de la víctima. 
+
+Sumado a esto la empresa minera Pucobre extiende la definición del problema 
+
+estableciendo como reglamento el registro de todo Incidente ocurrido en sus 
+
+instalaciones y además la investigación de todo incidente que su severidad 
+
+potencial estuviera en la escala media-alta de la tabla. 
+
+Nótese en la pirámide de Riesgos Laborales a continuación elaborada para 
+
+Pucobre por un contratista que tras el análisis de un millón de accidentes durante 
+
+casi diez años  
+
+ 
+
+Ilustración 1Pirámide de Riesgos 
+
+•Fatalidad1
+
+•Accidentes Con Tiempo Perdido30
+
+•Accidentes Sin Tiempo Perdido300
+•Primera Atencion o Cuasi 
+Accidente          3000
+
+•Acciones y 
+Condiciones 
+Inseguras
+
+30000
+
+Nivel Reactivo 
+
+Nivel 
+
+Preventivo 
+
+
+
+Capítulo 3. Análisis del Sistema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  13 
+
+Cuando se han acumulado 30.000 acciones y condiciones inseguras, existe la 
+
+probabilidad de que ocurran o hayan ocurrido 3.000 accidentes con primera 
+
+atención o cuasi accidentes, 300 accidentes sin tiempo perdido, 30 accidentes con 
+
+tiempo perdido y 1 fatalidad.  
+
+Esto genera una nueva necesidad, la de registrar los incidentes no sólo para 
+
+cumplir con la Ley sino más bien para aprender de estos y evitar así llegar a 
+
+accidentes con tiempo perdido y mucho más a fatalidades. 
+
+Requerimiento: de esta necesidad se desprende que: 
+
+Req. 1: El sistema debe modelar la metodología de investigación 
+
+establecida por la empresa. 
+
+Req  2: El sistema debe generar informe preliminar de difusión del 
+
+incidente una vez terminada y cerrada la etapa preliminar, el informe debe 
+
+ser enviado automáticamente por correo a los supervisores de la empresa 
+
+para su difusión en la empresa. 
+
+3.1.2. Necesidad de registrar 
+
+Como se puede ver en el punto anterior la necesidad por una parte de cumplir 
+
+con la necesidad de informas e investigar genera de por si un volumen de datos 
+
+enorme, más cuando no solo hablamos de la parte reactiva de la pirámide sino 
+
+más bien incluimos esa parte preventiva de estudiar los Cuasi Accidentes o 
+
+Incidentes acorde a la definición de Pucobre. 
+
+Nuevamente la Ley en el Decreto Supero N°54 en su artículo 3 establece que la 
+
+obligación de llevar un completo registro cronológico de todos los accidentes que 
+
+ocurrieren, con indicación a lo menos de los siguientes datos: 
+
+ Nombre del accidentado y su trabajo; 
+
+ Fecha del accidente, alta y cómputo del tiempo de trabajo perdido expresado en días u 
+
+horas; 
+
+ Lugar del accidente y circunstancias en que ocurrió el hecho, diagnóstico y 
+
+consecuencias permanentes si las hubiere; 
+
+ Tiempo trabajado por el personal mensualmente, ya sea total para la empresa o por 
+
+secciones o rubro de producción, según convenga; 
+
+ Índice de frecuencia y de gravedad, el primero mensualmente y el segundo cuando sea 
+
+solicitado, pero en ningún caso por períodos superiores a 6 meses. 
+
+Para efecto de este proyecto nos ceñiremos a la documentación estandarizada 
+
+por la empresa: 
+
+ Informe de Difusión 
+
+ Informe Preliminar 
+
+ Informe HSEC 
+
+ Resumen Ejecutivo 
+
+ 
+
+
+
+Capítulo 3. Análisis del Sistema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  14 
+
+3.2. Plan General 
+
+El objetivo del plan general de desarrollo del software es establecer un análisis 
+
+previo en el cual se define el ciclo de vida del desarrollo del software, meta del 
+
+proyecto, objetivos y actividades a realizar para lograr el cumplimiento de la meta 
+
+propuesta; así también otros elementos propios de la ingeniería de software. 
+
+3.2.1. Ciclo de vida 
+
+El ciclo de vida seleccionado para este proyecto es el de Cascada Incremental, 
+
+este ciclo de vida se caracteriza por: 
+
+ Combina elementos del modelo de cascada con la filosofía interactiva de construcción 
+
+de prototipos, es decir Análisis, Diseño, Implementación, Pruebas, Puesta en Marcha y 
+
+Mantenimiento  
+
+ Cada secuencia lineal produce un producto operacional con cada incremento de la 
+
+misma forma que progresa el tiempo en el calendario, en este caso se dividirá en etapas 
+
+con respecto al modelo de investigación de incidentes  
+
+ El primer incremento es a menudo el núcleo, en el caso de esta memoria el núcleo del 
+
+sistema es en si el modelo de investigación de incidentes implementado por la empresa.  
+
+ Como un resultado de evaluación y/o utilización se desarrolla un plan para el 
+
+incremento siguiente, este proceso se repite hasta llegar al producto completo  
+
+ Este modelo es particularmente útil cuando la dotación de personal no es suficiente 
+
+para una implementación completa  
+
+ Los primeros incrementos se pueden implementar con menos recursos  
+
+ Si es muy riesgoso desarrollar el sistema completo de una sola vez, entonces debería 
+
+considerar este modelo  
+
+Las ventajas de este ciclo de vida son 
+
+ Construir un sistema pequeño es siempre menos riesgoso que construir un sistema 
+
+grande.  
+
+ Al ir desarrollando parte de las funcionalidades, es más fácil determinar si los 
+
+requerimientos planeados para los niveles subsiguientes son correctos.  
+
+ Si un error importante es realizado, sólo la última iteración necesita ser descartada y 
+
+utilizar el incremento previo.  
+
+Las desventajas del ciclo de vida.  
+
+ Se presupone que todos los requisitos se han definido al inicio.  
+
+ Se requiere de una experiencia importante para definir los incrementos de forma de 
+
+distribuir en ellos las tareas en forma proporcional  
+
+ Si el sistema a desarrollar es de gran magnitud y se cuenta con un único grupo para 
+
+construirlo se corre el riesgo que el desarrollo se prolongue demasiado en tiempo 
+
+Se elige este ciclo de vida principalmente porque existe un núcleo claro del 
+
+sistema, en este caso es el modelo de investigación de incidentes. Además, el 
+
+proyecto es desarrollado por empresa contratista a la cual se le exige entregar una 
+
+estimación de costos y tiempos de desarrollo, para esto es que los requerimientos 
+
+del sistema deben ser definidos al principio del proyecto, posibles modificaciones 
+
+son evaluadas para ser incluidas en iteraciones posteriores. 
+
+
+
+Capítulo 3. Análisis del Sistema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  15 
+
+El procedimiento de investigación de incidentes permite además distinguir las 
+
+diferentes etapas y vistas necesaria facilitando la actividad de subdividir el 
+
+proyecto en iteraciones. 
+
+3.2.2. Ámbito 
+
+El sistema es diseñado en base al modelo de investigación definido por Pucobre 
+
+para ser utilizado por aquellas personas que conforman la comisión 
+
+investigadora, dicha comisión está conformada principal mente por personal de 
+
+nivel supervisor y/o perteneciente al comité paritario y/o personal de la 
+
+Superintendencia de Calidad, Ambiente, Seguridad y Salud; todos previamente 
+
+capacitados en la metodología de investigación de incidentes.  
+
+3.2.3. Meta 
+
+Desarrollar una herramienta de software que permita a la comisión investigadora 
+
+de incidente registrar la información obtenida en cada etapa del proceso de 
+
+investigación, genere los reportes según estándar para difusión y genere alertas 
+
+automáticas ante incumplimientos de los plazos establecidos. 
+
+3.2.4. Alcance 
+
+ El sistema permite realizar la investigación acorde a metodología ICAM 
+
+ El sistema genera reportes según formato establecido por la empresa una vez finalizada 
+
+la etapa de la que depende. 
+
+ El sistema sólo contempla incidentes ocurridos en la empresa PUCOBRE en sus 
+
+diferentes faenas. 
+
+ El sistema es una aplicación web para ser utilizada en la Intranet de la empresa, no se 
+
+considera el uso de este en Internet ni como aplicación de escritorio. 
+
+3.2.5. Pareto y Objetivos 
+
+3.2.5.1. Pareto 
+
+El principio de Pareto es utilizado para definir la importancia de los objetivos del 
+
+proyecto, definiendo así que objetivos son más importantes para el éxito del 
+
+proyecto y por ende deben destinar mayor esfuerzo en las etapas de desarrollo 
+
+del proyecto. Los valores se han definido acorde a la siguiente tabla: 
+
+Grado de Importancia Límite inferior (%) Límite Superior (%) 
+
+Muy Importante 70 100 
+
+Importante 50 70 
+
+Obligatorio 30 50 
+
+Deseable 15 30 
+
+Irrelevante 0 15 
+Tabla 1: Tabla de Paretización 
+
+ 
+
+ 
+
+ 
+
+
+
+Capítulo 3. Análisis del Sistema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  16 
+
+3.2.5.2. Objetivos del Proyecto 
+
+Los objetivos identificados para alcanzar el cumplimiento de la meta propuesta 
+
+en el Plan General del Proyecto se detallan en la tabla a continuación. 
+
+Objetivo Grado de Importancia 
+(Pareto) 
+
+% 
+Estimado 
+
+% 
+Normalizado 
+
+Análisis del proyecto Muy Importante 100 16 
+
+Determinación de 
+funcionalidades 
+
+Muy Importante 100 16 
+
+Diseño de Aplicación de 
+Investigación de Incidente 
+y servicios 
+
+Muy Importante 100 16 
+
+Desarrollo de Aplicación 
+Investigación de Incidentes 
+
+Muy Importante 100 16 
+
+Desarrollo de Aplicación 
+de manejo de archivos 
+
+Muy Importante 70 11 
+
+Desarrollo de servicio de 
+envío de Alertas-correos 
+
+Muy Importante 100 16 
+
+Pruebas Importante 50 8 
+
+ 
+
+3.2.6. Actividades 
+
+En esta sección le presentamos la carta Gant del proyecto con sus respectivas 
+
+tareas, tiempo estimado de la actividad, periodo en el que se desarrolla y la tarea 
+
+de la cual depende.  
+
+  Actividad Duración Comienzo Fin 
+Prede
+cesor
+
+as 
+
+1 
+Registro de Incidencias / 
+Mejoras (RIM) FASE I 
+
+22,78 días vie 18-03-11 lun 25-04-11   
+
+2    Análisis 5,94 días vie 18-03-11 lun 28-03-11   
+
+3 
+      Reunión inicial con Miguel 
+Castro toma de requerimientos 
+
+3 hrs vie 18-03-11 vie 18-03-11   
+
+4       Análisis del problema 3 días vie 18-03-11 mié 23-03-11   
+
+5 
+      Creación de diagrama de flujo 
+que modele el procedimiento 
+
+0,5 días jue 24-03-11 jue 24-03-11 4 
+
+6 
+      Creación del modelo 
+conceptual que describa el 
+problema 
+
+1 día jue 24-03-11 vie 25-03-11 5 
+
+7       Revisión de Antecedentes 0,89 días vie 25-03-11 lun 28-03-11 6 
+
+8    Desarrollo 11,83 días lun 28-03-11 jue 14-04-11 2 
+
+9       Construcción 11,83 días lun 28-03-11 jue 14-04-11 7 
+
+10    Pruebas 4,44 días vie 08-04-11 jue 14-04-11   
+
+11       Ejecutar pruebas unitarias 3,56 días vie 08-04-11 mié 13-04-11   
+
+12       Ejecutar pruebas globales 3,56 días lun 11-04-11 jue 14-04-11   
+
+13    Producción 0,89 días vie 15-04-11 vie 15-04-11   
+
+14       Instalación  0,89 días vie 15-04-11 vie 15-04-11 12 
+
+15    Marcha Blanca 1 sem vie 15-04-11 lun 25-04-11   
+
+16    Documentación 2,67 días jue 14-04-11 lun 18-04-11   
+
+17       Manual Usuario 0,89 días jue 14-04-11 jue 14-04-11   
+
+
+
+Capítulo 3. Análisis del Sistema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  17 
+
+18       Instructivo Mesa  0,89 días vie 15-04-11 vie 15-04-11 17 
+
+19       Funcional 0,89 días lun 18-04-11 lun 18-04-11 18 
+
+20 
+Registro de Incidencias / 
+Mejoras (RIM) FASE II 
+
+13 días vie 15-04-11 vie 06-05-11 8 
+
+21    Desarrollo 8 días vie 15-04-11 jue 28-04-11   
+
+22       Construcción 8 días vie 15-04-11 jue 28-04-11   
+
+23    Pruebas 4,44 días lun 25-04-11 vie 29-04-11   
+
+24       Ejecutar pruebas unitarias 3,56 días lun 25-04-11 jue 28-04-11   
+
+25       Ejecutar pruebas globales 3,56 días 
+mar 26-04-
+
+11 
+vie 29-04-11   
+
+26    Producción 0,89 días vie 29-04-11 vie 29-04-11   
+
+27       Instalación  0,89 días vie 29-04-11 vie 29-04-11   
+
+28    Marcha Blanca 1 sem vie 29-04-11 vie 06-05-11   
+
+29    Documentación 2,67 días jue 28-04-11 lun 02-05-11   
+
+30       Manual Usuario 0,89 días jue 28-04-11 jue 28-04-11   
+
+31       Instructivo Mesa  0,89 días vie 29-04-11 vie 29-04-11 30 
+
+32       Funcional 0,89 días lun 02-05-11 lun 02-05-11 31 
+
+ 
+
+Como se señaló en el punto 3.2.1 el ciclo de vida para este proyecto es Cascada 
+
+Incremental, acorde a esto se divide el proyecto en dos iteraciones importante 
+
+dividiendo así el proyecto en Fase I y Fase II de la investigación. Los módulos de 
+
+gestión de archivos y envío de alertas quedan incluidos en la Fase I del proyecto. 
+
+3.2.7. Riesgos 
+
+La identificación de riesgos es esencial en todo proyecto, aún si formalmente no 
+
+es requerido ni por el modelo ni por las empresas participantes; esta tiene por 
+
+objetivo evitar que eventos no deseados afecten negativamente en el 
+
+cumplimiento de las metas del proyecto y en peor de los casos hacerlo fracasar. 
+
+La identificación de los riesgos toma fuerza al permitirnos determinar acciones a 
+
+seguir para eliminarlos como primera opción, de no ser posible es necesario crear 
+
+un plan de acción que mitigue los efectos al mínimo. 
+
+El impacto puede ser determinado en base a la combinación de su probabilidad y 
+
+sus consecuencias como muestra la siguiente tabla. 
+
+ 
+Consecuencias 
+
+Poco 
+Dañino 
+
+Dañino 
+Muy 
+
+Dañino 
+
+Probabilidad 
+
+Baja Tolerable Moderado Moderado 
+
+Media Moderado Moderado Importante 
+
+Alta Moderado Importante Intolerable 
+Tabla 2: Tabla de Cálculo de Impacto de Riesgos 
+
+ 
+
+ 
+
+ 
+
+
+
+Capítulo 3. Análisis del Sistema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  18 
+
+Los riesgos identificados en el desarrollo de este proyecto son listados a 
+
+continuación 
+
+Código de referencia R.01. 
+
+Descripción corta Mala determinación de Requerimientos 
+
+Probabilidad Baja 
+
+Consecuencia Dañino 
+
+Impacto Moderado 
+
+Plan de Prevención Realizar reuniones con encargado de proyecto con 
+propósito de verificar la valides de los 
+requerimientos. 
+Los requerimientos son validados y aprobados por 
+contratista y cliente antes del comienzo del proyecto. 
+
+Plan de Mitigación Utilizar arquitectura de software de bajo 
+acoplamiento y alta cohesión que permita entre otras 
+cosas reducir los tiempos e impacto en caso de 
+cambio.  
+Los cambios se evalúan y se establece en que 
+iteración se debe agregar de ser necesario. 
+
+ 
+Código de referencia R.02. 
+
+Descripción corta Incumplimiento de plazos de entrega de avances 
+
+Probabilidad Media 
+
+Consecuencia Dañino 
+
+Impacto Moderado 
+
+Plan de Prevención Establecer ciclo de vida adecuado tanto al proyecto 
+como al personal involucrado, considerar además un 
+periodo de holgura. 
+
+Plan de Mitigación Mantener una buena comunicación con el personal, 
+control de avance con la finalidad de tener generar 
+respuesta temprana a desvíos. 
+
+ 
+
+Código de referencia R.03. 
+
+Descripción corta No disponibilidad de Ambiente de Prueba 
+
+Probabilidad Media 
+
+Consecuencia Dañino 
+
+Impacto Moderado 
+
+Plan de Prevención Se debe planificar junto con el personal de 
+infraestructura el uso del ambiente de prueba.  
+
+Plan de Mitigación Se avanza en una tarea que no requiera del ambiente 
+de pruebas. 
+
+ 
+
+Código de referencia R.04. 
+
+Descripción corta Ambiente de Pruebas no compatible con producción 
+
+Probabilidad Media 
+
+Consecuencia Dañino 
+
+Impacto Moderado 
+
+Plan de Prevención Se establece acuerdo con infraestructura en la 
+responsabilidad, se planifica la disponibilidad de la 
+máquina con anticipación. 
+
+Plan de Mitigación  
+
+ 
+
+
+
+Capítulo 3. Análisis del Sistema 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  19 
+
+3.3. Modelo de Negocio 
+
+La aplicación como ya se ha mencionado responde a una metodología de 
+
+investigación de incidentes ICAM (de sus siglas en ingles Incident Cause Analysis 
+
+Method o Método de Análisis de Causas de Incidentes en español), el cual busca 
+
+encontrar las causas raíces que propician el evento y usar esta información para 
+
+poder prevenir en forma temprana los riesgos encontrados. 
+
+Como estrategia por parte del equipo de desarrollo y para mejorar la 
+
+comunicación con los profesionales del área de prevención de riesgos expertos 
+
+en dicha metodología se determinó el uso de diagramas de flujos en el 
+
+modelamiento del procedimiento. De este proceso sale que el modelo de negocio 
+
+a seguir está resumido por el siguiente diagrama: 
+
+ 
+
+Diagrama 1: Flujo metodología de investigación de incidentes 
+
+Notar del diagrama anterior que la primera etapa o preliminar corresponde al 
+
+ciclo que va desde que ocurre el incidente hasta el momento que se determina si 
+
+requiere mayor investigación o se cierra con la información recopilada, el criterio 
+
+de cierre tiene que ver con el riesgo potencial del incidente. Para este punto se ha 
+
+ingresado al sistema evidencias de tipo imágenes y declaraciones preliminares, se 
+
+han generado dos informes preliminares, se han generado planes de difusión y 
+
+acciones preliminares los cuales son sometidos a seguimiento. 
+
+La segunda etapa es para profundizar en la investigación, en esta se busca 
+
+encontrar los factores que propiciaron el evento, se adjuntan nuevas evidencias 
+
+que pueda ayudar a comprender mejor lo ocurrido, se generan planes de difusión 
+
+y acción, se genera un informe final y se hace seguimiento de los planes de 
+
+acción; notar además que el proceso de investigación no se cierra hasta que cada 
+
+plan de acción ha sido completado al 100% y sus respectivos responsables 
+
+adjuntaran las evidencias que corroboren la información.  
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  20 
+
+4. Capítulo 4. Diseño 
+
+4.1. Arquitectura del sistema 
+
+El sistema corresponde a un modelo cliente-servidor, en particular el Sistema de 
+
+Gestión está compuesta por: 
+
+ Sistema de Gestión de Incidentes Pucobre: Aplicación Web la cual es en sí la que 
+
+los usuarios finales utilizan, en esta se realiza el ingreso, modificación y consultas de 
+
+incidentes por parte los usuarios finales.  
+
+ Servicio de generación de Alertas: este servicio tiene por función responder al 
+
+requerimiento de envío de alertas ante incumplimientos en los plazos de cada incidente. 
+
+Se diseña de forma independiente por la necesidad de que sea un proceso automático y 
+
+continuo. 
+
+ Servicio de gestión de archivos: se genera una tercera aplicación con el propósito de 
+
+servir además a futuras aplicaciones, gestiona los archivos que son subidos al sistema 
+
+como evidencia como son imágenes y documentos adjuntos. Se diseña así además para 
+
+asegurar mayor flexibilidad a la hora de configurar el espacio de disco en el cual se aloja 
+
+la evidencia. 
+
+Es de tal manera que a grandes rasgos la aplicación queda de la siguiente manera: 
+
+Diagrama 2: Arquitectura del sistema 
+
+Como notaran el servicio de generación de alertas es independiente al sistema de 
+
+gestión de incidentes, consulta directamente a la base de datos en búsqueda de 
+
+incumplimiento de plazos y envía la alerta según políticas de la empresa a los 
+
+miembros de la comisión investigadora por correo electrónico. 
+
+Por su parte el servicio de gestión de archivos solo cumple la función de 
+
+almacenar y proveer los archivos los cuales son devueltos ante la consulta a su 
+
+identificador por tanto es independiente a la base de datos.  
+
+A destacar que como requerimiento técnico por parte de la empresa el desarrollo 
+
+se debe realizar bajo la siguiente arquitectura: 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  21 
+
+ Sistema Operativo del servidor: Windows Server 2008 
+
+ Servidor de Aplicaciones: Internet Information Server 7 
+
+ Lenguajes de programación: 
+
+o C# Framework 3.5 
+
+o Asp.Net 
+
+o HTLM 
+
+o AjaxControlToolkit 
+
+ Motor de Base de Datos: Microsoft SQLServer 2008 SP2 
+
+La aplicación debe ser diseñada considerando lo anterior y debe ser 
+
+implementada bajo ese marco. 
+
+4.2. Requerimientos Funcionales 
+
+4.2.1. Consideraciones Generales 
+
+Para el nuevo sistema (SGIP), se describen cuatro roles de usuario, los cuáles 
+
+son: 
+
+ Rol Digitador.  
+
+ Rol Administrador de Datos.  
+
+ Rol Administrador de Sistema.  
+
+ Rol Administrador de Portal.  
+
+El detalle de los roles predefinidos se entrega a continuación:  
+
+Rol Sigla Descripción 
+
+DIGITADOR RDIG Rol que tiene permitido ingresar y visualizar 
+
+incidentes al sistema. 
+
+ADMINISTRADOR 
+
+DE DATOS 
+
+RADA Rol encargado de la administración de la 
+
+información relacionada a los incidentes 
+
+ingresados por el rol Digitador.  
+
+ADMINISTRADOR 
+
+DE SISTEMA 
+
+RASI Rol administrador de sistema, encargado de 
+
+ingresar datos a los mantenedores y del ingreso 
+
+de usuarios. 
+
+ADMINISTRADOR 
+
+DE PORTAL 
+
+RAPO Rol administrador de portal, encargado de 
+
+seleccionar los incidentes que serán mostrados 
+
+en la página principal de ingreso del sistema. 
+
+ 
+De ahora en adelante para efecto de este documento se referirá a cada rol por su 
+
+sigla. Un usuario puede poseer ninguno, uno o todos los roles anteriormente 
+
+descritos. 
+
+4.2.2. Funcionalidades 
+
+A continuación, se describirán las funcionalidades que poseen el sistema y cada 
+
+una de sus sub-funcionalidades adjuntas, cada descripción será asociada al rol, el 
+
+cual puede cumplir con el desarrollo de dicha función en el sistema. 
+
+Las funcionalidades serán agrupadas de acuerdo a la siguiente estructura: 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  22 
+
+ Página Principal 
+
+ Inicio de sesión 
+
+ Acceso a Incidentes, rol Digitador. 
+
+ Ingreso nuevo incidente y completar etapa preliminar de incidente. 
+
+ Ingreso etapa investigación incidente. 
+
+ Ingreso etapa Informar y generación de Acciones. 
+
+ Acceso a Incidentes, rol Administrador de datos. 
+
+ Edición etapa preliminar de incidente. 
+
+ Edición etapa investigación de incidente. 
+
+ Edición etapa Informar y generación de Acciones. 
+
+ Avances de planes de acción/difusión. 
+
+ Lecciones Aprendidas. 
+
+ Cronograma asociado a incidente 
+
+ Cambios realizados información incidente 
+
+ Acceso a Reportes de Incidentes. 
+
+ Reportes de incidente. 
+
+ Mantenedores del Sistema. 
+
+ Usuarios Sistema. 
+
+ Administración de Portal de Noticias página principal. 
+
+ Administración de Email. 
+
+ Configuración Cuenta de Usuario. 
+
+ Cerrar Sesión. 
+
+4.2.2.1. Página Principal 
+
+4.2.2.1.1. Visualizar en página principal información relacionada a los 
+incidentes registrados en Pucobre a modo de noticia 
+
+Descripción Muestra información asociada a la etapa preliminar asociada 
+
+a los incidentes registrados en Pucobre. 
+
+Consideraciones Se debe visualizar una lista con los incidentes que son mostrados 
+
+en la página principal. Las noticias de los incidentes deben ser 
+
+agrupadas según los cuatro tipos de incidentes existentes: 
+
+ Incidentes Significativos. 
+
+ Incidentes no Significativos. 
+
+ Cuasi-Incidentes Significativos. 
+
+ Cuasi-Incidentes no Significativos. 
+
+Una vez seleccionado un incidente se deben presentar los 
+
+siguientes datos adjuntos a este: 
+
+ Datos principales incidente (Faena, fecha, incidente, 
+
+descripción, superintendencia, turno, lugar, día/noche). 
+
+ Empresas vinculadas a incidente. 
+
+ Lesiones / daños asociados al incidente. 
+
+ Probables causas. 
+
+ Acciones correctivas preliminares. 
+
+ Imágenes asociadas al incidente. 
+
+Es posible navegar entre las noticias (incidentes) similares en el 
+
+tipo al incidente seleccionado en un comienzo para ver su detalle. 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  23 
+
+Sub-
+
+Funcionalidad 
+
+N/A 
+
+Roles Asociados Todos, incluso usuarios que no están registrados en el sistema. 
+
+4.2.2.1.2. Gráficos Página Principal 
+
+Descripción Muestra gráficos relacionados al comportamiento de 
+
+incidentes por faenas, y clasificación de incidentes. 
+
+Consideraciones Se considera presentar dos gráficos acordes a los incidentes 
+
+ingresados al sistema: 
+
+ Cantidad de incidentes según tipo divididos según faena 
+
+de ocurrencia para último año en Pucobre. 
+
+ Cantidad de incidentes según tipo ocurridos durante el 
+
+año en Pucobre. 
+
+Sub-Funcionalidad  
+
+Roles Asociados Todos, incluso usuarios que no están registrados en el sistema. 
+
+4.2.2.2. Inicio de sesión  
+
+4.2.2.2.1. Iniciar Sesión Usuario 
+
+Descripción Formulario de inicio de sesión con nombre de usuario y 
+
+contraseña. En caso de error (nombre de usuario o 
+
+contraseña incorrecta o usuario no existe) muestra mensaje 
+
+de error. 
+
+Consideraciones Al ingresar el sistema muestra un menú en la parte superior con 
+
+las funcionalidades a las cuáles puede acceder determinado 
+
+usuario, basado en los roles que este posee asociados. En la parte 
+
+inferior se despliega la pantalla principal del sistema. 
+
+Sub-Funcionalidad  
+
+Roles Asociados Todos. 
+
+4.2.2.3. Acceso a Incidentes, rol Digitador 
+
+4.2.2.3.1. Acceso a Incidentes 
+
+Descripción Lista los incidentes que han ocurrido en Pucobre y han sido 
+
+ingresados al sistema 
+
+Consideraciones Existen 4 criterios de búsqueda para los incidentes ingresados: 
+
+ Por tipo de incidente. (a) 
+
+ Por fecha de incidente. (b) 
+
+ Por faena ocurrencia incidente. (c) 
+
+ Incidentes entre periodos de tiempo. (d) 
+ 
+
+Puede realizarse la búsqueda mesclando todas estas opciones, no 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  24 
+
+pudiendo utilizar en un mismo criterio de búsqueda las opciones 
+
+b y d juntas. 
+
+Seleccionando el incidente a revisar este puede ser accedido desde 
+
+esta pantalla para: 
+
+ Etapa Preliminar de Incidente. (a) 
+
+ Etapa de Investigación de Incidente. (b) 
+
+ Etapa Acciones e Informar. (c) 
+
+ Planes de Acción/Difusión. 
+
+ Lecciones aprendidas. 
+
+ Cronograma asociado a incidente. 
+ 
+
+Para a), b), c), dependiendo del grado de avance y si el usuario que 
+
+consulta la información asociada al incidente se encuentra 
+
+vinculado a esta, el tipo de operación de acceso a la respectiva 
+
+pantalla. Los dos tipos de acceso son completar datos y visualizar 
+
+datos. 
+
+Todos los usuarios registrados pueden visualizar todas los 
+
+incidentes registrados e ingresados al sistema. 
+
+ 
+
+Sub-Funcionalidad  
+
+Roles Asociados RDIG 
+
+4.2.2.4. Ingreso nuevo incidente y completar etapa preliminar de 
+incidente 
+
+4.2.2.4.1. Ingreso de un nuevo Incidente 
+
+Descripción Permite llevar a cabo el ingreso de un nuevo incidente al 
+
+sistema. 
+
+Consideraciones El acceso a ingreso de un nuevo incidente se muestra en el 
+
+menú superior para el rol Digitador. 
+
+Un incidente es ingresado solo por un usuario. 
+
+El ingreso de un nuevo incidente, comprende sus datos 
+
+principales. 
+
+Los datos principales asociados a un incidente son: 
+
+ Selección de tipo de incidente: Un incidente debe estar 
+calificado según los siguientes tipos: 
+
+o Incidente significativo. 
+o Incidente no significativo. 
+o Cuasi-Incidente significativo. 
+o Cuasi-Incidente no significativo. 
+
+Incidente. Ejemplo:” RUEDA DESPRENDIDA DE 
+
+EJE DE BATEA RT-666, GOLPEA POSTE 
+
+GARITA”. 
+
+ Descripción del incidente, basado en metodología 
+
+4W+1H (Qué, Quien, Como, Cuando y Donde ocurrió 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  25 
+
+el incidente). 
+
+ Faena en la cual ocurrió el incidente. 
+
+ Superintendencia a cargo. 
+
+ Área perteneciente a Superintendencia. 
+
+ Daño material existente en incidente. 
+
+ Equipos involucrados. 
+
+ Lugar en el cual ocurrió el incidente. 
+
+ Fecha y Hora en la cual ocurrió el incidente. 
+
+ Turno. 
+
+ Si el incidente ocurrió en el Día o Noche. 
+
+ Empresa(s): selección de empresa(s) involucrada(s) en 
+incidente. 
+
+ Severidad Real: asociada a incidente, lista desplegable. 
+
+ Severidad Potencial: asociada a incidente, lista 
+
+desplegable. 
+
+ Día/Noche, lista desplegable. 
+
+ Eco Impactado: selección de ECO asociado a incidente. 
+Tipo de implicado en incidente (Empleado, Contratista 
+
+y/o terceras personas), lista desplegable. 
+
+ Revisado Por: usuario que revisa ingreso de incidente. 
+
+ Ingresado Por: nombre de usuario que ingresa incidente. 
+
+(no editable). 
+
+ Clasificación, basada en si hay o no pérdida de tiempo. 
+ 
+
+El Código sociabilización reporte incidente, es generado 
+
+automáticamente una vez ingresado el incidente. 
+
+ 
+
+Sub-Funcionalidad  4.2.2.4.2 Generar código socialización de Reporte de Incidente. 
+
+Roles Asociados RDIG 
+
+4.2.2.4.2. Generar código socialización de Reporte de Incidente. 
+
+Descripción Se debe generar un código único para cada reporte de 
+
+incidente ingresado. 
+
+Consideraciones El código es formado por el tipo de incidente, código de la faena, la 
+
+fecha y la secuencia de incidente registrados en la faena afectada 
+
+(Cód. Tipo Incidente+Cód. Faena +Secuencia Interna). Ejemplo: 
+
+SI_PBC_001 
+
+Los códigos según tipo de incidente son: 
+
+ SI: Incidente Significativo. 
+
+ NS: Incidente no significativo. 
+
+ CSI: Cuasi Incidente Significativo. 
+
+ CNS: Cuasi Incidente No Significativo. 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RDIG 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  26 
+
+4.2.2.4.3. Completar etapa preliminar de un Incidente 
+
+Descripción Permite completar información de un incidente ingresado al 
+
+sistema. 
+
+Consideraciones Considerando un incidente ingresado al sistema o uno en el cual 
+
+su etapa preliminar no ha sido finalizada, es posible completar o 
+
+modificar la información referente a dicha etapa preliminar. 
+
+Es posible editar los datos principales asociados a un incidente. 
+
+La información a completar en esta etapa es: 
+
+ Imágenes asociadas a incidente, considera aquellas 
+imágenes que han sido tomadas una vez ocurrido un 
+
+hecho de estas características. 
+
+ Detalle incidente, considera, lesiones o daños, probables 
+causas, acciones correctivas preliminares. 
+
+ Reporte CASS, relativo a información solicitada para 
+completar el reporte CASS asociado a un incidente 
+
+ocurrido, esta información es obligatoria, y se debe 
+
+completar si se desea dar por finalizada la etapa preliminar 
+
+del incidente. 
+
+ Involucrados incidente, considera lesionados y/o testigos 
+
+del incidente. 
+
+ Vinculados a incidente, usuarios que son vinculados 
+directamente al incidente, estos usuarios pueden modificar 
+
+información de esta etapa siempre y cuando no se haya 
+
+finalizado su ingreso, así como poder modificar o ingresar 
+
+información en las dos etapas posteriores de registro del 
+
+incidente (etapa investigación y generación de acciones e 
+
+informar). 
+
+ Difusión de incidente. Selección de usuarios a los cuales 
+se le enviará un correo electrónico con la tarea de difundir 
+
+el incidente en un determinado lugar de la minera. 
+
+Además, en esta sub-etapa se da por finalizado el ingreso 
+
+preliminar del incidente. 
+ 
+
+Sub-Funcionalidad 4.2.2.4.4 Imágenes asociadas a incidente  
+
+4.2.2.4.6 Lesiones / daños o consecuencias incidentes 
+
+4.2.2.4.7 Reporte CASS 
+
+4.2.2.4.8 Involucrados asociados a incidente 
+
+4.2.2.4.9 Vinculados asociados a incidente 
+
+4.2.2.4.10 Difusión y finalización informe preliminar incidente 
+
+Roles Asociados RDIG 
+
+  
+
+  
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  27 
+
+4.2.2.4.4. Imágenes asociadas a incidente 
+
+Descripción Permite ingresar/eliminar imágenes asociadas al incidente. 
+
+Consideraciones Solo pueden ingresar / eliminar imágenes, el usuario que ingreso el 
+
+incidente y los usuarios vinculados a este. 
+
+Para el rol Digitador, solo pueden ser modificadas (ingresar / 
+
+eliminar) las imágenes mientras no se finalice el ingreso de la etapa 
+
+preliminar del incidente. 
+
+Para el rol Administrador de datos, solo pueden ser modificadas 
+
+(ingresar / eliminar) las imágenes una vez finalizado el ingreso de la 
+
+etapa preliminar del incidente. 
+
+Solo se pueden seleccionar 3 imágenes para ser publicadas 
+
+posteriormente en el informe Preliminar de Incidente. 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.4.5. Acciones preliminares incidente 
+
+Descripción Permite ingresar/eliminar acciones preliminares asociados al 
+
+incidente. 
+
+Consideraciones Solo pueden ingresar / eliminar acciones preliminares, el usuario 
+
+que ingreso el incidente y/o los usuarios vinculados a este. 
+
+Para el rol Digitador, solo pueden ser modificadas (ingresar / 
+
+eliminar) las acciones preliminares mientras no se finalice el ingreso 
+
+de la etapa preliminar del incidente. 
+
+Para el rol Administrador de datos, solo pueden ser modificadas 
+
+(ingresar / eliminar) las acciones preliminares una vez finalizado el 
+
+ingreso de la etapa preliminar del incidente. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.4.6. Lesiones / daños o consecuencias incidentes 
+
+Descripción Permite ingresar/eliminar lesiones/daños asociados al 
+
+incidente. 
+
+Consideraciones Solo pueden ingresar / eliminar lesiones/daños, el usuario que 
+
+ingreso el incidente y/o los usuarios vinculados a este. 
+
+Para el rol Digitador, solo pueden ser modificadas (ingresar / 
+
+eliminar) las lesiones/daños mientras no se finalice el ingreso de la 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  28 
+
+etapa preliminar del incidente. 
+
+Para el rol Administrador de datos, solo pueden ser modificadas 
+
+(ingresar / eliminar) las lesiones/daños una vez finalizado el ingreso 
+
+de la etapa preliminar del incidente. 
+
+Una lesión puede ser personal o de infraestructura. 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.4.7. Reporte CASS 
+
+Descripción Permite ingresar/modificar la información relativa al reporte 
+
+CASS adjunto al incidente. 
+
+Consideraciones Para el rol Digitador, puede editar esta información mientras no se 
+
+finalice el ingreso de la etapa preliminar del incidente. 
+
+Para el rol Administrador de datos, puede modificar esta 
+
+información una vez finalizado el ingreso de la etapa preliminar del 
+
+incidente. 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.4.8. Involucrados asociados a incidente 
+
+Descripción Permite ingresar/eliminar/modificar/visualizar involucrados 
+
+asociados al incidente. 
+
+Consideraciones Solo pueden ingresar / eliminar /modificar involucrados, el usuario 
+
+que ingreso el incidente y los usuarios vinculados a este. 
+
+Pueden ser modificadas (ingresar / eliminar) los involucrados 
+
+mientras no se finalice el ingreso de la etapa preliminar del 
+
+incidente. 
+
+Para el rol Digitador, puede ingresar/editar/eliminar involucrados 
+
+mientras no se finalice el ingreso de la etapa preliminar del 
+
+incidente. 
+
+Para el rol Administrador de datos, puede ingresar/editar/eliminar 
+
+involucrados una vez finalizado el ingreso de la etapa preliminar del 
+
+incidente. 
+
+Los datos a solicitar del involucrado en incidente son: 
+
+ Rut: Rol Único Tributario asociado ha involucrado, dato no 
+
+obligatorio. 
+
+ Nombre: nombre asociado a involucrado incidente. 
+
+ Edad de involucrado. 
+
+ Tipo Involucrado: lesionado, testigo. 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  29 
+
+ Categoría de Trabajo de persona(s) lesionada o involucrada. 
+
+ Empresa: empresa asociada ha involucrado, dato 
+obligatorio, las empresas son las mismas seleccionadas al 
+
+momento de ingresar los datos principales incidente. Si el 
+
+involucrado es testigo, deben ser desplegadas todas las 
+
+empresas existentes. 
+
+ Cargo: cargo asociado a involucrado incidente, dato 
+
+obligatorio. 
+
+ Antigüedad: antigüedad asociada a involucrado incidente, 
+dato obligatorio. 
+
+ Experiencia en el cargo: asociada a involucrado incidente, 
+dato obligatorio. 
+
+ Parte del cuerpo afectada: dato obligatorio.  
+
+ Sistema de Turno del Involucrado. 
+
+ Día de Sistema de Turno de involucrado en el cual ocurre 
+incidente. 
+
+ Teléfono del involucrado. 
+
+ Dirección del involucrado. 
+
+ Genero del involucrado. 
+ 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.4.9. Vinculados asociados a incidente 
+
+Descripción Permite ingresar/eliminar vinculados asociados al incidente. 
+
+Consideraciones Los vinculados son seleccionados de una lista de los usuarios (perfil 
+
+común) existentes en el sistema. 
+
+Pueden ser buscados por nombre, utilizando el filtro adjunto a esta 
+
+funcionalidad. 
+
+Solo pueden ingresar / eliminar vinculados, el usuario que ingreso 
+
+el incidente y los usuarios vinculados a este. 
+
+El usuario que ingreso incidente no puede ser desvinculado del 
+
+reporte de incidente que ha creado. 
+
+Para el rol Digitador, puede ingresar/eliminar involucrados 
+
+mientras no se finalice el ingreso de la etapa preliminar del 
+
+incidente. 
+
+Para el rol Administrador de datos, puede ingresar/eliminar 
+
+involucrados una vez finalizado el ingreso de la etapa preliminar del 
+
+incidente. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RDIG,RADA 
+
+ 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  30 
+
+4.2.2.4.10. Difusión y finalización informe preliminar incidente 
+
+Descripción Permite difundir y finalizar la etapa preliminar del incidente. 
+
+Consideraciones En el caso de difundir, se permite enviar un correo electrónico de 
+
+notificación de asignación de difusión de incidente para los usuarios 
+
+que sean seleccionados de una lista. 
+
+Para acceder a esta sección se debe ingresar el ítem “Reporte 
+
+CASS”. 
+
+Solo se finaliza una vez el ingreso de la etapa preliminar de 
+
+incidente. 
+
+Al momento de finalizar el ingreso preliminar de un incidente se 
+
+debe seleccionar si el incidente requiere o no investigación. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.4.11 Envío correo de notificación difusión incidente. 
+
+Rolles Asociados RDIG 
+
+4.2.2.4.11. Envío correo de notificación difusión incidente. 
+
+Descripción Se debe enviar un correo de notificación de incidente a los 
+
+usuarios encargados de realizar su difusión en las distintas 
+
+faenas/superintendencias de la minera Pucobre. 
+
+Consideraciones El envío de email se realizará a listas de correo, las cuales están ya 
+
+definidas. 
+
+Debe ser adjuntado el informe de difusión asociado al incidente. 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG 
+
+ 
+
+4.2.2.5. Ingreso etapa investigación de incidente 
+
+4.2.2.5.1. Ingreso de investigación de incidente. 
+
+Descripción La estructura bajo la cual se llevará a cabo el ingreso de 
+
+investigación de un incidente es dividida en las secciones 
+
+descritas a continuación. 
+
+Consideraciones Las secciones que considera el proceso de investigación de un 
+
+incidente son: 
+
+ Organización de la Información 
+
+ Ingreso de documentación adjunta generada por la 
+
+comisión investigadora del incidente. 
+
+ A partir de la documentación ingresada se deben ingresar 
+
+los factores contribuyentes obtenidos en la investigación 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  31 
+
+del incidente. 
+
+ Análisis de Investigación 
+
+ Clasificar los factores contribuyentes 
+
+     (a). Identificar defensas ausentes/fallidas. 
+
+                 (b). Identificar las acciones Individuales/Equipos. 
+
+                     (c) .Identificar las condiciones de la tarea/entorno. 
+
+                     (d). Identificar factores organizacionales. 
+
+ Generación tabla (ICAM) de resultados  
+
+Para cada uno de las clasificaciones descritas anteriormente, se 
+
+debe asociar los hechos (detalle) por los cuales ha sido realizada su 
+
+selección. Deben de ser ordenada de modo que pueda apreciarse 
+
+las relaciones entre las categorías, sin embargo, esto no es siempre 
+
+necesario.  
+
+Una vez finalizada la sección Análisis de Investigación es posible 
+
+dar por finalizada la etapa de Investigación del Incidente. 
+
+Para acceder a esta etapa debe estar finalizada la etapa preliminar 
+
+del incidente. 
+
+Los usuarios vinculados o el que ingreso el incidente son los únicos 
+
+que pueden ingresar información a esta etapa. 
+
+Para continuar con la etapa informar y generación de acciones 
+
+asociadas al incidente es necesario tener finalizada la etapa de 
+
+investigación. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.6.1 Ingreso Organización de la Información 
+
+4.2.2.7.1 Ingreso Análisis Investigación 
+
+ 
+
+Roles Asociados RDIG 
+
+ 
+
+4.2.2.6. Organización de la Información 
+
+4.2.2.6.1. Ingreso Organización de la Información 
+
+Descripción Permite llevar a cabo la organización de la información que ha 
+
+sido ingresada al sistema. 
+
+Consideraciones El ingreso de la organización de la información consta de dos 
+
+partes. 
+
+ Ingreso de documentación adjunta. 
+
+ Ingreso factores contribuyentes obtenidos de la 
+organización de información por parte de la comisión de 
+
+investigación. 
+
+ Las fechas del incidente son consideradas de la siguiente 
+forma: 
+
+a) Fecha de inicio de investigación, para esta fecha debe ser 
+considerada la fecha en la cual ocurrió el incidente. 
+
+b) Fecha término estimado investigación, la fecha anterior 
+más 25 días. 
+
+c) Fecha término real investigación, la fecha real en la cual 
+se terminó la investigación asociada al incidente. 
+
+ 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  32 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.6.2 Ingreso documentación generada comisión de 
+
+investigación 
+
+4.2.2.6.3 Ingreso Factores Contribuyentes 
+
+ 
+
+Roles Asociados RDIG 
+
+4.2.2.6.2. Ingreso documentación generada comisión de investigación 
+
+Descripción Permite ingresar documentación generada por la comisión a 
+
+cargo de la investigación del incidente. 
+
+Consideraciones Pueden ser ingresados n-archivos. 
+
+Para el rol Digitador, solo pueden ser anexados archivos mientras 
+
+no se finalice el ingreso de la etapa investigación del incidente. 
+
+Para el rol Administrador de datos, solo pueden ser anexados 
+
+archivos mientras una vez finalizado el ingreso de la etapa 
+
+investigación del incidente. 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.6.3. Ingreso Factores Contribuyentes 
+
+Descripción Permite ingresar los factores contribuyentes obtenidos a partir 
+
+de la investigación realizada por la comisión. 
+
+Consideraciones Para el rol Digitador, solo pueden ser ingresados/eliminados 
+
+factores contribuyentes mientras no se finalice el ingreso de la etapa 
+
+investigación del incidente. 
+
+Para el rol Administrador de datos, solo pueden ser 
+
+ingresados/eliminados factores contribuyentes mientras una vez 
+
+finalizado el ingreso de la etapa investigación del incidente. 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+ 
+
+4.2.2.7. Análisis Investigación  
+
+4.2.2.7.1. Ingreso Análisis Investigación  
+
+Descripción Permite llevar a cabo el análisis de la investigación que ha 
+
+sido ingresada al sistema. 
+
+Consideraciones El análisis de la investigación consta de tres partes: 
+
+ Clasificación de Factores Contribuyentes. 
+
+ Configuración de resultados plantilla ICAM  
+
+ Conclusión de la Investigación. 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  33 
+
+ 
+
+Debe visualizarse la información ingresada en la etapa anterior 
+
+Organización de la Información. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.7.2 Clasificación Factores Contribuyentes 
+
+4.2.2.7.7 Ingreso Cartilla ICAM 
+
+4.2.2.7.10 Ingreso Conclusión Investigación 
+
+Roles Asociados RDIG 
+
+4.2.2.7.2. Clasificación Factores Contribuyentes 
+
+Descripción Debe ser realizado la clasificación de los factores 
+
+contribuyentes obtenidos. 
+
+Consideraciones Deben ser clasificados los factores concluyentes y las causas básicas 
+
+según. 
+
+ Defensas Ausentes y Fallidas. 
+
+ Acciones Individuales/Equipo. 
+
+ Condiciones de la Tarea/Entorno. 
+
+ Factores no Contribuyentes. 
+ 
+
+Para el rol Digitador, solo pueden ser clasificados factores 
+
+contribuyentes mientras no se finalice el ingreso de la etapa 
+
+investigación del incidente. 
+
+Para el rol Administrador de datos, solo pueden ser clasificados los 
+
+factores contribuyentes una vez finalizado el ingreso de la etapa 
+
+investigación del incidente. 
+
+ 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.7.3 Identificar las defensas ausentes y falladas 
+
+4.2.2.7.4 Identificar las acciones individuales/ equipos 
+
+4.2.2.7.5  Identificar las condiciones de tarea/entorno 
+
+4.2.2.7.6 Identificar los factores organizacionales 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.7.3. Identificar las defensas ausentes y falladas 
+
+Descripción Deben identificarse las defensas inadecuadas o ausentes 
+
+desde una lista y asociársele un detalle enumerable de los 
+
+hechos que motivaron su la selección. 
+
+Consideraciones Toda selección de defensa debe tener asociada un detalle 
+
+enumerable de los hechos que la motivaron. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  34 
+
+4.2.2.7.4. Identificar las acciones individuales/ equipos 
+
+Descripción Deben identificarse las acciones individuales/equipos desde 
+
+una lista y asociársele un detalle enumerable de los hechos 
+
+que motivaron su la selección. 
+
+Consideraciones Toda selección de acción debe tener asociada un detalle enumerable 
+
+de los hechos que la motivaron. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.7.5. Identificar las condiciones de tarea/entorno 
+
+Descripción Deben identificarse las condiciones de tarea/entorno desde 
+
+una lista y asociársele un detalle enumerable de los hechos 
+
+que motivaron su la selección. 
+
+Consideraciones Toda selección de acción debe tener asociada un detalle enumerable 
+
+de los hechos que la motivaron. 
+
+Las condiciones de tarea/entorno deben ser desplegadas en una 
+
+lista y agrupadas según la categoría: 
+
+ Factores del lugar de trabajo. 
+
+ Factores Humanos. 
+ 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.7.6. Identificar los factores organizacionales 
+
+Descripción Deben identificarse las acciones individuales/equipos desde 
+
+una lista y asociársele un detalle enumerable de los hechos 
+
+que motivaron su la selección. 
+
+Consideraciones Toda selección de factor debe tener asociada un detalle enumerable 
+
+de los hechos que la motivaron. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.7.7. Ingreso Cartilla ICAM 
+
+Descripción Permite desplegar y configurar los resultados obtenidos a 
+
+partir del análisis de investigación. 
+
+Consideraciones Las categorías en las cuales se divide esta cartilla son (de izquierda a 
+
+derecha): 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  35 
+
+ Factores Organizacionales. 
+
+ Condiciones de Entorno-Tarea. 
+
+ Acciones Individuales o del Equipo. 
+
+ Defensas Ausentes/Fallidas 
+
+ Incidente (título de incidente). 
+ 
+
+Permitir relacionar el contenido entre las categorías. 
+
+ 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.7.8 Representación gráfica tabla resultado de Investigación 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.7.8. Representación gráfica tabla resultado de Investigación 
+
+Descripción Permite llevar a cabo la representación gráfica de la tabla de 
+
+resultados (ICAM) generada a partir de la información 
+
+ingresada durante el análisis de incidente. 
+
+Consideraciones Se mostrará el diagrama de flujo final asociado al incidente. 
+
+El diagrama está dividido en las siguientes categorías: 
+
+ Factores Organizacionales. 
+
+ Condiciones Tarea/Entorno. 
+
+ Acciones Individuales/Equipos 
+
+ Defensas Ausentes/Fallidas 
+
+ Descripción Incidente. 
+ 
+
+Muestra la relación existente entre cada elemento de las distintas 
+
+categorías, siempre y cuando esta exista. 
+
+A medida que se ingresan /eliminan/modifican las relaciones entre 
+
+las categorías debe actualizarse la representación gráfica. 
+
+La opción de relacionar elementos de las distintas categorías, será 
+
+realizada a través de un formulario. 
+
+La opción de reordenar elementos de las distintas categorías, será 
+
+realizada a través de un formulario. 
+
+Se debe dar opción de finalizar el proceso de análisis de la 
+
+investigación. 
+
+Para el rol Digitador, solo pueden relacionarse los distintos 
+
+componentes mientras no se finalice el ingreso de la etapa 
+
+investigación del incidente. 
+
+Para el rol Administrador de datos, solo pueden relacionarse los 
+
+distintos componentes una vez finalizado el ingreso de la etapa 
+
+investigación del incidente. 
+
+ 
+
+ 
+
+Sub- 4.2.2.7.9 Relacionar elementos análisis Investigación 
+
+ 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  36 
+
+Funcionalidad 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.7.9. Relacionar elementos análisis Investigación 
+
+Descripción Se debe permitir relacionar los distintos componentes 
+
+obtenidos en el análisis de la investigación entre las distintas 
+
+categorías existentes. 
+
+Consideraciones No es necesario relacionar los elementos, pero si debe darse la 
+
+opción de realizarlo. 
+
+ 
+
+Llámese componente a cualquier dato adjunto a cada una de estas 
+
+categorías: 
+
+ Defensas Ausentes y Fallidas. 
+
+ Acciones Individuales/Equipo. 
+
+ Condiciones de la Tarea/Entorno. 
+
+ Factores Organizacionales. 
+ 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.7.10. Ingreso Conclusión Investigación 
+
+Descripción Se debe permitir ingresar la conclusión adjunta a la 
+
+investigación del incidente. 
+
+Consideraciones  
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG 
+
+4.2.2.7.11. Finalizar Investigación  
+
+Descripción Permite dar por finalizada la investigación asociada al 
+
+incidente. 
+
+Consideraciones  
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  37 
+
+4.2.2.8. Ingreso etapa informar y generación de Acciones. 
+
+4.2.2.8.1. Ingreso de etapa informar hallazgos y generación de acciones 
+
+Descripción Esta etapa consta de dos secciones: 
+
+Consideraciones  Ingreso de plan de Acción. 
+
+ Para dar por finalizada esta etapa solo es necesario que el 
+
+plan de acción posea al menos una acción ingresada. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG 
+
+ 
+
+4.2.2.8.2. Ingreso de Plan de acción 
+
+Descripción Debe ingresarse un plan de acción asociado al incidente. 
+
+Consideraciones Si la investigación de incidente es realizada, el plan de acción debe al 
+
+menos poseer una acción ingresada. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.8.3 Ingreso de acciones. 
+
+4.2.2.8.4 Administración de acciones. 
+
+4.2.2.8.5 Administración de plan de acción. 
+
+ 
+
+Roles Asociados RDIG 
+
+ 
+
+4.2.2.8.3. Ingreso de acciones. 
+
+Descripción Deben ingresarse acciones asociadas a las defensas 
+
+ausentes/factores organizacionales obtenidos en la etapa de 
+
+investigación. 
+
+Consideraciones Al menos debe ser ingresada una acción individual para todos los 
+
+factores organizacionales y/o defensas ausentes obtenidos. 
+
+ 
+
+Para el rol Digitador, solo se pueden ingresar/eliminar acciones 
+
+mientras no se finalice el ingreso de la etapa investigación del 
+
+incidente. 
+
+Para el rol Administrador de datos, solo pueden ingresar/eliminar 
+
+acciones una vez finalizado el ingreso de la etapa investigación del 
+
+incidente. 
+
+ 
+
+Al momento de ingresar una nueva acción, debe ser seleccionado el 
+
+tipo de acción para verificar si esta es una acción correctiva, o una 
+
+acción preventiva o una recomendación. 
+
+ 
+
+Además, debe seleccionarse la jerarquía de control vinculada a dicha 
+
+acción. 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  38 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+ 
+
+4.2.2.8.4. Administración de acciones. 
+
+Descripción Las acciones asociadas a las defensas ausentes y factores 
+
+organizacionales deben ser administradas. 
+
+Consideraciones Dentro de la administración de acciones se considera: 
+
+ Determinar el cuadrante de la matriz de resultados en el cual 
+
+encaja la acción. 
+
+ Asignar las faenas en las cuales se debe ejecutar la acción, así 
+
+como el responsable de cada una de estas. 
+
+ Al menos debe ser ingresada una acción individual para 
+
+todos los factores organizacionales y/o defensas ausentes 
+
+obtenidos. 
+
+ Las acciones que son administradas pasan directamente a ser 
+
+parte del plan de acción asociado al incidente. 
+
+Para el rol Digitador, solo se pueden administrar acciones mientras 
+
+no se finalice el ingreso de la etapa investigación del incidente. 
+
+Para el rol Administrador de datos, solo se pueden administrar 
+
+acciones una vez finalizado el ingreso de la etapa investigación del 
+
+incidente. 
+
+Una acción puede ser asignada a cualquier usuario activo del sistema 
+
+independiente, de los roles que este posea, pero solo los roles 
+
+Administrador y Digitador pueden acceder a ingresar avances 
+
+a la acción que tenga asignada. 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.8.5. Administración de plan de acción. 
+
+Descripción El plan de acción asociado a un incidente es conformado por 
+
+las acciones que han sido creadas y administradas para dicho 
+
+incidente. 
+
+Consideraciones Mientras no se haya iniciado la acción asociada al plan de acción es 
+
+posible editar la información adjunta a dicha acción. 
+
+En este contexto es posible editar: 
+
+ La fecha de inicio. 
+
+ La fecha de plazo. 
+
+ El responsable de la acción en la faena a desarrollarla. 
+Es posible eliminar acciones no iniciadas. 
+
+Para el rol Digitador, solo se pueden editar/eliminar acciones que 
+
+no estén iniciadas mientras no se finalice el ingreso de la etapa 
+
+investigación del  incidente. 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  39 
+
+Para el rol Administrador de datos, solo se pueden editar/eliminar 
+
+acciones que no estén iniciadas una vez finalizado el ingreso de la 
+
+etapa investigación del incidente. 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+ 
+
+4.2.2.9. Acceso a Incidentes, rol Administrador de Datos 
+
+4.2.2.9.1. Acceso a Incidentes 
+
+Descripción Lista los incidentes que han ocurrido en Pucobre y han sido 
+
+ingresados al sistema 
+
+Consideraciones Existen 4 criterios de búsqueda para los incidentes ingresados: 
+
+ Por tipo de incidente. (a) 
+
+ Por fecha de incidente. (b) 
+
+ Por faena ocurrencia incidente. (c) 
+
+ Incidentes entre periodos de tiempo. (d) 
+Puede realizarse la búsqueda mesclando todas estas opciones, no 
+
+pudiendo utilizar en un mismo criterio de búsqueda las opciones b y 
+
+d juntas. 
+
+Seleccionando el incidente a revisar este puede ser accedido desde 
+
+esta pantalla para: 
+
+ Etapa Preliminar de Incidente. (a) 
+
+ Etapa de Investigación de Incidente. (b) 
+
+ Etapa Acciones e Informar. (c) 
+
+ Planes de Acción/Difusión. 
+
+ Lecciones aprendidas. 
+
+ Cronograma asociado a incidente. 
+
+ Cambios realizados en incidente. 
+Para a), b), c), dependiendo del grado de avance de cada etapa es 
+
+posible acceder a editar la información que en ella se ha ingresado, 
+
+en caso de no estar finalizada solo podrá ser visualizada dicha 
+
+información. 
+
+Todos los usuarios registrados pueden visualizar todas los 
+
+incidentes registrados e ingresados al sistema. 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RADA 
+
+ 
+
+ 
+
+ 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  40 
+
+4.2.2.10. Edición etapa preliminar de incidente 
+
+4.2.2.10.1. Editar etapa preliminar de un Incidente 
+
+Descripción Permite editar la información de la etapa preliminar de un 
+
+incidente ingresado al sistema. 
+
+Consideraciones Se guarda registro de cada cambio realizado. 
+
+Solo puede ser editada la etapa preliminar para aquellos incidentes 
+
+para los cuales haya sido está finalizada. 
+
+Es posible editar los siguientes datos principales asociados a un 
+
+incidente. 
+
+ Imágenes asociadas a incidente, considera aquellas imágenes 
+que han sido tomadas una vez que a ocurrido un hecho de 
+
+estas características. 
+
+ Detalle incidente, considera, lesiones o daños, probables 
+
+causas, acciones correctivas preliminares. 
+
+ Reporte HSEC, relativo a información solicitada para 
+completar el reporte HSEC asociado a un incidente 
+
+ocurrido, esta información es obligatoria, y se debe 
+
+completar si se desea dar por finalizada la etapa preliminar 
+
+del incidente. 
+
+ Involucrados incidente, considera lesionados y/o testigos 
+del incidente. 
+
+ Vinculados a incidente, usuarios que son vinculados 
+directamente al incidente, estos usuarios pueden modificar 
+
+información de esta etapa siempre y cuando no se haya 
+
+finalizado su ingreso, así como poder modificar o ingresar 
+
+información en las dos etapas posteriores de registro del 
+
+incidente (etapa investigación y generación de acciones e 
+
+informar). 
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.4.4 Imágenes asociadas a incidente 
+
+Descripción Permite ingresar/eliminar imágenes 
+
+asociadas al incidente. 
+
+Consideraciones Solo pueden ingresar / eliminar imágenes, 
+
+el usuario que ingreso el incidente y los 
+
+usuarios vinculados a este. 
+
+Para el rol Digitador, solo pueden ser 
+
+modificadas (ingresar / eliminar) las 
+
+imágenes mientras no se finalice el ingreso 
+
+de la etapa preliminar del incidente. 
+
+Para el rol Administrador de datos, solo 
+
+pueden ser modificadas (ingresar / 
+
+eliminar) las imágenes una vez finalizado 
+
+el ingreso de la etapa preliminar del 
+
+incidente. 
+
+Solo se pueden seleccionar 3 imágenes 
+
+para ser publicadas posteriormente en el 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  41 
+
+informe Preliminar de Incidente. 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.10.2. Acciones preliminares incidente 
+
+4.2.2.4.6 Lesiones / daños o consecuencias incidentes 
+
+4.2.2.4.7 Reporte CASS 
+4.2.2.4.79 Involucrados asociados a incidente 
+4.2.2.4.9 Vinculados asociados a incidente 
+
+Roles Asociados RADA 
+
+4.2.2.11. Edición etapa investigación de incidente 
+
+4.2.2.11.1. Editar investigación de incidente. 
+
+Descripción La investigación de un incidente puede ser editada una vez 
+
+finalizado su ingreso. 
+
+Consideraciones Las secciones que considera el proceso de investigación de un 
+
+incidente son: 
+
+ Organización de la Información 
+Es posible agregar nueva documentación adjunta generada 
+
+por la comisión investigadora del incidente. 
+
+ 
+
+Es posible ingresar/eliminar los factores contribuyentes 
+
+obtenidos en la investigación del incidente. En el caso de 
+
+eliminar es posible, si los factores no han sido clasificados 
+
+en la sección Análisis de Investigación. 
+
+ Análisis de Investigación 
+Los factores contribuyentes pueden ser clasificado según: 
+
+     (a). Identificar defensas ausentes/fallidas. 
+
+                 (b). Identificar las acciones Individuales/Equipos. 
+
+                 (c) .Identificar las condiciones de la tarea/entorno. 
+
+                 (d). Identificar factores organizacionales. 
+
+ 
+
+Es posible ingresar/eliminar la clasificación de los factores 
+
+contribuyentes. En el caso de eliminar, si la clasificación no 
+
+ha generado acciones es posible eliminarla. 
+
+ 
+
+Solo las defensas ausentes y los factores organizacionales 
+
+pueden generar acciones. 
+
+ 
+
+Generación tabla (ICAM) de resultados  
+
+ 
+
+Para cada uno de las clasificaciones descritas anteriormente, 
+
+se debe asociar los hechos (detalle) por los cuales ha sido 
+
+realizada su selección. Deben de ser ordenada de modo que 
+
+pueda apreciarse las relaciones entre las categorías, sin 
+
+embargo esto no es siempre necesario.  
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  42 
+
+ 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.11.2 Edición Organización de la Información 
+
+4.2.2.11.3 Edición Análisis Investigación 
+
+Roles Asociados RADA 
+
+ 
+
+Organización de la Información 
+
+4.2.2.11.2. Edición Organización de la Información 
+
+Descripción Permite llevar a cabo la organización de la información que ha 
+
+sido ingresada al sistema. 
+
+Consideraciones Al editar esta sección se debe considerar que consta de dos partes. 
+
+ Ingreso de documentación adjunta. 
+
+ Ingreso factores contribuyentes obtenidos de la 
+
+organización de información por parte de la comisión de 
+
+investigación. 
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.6.2 Ingreso documentación generada comisión de 
+
+investigación 
+
+4.2.2.6.3     Ingreso Factores Contribuyentes 
+
+ 
+
+Roles Asociados RADA 
+
+ 
+
+Análisis Investigación  
+
+4.2.2.11.3. Edición Análisis Investigación  
+
+Descripción Permite llevar a cabo el análisis de la investigación que ha 
+
+sido ingresada al sistema. 
+
+Consideraciones Al editar esta sección se debe considerar que consta de tres partes: 
+
+ Clasificación de Factores Contribuyentes. 
+
+ Configuración de resultados plantilla ICAM  
+
+ Conclusión de la Investigación. 
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.7.2 Clasificación Factores Contribuyentes 
+
+4.2.2.7.7 Ingreso Cartilla ICAM 
+
+4.2.2.7.10 Ingreso Conclusión Investigación 
+
+Roles Asociados RADA 
+
+4.2.2.12. Edición etapa informar y generación de Acciones. 
+
+4.2.2.12.1. Editar etapa informar hallazgos y generación de acciones 
+
+Descripción Esta etapa consta de dos secciones: 
+
+Consideraciones Ingreso de plan de Acción. 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  43 
+
+La información ingresada en esta etapa puede ser editada solo si la 
+
+etapa se encuentra finalizada. 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RADA 
+
+ 
+
+4.2.2.12.2. Edición de Plan de acción 
+
+Descripción Debe ingresarse un plan de acción asociado al incidente. 
+
+Consideraciones Si hubo investigación del incidente, el plan de acción debe al menos 
+
+poseer una acción ingresada. 
+
+Una acción ingresada al plan de acción asociado al incidente puede 
+
+ser editada si no ha sido iniciada su ejecución. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.8.3 Ingreso de acciones. 
+
+4.2.2.8.4 Administración de acciones. 
+
+4.2.2.8.5 Administración de plan de acción. 
+
+ 
+
+Roles Asociados RADA 
+
+ 
+
+4.2.2.13. Avances Planes de Acción/Difusión 
+
+4.2.2.13.1. Avances acciones 
+
+Descripción Deben ser ingresados avances adjunto a cada acción existente 
+
+en los planes de acción o de difusión generados para el 
+
+incidente. 
+
+Consideraciones Existen dos tipos de avances según los planes generados: 
+
+ Avance Difusión Incidente. 
+
+ Avance Plan de Acción. 
+ 
+
+Un usuario solo puede acceder a completar avances a la acción que 
+
+le ha sido asignada, independiente del tipo de avance que deba 
+
+ingresar, sea este perteneciente al plan de difusión o al plan de 
+
+acción vinculados al incidente. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+4.2.2.13.2 Avances Difusión Incidente 
+
+4.2.2.13.3 Avances Plan de Acción 
+
+Roles Asociados RDIG, RADA 
+
+ 
+
+4.2.2.13.2. Avances Difusión Incidente 
+
+Descripción Deben ser ingresados avances adjunto a cada acción existente 
+
+en el plan de difusión generado para el incidente. 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  44 
+
+Consideraciones Valores validos son enteros entre 0 y 100%. 
+
+Una acción de difusión se da por completada cuando porcentaje 
+
+avance = 100%. 
+
+A medida que se ingresan avances a la acción deben asociarse 
+
+evidencia objetiva. 
+
+Entre la evidencia objetiva se encuentran fotos, archivos que 
+
+acrediten la realización de la acción. 
+
+Se debe registrar y contabilizar el momento en el cual el responsable 
+
+de la acción realice su cierre en el sistema. 
+
+El usuario responsable es el encargado de realizar los avances de la 
+
+acción de difusión. 
+
+Si todas las acciones de difusión cumplen al 100% entonces se da 
+
+por finalizado dicho proceso. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG, RADA 
+
+ 
+
+4.2.2.13.3. Avances Plan de Acción 
+
+Descripción Deben ser ingresados avances adjunto a cada acción existente 
+
+en el plan de acción generado para el incidente. 
+
+Consideraciones Valores validos son enteros entre 0 y 100%. 
+
+Una acción del plan de acción se da por completada cuando 
+
+porcentaje avance = 100%. 
+
+A medida que se ingresan avances a la acción deben asociarse 
+
+evidencia objetiva. 
+
+ Entre la evidencia objetiva se encuentran fotos, archivos que 
+
+acrediten la realización de la acción. 
+
+Se debe registrar y contabilizar el momento en el cual el responsable 
+
+de la acción realice su cierre en el sistema. 
+
+El usuario responsable es el encargado de realizar los avances de la 
+
+acción de difusión. 
+
+Solo un usuario integrante de CASS puede dar por finalizado el 
+
+ingreso de avances asociados a una acción en particular. 
+
+Si todas las acciones del plan de acción se cumplen al 100% y su 
+
+ingreso está finalizado entonces se da por finalizado dicho proceso, 
+
+cambiando el estado del incidente ha finalizado. 
+
+Sub-  
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  45 
+
+Funcionalidad 
+
+Roles Asociados RDIG, RADA 
+
+4.2.2.13.4. Envío correo de notificación avances plan de acción. 
+
+Descripción Se debe configurar envió de mail para la notificación de 
+
+acciones y cumplimiento de avances. 
+
+Consideraciones Se enviarán correos, basado en lo siguiente: 
+
+ Cuando se complete el avance de una acción existente en el 
+plan de acción, se debe enviar un correo de notificación al 
+
+responsable de la acción y a todos los usuarios vinculados al 
+
+registro del incidente. 
+
+ Se debe generar y administrar estructura (tipo árbol) que 
+permita la carga de jerarquías para el envío de e-mails de 
+
+alertas de retraso. 
+
+ Las estrategias para envió de alertas se hará conforme a 
+fechas de inicio y termino de una tarea y % de avance en el 
+
+tiempo. 
+
+ Se debe crear una cuenta regresiva que permita enviar 
+
+notificación vía email a los responsables de los plazos con 
+
+los que cuenta para realizar la acción a la cual están 
+
+vinculado, los plazos deben considerar una semana de 
+
+anticipación, con dos días de anticipación y la fecha de 
+
+vencimiento de la acción. 
+
+ Se debe enviar un mail de notificación de término de plazo, 
+uno por día, al responsable y supervisor del responsable 
+
+cada día que pasa posterior al vencimiento y hasta 5 días. 
+
+ A partir del 6° día, el mail continúo enviándose, pero 
+agregando al supervisor que jerárquicamente está por sobre 
+
+el supervisor inicial. 
+
+ El mail de notificación se continúa enviando cada día por 
+medio a los destinatarios hasta 5 envíos. 
+
+ Si se llega proporcionalmente a la fecha en que corresponde 
+
+un 6° envío en el punto anterior, el nuevo mail debe incluir 
+
+al Sub Gerente o Superintendente del área. 
+
+ La notificación continúa enviándose al nuevo grupo de 
+destinatarios siguiendo el mismo ciclo antes indicado. 
+
+ Si la acción continúa sin ser cerrada, se agrega copia al 
+Gerente General al completar 5 envíos. 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.14. Lecciones Aprendidas 
+
+4.2.2.14.1. Ingreso lecciones aprendidas 
+
+Descripción Deben ser ingresados avances adjunto a cada acción existente 
+
+en los planes de acción o de difusión generados para el 
+
+incidente. 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  46 
+
+Consideraciones Deben estar finalizadas las tres etapas de ingreso del incidente: 
+
+ Etapa Preliminar de incidente. 
+
+ Etapa Investigación incidente. 
+
+ Etapa Informar y generación de Acciones. 
+Cualquier usuario existente en el sistema puede ingresar lecciones 
+
+aprendidas. 
+
+Un usuario puede eliminar una lección que el haya ingresado con 
+
+anterioridad 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG, RADA 
+
+ 
+
+4.2.2.15. Cronograma asociado a incidente 
+
+4.2.2.15.1. Cronograma adjunto eventos asociado a etapas de ingreso de 
+incidente. 
+
+Descripción Visualiza el detalle de los días y hora cuando fueron realizados 
+
+ciertos eventos de vital importancia en el incidente ingresado 
+
+Consideraciones El detalla de los eventos asociados a: 
+
+ Fecha de inicio de Etapa Preliminar de incidente. 
+
+ Fecha de término de Etapa Preliminar de incidente. 
+
+ Fecha de inicio de Etapa Investigación de incidente. 
+
+ Fecha de término de Etapa Investigación de incidente. 
+
+ Fecha de inicio de Etapa Acciones e Informar Hallazgos. 
+Fecha de término de Etapa Acciones e Informar Hallazgos. 
+
+Visualizar el estado actual del proceso de gestión de incidentes. 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RDIG,RADA 
+
+4.2.2.16. Cambios realizados información incidente 
+
+4.2.2.16.1. Visualizar cambios  
+
+Descripción Visualiza el detalle de los cambios realizados en las etapas de 
+
+ingreso por parte de los usuarios cuyo rol sea el de 
+
+Administrador de Datos. 
+
+Consideraciones Se debe visualizar el detalle del cambio, el usuario que realizo el 
+
+cambio y la fecha y hora del cambio realizado. 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RADA 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  47 
+
+4.2.2.17. Acceso a Reportes de Incidentes 
+
+4.2.2.17.1. Acceso a Reportes 
+
+Descripción Lista los incidentes que han ocurrido en Pucobre y han sido 
+
+ingresados al sistema 
+
+Consideraciones Existen 4 criterios de búsqueda para los incidentes ingresados: 
+
+ Por tipo de incidente. (a) 
+
+ Por fecha de incidente. (b) 
+
+ Por faena ocurrencia incidente. (c) 
+
+ Incidentes entre periodos de tiempo. (d) 
+Existen 3 tipos de reportes a los cuales es posible acceder a medida 
+
+que se vaya realizando el ingreso del incidente por las distintas 
+
+etapas existentes: 
+
+ Informe preliminar de incidentes. 
+
+ Informe HSEC preliminar. 
+
+ Informe HSEC final. 
+ 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+ 
+
+Roles Asociados RADA,RDIG 
+
+ 
+
+4.2.2.18. Reportes de Incidente 
+
+4.2.2.18.1. Generar Informe Preliminar 
+
+Descripción Generar el informe Preliminar de Incidente. 
+
+Consideraciones Es posible cumplir esta función si está finalizada la etapa preliminar 
+del Incidente. 
+Todos los usuarios registrados con rol Administrador o rol 
+Digitador pueden imprimir este informe. 
+Estructura similar a Informe entregado por la versión 1.0 del 
+sistema. 
+Es posible acceder a este reporte desde el portal de noticias. 
+ 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RADA,RDIG 
+
+4.2.2.18.2. Generar Reporte de Incidente HSEC preliminar 
+
+Descripción Genera un reporte con similares características al reporte de 
+
+incidente HSEC. 
+
+Consideraciones Si solo se encuentra finalizada la etapa Preliminar del incidente es 
+generada solo la Parte 1 del reporte.  
+Todos los usuarios registrados con rol Administrador o rol 
+Digitador pueden imprimir este informe. 
+
+Sub- - 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  48 
+
+Funcionalidad 
+
+Roles Asociados RADA, RDIG. 
+
+Nota: Si el acceso es desde el portal de noticias no importa el rol de 
+
+usuario o si este se encuentra o no registrado. 
+
+4.2.2.18.3. Generar Reporte de Incidente HSEC final 
+
+Descripción Genera un reporte con similares características al reporte de 
+
+incidente HSEC. 
+
+Consideraciones El reporte se mostrará completo (Parte 1 + Parte 2) solo cuando 
+cumplan los otros 3 Hitos restante del proceso asociado al 
+incidente: 
+
+ Ingreso finalizado Etapa Preliminar del incidente. 
+
+ Ingreso finalizado Etapa de Investigación del incidente. 
+
+ Ingreso finalizado Etapa Informar y generación de acciones. 
+ 
+Todos los usuarios registrados con rol Administrador o rol 
+Digitador pueden imprimir este informe. 
+ 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RADA,RDIG 
+
+4.2.2.18.4. Generar Informe Difusión Incidente. 
+
+Descripción Generar el informe Difusión de Incidente. 
+
+Consideraciones Es posible cumplir esta función si está finalizada la etapa preliminar 
+del Incidente. 
+ 
+Todos los usuarios registrados con rol Administrador o rol 
+Digitador pueden imprimir este informe.  
+ 
+ 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RADA,RDIG 
+
+4.2.2.18.5.  Generar Resumen Ejecutivo Incidente. 
+
+Descripción Generar el Resumen Ejecutivo de Incidente. 
+
+Consideraciones Este reporte se generará solo cuando cumplan los otros 3 Hitos 
+restante del proceso asociado al incidente: 
+
+ Ingreso finalizado Etapa Preliminar del incidente. 
+
+ Ingreso finalizado Etapa de Investigación del incidente. 
+
+ Ingreso finalizado Etapa Informar y generación de acciones. 
+ 
+Todos los usuarios registrados con rol Administrador o rol 
+Digitador pueden imprimir este informe.  
+ 
+ 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  49 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RADA,RDIG 
+
+4.2.2.19. Mantenedores del Sistema 
+
+Se excluirá de este documento los mantenedores y vistas de configuración. 
+
+4.2.2.20. Usuarios del Sistema 
+
+4.2.2.20.1. Pantalla principal Usuarios Sistema 
+
+Descripción Administra y Lista los usuarios existentes en la actualidad en 
+
+el sistema. 
+
+Consideraciones Entre las opciones de filtro de búsqueda de usuarios se encuentran: 
+
+ Filtro búsqueda por Rut. 
+
+ Filtro búsqueda por nombre. 
+
+ Filtro búsqueda por faena 
+
+ Filtro búsqueda por empresa. 
+
+ Filtro búsqueda por estado de cuenta. 
+
+Los usuarios deben estar entre sí relacionados por jerarquías entre 
+
+ellos. 
+
+ 
+
+Seleccionando el usuario a revisar este puede ser accedido desde 
+
+esta pantalla para: 
+
+Desde esta pantalla se accede a: 
+
+ Jerarquía de Usuarios 
+
+ Ingresar un nuevo Usuario. 
+
+ Difusión Usuarios. 
+
+Sobre un usuario cualquiera, se puede acceder a: 
+
+ Visitas de usuario. 
+
+ Ver/Editar información asociada a usuario. 
+
+ Asignar roles de acceso a usuario. 
+ 
+
+Sub-
+
+Funcion
+
+alidad 
+
+ 
+
+Roles Asociados RASI 
+
+4.2.2.20.2. Ingreso nuevo Usuario. 
+
+Descripción Esta función tiene por finalidad llevar a cabo el ingreso de un 
+
+nuevo usuario al sistema. 
+
+Consideraciones Los datos asociados al usuario son: 
+
+ Rut de Usuario 
+
+ Nombre de usuario 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  50 
+
+ Nombre de acceso al sistema 
+
+ Password. 
+
+ Empresa a la que pertenece usuario. 
+
+ Faena a la que pertenece usuario. 
+
+ Superintendencia a la que pertenece usuario. 
+
+ Cargo que posee el usuario. 
+
+ E-mail del usuario. 
+
+ Dirección del usuario. 
+
+ Fono del usuario. 
+
+ Ciudad del usuario. 
+
+ Si pertenece a lista de usuarios difusión incidente. 
+
+ Si el usuario ingresado es integrante de CASS. 
+ 
+
+El nombre de acceso del usuario es único. 
+
+ 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RASI 
+
+4.2.2.20.3. Jerarquía de Usuarios. 
+
+Descripción Esta función tiene por finalidad crear y administrar la 
+
+jerarquía de los usuarios al interior de la empresa. 
+
+Consideraciones La jerarquía de usuario es de vital importancia a la hora del envío de 
+
+notificaciones por intermedio de correo electrónico. 
+
+Debe configurarse esta instancia antes de configurar el servicio de 
+
+envío de correos anexo al sistema. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RASI 
+
+4.2.2.20.4. Difusión de Usuarios. 
+
+Descripción Esta función tiene por finalidad administrar los usuarios que 
+
+pertenecen a la lista de difusión de la etapa preliminar del 
+
+incidente. 
+
+Consideraciones  
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RASI 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  51 
+
+4.2.2.20.5. Visitas realizadas usuario. 
+
+Descripción Esta función tiene por finalidad mostrar las visitas que ha 
+
+realizado un usuario al sistema. 
+
+Consideraciones Se visualizan las visitas en un período de tiempo determinado por el 
+
+usuario consultor. 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RASI 
+
+4.2.2.20.6. Ver/editar información asociada a usuario. 
+
+Descripción Esta función tiene por finalidad ver la información asociada a 
+
+un usuario del sistema. 
+
+Consideraciones Si el usuario con rol administrador de sistema desea editar la 
+
+información del usuario, este puede realizar cambios sobre los 
+
+siguientes campos: 
+
+ 
+
+Los datos asociados al usuario son: 
+
+ Rut de Usuario 
+
+ Nombre de usuario 
+
+ Nombre de acceso al sistema 
+
+ Password. 
+
+ Empresa a la que pertenece usuario. 
+
+ Faena a la que pertenece usuario. 
+
+ Superintendencia a la que pertenece usuario. 
+
+ Cargo que posee el usuario. 
+
+ E-mail del usuario. 
+
+ Dirección del usuario. 
+
+ Fono del usuario. 
+
+ Ciudad del usuario. 
+
+ Si pertenece a lista de usuarios difusión incidente. 
+
+ Imagen asociada al usuario. 
+
+ Si el usuario ingresado es integrante de CASS. 
+ 
+
+ 
+
+En esta instancia es posible activar/ desactivar un usuario. 
+
+ 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RASI 
+
+4.2.2.20.7. Asignar roles de acceso a usuario. 
+
+Descripción Esta función tiene por finalidad asignar los roles de acceso a 
+
+los usuarios del sistema. 
+
+Consideraciones Los roles son: 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  52 
+
+ Rol Digitador. 
+
+ Rol Administrador de Datos. 
+
+ Rol Administrador de Sistema. 
+
+ Rol Administrador de Portal. 
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RASI 
+
+ 
+
+4.2.2.21. Administración de Portal de Noticias página principal. 
+
+4.2.2.21.1. Configuración de Noticias. 
+
+Descripción Permite configurar los incidentes ingresados a modo de 
+
+presentarlos como noticias en la página principal del sistema. 
+
+Consideraciones Los incidentes son ordenados basados en los cuatro tipos de 
+incidentes definidos: 
+
+ Incidente Significativo. 
+
+ Incidente no Significativo. 
+
+ Cuasi-Incidente Significativo. 
+
+ Cuasi-Incidente no Significativo. 
+ 
+ 
+
+Al momento de configurar un incidente como noticia se debe 
+
+considerar que solo los incidentes con su etapa preliminar finalizada 
+
+pueden ser presentados como noticia en la página principal. 
+
+Para realizar la publicación del incidente como noticia, se debe: 
+
+ Ingresar fecha de inicio de publicación. (a) 
+
+ Ingresar fecha de término de publicación. (b) 
+
+ Seleccionar imagen representativa de noticia. (c) 
+
+ Adjuntar descripción adjunta a la publicación. (d) 
+ 
+
+Considerar (a) y (b) obligatorio al momento de publicar incidente 
+
+como noticia. 
+
+ 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RAPO 
+
+ 
+
+4.2.2.22. Administración de Email. 
+
+4.2.2.22.1. Configuración servidor de correo  
+
+Descripción Administrar datos para configurar la cuenta del correo, desde 
+
+la cual serán enviadas las distintas alertas y correos a los 
+
+usuarios del sistema. 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  53 
+
+Consideraciones  
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RASI 
+
+ 
+
+4.2.2.22.2. Historial de envío de correo  
+
+Descripción Visualizar el historial de envíos para cada uno de los tipos de 
+
+correo o alertas existente. 
+
+Consideraciones Se debe mostrar: 
+
+ El asunto. 
+
+ El detalle. 
+
+ La fecha de envío. 
+
+ Los usuarios a los cuales fue enviado. 
+ 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados RASI 
+
+ 
+
+4.2.2.23. Ayuda Sistema. 
+
+4.2.2.23.1. Configuración ayuda  
+
+Descripción Se debe permitir ingresar ayuda asociada a cada una de las 
+
+pantallas existentes en el sistema. 
+
+Consideraciones Para cada uno de las pantallas existentes en el sistema se debe 
+
+ingresar ayuda para los términos que en ella existen. 
+
+Esta ayuda está formada por la dupla término-descripción. 
+
+La ayuda debe ser accesible desde cualquier pantalla del sistema.       
+
+ 
+
+4.2.2.24. Configuración Cuenta de Usuario. 
+
+4.2.2.24.1. Configuración Datos de Usuario. 
+
+Descripción Esta función tiene por finalidad configurar la información 
+
+personal asociada a un usuario. 
+
+Consideraciones Los siguientes datos son editables: 
+
+ Rut. 
+
+ Password. 
+
+ Dirección. 
+
+ Fono. 
+
+ Ciudad. 
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  54 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles Asociados Todos los usuarios registrados y con acceso permitido al sistema. 
+
+ 
+
+4.2.2.24.2. Visitas realizadas usuario. 
+
+Descripción Esta función tiene por finalidad mostrar las visitas que ha 
+
+realizado el usuario al sistema. 
+
+Consideraciones Se visualizan las visitas en un período de tiempo determinado por el 
+
+usuario consultor. 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+ 
+
+ 
+
+Roles Asociados Todos los usuarios registrados y con acceso permitido al sistema. 
+
+ 
+
+4.2.2.25. Cerrar Sesión. 
+
+4.2.2.25.1. Cerrar Sesión Usuario 
+
+Descripción Todos los usuarios registrados y activos pueden realizar el 
+
+cierre de su sesión de trabajo. 
+
+Consideraciones - 
+
+Sub-
+
+Funcionalidad 
+
+- 
+
+Roles 
+
+Asociados 
+
+Todos los usuarios registrados y con acceso permitido al sistema. 
+
+4.2.3. Descomposición del requerimiento Funcional 
+
+4.2.3.1. Arquitectura de interface usuario 
+
+Se establece como requerimiento por parte el área de infraestructura de Pucobre 
+
+que el Browser a utilizar debe ser Internet Explorer V8. 
+
+La política impulsada por el área de infraestructura de la empresa cliente se 
+
+sustenta en la necesidad de estandarizar las aplicaciones utilizadas y asegurar la 
+
+calidad de uso de cada uno de los sistemas. 
+
+ 
+
+  
+
+
+
+Capítulo 4. Diseño 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  55 
+
+4.2.3.2. Arquitectura Base de datos 
+
+La base de datos del Sistema de Gestión de Incidentes está en SQL Server 2008 
+
+SP2. 
+
+A continuación, el modelo físico de la base de datos 
+
+ 
+
+Ilustración 2: Modelo Físico Base de Datos 
+
+Para mayor detalle de la base de datos puede consultar el informe técnico [Inf-4] 
+
+generado para el caso, este documento presenta un diccionario de datos 
+
+completo de la base de datos.  
+
+ACCION
+ID_ACCION
+
+ID_REGISTRO_INFORMAR
+
+ID_DETALLE_ENUMERABLE_...
+
+ID_DETALLE_ENUMERABLE_...
+
+ID_JERARQUIA_CONTROL
+
+CODIGO
+
+TIPO_ACCION
+
+DETALLE_ACCION
+
+CUADRANTE_MATRIZ
+
+PLAN_ACCION
+
+FECHA_INICIO
+
+FECHA_PLAZO
+
+ESTADO
+
+ACCION_INDIVIDUAL_EQUIPO
+ID_ACCION_INDIVIDUAL_EQUIPO
+
+CODIGO
+
+DESCRIPCION
+
+ORDEN
+
+ESTADO
+
+ACCION_PRELIMINAR
+ID_ACCION_PRELIMINAR
+
+ID_REGISTRO_INCIDENTE
+
+DETALLE
+
+ESTADO
+
+PERSONAL
+
+ACTIVIDAD_TIPO
+ID_ACTIVIDAD_TIPO
+
+DETALLE
+
+ORDEN
+
+ESTADO
+
+REGISTRO_INCIDENTE
+ID_REGISTRO_INCIDENTE
+
+ID_USUARIO
+
+ID_FAENA
+
+ID_TURNO_FAENA
+
+ID_SUPERINTENDENCIA
+
+ID_ESTANDAR_CRITICO_OPE...
+
+ID_SEVERIDAD_REAL
+
+ID_SEVERIDAD_POTENCIAL
+
+ID_TIPO_INCIDENTE
+
+ID_AREA
+
+ID_EQUIPO_INVOLUCRADO
+
+ID_DAGNO_MATERIAL
+
+ID_CLASIFICACION
+
+FECHA_INCIDENTE
+
+HORA_INCIDENTE
+
+LUGAR
+
+NUMERO_INCIDENTE
+
+CODIGO_INCIDENTE
+
+TITULO
+
+DESCRIPCION
+
+DIA_NOCHE
+
+FECHA_CREACION
+
+HORA_CREACION
+
+REQUIERE_INVESTIGACION
+
+ESTADO_PRELIMINAR
+
+ESTADO_INVESTIGACION
+
+ESTADO_FINAL
+
+REGISTRO_INFORMAR
+ID_REGISTRO_INFORMAR
+
+ID_REGISTRO_INCIDENTE
+
+FECHA_INICIO
+
+FECHA_TERMINO_EST
+
+FECHA_TERMINO_REAL
+
+ESTADO
+
+REGISTRO_INVESTIGACION
+ID_REGISTRO_INVESTIGACI...
+
+ID_REGISTRO_INCIDENTE
+
+FECHA_INICIO
+
+FECHA_TERMINO_EST
+
+FECHA_TERMINO_REAL
+
+DESCRIPCION
+
+ESTADO
+
+RELACION_DETALLE_ACCION_DEFENSA
+
+ID_RELACION_DETALLE_AC...
+
+ID_DETALLE_ENUMERABLE_...
+
+ID_DETALLE_ENUMERABLE_...
+
+ESTADO
+
+RELACION_DETALLE_CONDICION_ACCION
+
+ID_RELACION_DETALLE_CONDICION_ACCION
+
+ID_DETALLE_ENUMERABLE_CONDICION
+
+ID_DETALLE_ENUMERABLE_ACCION
+
+ESTADO
+
+RELACION_DETALLE_FACTOR_CONDICION
+
+ID_RELACION_DETALLE_FACTOR_CONDICION
+
+ID_DETALLE_ENUMERABLE_FACTOR
+
+ID_DETALLE_ENUMERABLE_CONDICION
+
+ESTADO
+
+RELACION_FAENA_DEF_TURNO
+ID_RELACION_FAENA_DEF_TURNO
+
+ID_DEFINICION_TURNO
+
+ID_FAENA
+
+ESTADO
+
+RELACION_INVESTIGACION_ACCION
+ID_RELACION_INVESTIGACION_ACCION
+
+ID_REGISTRO_INVESTIGACION
+
+ID_ACCION_INDIVIDUAL_EQUIPO
+
+ID_FACTOR_CONTRIBUYENTE
+
+ESTADO
+
+RELACION_INVESTIGACION_CONDICION
+ID_RELACION_INVESTIGACION_CONDICION
+
+ID_REGISTRO_INVESTIGACION
+
+ID_CONDICION_TAREA
+
+ID_FACTOR_CONTRIBUYENTE
+
+ESTADO
+
+RELACION_INVESTIGACION_DEFENSA
+ID_RELACION_INVESTIGACION_DEFENSA
+
+ID_REGISTRO_INVESTIGACION
+
+ID_DEFENSA_AUSENTE
+
+ID_FACTOR_CONTRIBUYENTE
+
+ESTADO
+
+RELACION_INVESTIGACION_FACTOR
+ID_RELACION_INVESTIGACION_FACTOR
+
+ID_REGISTRO_INVESTIGACION
+
+ID_FACTOR_ORGANIZACIONAL
+
+ID_FACTOR_CONTRIBUYENTE
+
+ESTADO
+
+RELACION_REG_INCIDENTE_EMPRESA
+
+ID_RELACION_REG_INCIDENTE_EMPRESA
+
+ID_REGISTRO_INCIDENTE
+
+ID_EMPRESA
+
+ESTADO
+
+RELACION_USUARIO_GERENCIA
+ID_RELACION_USUARIO_GERENCIA
+
+ID_GERENCIA
+
+ID_USUARIO
+
+ESTADO
+
+RELACION_USUARIO_SUPERINTENDENCIA
+ID_RELACION_USUARIO_SUPERINTENDENCIA
+
+ID_SUPERINTENDENCIA
+
+ID_USUARIO
+
+ESTADO
+
+REPORTE_HSEC
+ID_REPORTE_HSEC
+
+ID_REGISTRO_INCIDENTE
+
+ID_INCIDENTE_DE
+
+ID_CATEGORIA_TRABAJO
+
+ID_ACTIVIDAD_TIPO
+
+ID_NIVEL_SEVERIDAD_REAL
+
+ID_NIVEL_SEVERIDAD_POTE...
+
+EVALUACION_RIESGO
+
+EXISTE_ESTANDAR
+
+INCIDENTE_CERO
+
+INCIDENTE_REPETIDO
+
+INCIDENTE_FALLA
+
+DAGNOS_MATERIALES
+
+INTERRUPCION_NEGOCIO
+
+ESTADO
+
+REPORTES_ADJUNTOS
+ID_REPORTES_ADJUNTO
+
+ID_REGISTRO_INCIDENTE
+
+HSEC_PRELIMINAR
+
+HSEC_FINAL
+
+INFORME_PRELIMINAR
+
+INFORME_DIFUSION
+
+RESUMEN_EJECUTIVO
+
+ROL_ASOCIADO_USUARIO
+ID_ROL_ASOCIADO_USUARIO
+
+ID_USUARIO
+
+ID_ROL_USUARIO
+
+FECHA_INICIO_ASOCIACION
+
+FECHA_TERMINO_ASOCIACION
+
+ESTADO
+
+ROL_USUARIO
+ID_ROL_USUARIO
+
+ROL
+
+CODIGO
+
+NOMBRE
+
+DESCRIPCION
+
+PROPOSITO
+
+ESTADO
+
+SEVERIDAD
+ID_SEVERIDAD
+
+NOMBRE
+
+CODIGO
+
+ORDEN
+
+SEVERIDAD_REAL
+
+SEVERIDAD_POTENCIAL
+
+ESTADO
+
+SISTEMA_TURNO
+ID_SISTEMA_TURNO
+
+DETALLE
+
+ORDEN
+
+ESTADO
+
+SUPERINTENDENCIA
+ID_SUPERINTENDENCIA
+
+ID_GERENCIA
+
+NOMBRE
+
+ORDEN
+
+ESTADO
+
+TERMINO_PANTALLA
+ID_TERMINO_PANTALLA
+
+ID_PANTALLA_SISTEMA
+
+TERMINO
+
+DESCRIPCION
+
+ESTADO
+
+TIPO_INCIDENTE
+ID_TIPO_INCIDENTE
+
+NOMBRE
+
+CODIGO
+
+ESTADO
+
+TURNO
+ID_TURNO
+
+ID_DEFINICION_TURNO
+
+NOMBRE
+
+HORA_INICIO
+
+HORA_TERMINO
+
+ORDEN
+
+ESTADO
+
+USUARIO
+ID_USUARIO
+
+ID_FAENA
+
+ID_SUPERINTENDENCIA
+
+ID_EMPRESA
+
+ID_CARGO
+
+ID_CIUDAD
+
+RUT_USUARIO
+
+NOMBRE_USUARIO
+
+EMAIL
+
+FONO
+
+DIRECCION
+
+NOMBRE_ACCESO
+
+PASSWORD
+
+DIFUSION
+
+ESTADO
+
+ES_INTEGRANTE
+
+ES_GERENTE
+
+ES_SUPERINTENDENTE
+
+VINCULO_INCIDENTE
+ID_VINCULO_INCIDENTE
+
+ID_REGISTRO_INCIDENTE
+
+ID_USUARIO
+
+REVISOR
+
+ESTADO
+
+VISITA_USUARIO
+ID_VISITA_USUARIO
+
+ID_USUARIO
+
+FECHA
+
+HORA_INICIO
+
+HORA_TERMINO
+
+AREA
+ID_AREA
+
+ID_SUPERINTENDENCIA
+
+NOMBRE
+
+NUMERO
+
+ESTADO
+
+AVANCE_PLAN_ACCION
+ID_AVANCE_PLAN_ACCION
+
+ID_PLAN_ACCION
+
+ID_USUARIO
+
+DETALLE
+
+OTRO_ENCARGADO
+
+FECHA_INICIO
+
+FECHA_TERMINO
+
+REP_CUMPLIMIENTO
+
+ESTADO
+
+AVANCE_PLAN_DIFUSION
+ID_AVANCE_PLAN_DIFUSION
+
+ID_DIFUSION_INCIDENTE
+
+ID_USUARIO
+
+DETALLE
+
+OTRO_ENCARGADO
+
+FECHA_INICIO
+
+FECHA_TERMINO
+
+REP_CUMPLIMIENTO
+
+ESTADO
+
+CARGO
+ID_CARGO
+
+NOMBRE
+
+ORDEN
+
+ESTADO
+
+CASS
+ID_CASS
+
+ID_REPORTE_HSEC
+
+C
+
+A
+
+S_
+
+S
+
+TIPO
+
+CATEGORIA_TRABAJO
+ID_CATEGORIA_TRABAJO
+
+DETALLE
+
+ORDEN
+
+ESTADO
+
+CIUDAD
+ID_CIUDAD
+
+NOMBRE
+
+ORDEN
+
+ESTADO
+
+PORTAL
+ID_PORTAL
+
+ID_REGISTRO_INCIDENTE
+
+ID_USUARIO
+
+DESCRIPCION
+
+FECHA_INICIO
+
+FECHA_TERMINO
+
+ESTADO
+
+
+
+Capítulo 5 Implementación 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  56 
+
+5. Capítulo 5 Implementación 
+En este capítulo mostraremos unas vistas y la referencia al requerimiento 
+
+definido en el Capítulo 4. Diseño, para una referencia más completa de cada vista 
+
+puede consultar el informe técnico [Inf-5] el cual es un manual de uso completo 
+
+del sistema en cuestión. 
+
+5.1. Portal de inicio 
+
+La página principal del sistema presenta a modo de portal de noticias un listado 
+
+de los incidentes que han sido ingresados en el sistema y configurados como 
+
+noticias. La presente vista corresponde al requerimiento 4.2.2.1 Página Principal. 
+
+A partir de esta página principal es posible visualizar las noticias agrupadas según 
+
+los 4 tipos de incidentes predefinidos: 
+
+ Incidente significativo. 
+
+ Incidente no significativo. 
+
+ Cuasi- incidente significativo. 
+
+ Cuasi- incidente no significativo. 
+
+ 
+
+ 
+
+Pulsando el link “Leer más…” asociado a cada noticia presentada es posible 
+
+visualizar el detalle asociado a esta; según requerimiento 4.2.2.1.1Visualizar en 
+
+página principal información relacionada a los incidentes registrados en Pucobre 
+
+a modo de noticia. 
+
+
+
+Capítulo 5 Implementación 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  57 
+
+ 
+
+ 
+
+Por lo demás pulsando en “Graficos asociados a Incidentes de este Tipo” se 
+
+presenta la siguiente vista acorde a requerimiento 4.2.2.1.2 Gráficos Página 
+
+Principal. 
+
+  
+
+
+
+Capítulo 5 Implementación 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  58 
+
+ 
+
+5.2. Ingreso de nuevo incidente 
+
+El ingreso de un nuevo incidente corresponde a la primera etapa del modelo de 
+
+investigación de incidentes, su diseño funcional esta descrito en la sección 
+
+4.2.2.4.1. anteriormente mencionada. La vista resultante de dicho requerimiento 
+
+queda de la siguiente manera:  
+
+  
+
+ 
+
+ 
+
+
+
+Conclusiones 
+ 
+
+Sistema de Gestión de Incidentes Pucobre  59 
+
+6. Conclusiones 
+Tras haber finalizado los procesos involucrados en este proyecto es importante 
+
+destacar que tanto las metas y objetivos planteados fueron completados a 
+
+cabalidad. 
+
+El resultado de este proyecto es en la actualidad un sistema con más de un año y 
+
+medio desde su puesta en marcha el sistema no ha tenido que sufrir cambios 
+
+significativos; esto es gracia a que el Kernel del sistema que en este caso 
+
+identificamos como la Metodología o Modelo de Investigación de Incidentes 
+
+muestra un nivel de madurez suficiente para no necesitar rediseño por el 
+
+momento. 
+
+De lo anterior es interesante
