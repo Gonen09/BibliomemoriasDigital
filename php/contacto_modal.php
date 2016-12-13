@@ -8,6 +8,7 @@
             <div class="modal-dialog" role="document">
                 <!--Content-->
                 <div class="modal-content">
+                  <form action="php/contacto.php" method="post">
                     <!--Body-->
                     <div class="modal-body">
                         <img class="img-rounded img-responsive" id="img_contacto" src="image/principal/contacto.png">
@@ -36,7 +37,7 @@
                         <div class="md-form">
                           <div class="form-group">
                            <label for="sel1">Motivo contacto:</label>
-                           <select class="form-control" id="sel1">
+                           <select class="form-control" id="sel1" name="motivo">
                              <option>Sugerencia</option>
                              <option>Felicitación</option>
                              <option>Reclamo</option>
@@ -47,17 +48,18 @@
                         <div class="md-form">
                             <div class="form-group">
                              <label for="comment">Comentarios:</label>
-                             <textarea type="text" class="form-control md-textarea" style="resize: none;" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
+                             <textarea type="text" class="form-control md-textarea" name="comentario" style="resize: none;" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
                             </div>
                         </div>
                     </div>
                     <!--Footer-->
                     <div class="modal-footer">
                       <div class="col-xs-8 col-xs-offset-4 center-block">
-                        <button type="button" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                       </div>
                     </div>
+                  </form>
                 </div>
             </div>
         </div>
