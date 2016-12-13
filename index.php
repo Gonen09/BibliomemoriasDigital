@@ -14,8 +14,14 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilo pagina CSS -->
     <link href="css/general.css" rel="stylesheet">
+    <link href="css/navbar_login.css" rel="stylesheet">
     <!-- Reloj -->
     <link href="css/reloj.css" rel="stylesheet">
+
+    <?php
+      require('php/login_nav.php');
+      session_start();
+    ?>
 
 </head>
 
@@ -60,9 +66,9 @@
                     </ul>
                   </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                  <li data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-user"></span> Iniciar sesión</a></li>
-                </ul>
+                <?php
+                  vista_login();
+                ?>
             </div> <!-- /.navbar-collapse -->
           </div> <!-- /.container -->
         </nav>
@@ -190,8 +196,7 @@
   <!-- Modal Login -->
   <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <!-- <form action="JavaScript:enviar_consulta('login-modal','respuesta')" method="post" id="login-modal"> -->
-        <form action="php/consulta_login.php" method="post" id="login-modal">
+        <form action="php/login.php" method="post" id="login-modal">
           <!--Content-->
           <div class="modal-content">
               <!--Body-->
@@ -201,14 +206,14 @@
                     <div class="md-form">
                       <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login-username" type="text" class="form-control" name="user" placeholder="Usuario">
+                        <input id="login-username" type="text" class="form-control" name="user" placeholder="Usuario: Rut sin puntos y sin guion" required>
                       </div>
                     </div>
                     <br>
                     <div class="md-form">
                       <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="login-password" type="password" class="form-control" name="password" placeholder="Contraseña">
+                        <input id="login-password" type="password" class="form-control" name="password" placeholder="Contraseña" required>
                       </div>
                     </div>
               </div>
@@ -316,7 +321,7 @@
                               <span class="input-group-btn">
                                   <button class="btn btn-default" type="submit">
                                       <span class="glyphicon glyphicon-search"></span>
-                              </button>
+                                  </button>
                               </span>
                           </div>
                         </form>
