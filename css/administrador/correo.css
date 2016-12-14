@@ -1,0 +1,67 @@
+.panel-body {
+    color: #444
+}
+
+.mailbox-read-info {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 10px
+}
+
+.mailbox-read-info h3 {
+    font-size: 20px;
+    margin: 0
+}
+
+.mailbox-read-info h5 {
+    margin: 0;
+    padding: 5px 0 0 0
+}
+
+.mailbox-read-time {
+    color: #999;
+    font-size: 13px
+}
+
+.mailbox-read-message {
+    padding: 10px
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
+}
+
+.box.height-control .box-body {
+    max-height: 300px;
+    overflow: auto
+}
+.box .border-right {
+    border-right: 1px solid #f4f4f4
+}
+.box .border-left {
+    border-left: 1px solid #f4f4f4
+}
+
+.box .box-group>.box {
+    margin-bottom: 5px
+}
+
+.box .knob-label {
+    text-align: center;
+    color: #333;
+    font-weight: 100;
+    font-size: 12px;
+    margin-bottom: 0.3em
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative
+}

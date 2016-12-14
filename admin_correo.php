@@ -16,7 +16,7 @@
 		<link href="css/navbar_login.css" rel="stylesheet">
 		<!-- Estilo vista admin -->
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
-		<link href="css/administrador/AdminLTE.min.css" rel="stylesheet">
+		<link href="css/administrador/correo.css" rel="stylesheet">
 
 		<?php
 			require('php/login_nav.php');
@@ -87,9 +87,7 @@
 		?>
 
 		<div class="page-content">
-
 			<div class="row">
-
 				<div class="col-md-2">
 					<div class="sidebar content-box">
 							<!-- Menú principal -->
@@ -103,9 +101,7 @@
 				</div> <!-- col-md-2 -->
 
 				<div class="col-md-10">
-
 					<div class="row">
-
 						<div class="col-lg-5">
 							<div class="content-box-large">
 								<div class="panel-heading">
@@ -126,7 +122,7 @@
 									</table>
 								</div>
 							</div>
-						</div>
+						</div><!-- col-lg-5 -->
 
 						<div class="col-lg-7">
 							<div class="box box-primary">
@@ -152,8 +148,7 @@
 								  </div>
 								</div>
 							</div><!-- /. box -->
-						</div><!-- /.col -->
-
+						</div><!-- col-lg-7 -->
 				  </div><!-- /.row -->
 				</div> <!--col-md-10-->
 			</div> <!-- row -->
