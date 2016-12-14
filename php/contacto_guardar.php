@@ -1,9 +1,6 @@
 <?php
 
-	header('Content-Type: text/html; charset=UTF-8');
-	include('conectar.php');
-
-	date_default_timezone_set('Chile/Continental');
+	require('conectar.php');
 
 	$nombre=$_POST["nombre"];
 	$mail=$_POST["correo"];
