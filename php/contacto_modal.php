@@ -2,7 +2,7 @@
 
   function modal_contacto(){
 
-    print '
+    print ('
         <!-- Modal Contact -->
         <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -63,6 +63,6 @@
                 </div>
             </div>
         </div>
-    ';
+    ');
   }
 ?>

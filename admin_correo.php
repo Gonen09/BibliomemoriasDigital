@@ -21,6 +21,7 @@
 		<?php
 			require('php/login_nav.php');
 			require('php/acerca_modal.php');
+			require('php/contacto_cargar.php');
 
 			session_start();
 
@@ -111,13 +112,9 @@
 								<div class="panel-body">
 									<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%">
 										<tbody>
-											<tr>
-												<td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-												<td class="mailbox-subject"><b><a href="#">AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...</a>
-												</td>
-												<td class="mailbox-attachment"></td>
-												<td><a href="#" class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar correo"></a></td>
-											</tr>
+											<?php
+												cargar_correos($conn);
+											?>
 										</tbody>
 									</table>
 								</div>

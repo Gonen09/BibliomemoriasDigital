@@ -1,7 +1,7 @@
 <?php
   function modal_login(){
 
-    print '
+    print ('
       <!-- Modal Login -->
       <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -41,6 +41,6 @@
             </form>
           </div>
       </div>
-    ';
+    ');
   }
 ?>

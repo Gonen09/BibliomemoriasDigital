@@ -4,7 +4,7 @@
 
     if(isset($_SESSION["user"])){
 
-      print '
+      print ('
         <!-- Menu del administrador -->
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
@@ -41,16 +41,16 @@
             </ul>
           </li>
         </ul>
-      ';
+      ');
 
     }else{
 
-      print '
+      print ('
         <!-- Iniciar sesion -->
         <ul class="nav navbar-nav navbar-right">
           <li data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-user"></span> Iniciar sesión</a></li>
         </ul>
-      ';
+      ');
     }
   }
  ?>
