@@ -5,7 +5,7 @@
       <!-- Modal Login -->
       <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
-            <form action="php/login.php" method="post" id="login-modal">
+            <form action="php/login/login.php" method="post" id="login-modal">
               <!--Content-->
               <div class="modal-content">
                   <!--Body-->

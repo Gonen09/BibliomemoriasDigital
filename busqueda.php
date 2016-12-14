@@ -22,10 +22,10 @@
       <link href="css/panal.css" rel="stylesheet">
 
 			<?php
-				require('php/login_nav.php');
+				require('php/login/login_nav.php');
 				require('php/contacto_modal.php');
 				require('php/acerca_modal.php');
-				require('php/login_modal.php');
+				require('php/login/login_modal.php');
 
 				session_start();
 			?>

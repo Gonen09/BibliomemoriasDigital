@@ -21,7 +21,7 @@
 		<link href="css/administrador/dataTables.bootstrap.css" rel="stylesheet">
 
 		<?php
-			require('php/login_nav.php');
+			require('php/login/login_nav.php');
 			require('php/acerca_modal.php');
 
 			session_start();
@@ -111,7 +111,7 @@
 						</div> <!-- panel-heading -->
 
 						<div class="panel-body" id="panel_tabla">
-							
+
 
 						</div><!-- panel-body -->
 					</div>
@@ -139,7 +139,7 @@
 		<script src="js/administrador/cargar_dataTable.js"></script>
 		<!-- Tooltip -->
 		<script src="js/tooltip.js"></script>
-		
+
 		<script src="js/funciones_eliminar.js"></script>
 	  </body>
 </html>

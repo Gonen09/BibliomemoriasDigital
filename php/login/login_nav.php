@@ -32,7 +32,7 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <p>
-                        <a href="php/logout.php" class="btn btn-danger btn-block">Cerrar sesión</a>
+                        <a href="php/login/logout.php" class="btn btn-danger btn-block">Cerrar sesión</a>
                       </p>
                     </div>
                   </div>

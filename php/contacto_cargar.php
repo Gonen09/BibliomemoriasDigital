@@ -9,7 +9,9 @@
     $contador = 0;
 
     while($row = $stmt->fetch()){
-      correo_lista($row['id'],$row['nombre'],$row['motivo'],$row['fecha'],$row['leido']);
+      $date = date_create($row['fecha']);
+      $fecha = date_format($date, 'd/m/Y H:i');
+      correo_lista($row['id'],$row['nombre'],$row['motivo'],$fecha,$row['leido']);
       $contador++;
     }
 
