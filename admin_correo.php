@@ -122,8 +122,11 @@
 						</div><!-- col-lg-5 -->
 
 						<div class="col-lg-7">
-							<div class="box box-primary">
-
+							<div class="box box-primary" id="correo-contenido">
+								<!-- Contenido del mensaje -->
+								<div class="mailbox-read-message">
+									<p> Seleccione un correo de la lista de correos</p>
+								</div>
 							</div><!-- /. box -->
 						</div><!-- col-lg-7 -->
 				  </div><!-- /.row -->
@@ -144,6 +147,8 @@
     <script src="js/bootstrap/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
+		<!-- Correo -->
+		<script src="js/correo_leer.js"></script>
 		<!-- Tooltip -->
 		<script src="js/tooltip.js"></script>
 	</body>

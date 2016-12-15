@@ -4,13 +4,13 @@
 	function correo_lista($id,$nombre,$motivo,$fecha,$leido){
 
 		if($leido == 0){
-			print ('				<tr class="correo-cerrado">
+			print ('				<tr class="correo-cerrado" onclick="leer_correo('.$id.')">
 												<td class="mailbox-name"><b><a href="read-mail.html">'.$nombre.'</a></b></td>
 												<td class="mailbox-subject"><b><a href="#">'.$motivo.'</a></b></td>
 			');
 
 		}else{
-			print ('				<tr class="correo-abierto">
+			print ('				<tr class="correo-abierto" onclick="leer_correo('.$id.')">
 												<td class="mailbox-name"><a href="read-mail.html">'.$nombre.'</a></td>
 												<td class="mailbox-subject"><a href="#">'.$motivo.'</a></td>
 			');
