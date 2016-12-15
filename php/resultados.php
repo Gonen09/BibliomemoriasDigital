@@ -39,6 +39,19 @@ function limpiarTexto  ($texto){
 }
 //Formando consulta 
 $texto_consulta = "";
+
+
+//Agregando filtro de busqueda
+$campo_filtro = "";
+$filtro_query = "";
+if (isset($_POST["clasificacion"])){
+	if ($_POST["clasificacion"] != ""){
+		$campo_filtro = "clasificacion";
+		$filtro_query = $_POST["clasificacion"];
+		$texto_consulta = "*:*";
+	}	
+}
+else
 if ($_POST["busqueda"] == 'inicial' ){
 	$contenido = limpiarTexto($_POST["contenido"]);
 	if ($contenido != "")
@@ -86,8 +99,6 @@ if ($_POST["busqueda"] == 'inicial' ){
 	
 }
 Setcookie("ultima_consulta", $texto_consulta);
-$globals= array('USERNAME' => 'john', 'USERID' => '18068416846');
-// echo "--->".$texto_consulta."<---";
 $options = array
 (
     'hostname' => 'localhost',
@@ -98,39 +109,19 @@ $options = array
 );
 
 $client = new SolrClient($options);
-
 $query = new SolrQuery();
-
 $query->setQuery($texto_consulta);
-
-
-//$query->setQuery('alumno:patricio OR alumno:carmen');
-//$query->setQuery('*:*');
-//$q = $_GET["texto_busqueda"];
-/*
-$q = 'alumno:patricio OR alumno:carmen';
-if  ($query_text == '')
-	exit;
-$query->setQuery($query_text);
-*/
-
-
 $query->setStart(0);
-
 $query->setRows(3);
-
 $query->addField('id_tesis')->addField('ano')->addField('alumno')->addField('score')->addField('titulo_tesis')->addField('profesor')->addField('valores_clasificacion');
 $query->setFacet(true);
-//$query->addFacetField('ano')->addFacetField('profesor')->addFacetField('id_tesis');
 $query->addFacetField('ano')->addFacetField('profesor')->addFacetField('clasificacion');
-//$query->addFacetQuery('profesor')->addFacetQuery('ano');
+
+if ($campo_filtro  != "" && $filtro_query!= "")
+	$query->addFilterQuery($campo_filtro.":".$filtro_query);
 
 $query_response = $client->query($query);
 $response = $query_response->getResponse();
-
-//echo '-->'.$query_text.'<--';	
-//echo '-->'.$query.'<--';	
-/**/
 ?>
 
 <div class="col-sm-6"> <!-- Panal resultados -->
@@ -300,8 +291,14 @@ if($response->response->numFound > 0) {
 								if ($c == $pag_elegida)
 									echo 'class="active"';
 								echo '><a onclick="';
-								if ($n_pag > 1)
-									echo "cambiarPagina(".$c.")";
+								//if ($n_pag > 1)
+									//echo "cambiarPagina(".$c.")";
+								if ($n_pag > 1){
+									if ($filtro_query == "")
+										echo "cambiarPagina(".$c.")";
+									else
+										echo "modificarResultados('".$campo_filtro."|".$filtro_query."',".$c.")";
+								}
 								echo '">';
 								echo $c;
 								echo "</a></li>";
@@ -310,7 +307,14 @@ if($response->response->numFound > 0) {
 							if ($pag_elegida != $n_pag && $n_pag > 1){
 								?>
 								<li>
-								<a  onclick= "<?php echo "cambiarPagina(".($pag_elegida+1).")";?>"aria-label="Next">
+								<a  onclick= "<?php 
+								//echo "cambiarPagina(".($pag_elegida+1).")";
+									if ($filtro_query == "")
+										echo "cambiarPagina(".($pag_elegida+1).")";
+									else
+										echo "modificarResultados('".$campo_filtro."|".$filtro_query."',".($pag_elegida+1).")";
+								
+								?>"aria-label="Next">
 									<span aria-hidden="true">&raquo;</span>
 								</a>
 								</li>
@@ -327,6 +331,7 @@ if($response->response->numFound > 0) {
 
 <script>
 //alert('<?php //echo $info_campos; ?>');
+var ultimaOpcion;
   if (CarrotSearchFoamTree.supported) {
   var foamtree = new CarrotSearchFoamTree({
 	id: "visualization",
@@ -344,7 +349,7 @@ if($response->response->numFound > 0) {
 							if(!$primero_p)
 								echo ',';
 							echo '{ id:';
-							echo '"1.'.$i.'" , label: "';
+							echo '"1|'.$i.'" , label: "';
 							echo $clave;
 							echo '" }';
 							$primero_p = false;
@@ -366,7 +371,7 @@ if($response->response->numFound > 0) {
 							if(!$primero)
 								echo ',';
 							echo '{ id:';
-							echo '"2.'.$i.'" , label: "';
+							echo '"ano|'.$i.'" , label: "';
 							echo $clave;
 							echo '" }';
 							$primero = false;
@@ -407,7 +412,21 @@ if($response->response->numFound > 0) {
 			]
 		}
 	  ]
-	}
+	},
+	onGroupClick: function(event) {
+      var label = event.group.label;
+        if(label == "Profesores Guía")
+          ultimaOpcion = "profesor";
+        else if(label == "Año")
+          ultimaOpcion = "ano";
+        else if(label == "Clasificación")
+          ultimaOpcion = "clasificacion";
+        else
+			agregarFiltro(ultimaOpcion + "|" + label)
+			//alert(ultimaOpcion + " -> " + label);
+	    	  //console.log(ultimaOpcion + " -> " + label);
+
+    }
   });
 } else {
   console.log("Visualization not supported.");

@@ -1,34 +1,43 @@
-function enviarFormulario(){
-	
-	var url = "php/resultados.php"; // El script a dónde se realizará la petición.
+ï»¿function enviarFormulario(){
+	enviarFormulario(null);
+}
+
+
+function enviarFormulario(clasificacion){
+	var url = "php/resultados.php"; // El script a dÃ³nde se realizarÃ¡ la peticiÃ³n.
 	var a = document.getElementById("p_avanzada");
 	var contenido = document.getElementById("q_contenido").value;
 	var adata = new Array();
-	if (a.getAttribute('aria-expanded') == 'false'){ //Si la busqueda es normal
+	if (clasificacion == null){
+		if (a.getAttribute('aria-expanded') == 'false'){ //Si la busqueda es normal
 		if (contenido== ''){
-			alert('No se ha completado ningún criterio campo de búsqueda');
 			return;
 		}
 		adata = {'busqueda':'inicial','contenido':contenido};
+		}
+		else{
+			var titulo  = document.getElementById("q_titulo").value;
+			var autor  = document.getElementById("q_autor").value;		
+			var profesor  = document.getElementById("q_profesor").value;	
+			var ano  = document.getElementById("q_ano").value;	
+			var abs  = document.getElementById("q_abstract").value;	
+			if (
+				(contenido	== '') &&
+				(titulo		== '') &&
+				(autor		== '') &&
+				(profesor	== '') &&
+				(abs		== '') 
+			){
+				alert('No se ha completado ningÃºn criterio campo de bÃºsqueda');
+				return;
+			}
+			adata = {'busqueda':'inicial','contenido':contenido,'titulo':titulo,'autor':autor,'profesor':profesor,'ano':ano,'abs':abs};
+		}	
 	}
 	else{
-		var titulo  = document.getElementById("q_titulo").value;
-		var autor  = document.getElementById("q_autor").value;		
-		var profesor  = document.getElementById("q_profesor").value;	
-		var ano  = document.getElementById("q_ano").value;	
-		var abs  = document.getElementById("q_abstract").value;	
-		if (
-			(contenido	== '') &&
-			(titulo		== '') &&
-			(autor		== '') &&
-			(profesor	== '') &&
-			(abs		== '') 
-		){
-			alert('No se ha completado ningún criterio campo de búsqueda');
-			return;
-		}
-		adata = {'busqueda':'inicial','contenido':contenido,'titulo':titulo,'autor':autor,'profesor':profesor,'ano':ano,'abs':abs};
-	}	
+		adata = {'clasificacion':clasificacion};
+	}
+	
 	
     $.ajax({
            type: "POST",
@@ -39,10 +48,14 @@ function enviarFormulario(){
            {
 				document.getElementById("contenedor_panal_y_resultados").innerHTML = data;
 				var scs=data.extractScript();    //capturamos los scripts 
-				scs.___evalScript();       //interpretación  scripts
+				scs.___evalScript();       //interpretaciÃ³n  scripts
            }
     });	
 }
+
+
+
+
 function cambiarPagina(pagina){
 	modificarResultados(null,pagina);
 }
@@ -80,7 +93,7 @@ function modificarResultados(facet,pagina){
 	else{
 		adata = {'pagina':pagina,'ano':ano,'clasificacion':clasificacion,'profesor':profesor};
 	}
-	var url = "php/modificar_resultados.php"; // El script a dónde se realizará la petición.
+	var url = "php/modificar_resultados.php"; // El script a dÃ³nde se realizarÃ¡ la peticiÃ³n.
 	$.ajax({
            type: "POST",
            url: url,
@@ -95,7 +108,7 @@ function modificarResultados(facet,pagina){
 
 function datosGraficos (ia,bdd,redes,sw){
 	var datos = [
-	 //Grupos para el gráfico
+	 //Grupos para el grÃ¡fico
 		  [
 			{ axis: "Inteligencia Artificial"       , value : ia },
 			{ axis: "Base de Datos"                 , value : bdd  },
@@ -107,11 +120,11 @@ function datosGraficos (ia,bdd,redes,sw){
 }
 
 function mostrarGrafico (datos){
-	//Opciones para el grafico araña, si no se configuran se cargaran las por defecto,
+	//Opciones para el grafico araÃ±a, si no se configuran se cargaran las por defecto,
 	//para cambiar de posicion el grafico configurar RadarChart.js
 	var mi_configuracion = {
-	  w: 300,													// Tamaño grafico horizontal
-	  h: 300,													// Tamaño grafico vertical
+	  w: 300,													// TamaÃ±o grafico horizontal
+	  h: 300,													// TamaÃ±o grafico vertical
 	  maxValue: 0.6,
 	  levels: 6,
 	  ExtraWidthX: 300
@@ -130,7 +143,7 @@ var text = svg.append("text")
 	.attr('transform', 'translate(90,0)')
 	.attr("x", w - 430)															// Titulo x- = izquierda , x+ = derecha
 	.attr("y", 10)																	// Titulo y- = arriba , y+ = abajo
-	.attr("font-size", "12px")											// Tamaño titulo
+	.attr("font-size", "12px")											// TamaÃ±o titulo
 	.attr("font-style","italic")										// Cursiva
 	.attr("font-weight","bold")											// Negrita
 	.attr("fill", "#404040")
@@ -161,7 +174,7 @@ var legend = svg.append("g")
 	  .append("text")
 	  .attr("x", w - 52)
 	  .attr("y", function(d, i){ return i * 20 + 9;})
-	  .attr("font-size", "11px")  // Tamaño letra leyenda
+	  .attr("font-size", "11px")  // TamaÃ±o letra leyenda
 	  .attr("fill", "#737373")
 	  .text(function(d) { return d; })
 	  ;

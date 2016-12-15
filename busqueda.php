@@ -256,9 +256,8 @@
 							  </div>
 							  <div class="form-group row">
 								<div class="col-xs-6 col-xs-offset-6">
-								  <!-- <button type="submit" class="btn btn-primary" onclick="enviarFormulario()"> -->
-								  <button  class="btn btn-primary" onclick="agregarFiltro('clasificacion|Inteligencia Artificial');">
-									<i class="glyphicon glyphicon-search"></i>
+								  <button type="submit" class="btn btn-primary" onclick="enviarFormulario()"> 
+								  <i class="glyphicon glyphicon-search"></i>
 									Consultar
 								  </button>
 								</div>

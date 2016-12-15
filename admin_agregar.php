@@ -110,22 +110,22 @@
 							        </div>
 					  				<div class="panel-body">
 					  				<!--	<form id="formulario" class="form-horizontal" role="form" method="post" action="php/agregar_documento.php" enctype="multipart/form-data">  -->
-									<form id="formulario" class="form-horizontal" role="form" method="post" enctype="multipart/form-data" onsubmit="return false;">
+									<form id="formulario" class="form-horizontal" role="form" method="post" enctype="multipart/form-data" onsubmit="enviarFormulario();return false; ">
 										  <div class="form-group row">
 										    <label for="idMemoria" class="col-xs-2 col-form-label text-right">ID Memoria</label>
 										    <div class="col-xs-10">
 										    	<div class="input-group">
-										    		<input class="form-control" id="idMemoria" name="id_tesis" type="text">
+										    		<input class="form-control" id="idMemoria" name="id_tesis" type="text" required>
 												    <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
 										    	</div>
-										    	<p class="note"><i><small>Formato ID: cXX_XXXX -> XXXX = año</small></i></p>
+										    	<p class="note"><i><small>Formato ID: cXX_año -> cxx = id memoria</small></i></p>
 										    </div>
 										  </div>
 										  <div class="form-group">
 										    <label for="titulo" class="col-sm-2 control-label">Título</label>
 										    <div class="col-sm-10">
 										    	<div class="input-group">
-										    		<input class="form-control" id="titulo" name="titulo_tesis">
+										    		<input class="form-control" id="titulo" name="titulo_tesis" required>
 										      		<span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
 										    	</div>
 										    </div>
@@ -134,7 +134,7 @@
 										    <label for="autorMemoria" class="col-sm-2 control-label">Autor(es)</label>
 										    <div class="col-sm-10">
 										    	<div class="input-group">
-										    		<input class="form-control" id="autorMemoria" name="tesistas">
+										    		<input class="form-control" id="autorMemoria" name="tesistas" required>
 										      		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 										    	</div>
 										      <p class="note"><i><small>Si es más de un autor, separados por coma (,)</small></i></p>
@@ -144,7 +144,7 @@
 										    <label for="profesorGuia" class="col-sm-2 control-label">Profesor</label>
 										    <div class="col-sm-10">
 										    	<div class="input-group">
-										    		<input class="form-control" id="profesorGuia" name="profesores">
+										    		<input class="form-control" id="profesorGuia" name="profesores"  required>
 										    		<span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
 										    	</div>
 										    </div>
@@ -170,13 +170,13 @@
 												<label class="col-md-1 control-label"> Ingrese archivo PDF	</label>
 												<div class="col-md-11">
 													<div class="input-group">
+														<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis" required>
 														<span class="input-group-addon"><i class="glyphicon glyphicon-open-file"></i></span>
-														<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis">
 													</div>
 												</div>
 											</div>
 											
-											<button onclick="enviarFormulario()" >ENVIAR</button>
+											<button type="submit" >ENVIAR</button>
 										</form><!--form-->
 					  				</div><!--panel-body-->
 					  			</div>

@@ -31,24 +31,23 @@ $filtro_query = "";
 
 if (isset($_POST["ano"])){
 	if ($_POST["ano"] != ""){
-		$filtro_query = "ano";
-		$filtro_query = "ano:".$_POST["ano"];
-		$query->addFilterQuery($filtro_query);
+		$campo_filtro = "ano";
+		$filtro_query = $_POST["ano"];
+		$query->addFilterQuery($campo_filtro.":".$filtro_query);
 	}	
 }
 if (isset($_POST["clasificacion"])){
-	//echo $_POST["clasificacion"];
 	if ($_POST["clasificacion"] != ""){
-		$filtro_query = "clasificacion";
-		$filtro_query = "clasificacion:".$_POST["clasificacion"];
-		$query->addFilterQuery($filtro_query);
+		$campo_filtro = "clasificacion";
+		$filtro_query = $_POST["clasificacion"];
+		$query->addFilterQuery($campo_filtro.":".$filtro_query);
 	}	
 }
 if (isset($_POST["profesor"])){
 	if ($_POST["profesor"] != ""){
-		$filtro_query = "profesor";
-		$filtro_query = "profesor:".$_POST["profesor"];
-		$query->addFilterQuery($filtro_query);
+		$campo_filtro = "profesor";
+		$filtro_query = $_POST["profesor"];
+		$query->addFilterQuery($campo_filtro.":".$filtro_query);
 	}	
 }
 

@@ -1,18 +1,33 @@
 function enviarFormulario(){
-	/*
-	var url = "php/agregar_documento.php"; // El script a dónde se realizará la petición.
-	alert ('inicio indexado');
+	id = document.getElementById('idMemoria').value;
+	comprobarExistenciaIdTesis (id);
+}
+	
+function comprobarExistenciaIdTesis (id_tesis){
+	alert ('Comenzando proceso Indexando.....');
 	$.ajax({
            type: "POST",
-           url: url,
-           data: $("#formulario").serialize(), // Adjuntar los campos del formulario enviado.
-		   success: function(data)
+           url: "php/verificar_id_ memoria.php",
+           data:{'id_memoria':id_tesis},
+			success: function(data)
            {
-			 	alert ('Indexado'+data);
+				alert (data);
+				if (data == 'true'){
+					alert ('la id de la tesis esta repetida');
+				}
+				else
+				if (data == 'false'){
+					indexar();
+				}
+				else{
+					alert ('Error en la indexación');
+				}
            }
     });	
-	*/
-	alert ('Indexando.....');
+}
+
+function indexar(){
+	
 	var formData = new FormData(document.getElementById("formulario"));
 	//formData.append("dato", "valor");
 	$.ajax({
@@ -28,7 +43,4 @@ function enviarFormulario(){
 		alert ('......Indexado');
        // $("#mensaje").html("Respuesta: " + res);
     });
-	
-	
 }
-	
