@@ -95,7 +95,6 @@ function getDate(){
 }
 
 function cargarReloj(){
-  //alert("Cargando reloj");
   initLocalClocks();
   setUpMinuteHands();
   moveMinuteHands();
