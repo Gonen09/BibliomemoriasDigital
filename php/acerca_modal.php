@@ -1,7 +1,7 @@
 <?php
 
   function modal_uni(){
-    print '
+    print ('
       <!-- Modal  1: Contacto -->
       <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-sm" role="document">
@@ -21,11 +21,11 @@
           </div>
         </div>
       </div>
-    ';
+    ');
   }
 
   function modal_docente(){
-    print '
+    print ('
       <!-- Modal  2: Docente -->
       <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-sm" role="document">
@@ -45,11 +45,11 @@
           </div>
         </div>
       </div>
-    ';
+    ');
   }
 
   function modal_curso(){
-    print '
+    print ('
       <!-- Modal  3: Sobre nosotros -->
       <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-sm" role="document">
@@ -68,7 +68,7 @@
           </div>
         </div>
       </div>
-    ';
+    ');
   }
 
 ?>

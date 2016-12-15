@@ -1,5 +1,6 @@
 <?php
 	header('Content-Type: text/html; charset=UTF-8');
+	date_default_timezone_set('Chile/Continental');
 
 	$nombre_bd = 'memoteca';
 	$usuario_bd = 'memorias';
