@@ -7,12 +7,13 @@
   function correo_item($motivo,$correo,$fecha,$comentario){
     print ('
         <div class="mailbox-read-info">
-          <h3>'.$motivo.'</h3>
+          <h3 class="titulos-correo"><b>'.$motivo.'</b></h3>
+          <br>
           <h5>De: '.$correo.' <span class="mailbox-read-time pull-right"> '.$fecha.'</span></h5>
         </div>
         <!-- /.mailbox-read-info -->
         <div class="mailbox-read-message">
-          <p>'.$comentario.'</p>
+          <br><p>'.$comentario.'</p><br>
         </div>
     ');
   }
@@ -25,7 +26,7 @@
   }
 
   function correo_leer($conexion,$id){
-    
+
     $stmt = $conexion->prepare('SELECT motivo,email,fecha,comentario,leido FROM contactos WHERE id=:id');
     $stmt->bindParam(':id',$id);
     $stmt->execute();

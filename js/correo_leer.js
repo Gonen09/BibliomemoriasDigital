@@ -1,7 +1,7 @@
 function leer_correo(id_correo){
 
-    alert("Cargando correo numero:"+id_correo);
-
+    //alert("Cargando correo numero:"+id_correo);
+    
     document.getElementById("correo-contenido").innerHTML="";
 
     var xhttp = new XMLHttpRequest();
