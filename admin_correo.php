@@ -19,6 +19,7 @@
 		<link href="css/administrador/correo.css" rel="stylesheet">
 
 		<?php
+			include_once('php/conectar.php');
 			require('php/login/login_nav.php');
 			require('php/acerca_modal.php');
 			require('php/contacto/contacto_lista.php');
@@ -111,9 +112,9 @@
 								<!-- Bandeja de Entrada -->
 								<div class="panel-body">
 									<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%">
-										<tbody>
+										<tbody id="correo-lista">
 											<?php
-												cargar_correos($conn);
+												correo_cargar($conn);
 											?>
 										</tbody>
 									</table>
@@ -149,7 +150,8 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
 		<!-- Correo -->
-		<script src="js/correo_leer.js"></script>
+		<script src="js/correo/correo_leer.js"></script>
+		<script src="js/correo/correo_eliminar.js"></script>
 		<!-- Tooltip -->
 		<script src="js/tooltip.js"></script>
 	</body>
