@@ -106,7 +106,7 @@
 						<div class="col-lg-5">
 							<div class="content-box-large">
 								<div class="panel-heading">
-									<h3>Bandeja de entrada</h3>
+									<legend class="titulo-bandeja"><b>Bandeja de entrada</b></legend>
 								</div>
 								<!-- Bandeja de Entrada -->
 								<div class="panel-body">

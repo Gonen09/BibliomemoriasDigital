@@ -1,9 +1,13 @@
+.titulo-bandeja {
+  color:blue;
+}
+
 .correo-abierto {
   background-color: white;
 }
 
 .correo-cerrado {
-    background-color: #F2F2F2;
+    background-color: #E6E6E6;
 }
 
 .panel-body {
