@@ -24,7 +24,7 @@
 	}
 
   function cargar_correos($conexion){
-    $stmt = $conexion->prepare('SELECT * FROM contactos');
+    $stmt = $conexion->prepare('SELECT id,nombre,fecha,motivo,leido FROM contactos');
     $stmt->execute();
 
     $contador = 0;
