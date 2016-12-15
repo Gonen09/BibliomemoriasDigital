@@ -8,7 +8,7 @@
             <div class="modal-dialog" role="document">
                 <!--Content-->
                 <div class="modal-content">
-                  <form action="php/contacto_guardar.php" method="post">
+                  <form action="php/contacto/contacto_guardar.php" method="post">
                     <!--Body-->
                     <div class="modal-body">
                         <img class="img-rounded img-responsive" id="img_contacto" src="image/principal/contacto.png">

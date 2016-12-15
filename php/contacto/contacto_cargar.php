@@ -1,5 +1,5 @@
 <?php
-	require('conectar.php');
+	include('php/conectar.php');
   require('contacto_admin.php');
 
   function cargar_correos($conexion){

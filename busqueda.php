@@ -23,7 +23,7 @@
 
 			<?php
 				require('php/login/login_nav.php');
-				require('php/contacto_modal.php');
+				require('php/contacto/contacto_modal.php');
 				require('php/acerca_modal.php');
 				require('php/login/login_modal.php');
 

@@ -1,6 +1,6 @@
 <?php
 
-	require('conectar.php');
+	require('../conectar.php');
 
 	$nombre=$_POST["nombre"];
 	$mail=$_POST["correo"];

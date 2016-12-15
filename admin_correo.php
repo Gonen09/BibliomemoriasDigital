@@ -21,7 +21,7 @@
 		<?php
 			require('php/login/login_nav.php');
 			require('php/acerca_modal.php');
-			require('php/contacto_cargar.php');
+			require('php/contacto/contacto_cargar.php');
 
 			session_start();
 
