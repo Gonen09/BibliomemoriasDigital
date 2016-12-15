@@ -1,3 +1,11 @@
+.correo-abierto {
+  background-color: white;
+}
+
+.correo-cerrado {
+    background-color: #F2F2F2;
+}
+
 .panel-body {
     color: #444
 }
