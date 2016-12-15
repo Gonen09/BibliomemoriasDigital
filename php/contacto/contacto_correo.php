@@ -19,15 +19,23 @@
 
   function correo_marcar($conexion,$id){
 
+    $stmt = $conexion->prepare('UPDATE contactos SET leido=1 WHERE id=:id');
+    $stmt->bindParam(':id',$id);
+    $stmt->execute();
   }
 
   function correo_leer($conexion,$id){
-    $stmt = $conexion->prepare('SELECT motivo,email,fecha,comentario FROM contactos WHERE id=:id');
+    
+    $stmt = $conexion->prepare('SELECT motivo,email,fecha,comentario,leido FROM contactos WHERE id=:id');
     $stmt->bindParam(':id',$id);
     $stmt->execute();
 
     while($row = $stmt->fetch()){
-      //Preguntar estado
+
+      if($row['leido'] == 0){
+          correo_marcar($conexion,$id);
+      }
+
       $date = date_create($row['fecha']);
       $fecha = date_format($date, 'd/m/Y H:i');
       correo_item($row['motivo'],$row['email'],$fecha,$row['comentario']);
