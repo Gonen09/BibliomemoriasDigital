@@ -6,8 +6,8 @@
       date_default_timezone_set('Chile/Continental');
       //echo date("d-m-Y H:i");
       $fechaactual = getdate();
-      //print_r($fechaactual);
-      echo "Hoy es: $fechaactual[weekday], $fechaactual[mday] de $fechaactual[month] de $fechaactual[year]";
+      print_r($fechaactual);
+      //echo "Hoy es: $fechaactual[weekday], $fechaactual[mday] de $fechaactual[month] de $fechaactual[year]";
      ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

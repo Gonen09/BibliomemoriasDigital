@@ -18,7 +18,7 @@
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
 
 		<?php
-			require('php/login_nav.php');
+			require('php/login/login_nav.php');
 			require('php/acerca_modal.php');
 
 			session_start();

@@ -2,13 +2,13 @@
 
   function modal_contacto(){
 
-    print '
+    print ('
         <!-- Modal Contact -->
         <div class="modal fade modal-ext" data-keyboard="false" data-backdrop="static" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <!--Content-->
                 <div class="modal-content">
-                  <form action="php/contacto.php" method="post">
+                  <form action="php/contacto/contacto_guardar.php" method="post">
                     <!--Body-->
                     <div class="modal-body">
                         <img class="img-rounded img-responsive" id="img_contacto" src="image/principal/contacto.png">
@@ -16,21 +16,21 @@
                         <div class="md-form">
                           <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="login-username" type="text" class="form-control" name="nombre" value="" placeholder="Nombre completo">
+                            <input id="login-username" type="text" class="form-control" name="nombre" value="" placeholder="Nombre completo" required>
                           </div>
                         </div>
                         <br>
                         <div class="md-form">
                           <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input id="login-username" type="text" class="form-control" name="correo" value="" placeholder="Correo electrónico">
+                            <input id="login-username" type="text" class="form-control" name="correo" value="" placeholder="Correo electrónico" required>
                           </div>
                         </div>
                         <br>
                         <div class="md-form">
                           <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                            <input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Telefono">
+                            <input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Telefono" required>
                           </div>
                         </div>
                         <br>
@@ -48,7 +48,7 @@
                         <div class="md-form">
                             <div class="form-group">
                              <label for="comment">Comentarios:</label>
-                             <textarea type="text" class="form-control md-textarea" name="comentario" style="resize: none;" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
+                             <textarea type="text" class="form-control md-textarea" name="comentario" required style="resize: none;" rows="2" id="comment" placeholder="Ingrese su mensaje aquí"></textarea>
                             </div>
                         </div>
                     </div>
@@ -63,6 +63,6 @@
                 </div>
             </div>
         </div>
-    ';
+    ');
   }
 ?>
