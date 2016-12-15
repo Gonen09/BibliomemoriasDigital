@@ -37,7 +37,7 @@
     }
 
     if ($contador == 0){
-      	print ('<tr><td><p><b><br>Sin correos<br></b><p></td></tr>');
+      	print ('<p><b><br>Sin correos<br></b><p>');
     }
   }
 ?>
