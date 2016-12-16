@@ -96,7 +96,7 @@
 	            <ul class="nav">
 	                <li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
 	                <li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
-	                <li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Borrar memorias</a></li>
+	                <li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Gestión memorias</a></li>
 	                <li class="current"><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
 	            </ul>
 	        </div>
