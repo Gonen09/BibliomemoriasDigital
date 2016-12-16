@@ -4,20 +4,20 @@
 
 		if($leido == 0){
 			print ('				<tr class="correo-cerrado">
-												<td class="mailbox-name"><b><a href="#" onclick="leer_correo('.$id.')">'.$nombre.'</a></b></td>
-												<td class="mailbox-subject"><b><a href="#" onclick="leer_correo('.$id.')">'.$motivo.'</a></b></td>
+												<td class="mailbox-name"><b><a nohref onclick="leer_correo('.$id.')">'.$nombre.'</a></b></td>
+												<td class="mailbox-subject"><b><a nohref onclick="leer_correo('.$id.')">'.$motivo.'</a></b></td>
 			');
 
 		}else{
 			print ('				<tr class="correo-abierto">
-												<td class="mailbox-name"><a href="#" onclick="leer_correo('.$id.')">'.$nombre.'</a></td>
-												<td class="mailbox-subject"><a href="#" onclick="leer_correo('.$id.')">'.$motivo.'</a></td>
+												<td class="mailbox-name"><a nohref onclick="leer_correo('.$id.')">'.$nombre.'</a></td>
+												<td class="mailbox-subject"><a nohref onclick="leer_correo('.$id.')">'.$motivo.'</a></td>
 			');
 		}
 
 		print ('
 					<td class="mailbox-date">'.$fecha.'</td>
-					<td><a onclick="borrar_correo('.$id.')" href="#" class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar correo"></a></td>
+					<td><a nohref onclick="borrar_correo('.$id.')" class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar correo"></a></td>
 				</tr>
 		');
 	}
