@@ -17,10 +17,13 @@
 		<link href="css/navbar_login.css" rel="stylesheet">
 		<!-- Estilo vista admin -->
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
+		<!-- Modal cargando -->
+		<link href="css/cargando.css" rel="stylesheet">
 
 		<?php
 			require('php/login/login_nav.php');
 			require('php/acerca_modal.php');
+			require('php/cargando_modal.php');
 
 			session_start();
 
@@ -84,6 +87,7 @@
 			modal_uni();
 			modal_docente();
 			modal_curso();
+			modal_cargando("Subir memoria");
 		?>
 
 		<div class="page-content">
@@ -200,7 +204,7 @@
 		<script src="js/bootstrap/jquery.min.js"></script>
 		<!-- Bootstrap Core JavaScript -->
 		<script src="js/bootstrap/bootstrap.min.js"></script>
-		<!-- Funciones indexacino -->
+		<!-- Funciones indexacion -->
 		<script src="js/funciones_indexacion.js"></script>
 	  </body>
 </html>
