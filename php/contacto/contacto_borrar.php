@@ -1,7 +1,7 @@
 <?php
 
   include_once('../conectar.php');
-  require ('contacto_lista.php');
+  include_once('contacto_lista.php');
 
   $id_correo = $_GET['id'];
 
