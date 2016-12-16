@@ -20,7 +20,7 @@ var RadarChart = {
 	 opacityArea: 0.5,
 	 ToRight: 5,
 	 TranslateX: 110,    // Mover grafico x
-	 TranslateY: 80,     // Mover grafico y
+	 TranslateY: 50,     // Mover grafico y
 	 ExtraWidthX: 100,
 	 ExtraWidthY: 100,
 	 color: d3.scale.category10()
