@@ -249,10 +249,11 @@
 							 <div class="well">
 									 <h4>Categorias</h4>
 									 <ul class="list-unstyled">
-											 <li><a href="#">Ingeniería de Software</a></li>
-											 <li><a href="#">Inteligencia Artificial</a></li>
-											 <li><a href="#">Base de datos</a></li>
-											 <li><a href="#">Telecomunicaciones</a></li>
+											 <li><a onclick="enviarFormulario('Ing Software')">Ingeniería de Software</a></li>
+											 <li><a onclick="enviarFormulario('Inteligencia Artificial    ')">Inteligencia Artificial</a></li>
+											 <li><a onclick="enviarFormulario('Base de datos')">Base de datos</a></li>
+											 <li><a onclick="enviarFormulario('Redes')" >Redes</a></li>
+											 
 									 </ul>
 							 </div>
 					 </div>

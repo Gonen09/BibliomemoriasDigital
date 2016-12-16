@@ -116,7 +116,7 @@ $query->setRows(3);
 $query->addField('id_tesis')->addField('ano')->addField('alumno')->addField('score')->addField('titulo_tesis')->addField('profesor')->addField('valores_clasificacion');
 $query->setFacet(true);
 $query->addFacetField('ano')->addFacetField('profesor')->addFacetField('clasificacion');
-
+$query->addSortField('score', SolrQuery::ORDER_DESC);
 if ($campo_filtro  != "" && $filtro_query!= "")
 	$query->addFilterQuery($campo_filtro.":".$filtro_query);
 
@@ -198,7 +198,7 @@ if($response->response->numFound > 0) {
 													$SW = $aux[1];
 													$SW = $SW / 100;
 													break;
-												case 'Inteligencia Artificial':
+												case 'Inteligencia Artificial    ':
 													$IA = $aux[1];
 													$IA = $IA / 100;
 													break;

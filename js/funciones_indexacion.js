@@ -4,23 +4,22 @@ function enviarFormulario(){
 }
 	
 function comprobarExistenciaIdTesis (id_tesis){
-	alert ('Comenzando proceso Indexando.....');
+	alert ('Comenzando proceso Indexando.....');//Inicio modal
 	$.ajax({
            type: "POST",
            url: "php/verificar_id_ memoria.php",
            data:{'id_memoria':id_tesis},
 			success: function(data)
            {
-				alert (data);
 				if (data == 'true'){
-					alert ('la id de la tesis esta repetida');
+					alert ('la id de la tesis esta repetida'); //final modal
 				}
 				else
 				if (data == 'false'){
 					indexar();
 				}
 				else{
-					alert ('Error en la indexación');
+					alert ('Error en la indexación');//final modal
 				}
            }
     });	
@@ -40,7 +39,7 @@ function indexar(){
     processData: false
 })
     .done(function(res){
-		alert ('......Indexado');
+		alert ('......Indexado');//final modal
        // $("#mensaje").html("Respuesta: " + res);
     });
 }

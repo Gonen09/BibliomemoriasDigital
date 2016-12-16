@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -123,7 +123,7 @@
 			  			<div class="row">
 			  				<div class="col-md-12">
 			  					<div class="content-box-header">
-				  					<div class="panel-title">New vs Returning Visitors</div>
+				  					<div class="panel-title">Información servidor solr</div>
 
 									<div class="panel-options">
 										<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
@@ -132,8 +132,44 @@
 					  			</div>
 					  			<div class="content-box-large box-with-header">
 
-						  			Pellentesque luctus quam quis consequat vulputate. Sed sit amet diam ipsum. Praesent in pellentesque diam, sit amet dignissim erat. Aliquam erat volutpat. Aenean laoreet metus leo, laoreet feugiat enim suscipit quis. Praesent mauris mauris, ornare vitae tincidunt sed, hendrerit eget augue. Nam nec vestibulum nisi, eu dignissim nulla.
-									<br /><br />
+						  			<?php
+										$versión_solr = solr_get_version();
+										echo "Versión plugin php : ";
+										print $versión_solr;
+										print "<br>";
+										
+										$options = array
+										(
+											'hostname' => 'localhost',
+											'login'    => 'admin',
+											'password' => '',
+											'port'     => 8983,
+											'path'     => 'solr/tesis',
+										);
+
+										$client = new SolrClient($options);
+
+										$query_response = $client->system();
+
+										$response = $query_response->getResponse();
+
+										//print_r($response);
+										//print_r ($response->lucene);
+										foreach ($response->lucene as $a => $b){
+											//echo $a."|".$b."<br>";
+										}
+										
+										echo "solr-spec-version ".$response->lucene["solr-spec-version"]."<br>";
+										echo "solr-impl-version ".$response->lucene["solr-impl-version"]."<br>";
+										echo "lucene-spec-version ".$response->lucene["lucene-spec-version"]."<br>";
+										echo "lucene-impl-version ".$response->lucene["lucene-impl-version"]."<br>";
+										
+										
+										
+										
+										
+										
+									?>
 								</div>
 			  				</div> <!-- col-md-12 -->
 			  			</div> <!-- row -->
