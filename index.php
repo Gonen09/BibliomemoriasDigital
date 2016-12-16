@@ -122,7 +122,7 @@
                               </p>
                             </div>
                             <div class="col-sm-4">
-                                <img class="img-responsive img-rounded" src="image/biblio.png" alt="biblio-digital">
+                                <img class="img-responsive img-rounded" src="image/index/biblio.png" alt="biblio-digital">
                             </div>
                           </div>
                         </div>
@@ -148,14 +148,17 @@
                   <div class="col-sm-6">
                     <div class="panel panel-default">
                       <div class="panel-heading" id="cabezera-panel">
-                        <h4 class="text-center">BiblioMemorias Digital Estadisticas</h4>
+                        <h4 class="text-center">Electivo III</h4>
                       </div>
                       <div class="panel-body">
                         <br>
-                        <h2 class="text-center text-primary">Memorias subidas al sitio</h2>
+                        <img class="img-responsive img-rounded" src="image/index/biblio-IR.jpg" alt="Acerca curso">
                         <br>
-                        <img class="img-responsive" src="image/web-graph.png" alt="grafico-web">
-                        <br>
+                        <p>En este curso Electivo, se trata de conocer y aplicar algoritmos de búsqueda de la
+                          información y los alcances que este tiene. Con aplicaciones en el ámbito de LUCENE
+                          (para la búsqueda, entre otros) y la posterior transformación de ella con ANTLR
+                          (entre otros).
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -183,36 +186,6 @@
                   </div>
                 </div>
 
-                <!-- Blog Categories Well -->
-                 <div class="row">
-                     <div class="col-lg-12">
-                         <div class="well">
-                             <h4>Categorias</h4>
-                             <ul class="list-unstyled">
-                                 <li><a href="#">Ingeniería de Software</a></li>
-                                 <li><a href="#">Inteligencia Artificial</a></li>
-                                 <li><a href="#">Base de datos</a></li>
-                                 <li><a href="#">Telecomunicaciones</a></li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="row">
-                   <div class="col-md-12">
-                     <!-- Side Widget Well -->
-                     <div class="well">
-                         <h4>Sitios de interes</h4>
-                         <ul class="list-unstyled">
-                             <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
-                             <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
-                             <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
-                             <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
-                         </ul>
-                     </div>
-                   </div>
-                 </div>
-
                 <div class="row">
                   <div class="col-md-12">
                     <!-- Well Reloj  -->
@@ -231,6 +204,21 @@
                         </article>
                       </div>
                       <p class="text-center"><i id="date-box">Fecha</i></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Side Widget Well -->
+                    <div class="well">
+                        <h4>Sitios de interes</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
+                            <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
+                            <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
+                            <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
+                        </ul>
                     </div>
                   </div>
                 </div>

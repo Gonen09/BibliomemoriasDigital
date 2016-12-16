@@ -10,7 +10,7 @@ border-radius: 15px 15px 15px 15px;
 
 .clock {
   border-radius: 50%;
-  background: #fff url(../image/ios_clock_point.svg) no-repeat center;
+  background: #fff url(../image/index/ios_clock_point.svg) no-repeat center;
   background-size: 88%;
   height: 20em;
   padding-bottom: 31%;
