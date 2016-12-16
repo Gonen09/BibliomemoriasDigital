@@ -204,7 +204,7 @@
                      <div class="well">
                          <h4>Sitios de interes</h4>
                          <ul class="list-unstyled">
-                             <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
+                             <li><a href="http://www.userena.cl">Universidad de La Serena</a></li>
                              <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
                              <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
                              <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
