@@ -30,11 +30,8 @@
 				session_start();
 			?>
 
-
-
 	</head>
-	<body onload="cargarReloj();
-								<?php
+	<body onload="<?php
 									if(isset($_POST['busqueda-index']) && !empty($_POST["busqueda-index"])){
 										print 'enviarFormulario();';
 									}
@@ -221,7 +218,7 @@
 							  </div>
 							  <div class="form-group row">
 								<div class="col-xs-6 col-xs-offset-6">
-								  <button type="submit" class="btn btn-primary" onclick="enviarFormulario()"> 
+								  <button type="submit" class="btn btn-primary" onclick="enviarFormulario()">
 								  <i class="glyphicon glyphicon-search"></i>
 									Consultar
 								  </button>
@@ -253,7 +250,7 @@
 											 <li><a onclick="enviarFormulario('Inteligencia Artificial    ')">Inteligencia Artificial</a></li>
 											 <li><a onclick="enviarFormulario('Base de datos')">Base de datos</a></li>
 											 <li><a onclick="enviarFormulario('Redes')" >Redes</a></li>
-											 
+
 									 </ul>
 							 </div>
 					 </div>
@@ -265,9 +262,9 @@
 					 <div class="well">
 							 <h4>Sitios de interes</h4>
 							 <ul class="list-unstyled">
-									 <li><a href="http://www.userena.cl">Universidad de La Serena</a></li>
+									 <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
 									 <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
-									 <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
+									 <li><a href="http://dns.uls.cl/~ej/">Docente asignatura</a><li>
 									 <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
 							 </ul>
 					 </div>
