@@ -120,13 +120,22 @@ function datosGraficos (ia,bdd,redes,sw){
 }
 
 function mostrarGrafico (datos){
+
+	var w = 400,
+		h = 400;
+
+	var colorscale = d3.scale.category10();
+
+	//Título de las leyendas
+	var LegendOptions = ['Categorías'];
+
 	//Opciones para el grafico araña, si no se configuran se cargaran las por defecto,
 	//para cambiar de posicion el grafico configurar RadarChart.js
 	var mi_configuracion = {
-	  w: 300,													// Tamaño grafico horizontal
-	  h: 300,													// Tamaño grafico vertical
+	  w: 350,													// Tamaño grafico horizontal
+	  h: 350,													// Tamaño grafico vertical
 	  maxValue: 0.6,
-	  levels: 6,
+	  levels: 8,
 	  ExtraWidthX: 300
 	}
 	RadarChart.draw("#chart", datos, mi_configuracion);
@@ -137,6 +146,7 @@ function mostrarGrafico (datos){
 	.attr("width", w+300)
 	.attr("height", h)
 
+/*
 //Create the title for the legend
 var text = svg.append("text")
 	.attr("class", "title")
@@ -148,13 +158,14 @@ var text = svg.append("text")
 	.attr("font-weight","bold")											// Negrita
 	.attr("fill", "#404040")
 	.text("Perfil del alumno VS Perfiles de ACM");  // Cambiar titulo
+*/
 
 //Initiate Legend
 var legend = svg.append("g")
 	.attr("class", "legend")
 	.attr("height", 100)
 	.attr("width", 200)
-	.attr('transform', 'translate(-200,20)')	// Posicion leyenda (x,y) : x- = izquierda , x+ = derecha ; y- = arriba , y+ = abajo
+	.attr('transform', 'translate(-100,20)')	// Posicion leyenda (x,y) : x- = izquierda , x+ = derecha ; y- = arriba , y+ = abajo
 	;
 	//Create colour squares
 	legend.selectAll('rect')

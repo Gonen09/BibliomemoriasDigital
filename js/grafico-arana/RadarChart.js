@@ -19,7 +19,7 @@ var RadarChart = {
 	 radians: 2 * Math.PI,
 	 opacityArea: 0.5,
 	 ToRight: 5,
-	 TranslateX: 135,    // Mover grafico x
+	 TranslateX: 110,    // Mover grafico x
 	 TranslateY: 80,     // Mover grafico y
 	 ExtraWidthX: 100,
 	 ExtraWidthY: 100,
@@ -108,7 +108,7 @@ var RadarChart = {
 		.style("font-family", "sans-serif")
 		.style("font-size", "11px")
 		.attr("text-anchor", "middle")
-		.attr("dy", "1.5em")
+		.attr("dy", "1.8em")
 		.attr("transform", function(d, i){return "translate(0, -10)"})
 		.attr("x", function(d, i){return cfg.w/2*(1-cfg.factorLegend*Math.sin(i*cfg.radians/total))-60*Math.sin(i*cfg.radians/total);})
 		.attr("y", function(d, i){return cfg.h/2*(1-Math.cos(i*cfg.radians/total))-20*Math.cos(i*cfg.radians/total);});
