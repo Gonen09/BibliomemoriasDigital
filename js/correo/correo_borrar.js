@@ -1,10 +1,17 @@
+
+function test(){
+
+  alert('Probando carga del script');
+
+}
+
 function borrar_correo(id_correo){
 
-    alert("Cargando correo numero:"+id_correo);
+    alert("Eliminando correo numero:"+id_correo);
 
-    confirmar = confirm("¿ Está seguro de eliminar el correo ?");
-
-    if (confirmar){
+    //confirmar = confirm("¿ Está seguro de eliminar el correo ?");
+    var p = 5;
+    if (p == 5){
 
       document.getElementById("correo-lista").innerHTML="";
 

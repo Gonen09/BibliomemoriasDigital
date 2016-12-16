@@ -33,7 +33,7 @@
 
 	</head>
 
-	<body>
+	<body onload="test()">
 		<!-- Header -->
 		<header>
 			<div class="row">
@@ -151,7 +151,7 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
 		<!-- Correo -->
 		<script src="js/correo/correo_leer.js"></script>
-		<script src="js/correo/correo_eliminar.js"></script>
+		<script type="text/javascript" src="js/correo/correo_borrar.js"></script>
 		<!-- Tooltip -->
 		<script src="js/tooltip.js"></script>
 	</body>
