@@ -1,5 +1,5 @@
-// Ventana Modal cargando
-import('modal_cargando.js');
+﻿// Ventana Modal cargando
+//import('modal_cargando.js');
 
 function enviarFormulario(){
 	id = document.getElementById('idMemoria').value;
@@ -7,7 +7,7 @@ function enviarFormulario(){
 }
 
 function comprobarExistenciaIdTesis (id_tesis){
-	alert ('Comenzando proceso Indexando.....');
+	//alert ('Comenzando proceso Indexando.....');
 	abre_modal();//Inicio modal
 	$.ajax({
            type: "POST",
@@ -24,7 +24,7 @@ function comprobarExistenciaIdTesis (id_tesis){
 					indexar();
 				}
 				else{
-					alert ('Error en la indexaci�n');
+					alert ('Error en la indexación');
 					cierra_modal();//Final modal
 				}
            }
@@ -45,8 +45,18 @@ function indexar(){
     processData: false
 })
     .done(function(res){
-		alert ('......Indexado');
+		alert ('La memoria fue ingresada correctamente');
 		cierra_modal();//Final modal
+		location.href="index.php";
        // $("#mensaje").html("Respuesta: " + res);
     });
+}
+
+function abre_modal(){
+  $("#modal-cargando").modal("show");
+}
+
+
+function cierra_modal(){
+  $("#modal-cargando").modal("hide");
 }
