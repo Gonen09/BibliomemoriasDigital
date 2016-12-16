@@ -107,10 +107,11 @@
 						<div class="col-lg-5">
 							<div class="content-box-large">
 								<div class="panel-heading">
-									<legend class="titulos-correo"><b>Bandeja de entrada</b></legend>
+									<legend class="titulos"><b>Bandeja de entrada</b></legend>
 								</div>
 								<!-- Bandeja de Entrada -->
 								<div class="panel-body">
+
 									<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%">
 										<tbody id="correo-lista">
 											<?php
@@ -118,6 +119,25 @@
 											?>
 										</tbody>
 									</table>
+
+									<nav class="text-center" aria-label="Page navigation">
+									  <ul class="pagination">
+									    <li class="disabled">
+									      <a href="#" aria-label="Previous">
+									        <span aria-hidden="true">&laquo;</span>
+									      </a>
+									    </li>
+									    <li class="active"><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+									    <li class="disabled">
+									      <a href="#" aria-label="Next">
+									        <span aria-hidden="true">&raquo;</span>
+									      </a>
+									    </li>
+									  </ul>
+									</nav>
+
 								</div>
 							</div>
 						</div><!-- col-lg-5 -->
@@ -126,7 +146,7 @@
 							<div class="box box-primary" id="correo-contenido">
 								<!-- Contenido del mensaje -->
 								<div class="mailbox-read-message">
-									<legend class="titulos-correo"><b>Correo</b></legend>
+									<legend class="titulos"><b>Correo</b></legend>
 									<br><p> Seleccione un correo de la lista de correos</p><br>
 								</div>
 							</div><!-- /. box -->
