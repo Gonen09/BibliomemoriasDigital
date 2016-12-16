@@ -105,7 +105,7 @@
 				</div> <!-- col-md32 -->
 
 				<div class="col-md-10">
-					<div class="container">
+					<div class="container-fluid">
 						<div class="row">
 			  				<div class="col-md-12">
 			  					<div class="content-box-large">
@@ -165,19 +165,24 @@
 										  <div class="form-group">
 										    <label class="col-sm-2 control-label">Abstract</label>
 										    <div class="col-sm-10">
-										      <textarea class="form-control" placeholder="Ingrese el abstract de la memoria" rows="6" name="abstract"></textarea>
+										      <textarea class="form-control" placeholder="Ingrese el abstract de la memoria" rows="8" name="abstract"></textarea>
 										    </div>
 										  </div>
 											<div class="form-group">
-												<label class="col-md-1 control-label"> Ingrese archivo PDF	</label>
-												<div class="col-md-11">
+												<label class="col-md-2 control-label">Archivo</label>
+												<div class="col-md-10">
 													<div class="input-group">
-														<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis" accept=".pdf" required>
 														<span class="input-group-addon"><i class="glyphicon glyphicon-open-file"></i></span>
+														<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis" accept=".pdf" required>
 													</div>
 												</div>
 											</div>
-											<button type="submit" >ENVIAR</button>
+											<div class="form-group">
+												<label class="col-md-6 control-label"></label>
+												<div class="col-md-6">
+													<button class="btn btn-primary" type="submit" >Enviar</button>
+												</div>
+											</div>
 										</form><!--form-->
 					  				</div><!--panel-body-->
 					  			</div>
