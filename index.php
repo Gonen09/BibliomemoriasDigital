@@ -14,6 +14,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilo pagina CSS -->
     <link href="css/general.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <link href="css/navbar_login.css" rel="stylesheet">
     <!-- Reloj -->
     <link href="css/reloj.css" rel="stylesheet">
@@ -148,16 +149,20 @@
                   <div class="col-sm-6">
                     <div class="panel panel-default">
                       <div class="panel-heading" id="cabezera-panel">
-                        <h4 class="text-center">Electivo III</h4>
+                        <h4 class="text-center">Electivo III : Recuperación de la Información</h4>
                       </div>
                       <div class="panel-body">
-                        <br>
                         <img class="img-responsive img-rounded" src="image/index/biblio-IR.jpg" alt="Acerca curso">
                         <br>
-                        <p>En este curso Electivo, se trata de conocer y aplicar algoritmos de búsqueda de la
-                          información y los alcances que este tiene. Con aplicaciones en el ámbito de LUCENE
-                          (para la búsqueda, entre otros) y la posterior transformación de ella con ANTLR
-                          (entre otros).
+                        <p>
+                          Es un curso del <strong>Ciclo Superior</strong>, <strong>teórico-práctico</strong>, que entrega las herramientas y conceptos en el
+                          ámbito de la <strong>Búsqueda y Recuperación de Información</strong> (Information Search and Retrieval <strong>(ISR)</strong>),esto
+                          es, búsqueda y recuperación de información en documentos electrónicos y cualquier tipo de <strong> colección
+                          documental digital</strong>, búsqueda de metadatos que describan documentos de internet, y como objetivo
+                          <strong>conocer y manejar algunas herramientas para realizar la recuperación</strong> en textos, imágenes, sonido o
+                          datos de otras características, de manera <strong>eficiente</strong>, según criterio de búsqueda, algoritmos y
+                          <strong>metodologías existentes</strong>. Se llevan a cabo diversas actividades  y proyectos que se derivan de los
+                          contenidos.
                         </p>
                       </div>
                     </div>
@@ -216,7 +221,7 @@
                         <ul class="list-unstyled">
                             <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
                             <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
-                            <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
+                            <li><a href="http://dns.uls.cl/~ej/">Docente asignatura</a><li>
                             <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
                         </ul>
                     </div>
