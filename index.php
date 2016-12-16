@@ -14,6 +14,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilo pagina CSS -->
     <link href="css/general.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <link href="css/navbar_login.css" rel="stylesheet">
     <!-- Reloj -->
     <link href="css/reloj.css" rel="stylesheet">
@@ -122,7 +123,7 @@
                               </p>
                             </div>
                             <div class="col-sm-4">
-                                <img class="img-responsive img-rounded" src="image/biblio.png" alt="biblio-digital">
+                                <img class="img-responsive img-rounded" src="image/index/biblio.png" alt="biblio-digital">
                             </div>
                           </div>
                         </div>
@@ -148,14 +149,21 @@
                   <div class="col-sm-6">
                     <div class="panel panel-default">
                       <div class="panel-heading" id="cabezera-panel">
-                        <h4 class="text-center">BiblioMemorias Digital Estadisticas</h4>
+                        <h4 class="text-center">Electivo III : Recuperación de la Información</h4>
                       </div>
                       <div class="panel-body">
+                        <img class="img-responsive img-rounded" src="image/index/biblio-IR.jpg" alt="Acerca curso">
                         <br>
-                        <h2 class="text-center text-primary">Memorias subidas al sitio</h2>
-                        <br>
-                        <img class="img-responsive" src="image/web-graph.png" alt="grafico-web">
-                        <br>
+                        <p>
+                          Es un curso del <strong>Ciclo Superior</strong>, <strong>teórico-práctico</strong>, que entrega las herramientas y conceptos en el
+                          ámbito de la <strong>Búsqueda y Recuperación de Información</strong> (Information Search and Retrieval <strong>(ISR)</strong>),esto
+                          es, búsqueda y recuperación de información en documentos electrónicos y cualquier tipo de <strong> colección
+                          documental digital</strong>, búsqueda de metadatos que describan documentos de internet, y como objetivo
+                          <strong>conocer y manejar algunas herramientas para realizar la recuperación</strong> en textos, imágenes, sonido o
+                          datos de otras características, de manera <strong>eficiente</strong>, según criterio de búsqueda, algoritmos y
+                          <strong>metodologías existentes</strong>. Se llevan a cabo diversas actividades  y proyectos que se derivan de los
+                          contenidos.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -183,36 +191,6 @@
                   </div>
                 </div>
 
-                <!-- Blog Categories Well -->
-                 <div class="row">
-                     <div class="col-lg-12">
-                         <div class="well">
-                             <h4>Categorias</h4>
-                             <ul class="list-unstyled">
-                                 <li><a href="#">Ingeniería de Software</a></li>
-                                 <li><a href="#">Inteligencia Artificial</a></li>
-                                 <li><a href="#">Base de datos</a></li>
-                                 <li><a href="#">Telecomunicaciones</a></li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="row">
-                   <div class="col-md-12">
-                     <!-- Side Widget Well -->
-                     <div class="well">
-                         <h4>Sitios de interes</h4>
-                         <ul class="list-unstyled">
-                             <li><a href="http://www.userena.cl">Universidad de La Serena</a></li>
-                             <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
-                             <li><a href="http://dns.uls.cl/~ej/">Docente</a><li>
-                             <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
-                         </ul>
-                     </div>
-                   </div>
-                 </div>
-
                 <div class="row">
                   <div class="col-md-12">
                     <!-- Well Reloj  -->
@@ -231,6 +209,21 @@
                         </article>
                       </div>
                       <p class="text-center"><i id="date-box">Fecha</i></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Side Widget Well -->
+                    <div class="well">
+                        <h4>Sitios de interes</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="https//www.userena.cl">Universidad de La Serena</a></li>
+                            <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
+                            <li><a href="http://dns.uls.cl/~ej/">Docente asignatura</a><li>
+                            <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
+                        </ul>
                     </div>
                   </div>
                 </div>

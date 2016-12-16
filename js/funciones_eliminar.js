@@ -1,7 +1,7 @@
-
+ï»¿
 
 function actualizarTabla(){
-	var url = "php/generar_tabla_de_documentos.php"; // El script a dónde se realizará la petición.
+	var url = "php/generar_tabla_de_documentos.php"; // El script a dÃ³nde se realizarÃ¡ la peticiÃ³n.
 	$.ajax({
 	   type: "POST",
 	   url: url,
@@ -14,7 +14,7 @@ function actualizarTabla(){
 				"sProcessing":    "Procesando...",
 				"sLengthMenu":    "Mostrar _MENU_ registros",
 				"sZeroRecords":   "No se encontraron resultados",
-				"sEmptyTable":    "Ningún dato disponible en esta tabla",
+				"sEmptyTable":    "NingÃºn dato disponible en esta tabla",
 				"sInfo":          "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
 				"sInfoEmpty":     "Mostrando registros del 0 al 0 de un total de 0 registros",
 				"sInfoFiltered":  "(filtrado de un total de _MAX_ registros)",
@@ -25,7 +25,7 @@ function actualizarTabla(){
 				"sLoadingRecords": "Cargando...",
 				"oPaginate": {
 					"sFirst":    "Primero",
-					"sLast":    "Último",
+					"sLast":    "Ãšltimo",
 					"sNext":    "Siguiente",
 					"sPrevious": "Anterior"
 				},
@@ -45,16 +45,20 @@ function actualizarTabla(){
 
 
 function eliminarDocumento (id_documento){
-	var url = "php/borrar_documento.php"; // El script a dónde se realizará la petición.
-	adata = {'id_documento':id_documento};
-	$.ajax({
-	   type: "POST",
-	   url: url,
-		data:adata,
-		success: function(data)
-	   {
-			actualizarTabla();
-		}
-    });	
-
+	var confirmar = confirm("Â¿ EstÃ¡ seguro que desea eliminar esta memoria ?");
+	if(confirmar){
+		
+		var url = "php/borrar_documento.php"; // El script a dÃ³nde se realizarÃ¡ la peticiÃ³n.
+		adata = {'id_documento':id_documento};
+		$.ajax({
+		   type: "POST",
+		   url: url,
+			data:adata,
+			success: function(data)
+		   {
+				actualizarTabla();
+			}
+		});	
+		
+	}
 }

@@ -47,7 +47,7 @@ function indexar(){
     .done(function(res){
 		alert ('La memoria fue ingresada correctamente');
 		cierra_modal();//Final modal
-		location.href="index.php";
+		location.href="admin_home.php";
        // $("#mensaje").html("Respuesta: " + res);
     });
 }

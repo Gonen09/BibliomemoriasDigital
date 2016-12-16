@@ -1,5 +1,10 @@
 .clock-box {
 background-color: #001f90;
+
+display: block;
+margin-left: auto;
+margin-right: auto;
+
 /*para Firefox*/
 -moz-border-radius: 15px 15px 15px 15px;
 /*para Safari y Chrome*/
@@ -10,7 +15,7 @@ border-radius: 15px 15px 15px 15px;
 
 .clock {
   border-radius: 50%;
-  background: #fff url(../image/ios_clock_point.svg) no-repeat center;
+  background: #fff url(../image/index/ios_clock_point.svg) no-repeat center;
   background-size: 88%;
   height: 20em;
   padding-bottom: 31%;
