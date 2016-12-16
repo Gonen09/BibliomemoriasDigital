@@ -33,7 +33,7 @@
 
 	</head>
 
-	<body onload="test()">
+	<body>
 		<!-- Header -->
 		<header>
 			<div class="row">
