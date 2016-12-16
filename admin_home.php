@@ -90,12 +90,12 @@
 			  <div class="col-md-2">
 			  	<div class="sidebar content-box">
 							<!-- Menú principal -->
-	            <ul class="nav">
-	                <li class="current"><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
-	                <li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
-	                <li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Gestión memorias</a></li>
-	                <li><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
-	            </ul>
+							<ul id="menu" class="nav nav-pills nav-stacked">
+                  <li class="current"><a data-toggle="pill" href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
+                  <li><a data-toggle="pill" href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias</a></li>
+                  <li><a data-toggle="pill" href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Gestión memorias</a></li>
+									<li><a data-toggle="pill" href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
+              </ul>
 	        </div>
 			  </div>
 			  <div class="col-md-10">
@@ -106,10 +106,25 @@
 							</div>
 							<div class="content-box-large box-with-header">
 			  				<div class="panel-body">
-			  					Ut tristique adipiscing mauris, sit amet suscipit metus porta quis. Donec dictum tincidunt erat, eu blandit ligula. Nam sit amet dolor sapien. Quisque velit erat, congue sed suscipit vel, feugiat sit amet enim. Suspendisse interdum enim at mi tempor commodo. Sed tincidunt sed tortor eu scelerisque. Donec luctus malesuada vulputate. Nunc vel auctor metus, vel adipiscing odio. Aliquam aliquet rhoncus libero, at varius nisi pulvinar nec. Aliquam erat volutpat. Donec ut neque mi. Praesent enim nisl, bibendum vitae ante et, placerat pharetra magna. Donec facilisis nisl turpis, eget facilisis turpis semper non. Maecenas luctus ligula tincidunt iasdsd vitae ante et,
-					  			<br /><br />
-					  			Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sed consectetur erat. Maecenas in elementum libero. Sed consequat pellentesque ultricies. Ut laoreet vehicula nisl sed placerat. Duis posuere lectus n, eros et hendrerit pellentesque, ante magna condimentum sapien, eget ultrices eros libero non orci. Etiam varius diam lectus.
-								<br /><br />
+									<legend class="titulos"><b>Admin</b></legend>
+									<p>
+										Bienvenido administrador, en el sitio de aministrador usted tiene todo el control para administrar
+										el repositorio de memorias de BiblioMemorias Digital, entre las funcionalidades del sitio están:
+										<br>
+									<p>
+										<strong>Agregar memorias:</strong> En esta sección el administrador puede subir las memorias de título
+										de los alumnos de Ingeniería en Computación para el posterior indexado con Solr.
+									</p>
+									<p>
+										<strong>Gestión memorias:</strong> En esta sección el administrador puede administrar las memorias de título
+										de los alumnos de Ingeniería en Computación, se visualiza el total de las memorias subidas al sitio y se pueden
+										descartar las memorias con algún problema.
+									</p>
+									<p>
+										<strong>Correo:</strong> En esta sección el administrador puede ver si personas han contactado con el sitio y
+										puede ver los correos enviados por ellos y administrarlos.
+									</p>
+									</p>
 			  				</div> <!-- panel-body -->
 			  			</div> <!-- content-box-large -->
 			  		</div> <!-- col-md-6 -->
@@ -121,7 +136,8 @@
 				  					<div class="panel-title">Información servidor solr</div>
 					  			</div>
 					  			<div class="content-box-large box-with-header">
-										
+										<img class="img-responsive" src="image/Solr_Logo.png" alt="Solr" id="img-solr">
+										<br>
 						  			<?php
 										$versión_solr = solr_get_version();
 										echo "Versión plugin php : ";
@@ -164,52 +180,9 @@
 			  				</div> <!-- col-md-12 -->
 			  			</div> <!-- row -->
 
-			  			<div class="row">
-			  				<div class="col-md-12">
-			  					<div class="content-box-header">
-				  					<div class="panel-title">New vs Returning Visitors</div>
 
-									<div class="panel-options">
-										<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
-										<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
-									</div>
-					  			</div>
-					  			<div class="content-box-large box-with-header">
-
-						  			Pellentesque luctus quam quis consequat vulputate. Sed sit amet diam ipsum. Praesent in pellentesque diam, sit amet dignissim erat. Aliquam erat volutpat. Aenean laoreet metus leo, laoreet feugiat enim suscipit quis. Praesent mauris mauris, ornare vitae tincidunt sed, hendrerit eget augue. Nam nec vestibulum nisi, eu dignissim nulla.
-									<br /><br />
-								</div>
-			  				</div> <!-- col-md-12 -->
-			  			</div> <!-- row -->
 			  		</div> <!-- col-md-6 -->
 			  	</div><!-- row -->
-
-			  	<div class="row">
-			  		<div class="col-md-12 panel-warning">
-			  			<div class="content-box-header panel-heading">
-		  					<div class="panel-title ">New vs Returning Visitors</div>
-
-							<div class="panel-options">
-								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
-								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
-							</div>
-			  			</div>
-			  			<div class="content-box-large box-with-header">
-				  			Pellentesque luctus quam quis consequat vulputate. Sed sit amet diam ipsum. Praesent in pellentesque diam, sit amet dignissim erat. Aliquam erat volutpat. Aenean laoreet metus leo, laoreet feugiat enim suscipit quis. Praesent mauris mauris, ornare vitae tincidunt sed, hendrerit eget augue. Nam nec vestibulum nisi, eu dignissim nulla.
-							<br /><br />
-						</div>
-			  		</div>
-			  	</div>
-
-			  	<div class="content-box-large">
-					Vivamus suscipit dui id tristique venenatis. Integer vitae dui egestas, ultrices augue et, luctus arcu. Sed pharetra lectus eget velit consequat, in dictum felis fringilla. Suspendisse vitae rutrum urna, quis malesuada tellus. Praesent consectetur gravida feugiat. In mi orci, malesuada sit amet lectus quis, tempor sollicitudin nibh. Nam ut nibh sit amet lorem facilisis adipiscing. Mauris condimentum ornare enim ut aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus molestie massa at accumsan luctus. Aenean ultricies elementum posuere. Praesent ut felis id metus auctor egestas at id augue.
-					<br /><br />
-					Sed gravida augue risus, in lacinia augue euismod at. Vestibulum pharetra sem nibh. Mauris a enim vel sapien dignissim commodo. Ut tristique fringilla diam, vel pulvinar ligula laoreet euismod. Curabitur sit amet pretium tortor. Nullam tincidunt ultrices metus, a cursus nulla mattis in. Ut risus lorem, fringilla vitae risus quis, ullamcorper elementum nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut lobortis risus at convallis dictum. Cras luctus, leo ac vestibulum ultrices, justo mi iaculis libero, non gravida arcu erat ut augue. Ut facilisis mollis quam, ut vestibulum magna placerat eu. Integer vulputate odio a lectus tincidunt placerat viverra vel est.
-					<br /><br />
-					Ut non tincidunt felis. Aliquam urna lacus, dictum vitae dignissim id, molestie vel urna. Quisque et auctor eros, a vulputate nibh. Praesent et dictum risus, vitae congue arcu. In convallis urna non convallis suscipit. Etiam auctor erat nec felis laoreet fringilla. In quis tortor sit amet arcu tempus elementum. In urna tellus, accumsan eget feugiat quis, commodo sit amet dolor. Sed pharetra leo id dignissim tincidunt. Phasellus ac consectetur massa, eu feugiat enim. Phasellus a porta ipsum. Nullam sit amet erat ornare, interdum orci non, ullamcorper magna. Aenean dictum, mi vel tempus mattis, neque sem tincidunt turpis, vitae sollicitudin felis nulla in purus. Nunc vitae erat vitae nibh pellentesque adipiscing. In dignissim dolor vitae metus eleifend, at tincidunt massa luctus. Suspendisse id ligula non leo tincidunt tempor.
-					<br /><br />
-					Nullam vel ligula arcu. Vivamus convallis libero auctor ante imperdiet, eget adipiscing nunc egestas. Quisque suscipit egestas mi tempor ornare. Fusce a tincidunt erat. Quisque quis risus adipiscing, eleifend dolor vel, ornare risus. Curabitur leo tortor, tempor at iaculis id, elementum sed tellus. Vestibulum sagittis quis mi ut lobortis. Nullam quis mattis diam, feugiat pulvinar sem.
-			  	</div>
 			  </div>
 			</div>
 	    </div>
