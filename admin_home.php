@@ -93,7 +93,7 @@
 	            <ul class="nav">
 	                <li class="current"><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
 	                <li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
-	                <li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Borrar memorias</a></li>
+	                <li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Gestión memorias</a></li>
 	                <li><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
 	            </ul>
 	        </div>
@@ -124,11 +124,6 @@
 			  				<div class="col-md-12">
 			  					<div class="content-box-header">
 				  					<div class="panel-title">Información servidor solr</div>
-
-									<div class="panel-options">
-										<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
-										<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
-									</div>
 					  			</div>
 					  			<div class="content-box-large box-with-header">
 
@@ -137,7 +132,7 @@
 										echo "Versión plugin php : ";
 										print $versión_solr;
 										print "<br>";
-										
+
 										$options = array
 										(
 											'hostname' => 'localhost',
@@ -158,17 +153,17 @@
 										foreach ($response->lucene as $a => $b){
 											//echo $a."|".$b."<br>";
 										}
-										
+
 										echo "solr-spec-version ".$response->lucene["solr-spec-version"]."<br>";
 										echo "solr-impl-version ".$response->lucene["solr-impl-version"]."<br>";
 										echo "lucene-spec-version ".$response->lucene["lucene-spec-version"]."<br>";
 										echo "lucene-impl-version ".$response->lucene["lucene-impl-version"]."<br>";
-										
-										
-										
-										
-										
-										
+
+
+
+
+
+
 									?>
 								</div>
 			  				</div> <!-- col-md-12 -->
