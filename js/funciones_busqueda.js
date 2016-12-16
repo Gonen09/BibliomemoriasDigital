@@ -143,7 +143,7 @@ function mostrarGrafico (datos){
 	var svg = d3.select('#body-chart')
 	.selectAll('svg')
 	.append('svg')
-	.attr("width", w+300)
+	.attr("width", w+100)
 	.attr("height", h)
 
 /*
@@ -165,8 +165,9 @@ var legend = svg.append("g")
 	.attr("class", "legend")
 	.attr("height", 100)
 	.attr("width", 200)
-	.attr('transform', 'translate(-100,20)')	// Posicion leyenda (x,y) : x- = izquierda , x+ = derecha ; y- = arriba , y+ = abajo
+	.attr('transform', 'translate(-100,10)')	// Posicion leyenda (x,y) : x- = izquierda , x+ = derecha ; y- = arriba , y+ = abajo
 	;
+
 	//Create colour squares
 	legend.selectAll('rect')
 	  .data(LegendOptions)
@@ -178,6 +179,7 @@ var legend = svg.append("g")
 	  .attr("height", 10)			// Alto cuadrito leyenda
 	  .style("fill", function(d, i){ return colorscale(i);})
 	  ;
+
 	//Create text next to squares
 	legend.selectAll('text')
 	  .data(LegendOptions)

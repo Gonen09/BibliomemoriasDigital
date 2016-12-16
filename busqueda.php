@@ -102,7 +102,7 @@
 			  <div class="modal-content">
 
 				  <div class="modal-header text-center">
-					<h3 class="modal-title text-primary" id="myModalLabel3">Estadíticas de la memoria</h3>
+					<h3 class="modal-title text-primary" id="myModalLabel3">Estadísticas de la memoria</h3>
 				  </div>
 				  <!--Body-->
 				  <div class="modal-body">
