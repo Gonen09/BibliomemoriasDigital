@@ -174,7 +174,7 @@
 												<label class="col-md-1 control-label"> Ingrese archivo PDF	</label>
 												<div class="col-md-11">
 													<div class="input-group">
-														<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis" required>
+														<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis" accept=".pdf" required>
 														<span class="input-group-addon"><i class="glyphicon glyphicon-open-file"></i></span>
 													</div>
 												</div>
