@@ -168,8 +168,6 @@
 										      <textarea class="form-control" placeholder="Ingrese el abstract de la memoria" rows="6" name="abstract"></textarea>
 										    </div>
 										  </div>
-
-										  <legend>Archivo PDF</legend>
 											<div class="form-group">
 												<label class="col-md-1 control-label"> Ingrese archivo PDF	</label>
 												<div class="col-md-11">
