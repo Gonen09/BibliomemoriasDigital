@@ -110,7 +110,7 @@
 			  				<div class="col-md-12">
 			  					<div class="content-box-large">
 					  				<div class="panel-heading">
-							            <legend>Subir memorias</legend>
+							            <legend class="titulos"><b>Subir memorias</b></legend>
 							        </div>
 					  				<div class="panel-body">
 					  				<!--	<form id="formulario" class="form-horizontal" role="form" method="post" action="php/agregar_documento.php" enctype="multipart/form-data">  -->

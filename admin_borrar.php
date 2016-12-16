@@ -107,7 +107,7 @@
 				<div class="col-md-10">
 					<div class="content-box-large">
 						<div class="panel-heading">
-							<div class="panel-title">Lista de memorias</div>
+							<div class="panel-title"><h4 class="titulos"><b>Lista de memorias</b></h4></div>
 						</div> <!-- panel-heading -->
 
 						<div class="panel-body" id="panel_tabla">

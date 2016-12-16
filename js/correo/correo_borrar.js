@@ -17,7 +17,7 @@ function borrar_correo(id_correo){
 
       document.getElementById("correo-contenido").innerHTML=''+
         '<div class="mailbox-read-message">'+
-          '<legend class="titulos-correo"><b>Correo</b></legend>'+
+          '<legend class="titulos"><b>Correo</b></legend>'+
           '<br><p> Seleccione un correo de la lista de correos</p><br>'+
         '</div>';
 

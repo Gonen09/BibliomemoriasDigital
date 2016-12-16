@@ -107,7 +107,7 @@
 						<div class="col-lg-5">
 							<div class="content-box-large">
 								<div class="panel-heading">
-									<legend class="titulos-correo"><b>Bandeja de entrada</b></legend>
+									<legend class="titulos"><b>Bandeja de entrada</b></legend>
 								</div>
 								<!-- Bandeja de Entrada -->
 								<div class="panel-body">
@@ -146,7 +146,7 @@
 							<div class="box box-primary" id="correo-contenido">
 								<!-- Contenido del mensaje -->
 								<div class="mailbox-read-message">
-									<legend class="titulos-correo"><b>Correo</b></legend>
+									<legend class="titulos"><b>Correo</b></legend>
 									<br><p> Seleccione un correo de la lista de correos</p><br>
 								</div>
 							</div><!-- /. box -->
