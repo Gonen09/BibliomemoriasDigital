@@ -102,7 +102,7 @@
 									<div class="panel-title"><h4 class="text-center">Administrador BiblioMemorias Digital</h4></div>
 								</div>
 								<div class="content-box-large box-with-header">
-				  				<div class="panel-body">
+				  				<div class="panel-body text-justify">
 										<legend class="titulos"><b>Admin</b></legend>
 										<p>
 											Bienvenido administrador, en el sitio de aministrador usted tiene todo el control para administrar

@@ -107,11 +107,11 @@
                             <div class="well col-sm-8">
                               <h3 class="titulos">El Electivo III <strong class="text-primary" data-toggle="tooltip" data-placement="right" title="vivo!!!">esta vivo !!!</strong></h3>
                               <br>
-                              <p>
+                              <p class="text-justify">
                                 Bienvenido a nuestro repositorio de <strong>Memorias de Titulo</strong> de la carrera <strong>Ingeniería en
                                 Computación e Informática</strong> de la <strong>Universidad de La Serena</strong>.
                               </p>
-                              <p>
+                              <p class="text-justify">
                                 El proposito de este repositorio es administrar de manera eficiente las <strong>memorias de titulo</strong>
                                 de la carrera, subiendo de forma digital las memorias de titulo,
                                 con un <strong>formato definido</strong> por la escuela de ingeniería en computación, para que los estudiantes,
@@ -148,7 +148,7 @@
                       <div class="panel-heading" id="cabezera-panel">
                         <h4 class="text-center">Electivo III : Recuperación de la Información</h4>
                       </div>
-                      <div class="panel-body">
+                      <div class="panel-body text-justify">
                         <img class="img-responsive img-rounded" src="image/index/biblio-IR.jpg" alt="Acerca curso">
                         <br>
                         <p>
