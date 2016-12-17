@@ -129,7 +129,7 @@
 								<div class="col-xs-10">
 								  <div class="input-group">
 									<input class="form-control" type="text" placeholder="Titulo memoria" id="q_titulo">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-bookmark icon-color"></i></span>
 								  </div>
 								</div>
 							  </div>
@@ -138,7 +138,7 @@
 								<div class="col-xs-10">
 								  <div class="input-group">
 									<input class="form-control" type="text" placeholder="Autor(es) memoria" id="q_autor">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
 								  </div>
 								</div>
 							  </div>
@@ -147,7 +147,7 @@
 								<div class="col-xs-10">
 								  <div class="input-group">
 									<input class="form-control" type="text" placeholder="Profesor(es) memoria" id="q_profesor">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
 								  </div>
 								</div>
 							  </div>
@@ -156,7 +156,7 @@
 								<div class="col-xs-10">
 								  <div class="input-group">
 									<input class="form-control" type="number" value="2000" id="q_ano">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
 								  </div>
 								</div>
 							  </div>
@@ -165,7 +165,7 @@
 								<div class="col-xs-10">
 								  <div class="input-group">
 									<input class="form-control" type="text" placeholder="Resumen memoria" id="q_abstract">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
+									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-book icon-color"></i></span>
 								  </div>
 								</div>
 							  </div>
