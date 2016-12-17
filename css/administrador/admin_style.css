@@ -14,7 +14,6 @@
   margin-top: 30px;
 }
 
-
 /* Sidebar navigation */
 
 .content-box, .content-box-large {
@@ -40,15 +39,15 @@
 
 .content-box-header {
   min-height: 40px;
-   font-size: 16px;
-   background-color: #001f90;
-   color:white;
-   border-top-left-radius:5px;
-   border-top-right-radius:5px;
-   padding:10px;
-   border-left:1px solid #eee;
-   border-top:1px solid #eee;
-   border-right:2px solid #eee;
+  font-size: 16px;
+  background-color: #001f90;
+  color:white;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  padding:10px;
+  border-left:1px solid #eee;
+  border-top:1px solid #eee;
+  border-right:2px solid #eee;
 }
 
 .content-box-header:after {
@@ -73,7 +72,7 @@
 
 .sidebar .nav > li {
 	margin: 0;
-   border-bottom:1px dashed #eee;
+  border-bottom:1px dashed #eee; /*aqui*/
 }
 
 .sidebar .nav > li:last-child{
@@ -92,53 +91,30 @@
 	font-size: 14px;
 	line-height: 20px;
 	padding: 15px 15px;
-	color: #999;
+	color: #fff;
 	display: block;
-   font-weight:bold;
-   background:none;
+  font-weight:bold;
+  background:#001f90;
 	text-decoration: none;
-   border-top:0px;
-   font-weight:bold;
+  border-top:0px;
 }
 
 .sidebar .nav > li > a > i{
    margin-right:5px;
 }
 
-.sidebar .nav > li > ul > li > a {
-	font-size: 13px;
-	line-height: 20px;
-	padding: 8px 10px 8px 40px;
-	color: #999;
-   background:#fff;
-	display: block;
-	text-decoration: none;
-   border-top:0px;
-   font-weight:bold;
+
+/*Activa*/
+.sidebar .nav, .sidebar .nav li.current > a, .sidebar .nav li.current > a:hover {
+	background: #eee8ff;
+	color: #001f90;
+  border-bottom:0px;
 }
 
-.sidebar .nav > li > ul > li.active > a{
-   background:#fff;
-   border-top:0px;
-   color:#555;
-}
-
-.sidebar .nav > li > ul > li > a:hover{
-   background:#fff;
-   color:#555;
-   border-bottom:0px;
-}
-
-.sidebar .nav li a:hover, .sidebar .nav li.current > a {
-	background: #fff;
-	color: #555;
-   border-bottom:0px;
-}
-
-.sidebar .nav li.open > a {
-   background:#fff;
-   color: #555;
-   border-bottom:1px dashed #eee;
+.sidebar .nav li a:hover{
+  background: #5370e6;
+  color: #fff;
+  border-bottom:0px;
 }
 
 .sidebar .nav a .caret {
@@ -151,23 +127,12 @@
 	border-right: 4px solid transparent;
 	border-left: 4px solid transparent;
 	content: "";
-   margin-top: 8px;
+  margin-top: 8px;
 	margin-left: 2px;
 }
 
 .sidebar .nav a:hover .caret {
 	border-top-color: #aaa;
-}
-
-.sidebar .nav li.open > a > .caret {
-	border-top: none;
-	border-bottom: 4px solid #aaa !important;
-	border-right: 4px solid transparent;
-	border-left: 4px solid transparent;
-}
-
-.sidebar .nav li.open > a:hover > .caret {
-	border-bottom-color: #aaa;
 }
 
 .panel-heading>.panel-title, .content-box-header .panel-title {

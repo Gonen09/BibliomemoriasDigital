@@ -14,7 +14,6 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
 	    <!-- Estilo pagina CSS -->
       <link href="css/general.css" rel="stylesheet">
-    	<link href="css/navbar_login.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
       <!-- Reloj -->
       <link href="css/reloj.css" rel="stylesheet">
@@ -23,7 +22,6 @@
 
 			<?php
 				require('php/general.php');
-				require('php/login/login_nav.php');
 				require('php/contacto/contacto_modal.php');
 				require('php/acerca_modal.php');
 				require('php/login/login_modal.php');
@@ -39,51 +37,9 @@
 								?>
 	">
 
-	<?php
-      encabezado();
-  ?>
-
-  <!-- Navigation -->
-  <div class="row">
-    <div class="col-lg-12">
-      <nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top" role="navigation">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand">BiblioMemorias Digital</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li><a href="index.php">Inicio</a></li>
-                  <li class="active"><a href="busqueda.php">Buscar Memorias</a></li>
-                  <li><a href="admin_home.php">Administrar</a></li>
-                  <li data-toggle="modal" data-target="#modal-contact"><a href="#">Formulario contacto</a></li>
-                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    Acerca <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li data-toggle="modal" data-target="#myModal1"><a href="#">Institución</a></li>
-                      <li data-toggle="modal" data-target="#myModal2"><a href="#">Docente</a></li>
-                      <li data-toggle="modal" data-target="#myModal3"><a href="#">Sobre nosotros</a></li>
-                    </ul>
-                  </li>
-                </ul>
-								<?php
-                  vista_login();
-                ?>
-            </div> <!-- /.navbar-collapse -->
-          </div> <!-- /.container -->
-        </nav>
-    </div>
-  </div>
-
 		<?php
+	    encabezado();
+			navegacion(2);
 			modal_contacto();
 			modal_uni();
 			modal_docente();
@@ -172,7 +128,7 @@
 								<div class="col-xs-10">
 								  <div class="input-group">
 									<input class="form-control" type="text" placeholder="Titulo memoria" id="q_titulo">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-bookmark icon-color"></i></span>
 								  </div>
 								</div>
 							  </div>
@@ -181,7 +137,7 @@
 								<div class="col-xs-10">
 								  <div class="input-group">
 									<input class="form-control" type="text" placeholder="Autor(es) memoria" id="q_autor">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
 								  </div>
 								</div>
 							  </div>
@@ -190,7 +146,7 @@
 								<div class="col-xs-10">
 								  <div class="input-group">
 									<input class="form-control" type="text" placeholder="Profesor(es) memoria" id="q_profesor">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
 								  </div>
 								</div>
 							  </div>
@@ -199,7 +155,7 @@
 								<div class="col-xs-10">
 								  <div class="input-group">
 									<input class="form-control" type="number" value="2000" id="q_ano">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
 								  </div>
 								</div>
 							  </div>
@@ -208,14 +164,14 @@
 								<div class="col-xs-10">
 								  <div class="input-group">
 									<input class="form-control" type="text" placeholder="Resumen memoria" id="q_abstract">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
+									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-book icon-color"></i></span>
 								  </div>
 								</div>
 							  </div>
 							  <div class="form-group row">
 								<div class="col-xs-6 col-xs-offset-6">
 								  <button type="submit" class="btn btn-color text-color" onclick="enviarFormulario()">
-								  <i class="glyphicon glyphicon-search icon-color"></i>
+								  <i class="glyphicon glyphicon-search icon-color icon-margin"></i>
 									Consultar
 								  </button>
 								</div>
