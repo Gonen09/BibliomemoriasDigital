@@ -64,3 +64,26 @@ footer, .btn-color {
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #001f90;
 }
+
+/*NABVAR LOGIN*/
+
+.navbar-login {
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session {
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size {
+    font-size: 87px;
+}
+
+.user-image {
+  height: 30px;
+  width: 30px;
+}

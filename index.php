@@ -15,7 +15,6 @@
     <!-- Estilo pagina CSS -->
     <link href="css/general.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    <link href="css/navbar_login.css" rel="stylesheet">
     <!-- Reloj -->
     <link href="css/reloj.css" rel="stylesheet">
 

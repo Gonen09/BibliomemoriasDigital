@@ -14,7 +14,6 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
 	    <!-- Estilo pagina CSS -->
       <link href="css/general.css" rel="stylesheet">
-    	<link href="css/navbar_login.css" rel="stylesheet">
       <link href="css/busqueda.css" rel="stylesheet">
       <!-- Reloj -->
       <link href="css/reloj.css" rel="stylesheet">
