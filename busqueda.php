@@ -143,7 +143,7 @@
 								?>
 						        >
 							  <div class="input-group-btn">
-								  <button class="btn btn-default" type="submit" onclick="enviarFormulario()"><i class="glyphicon glyphicon-search"></i></button>
+								  <button class="btn btn-color" type="submit" onclick="enviarFormulario()"><i class="glyphicon glyphicon-search icon-color"></i></button>
 							  </div>
 							</div>
 						  </div>
@@ -214,8 +214,8 @@
 							  </div>
 							  <div class="form-group row">
 								<div class="col-xs-6 col-xs-offset-6">
-								  <button type="submit" class="btn btn-primary" onclick="enviarFormulario()">
-								  <i class="glyphicon glyphicon-search"></i>
+								  <button type="submit" class="btn btn-color text-color" onclick="enviarFormulario()">
+								  <i class="glyphicon glyphicon-search icon-color"></i>
 									Consultar
 								  </button>
 								</div>

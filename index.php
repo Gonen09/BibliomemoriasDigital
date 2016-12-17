@@ -178,8 +178,8 @@
                           <div class="input-group">
                               <input class="form-control" type="text" name="busqueda-index" placeholder="Ingrese contenido" required>
                               <span class="input-group-btn">
-                                  <button class="btn btn-default" type="submit">
-                                      <span class="glyphicon glyphicon-search"></span>
+                                  <button class="btn btn-color" type="submit">
+                                      <span class="glyphicon glyphicon-search icon-color"></span>
                                   </button>
                               </span>
                           </div>

@@ -117,7 +117,7 @@
 										    <div class="col-xs-10">
 										    	<div class="input-group">
 										    		<input class="form-control" id="idMemoria" name="id_tesis" type="text" required>
-												    <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
+												    <span class="input-group-addon btn-color"><i class="glyphicon glyphicon-barcode icon-color"></i></span>
 										    	</div>
 										    	<p class="note"><i><small>Formato ID: cXX_año -> cxx = id memoria</small></i></p>
 										    </div>
@@ -127,7 +127,7 @@
 										    <div class="col-sm-10">
 										    	<div class="input-group">
 										    		<input class="form-control" id="titulo" name="titulo_tesis" required>
-										      		<span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+										      		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-bookmark icon-color"></i></span>
 										    	</div>
 										    </div>
 										  </div>
@@ -136,7 +136,7 @@
 										    <div class="col-sm-10">
 										    	<div class="input-group">
 										    		<input class="form-control" id="autorMemoria" name="tesistas" required>
-										      		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										      		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
 										    	</div>
 										      <p class="note"><i><small>Si es más de un autor, separados por coma (,)</small></i></p>
 										    </div>
@@ -146,7 +146,7 @@
 										    <div class="col-sm-10">
 										    	<div class="input-group">
 										    		<input class="form-control" id="profesorGuia" name="profesores"  required>
-										    		<span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+										    		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
 										    	</div>
 										    </div>
 										  </div>
@@ -155,7 +155,7 @@
 										    <div class="col-sm-3">
 										    	<div class="input-group">
 										    		<input class="form-control" id="anio" type="number" name="ano" value="2016">
-										    		<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+										    		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
 										    	</div>
 										    </div>
 										  </div>
@@ -169,7 +169,7 @@
 												<label class="col-md-2 control-label">Archivo</label>
 												<div class="col-md-10">
 													<div class="input-group">
-														<span class="input-group-addon"><i class="glyphicon glyphicon-open-file"></i></span>
+														<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-open-file icon-color"></i></span>
 														<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis" accept=".pdf" required>
 													</div>
 												</div>
@@ -177,7 +177,10 @@
 											<div class="form-group">
 												<label class="col-md-6 control-label"></label>
 												<div class="col-md-6">
-													<button class="btn btn-primary" type="submit" >Enviar</button>
+													<button class="btn btn-color text-color" type="submit">
+														<i class="glyphicon glyphicon-send icon-color"></i>
+														Enviar
+													</button>
 												</div>
 											</div>
 										</form><!--form-->

@@ -14,6 +14,16 @@ footer {
     color:white;
 }
 
+/*Botones*/
+
+.btn-color {
+  background-color: #001f90;
+}
+
+.icon-color , .text-color, .text-color:hover{
+  color: white;
+}
+
 /*NAVBAR*/
 #custom-bootstrap-menu.navbar-default .navbar-brand {
     color: rgba(255, 255, 255, 1);
