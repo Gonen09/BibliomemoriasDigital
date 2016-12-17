@@ -129,7 +129,7 @@
 					<form id="formulario" onsubmit="return false;">
 						<div class="row">
 						  <div class="col-md-8">
-							<h3 class="text-primary"><strong>Búsqueda simple</strong></h3>
+							<h3 class="text-primary titulos"><strong>Búsqueda simple</strong></h3>
 							<br>
 							<div class="input-group">
 							  <input type="text" id="q_contenido" class="form-control" placeholder="Buscar contenido" name="q"
@@ -165,7 +165,7 @@
 						<div class="panel-body">
 						  <div class="row">
 							<div class="col-sm-8" aling="center">
-							  <h3 class="text-primary text-center"><strong>Búsqueda avanzada</strong></h3>
+							  <h3 class="text-primary titulos text-center"><strong>Búsqueda avanzada</strong></h3>
 							  <br>
 							  <div class="form-group row">
 								<label for="example-text-input" class="col-xs-2 col-form-label text-right">Titulo</label>

@@ -89,7 +89,7 @@
     <div class="container-fluid">
         <div class="row content" id="canvas">
             <div class="container-fluid">
-              <h1 class="page-header text-primary">
+              <h1 class="page-header text-primary titulos">
                   Recuperación de la Información
                   <small> Electivo III</small>
               </h1>
@@ -105,7 +105,7 @@
                         <div class="container-fluid">
                           <div class="row">
                             <div class="well col-sm-8">
-                              <h3>El Electivo III <strong class="text-primary" data-toggle="tooltip" data-placement="right" title="vivo!!!">esta vivo !!!</strong></h3>
+                              <h3 class="titulos">El Electivo III <strong class="text-primary" data-toggle="tooltip" data-placement="right" title="vivo!!!">esta vivo !!!</strong></h3>
                               <br>
                               <p>
                                 Bienvenido a nuestro repositorio de <strong>Memorias de Titulo</strong> de la carrera <strong>Ingeniería en

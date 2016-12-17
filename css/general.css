@@ -3,21 +3,18 @@
   width:100%;
 }
 
-/*FOOTER*/
-footer {
+footer, .btn-color {
     background-color: #001f90;
+}
+
+.titulos {
+  color: #001f90;
 }
 
 /*Cabezera paneles*/
 #cabezera-panel {
     background-color: #001f90;
     color:white;
-}
-
-/*Botones*/
-
-.btn-color {
-  background-color: #001f90;
 }
 
 .icon-color , .text-color, .text-color:hover{
