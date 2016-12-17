@@ -178,7 +178,7 @@
 												<label class="col-md-6 control-label"></label>
 												<div class="col-md-6">
 													<button class="btn btn-color text-color" type="submit">
-														<i class="glyphicon glyphicon-send icon-color"></i>
+														<i class="glyphicon glyphicon-send icon-color icon-margin"></i>
 														Enviar
 													</button>
 												</div>

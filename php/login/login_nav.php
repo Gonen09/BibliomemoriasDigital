@@ -8,7 +8,7 @@
         <!-- Menu del administrador -->
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Admin <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user icon-margin"></span> Admin <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li>
                 <div class="navbar-login">
@@ -48,7 +48,7 @@
       print ('
         <!-- Iniciar sesion -->
         <ul class="nav navbar-nav navbar-right">
-          <li data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-user"></span> Iniciar sesión</a></li>
+          <li data-toggle="modal" data-target="#modal-login"><a href="#"><span class="glyphicon glyphicon-user icon-margin"></span> Iniciar sesión</a></li>
         </ul>
       ');
     }

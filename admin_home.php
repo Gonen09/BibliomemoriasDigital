@@ -136,6 +136,7 @@
 											<img class="img-responsive" src="image/Solr_Logo.png" alt="Solr" id="img-solr">
 											<br>
 							  			<?php
+											
 												$versión_solr = solr_get_version();
 												echo "Versión plugin php : ";
 												print $versión_solr;
@@ -151,9 +152,7 @@
 												);
 
 												$client = new SolrClient($options);
-
 												$query_response = $client->system();
-
 												$response = $query_response->getResponse();
 
 												/*print_r($response);
@@ -167,7 +166,6 @@
 												echo "solr-impl-version ".$response->lucene["solr-impl-version"]."<br>";
 												echo "lucene-spec-version ".$response->lucene["lucene-spec-version"]."<br>";
 												echo "lucene-impl-version ".$response->lucene["lucene-impl-version"]."<br>";
-
 											?>
 										</div>
 				  				</div> <!-- col-md-12 -->
