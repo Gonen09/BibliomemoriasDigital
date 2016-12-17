@@ -21,6 +21,7 @@
 		<link href="css/administrador/dataTables.bootstrap.css" rel="stylesheet">
 
 		<?php
+			require('php/general.php');
 			require('php/login/login_nav.php');
 			require('php/acerca_modal.php');
 
@@ -34,14 +35,10 @@
 	</head>
 
 	<body onload="actualizarTabla()">
-		<!-- Header -->
-		<header>
-			<div class="row">
-				<div align="center" class="col-lg-12">
-					<img src="image/principal/banner.png" class="img-responsive" id="banner">
-				</div> <!-- /.col-lg-12 -->
-			</div>  <!-- /.row -->
-		</header> <!-- Header -->
+
+		<?php
+	      encabezado();
+	  ?>
 
 		<!-- Navigation -->
 	  <div class="row">
@@ -107,7 +104,7 @@
 				<div class="col-md-10">
 					<div class="content-box-large">
 						<div class="panel-heading">
-							<div class="panel-title"><h4 class="titulos"><b>Lista de memorias</b></h4></div>
+								<legend class="titulos"><b>Lista de memorias</b></legend>
 						</div> <!-- panel-heading -->
 
 						<div class="panel-body" id="panel_tabla">
@@ -119,14 +116,10 @@
 			</div> <!-- row -->
 		</div>
 
-		<!-- Footer -->
-		<footer>
-			<div class="row">
-			  <div align="center" class="col-lg-12">
-					<img src="image/principal/footer_uls.png" id="foot" class="img-responsive"/>
-				</div>
-			</div>
-		</footer>
+		<?php
+      piePagina();
+    ?>
+
 		<!-- jQuery -->
     <script src="js/bootstrap/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
@@ -139,7 +132,7 @@
 		<script src="js/administrador/cargar_dataTable.js"></script>
 		<!-- Tooltip -->
 		<script src="js/tooltip.js"></script>
-
+		<!-- Funciones eliminacion -->
 		<script src="js/funciones_eliminar.js"></script>
 	  </body>
 </html>

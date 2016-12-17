@@ -22,6 +22,7 @@
       <link href="css/panal.css" rel="stylesheet">
 
 			<?php
+				require('php/general.php');
 				require('php/login/login_nav.php');
 				require('php/contacto/contacto_modal.php');
 				require('php/acerca_modal.php');
@@ -38,14 +39,9 @@
 								?>
 	">
 
-	  <!-- Header -->
-	  <header>
-		  <div class="row">
-			<div align="center" class="col-lg-12">
-				  <img src="image/principal/banner.png" class="img-responsive" id="banner">
-			</div> <!-- /.col-lg-12 -->
-		  </div>  <!-- /.row -->
-	  </header> <!-- Header -->
+	<?php
+      encabezado();
+  ?>
 
   <!-- Navigation -->
   <div class="row">
@@ -133,7 +129,7 @@
 					<form id="formulario" onsubmit="return false;">
 						<div class="row">
 						  <div class="col-md-8">
-							<h3 class="text-primary"><strong>Búsqueda simple</strong></h3>
+							<h3 class="text-primary titulos"><strong>Búsqueda simple</strong></h3>
 							<br>
 							<div class="input-group">
 							  <input type="text" id="q_contenido" class="form-control" placeholder="Buscar contenido" name="q"
@@ -147,7 +143,7 @@
 								?>
 						        >
 							  <div class="input-group-btn">
-								  <button class="btn btn-default" type="submit" onclick="enviarFormulario()"><i class="glyphicon glyphicon-search"></i></button>
+								  <button class="btn btn-color" type="submit" onclick="enviarFormulario()"><i class="glyphicon glyphicon-search icon-color"></i></button>
 							  </div>
 							</div>
 						  </div>
@@ -169,7 +165,7 @@
 						<div class="panel-body">
 						  <div class="row">
 							<div class="col-sm-8" aling="center">
-							  <h3 class="text-primary text-center"><strong>Búsqueda avanzada</strong></h3>
+							  <h3 class="text-primary titulos text-center"><strong>Búsqueda avanzada</strong></h3>
 							  <br>
 							  <div class="form-group row">
 								<label for="example-text-input" class="col-xs-2 col-form-label text-right">Titulo</label>
@@ -218,8 +214,8 @@
 							  </div>
 							  <div class="form-group row">
 								<div class="col-xs-6 col-xs-offset-6">
-								  <button type="submit" class="btn btn-primary" onclick="enviarFormulario()">
-								  <i class="glyphicon glyphicon-search"></i>
+								  <button type="submit" class="btn btn-color text-color" onclick="enviarFormulario()">
+								  <i class="glyphicon glyphicon-search icon-color"></i>
 									Consultar
 								  </button>
 								</div>
@@ -287,21 +283,14 @@
 <!--		</div> <!-- row content -->
 	</div> <!-- container-fluid -->
 
-	  <!-- Footer -->
-	  <footer>
-		  <div class="row">
-			<div align="center" class="col-lg-12">
-				  <img src="image/principal/footer_uls.png" id="foot" class="img-responsive"/>
-			</div> <!-- /.col-lg-12 -->
-		  </div>  <!-- /.row -->
-	  </footer>  <!-- Footer -->
+		<?php
+			piePagina();
+		?>
 
 	  <!-- jQuery -->
 	  <script src="js/bootstrap/jquery.min.js"></script>
 	  <!-- Bootstrap Core JavaScript -->
 	  <script src="js/bootstrap/bootstrap.min.js"></script>
-	  <!-- Reloj -->
-	  <script src="js/reloj.js"></script>
 	  <!-- Grafico panal -->
 	  <script src="js/panal/carrotsearch.foamtree.js"></script>
 	  <script src="js/panal/hammer.min.js"></script>

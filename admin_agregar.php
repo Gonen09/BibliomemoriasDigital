@@ -21,6 +21,7 @@
 		<link href="css/cargando.css" rel="stylesheet">
 
 		<?php
+			require('php/general.php');
 			require('php/login/login_nav.php');
 			require('php/acerca_modal.php');
 			require('php/cargando_modal.php');
@@ -35,14 +36,10 @@
 	</head>
 
 	<body>
-		<!-- Header -->
-		<header>
-			<div class="row">
-				<div align="center" class="col-lg-12">
-					<img src="image/principal/banner.png" class="img-responsive" id="banner">
-				</div> <!-- /.col-lg-12 -->
-			</div>  <!-- /.row -->
-		</header> <!-- Header -->
+
+		<?php
+	      encabezado();
+	  ?>
 
 		<!-- Navigation -->
 	  <div class="row">
@@ -120,7 +117,7 @@
 										    <div class="col-xs-10">
 										    	<div class="input-group">
 										    		<input class="form-control" id="idMemoria" name="id_tesis" type="text" required>
-												    <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
+												    <span class="input-group-addon btn-color"><i class="glyphicon glyphicon-barcode icon-color"></i></span>
 										    	</div>
 										    	<p class="note"><i><small>Formato ID: cXX_año -> cxx = id memoria</small></i></p>
 										    </div>
@@ -130,7 +127,7 @@
 										    <div class="col-sm-10">
 										    	<div class="input-group">
 										    		<input class="form-control" id="titulo" name="titulo_tesis" required>
-										      		<span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+										      		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-bookmark icon-color"></i></span>
 										    	</div>
 										    </div>
 										  </div>
@@ -139,7 +136,7 @@
 										    <div class="col-sm-10">
 										    	<div class="input-group">
 										    		<input class="form-control" id="autorMemoria" name="tesistas" required>
-										      		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										      		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
 										    	</div>
 										      <p class="note"><i><small>Si es más de un autor, separados por coma (,)</small></i></p>
 										    </div>
@@ -149,7 +146,7 @@
 										    <div class="col-sm-10">
 										    	<div class="input-group">
 										    		<input class="form-control" id="profesorGuia" name="profesores"  required>
-										    		<span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+										    		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
 										    	</div>
 										    </div>
 										  </div>
@@ -158,7 +155,7 @@
 										    <div class="col-sm-3">
 										    	<div class="input-group">
 										    		<input class="form-control" id="anio" type="number" name="ano" value="2016">
-										    		<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+										    		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
 										    	</div>
 										    </div>
 										  </div>
@@ -172,7 +169,7 @@
 												<label class="col-md-2 control-label">Archivo</label>
 												<div class="col-md-10">
 													<div class="input-group">
-														<span class="input-group-addon"><i class="glyphicon glyphicon-open-file"></i></span>
+														<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-open-file icon-color"></i></span>
 														<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis" accept=".pdf" required>
 													</div>
 												</div>
@@ -180,7 +177,10 @@
 											<div class="form-group">
 												<label class="col-md-6 control-label"></label>
 												<div class="col-md-6">
-													<button class="btn btn-primary" type="submit" >Enviar</button>
+													<button class="btn btn-color text-color" type="submit">
+														<i class="glyphicon glyphicon-send icon-color"></i>
+														Enviar
+													</button>
 												</div>
 											</div>
 										</form><!--form-->
@@ -192,16 +192,9 @@
 			</div><!--col-md-9-->
 		</div> <!-- row -->
 
-		<!-- Footer -->
-		<footer>
-			<div class="row">
-			  <div align="center" class="col-lg-12">
-					<img src="image/principal/footer_uls.png" id="foot" class="img-responsive"/>
-				</div>
-				<!-- /.col-lg-12 -->
-			</div>
-			<!-- /.row -->
-		</footer>
+		<?php
+      piePagina();
+    ?>
 
 		<!-- jQuery -->
 		<script src="js/bootstrap/jquery.min.js"></script>

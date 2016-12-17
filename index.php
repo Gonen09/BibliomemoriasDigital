@@ -20,6 +20,7 @@
     <link href="css/reloj.css" rel="stylesheet">
 
     <?php
+      require('php/general.php');
       require('php/login/login_nav.php');
       require('php/contacto/contacto_modal.php');
       require('php/acerca_modal.php');
@@ -31,14 +32,10 @@
   </head>
 
 <body onload="cargarReloj()">
-  <!-- Header -->
-  <header>
-    <div class="row">
-      <div align="center" class="col-lg-12">
-            <img src="image/principal/banner.png" class="img-responsive" id="banner">
-      </div> <!-- /.col-lg-12 -->
-    </div>  <!-- /.row -->
-  </header> <!-- Header -->
+
+  <?php
+      encabezado();
+  ?>
 
   <!-- Navigation -->
   <div class="row">
@@ -92,7 +89,7 @@
     <div class="container-fluid">
         <div class="row content" id="canvas">
             <div class="container-fluid">
-              <h1 class="page-header text-primary">
+              <h1 class="page-header text-primary titulos">
                   Recuperación de la Información
                   <small> Electivo III</small>
               </h1>
@@ -108,13 +105,13 @@
                         <div class="container-fluid">
                           <div class="row">
                             <div class="well col-sm-8">
-                              <h3>El Electivo III <strong class="text-primary" data-toggle="tooltip" data-placement="right" title="vivo!!!">esta vivo !!!</strong></h3>
+                              <h3 class="titulos">El Electivo III <strong class="text-primary" data-toggle="tooltip" data-placement="right" title="vivo!!!">esta vivo !!!</strong></h3>
                               <br>
-                              <p>
+                              <p class="text-justify">
                                 Bienvenido a nuestro repositorio de <strong>Memorias de Titulo</strong> de la carrera <strong>Ingeniería en
                                 Computación e Informática</strong> de la <strong>Universidad de La Serena</strong>.
                               </p>
-                              <p>
+                              <p class="text-justify">
                                 El proposito de este repositorio es administrar de manera eficiente las <strong>memorias de titulo</strong>
                                 de la carrera, subiendo de forma digital las memorias de titulo,
                                 con un <strong>formato definido</strong> por la escuela de ingeniería en computación, para que los estudiantes,
@@ -151,7 +148,7 @@
                       <div class="panel-heading" id="cabezera-panel">
                         <h4 class="text-center">Electivo III : Recuperación de la Información</h4>
                       </div>
-                      <div class="panel-body">
+                      <div class="panel-body text-justify">
                         <img class="img-responsive img-rounded" src="image/index/biblio-IR.jpg" alt="Acerca curso">
                         <br>
                         <p>
@@ -181,8 +178,8 @@
                           <div class="input-group">
                               <input class="form-control" type="text" name="busqueda-index" placeholder="Ingrese contenido" required>
                               <span class="input-group-btn">
-                                  <button class="btn btn-default" type="submit">
-                                      <span class="glyphicon glyphicon-search"></span>
+                                  <button class="btn btn-color" type="submit">
+                                      <span class="glyphicon glyphicon-search icon-color"></span>
                                   </button>
                               </span>
                           </div>
@@ -232,14 +229,9 @@
         </div>   <!-- /.row -->
     </div> <!-- /.container -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-          <div align="center" class="col-lg-12">
-                <img src="image/principal/footer_uls.png" id="foot" class="img-responsive"/>
-          </div> <!-- /.col-lg-12 -->
-        </div> <!-- /.row -->
-    </footer>
+    <?php
+      piePagina();
+    ?>
 
     <!-- jQuery -->
     <script src="js/bootstrap/jquery.min.js"></script>
