@@ -22,6 +22,7 @@
       <link href="css/panal.css" rel="stylesheet">
 
 			<?php
+				require('php/general.php');
 				require('php/login/login_nav.php');
 				require('php/contacto/contacto_modal.php');
 				require('php/acerca_modal.php');
@@ -38,14 +39,9 @@
 								?>
 	">
 
-	  <!-- Header -->
-	  <header>
-		  <div class="row">
-			<div align="center" class="col-lg-12">
-				  <img src="image/principal/banner.png" class="img-responsive" id="banner">
-			</div> <!-- /.col-lg-12 -->
-		  </div>  <!-- /.row -->
-	  </header> <!-- Header -->
+	<?php
+      encabezado();
+  ?>
 
   <!-- Navigation -->
   <div class="row">
@@ -287,21 +283,14 @@
 <!--		</div> <!-- row content -->
 	</div> <!-- container-fluid -->
 
-	  <!-- Footer -->
-	  <footer>
-		  <div class="row">
-			<div align="center" class="col-lg-12">
-				  <img src="image/principal/footer_uls.png" id="foot" class="img-responsive"/>
-			</div> <!-- /.col-lg-12 -->
-		  </div>  <!-- /.row -->
-	  </footer>  <!-- Footer -->
+		<?php
+			piePagina();
+		?>
 
 	  <!-- jQuery -->
 	  <script src="js/bootstrap/jquery.min.js"></script>
 	  <!-- Bootstrap Core JavaScript -->
 	  <script src="js/bootstrap/bootstrap.min.js"></script>
-	  <!-- Reloj -->
-	  <script src="js/reloj.js"></script>
 	  <!-- Grafico panal -->
 	  <script src="js/panal/carrotsearch.foamtree.js"></script>
 	  <script src="js/panal/hammer.min.js"></script>

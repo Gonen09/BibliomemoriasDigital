@@ -20,6 +20,7 @@
     <link href="css/reloj.css" rel="stylesheet">
 
     <?php
+      require('php/general.php');
       require('php/login/login_nav.php');
       require('php/contacto/contacto_modal.php');
       require('php/acerca_modal.php');
@@ -31,14 +32,10 @@
   </head>
 
 <body onload="cargarReloj()">
-  <!-- Header -->
-  <header>
-    <div class="row">
-      <div align="center" class="col-lg-12">
-            <img src="image/principal/banner.png" class="img-responsive" id="banner">
-      </div> <!-- /.col-lg-12 -->
-    </div>  <!-- /.row -->
-  </header> <!-- Header -->
+
+  <?php
+      encabezado();
+  ?>
 
   <!-- Navigation -->
   <div class="row">
@@ -232,14 +229,9 @@
         </div>   <!-- /.row -->
     </div> <!-- /.container -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-          <div align="center" class="col-lg-12">
-                <img src="image/principal/footer_uls.png" id="foot" class="img-responsive"/>
-          </div> <!-- /.col-lg-12 -->
-        </div> <!-- /.row -->
-    </footer>
+    <?php
+      piePagina();
+    ?>
 
     <!-- jQuery -->
     <script src="js/bootstrap/jquery.min.js"></script>

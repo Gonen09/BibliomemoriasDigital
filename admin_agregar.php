@@ -21,6 +21,7 @@
 		<link href="css/cargando.css" rel="stylesheet">
 
 		<?php
+			require('php/general.php');
 			require('php/login/login_nav.php');
 			require('php/acerca_modal.php');
 			require('php/cargando_modal.php');
@@ -35,14 +36,10 @@
 	</head>
 
 	<body>
-		<!-- Header -->
-		<header>
-			<div class="row">
-				<div align="center" class="col-lg-12">
-					<img src="image/principal/banner.png" class="img-responsive" id="banner">
-				</div> <!-- /.col-lg-12 -->
-			</div>  <!-- /.row -->
-		</header> <!-- Header -->
+
+		<?php
+	      encabezado();
+	  ?>
 
 		<!-- Navigation -->
 	  <div class="row">
@@ -192,16 +189,9 @@
 			</div><!--col-md-9-->
 		</div> <!-- row -->
 
-		<!-- Footer -->
-		<footer>
-			<div class="row">
-			  <div align="center" class="col-lg-12">
-					<img src="image/principal/footer_uls.png" id="foot" class="img-responsive"/>
-				</div>
-				<!-- /.col-lg-12 -->
-			</div>
-			<!-- /.row -->
-		</footer>
+		<?php
+      piePagina();
+    ?>
 
 		<!-- jQuery -->
 		<script src="js/bootstrap/jquery.min.js"></script>
