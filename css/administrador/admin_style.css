@@ -14,7 +14,6 @@
   margin-top: 30px;
 }
 
-
 /* Sidebar navigation */
 
 .content-box, .content-box-large {
@@ -104,16 +103,17 @@
    margin-right:5px;
 }
 
-.sidebar .nav > li > ul > li.active > a{
-   background:#fff;
-   border-top:0px;
-   color:#555;
-}
 
 /*Activa*/
-.sidebar .nav li a:hover, .sidebar .nav li.current > a {
+.sidebar .nav, .sidebar .nav li.current > a, .sidebar .nav li.current > a:hover {
 	background: #eee8ff;
 	color: #001f90;
+  border-bottom:0px;
+}
+
+.sidebar .nav li a:hover{
+  background: #5370e6;
+  color: #fff;
   border-bottom:0px;
 }
 
