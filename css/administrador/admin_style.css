@@ -173,9 +173,8 @@
 }
 
 .panel-heading>.panel-title, .content-box-header .panel-title {
-    float: left;
-    padding: 10px 15px;
-    padding-top: 0px;
+    float: center;
+    padding: 10px 0px 10px 0px;
 }
 
 .panel-heading>.panel-title>*, .content-box-header .panel-title>* {

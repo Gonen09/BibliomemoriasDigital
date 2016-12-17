@@ -99,7 +99,7 @@
 				  	<div class="row">
 				  		<div class="col-md-6">
 								<div class="content-box-header">
-									<div class="panel-title">Administrador BiblioMemorias Digital</div>
+									<div class="panel-title"><h4 class="text-center">Administrador BiblioMemorias Digital</h4></div>
 								</div>
 								<div class="content-box-large box-with-header">
 				  				<div class="panel-body">
@@ -130,7 +130,7 @@
 				  			<div class="row">
 				  				<div class="col-md-12">
 				  					<div class="content-box-header">
-					  					<div class="panel-title">Información servidor solr</div>
+					  					<div class="panel-title"><h4 class="text-center">Información servidor Solr</h4></div>
 						  			</div>
 						  			<div class="content-box-large box-with-header">
 											<img class="img-responsive" src="image/Solr_Logo.png" alt="Solr" id="img-solr">
