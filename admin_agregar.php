@@ -29,7 +29,8 @@
 			session_start();
 
 			if(!isset($_SESSION["user"])){
-				echo("<script>alert('Necesita iniciar sesion como administrador para acceder a este sitio.'); window.location='index.php';</script>");
+				echo("<script>alert('Necesita iniciar sesion como administrador para acceder a este sitio.');</script>");
+				echo("<script>window.location='index.php';</script>");
 			}
  		?>
 

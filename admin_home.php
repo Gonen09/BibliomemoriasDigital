@@ -25,7 +25,8 @@
 			session_start();
 
 			if(!isset($_SESSION["user"])){
-				echo("<script>alert('Necesita iniciar sesion como administrador para acceder a este sitio.'); window.location='index.php';</script>");
+				echo("<script>alert('Necesita iniciar sesion como administrador para acceder a este sitio.');</script>");
+				echo("<script>window.location='index.php';</script>");
 			}
  		?>
 
@@ -136,7 +137,7 @@
 											<img class="img-responsive" src="image/Solr_Logo.png" alt="Solr" id="img-solr">
 											<br>
 							  			<?php
-											
+
 												$versión_solr = solr_get_version();
 												echo "Versión plugin php : ";
 												print $versión_solr;
