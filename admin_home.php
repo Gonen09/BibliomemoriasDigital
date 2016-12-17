@@ -179,7 +179,6 @@
     </div>
 
 		<?php
-      piePagina();
 			piePagina();
     ?>
 
