@@ -16,7 +16,8 @@
 		<!-- Estilo vista admin -->
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
 		<link href="css/administrador/correo.css" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		
 		<?php
 			include_once('php/conectar.php');
 			require('php/general.php');

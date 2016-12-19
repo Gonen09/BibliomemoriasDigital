@@ -15,7 +15,8 @@
 		<link href="css/general.css" rel="stylesheet">
 		<!-- Estilo vista admin -->
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		
 		<?php
 			require('php/general.php');
 			require('php/acerca_modal.php');
@@ -56,30 +57,29 @@
 				  <div class="col-md-10">
 				  	<div class="row">
 				  		<div class="col-md-6">
-								<div class="content-box-header">
-									<div class="panel-title"><h4 class="text-center">Administrador BiblioMemorias Digital</h4></div>
-								</div>
-								<div class="content-box-large box-with-header">
+							<div class="content-box-header">
+								<div class="panel-title"><h4 class="text-center">Administrador BiblioMemorias Digital</h4></div>
+							</div>
+							<div class="content-box-large box-with-header">
 				  				<div class="panel-body text-justify">
-										<legend class="titulos"><b>Admin</b></legend>
-										<p>
-											Bienvenido administrador, en el sitio de aministrador usted tiene todo el control para administrar
-											el repositorio de memorias de BiblioMemorias Digital, entre las funcionalidades del sitio están:
-											<br>
-										<p>
-											<strong>Agregar memorias:</strong> En esta sección el administrador puede subir las memorias de título
-											de los alumnos de Ingeniería en Computación para el posterior indexado con Solr.
-										</p>
-										<p>
-											<strong>Gestión memorias:</strong> En esta sección el administrador puede administrar las memorias de título
-											de los alumnos de Ingeniería en Computación, se visualiza el total de las memorias subidas al sitio y se pueden
-											descartar las memorias con algún problema.
-										</p>
-										<p>
-											<strong>Correo:</strong> En esta sección el administrador puede ver si personas han contactado con el sitio y
-											puede ver los correos enviados por ellos y administrarlos.
-										</p>
-										</p>
+									<legend class="titulos"><b>Admin</b></legend>
+									<p>
+										Bienvenido administrador, en el sitio de aministrador usted tiene todo el control para administrar
+										el repositorio de memorias de BiblioMemorias Digital, entre las funcionalidades del sitio están:
+									<br>
+
+									<ul>
+										<li>
+											<strong>Agregar memorias:</strong> En esta sección el administrador puede subir las memorias de título de los alumnos de Ingeniería en Computación para el posterior indexado con Solr.
+										</li>
+										<li>
+											<strong>Gestión memorias:</strong> En esta sección el administrador puede administrar las memorias de título de los alumnos de Ingeniería en Computación, se visualiza el total de las memorias subidas al sitio y se pueden descartar las memorias con algún problema.
+										</li>
+										<li>
+											<strong>Correo:</strong> En esta sección el administrador puede ver si personas han contactado con el sitio y puede ver los correos enviados por ellos y administrarlos.
+										</li>
+									</ul>
+									</p>
 				  				</div> <!-- panel-body -->
 				  			</div> <!-- content-box-large -->
 				  		</div> <!-- col-md-6 -->
