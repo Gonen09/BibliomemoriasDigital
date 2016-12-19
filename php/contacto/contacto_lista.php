@@ -3,15 +3,17 @@
 	function correo_lista($id,$nombre,$motivo,$fecha,$leido){
 
 		if($leido == 0){
-			print ('				<tr class="correo-cerrado">
-												<td class="mailbox-name"><b><a nohref onclick="leer_correo('.$id.')">'.$nombre.'</a></b></td>
-												<td class="mailbox-subject"><b><a nohref onclick="leer_correo('.$id.')">'.$motivo.'</a></b></td>
+			print ('
+				<tr class="correo-cerrado">
+					<td class="mailbox-name"><b><a nohref onclick="leer_correo('.$id.')">'.$nombre.'</a></b></td>
+					<td class="mailbox-subject"><b><a nohref onclick="leer_correo('.$id.')">'.$motivo.'</a></b></td>
 			');
 
 		}else{
-			print ('				<tr class="correo-abierto">
-												<td class="mailbox-name"><a nohref onclick="leer_correo('.$id.')">'.$nombre.'</a></td>
-												<td class="mailbox-subject"><a nohref onclick="leer_correo('.$id.')">'.$motivo.'</a></td>
+			print ('
+				<tr class="correo-abierto">
+					<td class="mailbox-name"><a nohref onclick="leer_correo('.$id.')">'.$nombre.'</a></td>
+					<td class="mailbox-subject"><a nohref onclick="leer_correo('.$id.')">'.$motivo.'</a></td>
 			');
 		}
 
@@ -22,21 +24,22 @@
 		');
 	}
 
-  function correo_cargar($conexion){
-    $stmt = $conexion->prepare('SELECT id,nombre,fecha,motivo,leido FROM contactos');
-    $stmt->execute();
+  	function correo_cargar($conexion){
 
-    $contador = 0;
+    	$stmt = $conexion->prepare('SELECT id,nombre,fecha,motivo,leido FROM contactos');
+    	$stmt->execute();
 
-    while($row = $stmt->fetch()){
-      $date = date_create($row['fecha']);
-      $fecha = date_format($date, 'd/m/Y H:i');
-      correo_lista($row['id'],$row['nombre'],$row['motivo'],$fecha,$row['leido']);
-      $contador++;
-    }
+    	$contador = 0;
 
-    if ($contador == 0){
-      	print ('<p><b><br>Sin correos<br></b><p>');
-    }
-  }
+    	while($row = $stmt->fetch()){
+      		$date = date_create($row['fecha']);
+      		$fecha = date_format($date, 'd/m/Y H:i');
+      		correo_lista($row['id'],$row['nombre'],$row['motivo'],$fecha,$row['leido']);
+      		$contador++;
+    	}
+
+    	if ($contador == 0){
+      		print ('<p><b><br>Sin correos<br></b><p>');
+    	}
+  	}
 ?>

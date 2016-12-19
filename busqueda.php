@@ -228,7 +228,7 @@
 			</div> <!-- row -->
 
 			<!-- Aquí va el gráfico panal -->
-			<div class="row" id= "contenedor_panal_y_resultados"></div><!-- col-sm-6 -->
+			<div class="row" id="contenedor_panal_y_resultados"></div><!-- col-sm-6 -->
 		</div><!-- container-fluid -->
 
 		<?php
@@ -242,11 +242,9 @@
 	  	<!-- Grafico panal -->
 	  	<script src="js/panal/carrotsearch.foamtree.js"></script>
 	  	<script src="js/panal/hammer.min.js"></script>
-	  	<script src="js/panal/createPanal.js"></script>
 	  	<!-- Grafico araña -->
 	  	<script src="js/D3/d3.v3.min.js"></script>
 	  	<script src="js/grafico-arana/RadarChart.js"></script>
-	  	<script src="js/grafico-arana/webchart.js"></script>
 	    <!--Funciones de la pagina -->
 		<script src="js/interpretando_ajax.js"></script>
 		<script src="js/funciones_busqueda.js"></script>
