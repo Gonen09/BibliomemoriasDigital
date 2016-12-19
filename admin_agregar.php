@@ -18,7 +18,8 @@
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
 		<!-- Modal cargando -->
 		<link href="css/cargando.css" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		
 		<?php
 			require('php/general.php');
 			require('php/acerca_modal.php');
