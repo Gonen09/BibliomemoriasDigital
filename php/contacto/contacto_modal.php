@@ -15,21 +15,21 @@
                         <br>
                         <div class="md-form">
                           <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
                             <input id="login-username" type="text" class="form-control" name="nombre" value="" placeholder="Nombre completo" required>
                           </div>
                         </div>
                         <br>
                         <div class="md-form">
                           <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <span class="input-group-addon btn-color"><i class="glyphicon glyphicon-envelope icon-color"></i></span>
                             <input id="login-username" type="text" class="form-control" name="correo" value="" placeholder="Correo electrónico" required>
                           </div>
                         </div>
                         <br>
                         <div class="md-form">
                           <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                            <span class="input-group-addon btn-color"><i class="glyphicon glyphicon-phone icon-color"></i></span>
                             <input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Telefono" required>
                           </div>
                         </div>
