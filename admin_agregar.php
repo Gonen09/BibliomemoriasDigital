@@ -100,12 +100,13 @@
 										    </div>
 										  </div>
 										  <div class="form-group">
-										    <label for="profesorGuia" class="col-sm-2 control-label">Profesor</label>
+										    <label for="profesorGuia" class="col-sm-2 control-label">Profesor(es)</label>
 										    <div class="col-sm-10">
 										    	<div class="input-group">
 										    		<input class="form-control" id="profesorGuia" name="profesores"  required>
-										    		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
+										    			<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
 										    	</div>
+													<p class="note"><i><small>Si es más de un profesor, separados por coma (,)</small></i></p>
 										    </div>
 										  </div>
 										  <div class="form-group">

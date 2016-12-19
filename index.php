@@ -105,7 +105,7 @@
                         <h4 class="text-center">Electivo III : Recuperación de la Información</h4>
                       </div>
                       <div class="panel-body text-justify">
-                        <img class="img-responsive img-rounded" src="image/index/biblio-IR.jpg" alt="Acerca curso">
+                        <img class="img-responsive" src="image/index/biblio-IR.png" alt="Acerca curso">
                         <br>
                         <p>
                           Es un curso del <strong>Ciclo Superior</strong>, <strong>teórico-práctico</strong>, que entrega las herramientas y conceptos en el
