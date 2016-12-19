@@ -2,7 +2,7 @@
 	include('../conectar.php');
 
 	$usuario = $_POST['user'];
-  $pass = md5($_POST["password"]);
+  	$pass = md5($_POST["password"]);
 
 	session_start();
 

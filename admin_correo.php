@@ -17,7 +17,7 @@
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
 		<link href="css/administrador/correo.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-		
+
 		<?php
 			include_once('php/conectar.php');
 			require('php/general.php');
@@ -30,14 +30,13 @@
 				echo("<script>alert('Necesita iniciar sesion como administrador para acceder a este sitio.');</script>");
 				echo("<script>window.location='index.php';</script>");
 			}
- 		?>
-
+		?>
 	</head>
 
 	<body>
 
 		<?php
-      encabezado();
+			encabezado();
 			navegacion(3);
 			modal_uni();
 			modal_docente();
@@ -49,13 +48,13 @@
 				<div class="col-md-2">
 					<div class="sidebar content-box">
 							<!-- Menú principal -->
-	            <ul class="nav">
-	                <li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
-	                <li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
-	                <li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Gestión memorias</a></li>
-	                <li class="current"><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
-	            </ul>
-	        </div>
+						<ul class="nav">
+							<li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
+							<li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
+							<li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Gestión memorias</a></li>
+							<li class="current"><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
+						</ul>
+					</div>
 				</div> <!-- col-md-2 -->
 
 				<div class="col-md-10">
@@ -67,35 +66,32 @@
 								</div>
 								<!-- Bandeja de Entrada -->
 								<div class="panel-body">
-
 									<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%">
 										<tbody id="correo-lista">
-											<?php
-												correo_cargar($conn);
-											?>
+											<?php correo_cargar($conn); ?>
 										</tbody>
 									</table>
 
+									<!-- Paginación de los correos -->
 									<nav class="text-center" aria-label="Page navigation">
-									  <ul class="pagination">
-									    <li class="disabled">
-									      <a href="#" aria-label="Previous">
-									        <span aria-hidden="true">&laquo;</span>
-									      </a>
-									    </li>
-									    <li class="active"><a href="#">1</a></li>
+									  	<ul class="pagination">
+											<li class="disabled">
+										  		<a href="#" aria-label="Previous">
+													<span aria-hidden="true">&laquo;</span>
+										  		</a>
+											</li>
+											<li class="active"><a href="#">1</a></li>
 											<li><a href="#">2</a></li>
 											<li><a href="#">3</a></li>
-									    <li class="disabled">
-									      <a href="#" aria-label="Next">
-									        <span aria-hidden="true">&raquo;</span>
-									      </a>
-									    </li>
-									  </ul>
-									</nav>
-
-								</div>
-							</div>
+											<li class="disabled">
+											  	<a href="#" aria-label="Next">
+													<span aria-hidden="true">&raquo;</span>
+											  	</a>
+											</li>
+									  	</ul>
+									</nav><!-- Paginación de los correos -->
+								</div><!-- panel-body -->
+							</div><!-- content-box-large -->
 						</div><!-- col-lg-5 -->
 
 						<div class="col-lg-7">
@@ -113,13 +109,13 @@
 		</div>
 
 		<?php
-      piePagina();
-    ?>
+		  	piePagina();
+		?>
 
 		<!-- jQuery -->
-    <script src="js/bootstrap/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+		<script src="js/bootstrap/jquery.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
 		<!-- Correo -->
 		<script src="js/correo/correo_leer.js"></script>
 		<script src="js/correo/correo_borrar.js"></script>
