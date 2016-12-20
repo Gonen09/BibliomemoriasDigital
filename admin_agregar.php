@@ -113,7 +113,7 @@
 										  	<label for="anio" class="col-sm-2 control-label">Año</label>
 										    <div class="col-sm-3">
 										    	<div class="input-group">
-										    		<input class="form-control" id="anio" type="number" name="ano" value="2016">
+										    		<input class="form-control" id="anio" type="number" name="ano" value=<?php echo date("Y");?>>
 										    		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
 										    	</div>
 										    </div>

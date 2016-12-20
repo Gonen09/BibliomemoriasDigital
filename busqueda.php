@@ -154,7 +154,7 @@
 								<label for="example-url-input" class="col-xs-2 col-form-label text-right">Año</label>
 								<div class="col-xs-10">
 								  <div class="input-group">
-									<input class="form-control" type="number" value="2000" id="q_ano">
+									<input class="form-control" type="number" <?php print ('value="'.date("Y").'"'); ?> id="q_ano">
 									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
 								  </div>
 								</div>
