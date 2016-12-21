@@ -1,3 +1,9 @@
+.panel-body > .img-responsive{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -47,12 +53,18 @@ footer, .btn-color {
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
     color: rgba(17, 240, 225, 1);
     background-color: rgba(83, 112, 230, 1);
+    border-radius: 9px 9px 9px 9px;
+    padding: 13px 13px 13px 13px;
+    margin: 3px 3px 3px 3px;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
     color: rgba(0, 31, 144, 1);
     background-color: rgba(238, 232, 255, 1);
+    border-radius: 9px 9px 9px 9px;
+    padding: 13px 13px 13px 13px;
+    margin: 3px 3px 3px 3px;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
     border-color: #eee8ff;

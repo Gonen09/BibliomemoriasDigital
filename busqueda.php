@@ -80,38 +80,34 @@
 				  			<h4 class="text-center">Búsquedas</h4>
 						</div>
 						<div class="panel-body">
-					  		<div class="container" aling="center">
-								<div class="row">
-						  			<div class="col-md-12">
-										<form id="formulario" onsubmit="return false;">
-											<div class="row">
-								  				<div class="col-md-8">
-													<h3 class="text-primary titulos"><strong>Búsqueda simple</strong></h3>
-													<br>
-													<div class="input-group">
-													  	<input type="text" id="q_contenido" class="form-control" placeholder="Buscar contenido" name="q"
-
-															<?php
+							<div class="row">
+					  			<div class="col-md-12">
+									<form id="formulario" onsubmit="return false;">
+										<div class="row">
+							  				<div class="col-sm-8">
+												<h3 class="text-primary titulos"><strong>Búsqueda simple</strong></h3>
+												<br>
+												<div class="input-group">
+												  	<input type="text" id="q_contenido" class="form-control" placeholder="Buscar contenido" name="q"
+														<?php
 															if(isset($_POST['busqueda-index']) && !empty($_POST["busqueda-index"])){
 																$indexData = $_POST['busqueda-index'];
 																print 'value="'.$indexData.'"';
 															}
-
-															?>
-												        >
-													  	<div class="input-group-btn">
-														  <button class="btn btn-color" type="submit" onclick="enviarFormulario()"><i class="glyphicon glyphicon-search icon-color"></i></button>
-													  	</div>
-													</div><!-- input-group-->
-								  				</div><!-- col-md-8-->
-								  				<div class="col-md-4" align="center">
-													<img class="img-rounded" src="image/find-simple.png" alt="busqueda-simple"  id="busqueda-simple">
-								  				</div><!-- col-md-4-->
-											</div><!-- row -->
-										</form><!-- form -->
-						  			</div><!-- col-md-12-->
-								</div><!-- row -->
-					  		</div><!-- container -->
+														?>
+											        >
+												  	<div class="input-group-btn">
+													  <button class="btn btn-color" type="submit" onclick="enviarFormulario()"><i class="glyphicon glyphicon-search icon-color"></i></button>
+												  	</div>
+												</div><!-- input-group-->
+							  				</div><!-- col-md-8-->
+							  				<div class="col-sm-4" align="center">
+												<img class="img-rounded" src="image/find-simple.png" alt="busqueda-simple"  id="busqueda-simple">
+							  				</div><!-- col-md-4-->
+										</div><!-- row -->
+									</form><!-- form -->
+					  			</div><!-- col-md-12-->
+							</div><!--row -->
 					  		<hr>
 				  			<div class="panel-group" id="accordion">
 								<div class="panel panel-default">
@@ -180,7 +176,7 @@
 														</div>
 												  	</div><!-- form-group row -->
 												</div><!-- col-sm-8-->
-												<div class="col-sm-4" align="center">
+												<div class="col-sm-4">
 													<br><br><br>
 													<img class="img-rounded img-responsive" src="image/find-advanced.png" alt="busqueda-avanzada">
 													<br><br><br>
@@ -214,7 +210,7 @@
 						<div class="col-md-12">
 							<!-- Side Widget Well -->
 							<div class="well">
-								<h4>Sitios de interes</h4>
+								<h4>Sitios de interés</h4>
 								<ul class="list-unstyled">
 									<li><a href="http://www.userena.cl">Universidad de La Serena</a></li>
 									<li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>

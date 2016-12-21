@@ -13,7 +13,6 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Estilo pagina CSS -->
 		<link href="css/general.css" rel="stylesheet">
-		<link href="css/index.css" rel="stylesheet">
 		<!-- Reloj -->
 		<link href="css/reloj.css" rel="stylesheet">
 		<!-- Fuente -->
@@ -134,7 +133,7 @@
 							<!-- Well Reloj  -->
 							<div class="well">
 						  		<div class="well clock-box">
-									<article class="clock">
+									<div class="clock">
 								  		<div class="hours-container">
 											<div class="hours"></div>
 								  		</div>
@@ -144,7 +143,7 @@
 								  		<div class="seconds-container">
 											<div class="seconds"></div>
 								  		</div>
-									</article>
+									</div>
 							  	</div>
 						  		<p class="text-center"><i id="date-box">Fecha</i></p>
 							</div>
