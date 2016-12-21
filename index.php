@@ -13,6 +13,7 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Estilo pagina CSS -->
 		<link href="css/general.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
 		<!-- Reloj -->
 		<link href="css/reloj.css" rel="stylesheet">
 		<!-- Fuente -->
