@@ -134,7 +134,7 @@
 							<!-- Well Reloj  -->
 							<div class="well">
 						  		<div class="well clock-box">
-									<article class="clock">
+									<div class="clock">
 								  		<div class="hours-container">
 											<div class="hours"></div>
 								  		</div>
@@ -144,7 +144,7 @@
 								  		<div class="seconds-container">
 											<div class="seconds"></div>
 								  		</div>
-									</article>
+									</div>
 							  	</div>
 						  		<p class="text-center"><i id="date-box">Fecha</i></p>
 							</div>
