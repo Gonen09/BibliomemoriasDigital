@@ -136,7 +136,7 @@
 								<label for="example-search-input" class="col-xs-2 col-form-label text-right">Autor</label>
 								<div class="col-xs-10">
 								  <div class="input-group">
-									<input class="form-control" type="text" placeholder="Autor(es) memoria" id="q_autor">
+									<input class="form-control" type="text" placeholder="Autor(es) memoria, separados por coma" id="q_autor">
 									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
 								  </div>
 								</div>
@@ -145,9 +145,9 @@
 								<label for="example-email-input" class="col-xs-2 col-form-label text-right">Profesor</label>
 								<div class="col-xs-10">
 								  <div class="input-group">
-									<input class="form-control" type="text" placeholder="Profesor(es) memoria" id="q_profesor">
-									<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
-								  </div>
+										<input class="form-control" type="text" placeholder="Profesor(es) memoria, separados por coma" id="q_profesor">
+										<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
+									</div>
 								</div>
 							  </div>
 							  <div class="form-group row">
