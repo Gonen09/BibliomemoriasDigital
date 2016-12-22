@@ -2,13 +2,13 @@ function listar_correo(pagina){
 
   alert("Cargando pagina numero:"+pagina);
 
-  document.getElementById("correo-lista").innerHTML="";
+  document.getElementById("panel-correo-lista").innerHTML="";
 
   var xhttp = new XMLHttpRequest();
 
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
-     document.getElementById("correo-lista").innerHTML = xhttp.responseText;
+     document.getElementById("panel-correo-lista").innerHTML = xhttp.responseText;
     }
   };
 

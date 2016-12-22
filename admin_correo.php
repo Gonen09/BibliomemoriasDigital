@@ -64,22 +64,8 @@
 									<legend class="titulos"><b>Bandeja de entrada</b></legend>
 								</div>
 								<!-- Bandeja de Entrada -->
-								<div class="panel-body">
-
-									<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%">
-										<tbody id="correo-lista">
-
-											<!-- CARGAR CORREOS AQUI -->
-
-										</tbody>
-									</table>
-
-									<nav class="text-center" aria-label="Page navigation">
-									  <ul class="pagination" id="paginacion-correo">
-
-									  </ul>
-									</nav>
-
+								<div class="panel-body" id="panel-correo-lista">
+										<!-- Sistema de correo -->
 								</div>
 							</div>
 						</div><!-- col-lg-5 -->
