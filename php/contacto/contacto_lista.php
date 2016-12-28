@@ -2,19 +2,20 @@
 
 	require('../conectar.php');
 
-	//Limito la busqueda
+	//Limite la busqueda
 	$TAMANO_PAGINA = 10;
 
-	//examino la página a mostrar y el inicio del registro a mostrar
-	$num_pagina = $_GET["pagina"];
+	if (!isset($_GET["pagina"]) || $_GET["pagina"] == 0) {
+	    $inicio = 0;
+	    $fin = $TAMANO_PAGINA;
+	    $num_pagina = 1;
+	}else{
+			$num_pagina = $_GET["pagina"];
+	    $inicio = ($num_pagina - 1) * $TAMANO_PAGINA;
+			$fin = $inicio + $TAMANO_PAGINA;
+	}
 
-	if (!$num_pagina) {
-	   $inicio = 0;
-	   $num_pagina = 1;
-	}
-	else {
-	   $inicio = ($num_pagina - 1) * $TAMANO_PAGINA;
-	}
+	//print("Inicio:".$inicio." Fin: ".$fin." Num_pagina: ".$num_pagina);
 
 	//calculo el total de páginas
 	$num_total_registros = correo_contar($conn);
@@ -29,10 +30,6 @@
 	}
 
 	function correo_lista($id,$nombre,$motivo,$fecha,$leido){
-
-		print ('<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%">
-						<tbody id="correo-lista">
-		');
 
 		if($leido == 0){
 			print ('				<tr class="correo-cerrado">
@@ -49,10 +46,8 @@
 
 		print ('
 					<td class="mailbox-date">'.$fecha.'</td>
-					<td><a nohref onclick="borrar_correo('.$id.')" class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar correo"></a></td>
+					<td><a nohref onclick="borrar_correo('.$id.'); listar_correo(0); " class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar correo"></a></td>
 				</tr>
-				</tbody>
-			</table>
 		');
 	}
 
@@ -66,7 +61,7 @@
 		if ($numero_paginas <= 1 || $pagina_activa == 1){
 				print ('<li class="disabled">');
 		}else{
-				print ('<li class="enabled" onclick="listar_correo('.$pagina_activa-1.')">');
+				print ('<li class="enabled" onclick="listar_correo('.($pagina_activa-1).')">');
 		}
 
 		print('			<a href="#" aria-label="Anterior">
@@ -88,7 +83,7 @@
 		if ($numero_paginas <= 1 || $pagina_activa == $numero_paginas){
 				print ('<li class="disabled">');
 		}else{
-				print ('<li class="enabled" onclick="listar_correo('.$pagina_activa+1.')">');
+				print ('<li class="enabled" onclick="listar_correo('.($pagina_activa+1).')">');
 		}
 
 		print ('			<a href="#" aria-label="Next">
@@ -100,24 +95,30 @@
 		');
 	}
 
-  function correo_cargar($conexion,$inicio,$fin){
+  	function correo_cargar($conexion,$inicio,$fin){
 
-    $stmt = $conexion->prepare('SELECT id,nombre,fecha,motivo,leido FROM contactos ORDER BY id DESC LIMIT :inicio , :tam_pagina');
-		$stmt->bindParam(':inicio',$inicio,PDO::PARAM_INT);
-		$stmt->bindParam(':tam_pagina',$fin,PDO::PARAM_INT);
-		$stmt->execute();
+	    $stmt = $conexion->prepare('SELECT id,nombre,fecha,motivo,leido FROM contactos ORDER BY id DESC LIMIT '.$inicio.','.$fin);
+			$stmt->execute();
 
-    while($row = $stmt->fetch()){
-      $date = date_create($row['fecha']);
-      $fecha = date_format($date,'d/m/Y H:i');
-      correo_lista($row['id'],$row['nombre'],$row['motivo'],$fecha,$row['leido']);
-    }
-  }
+			print ('<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%">
+							<tbody id="correo-lista">
+			');
 
-	if($num_total_registros == 0){
+	    while($row = $stmt->fetch()){
+	      $date = date_create($row['fecha']);
+	      $fecha = date_format($date,'d/m/Y H:i');
+	      correo_lista($row['id'],$row['nombre'],$row['motivo'],$fecha,$row['leido']);
+	    }
+
+			print('				</tbody>
+						</table>
+		  ');
+  	}
+
+  	if($num_total_registros == 0){
 			print ('<p><b><br>Sin correos<br></b><p>');
-	}else{
-			correo_cargar($conn,$inicio,$TAMANO_PAGINA);
+  	}else{
+			correo_cargar($conn,$inicio,$fin);
 			correo_paginacion($total_paginas,$num_pagina);
-	}
+  	}
 ?>

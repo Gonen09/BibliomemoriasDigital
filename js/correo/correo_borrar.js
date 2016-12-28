@@ -5,25 +5,26 @@ function borrar_correo(id_correo){
 
     if (confirmar){
 
-      document.getElementById("correo-lista").innerHTML="";
-
       var xhttp = new XMLHttpRequest();
 
       xhttp.onreadystatechange = function() {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-         document.getElementById('correo-lista').innerHTML = xhttp.responseText;
-        }
-      };
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
 
-      document.getElementById("correo-contenido").innerHTML=''+
-        '<div class="mailbox-read-message">'+
-          '<legend class="titulos"><b>Correo</b></legend>'+
-          '<br><p> Seleccione un correo de la lista de correos</p><br>'+
-        '</div>';
+          /* document.getElementById('correo-lista').innerHTML = xhttp.responseText;
+
+           document.getElementById("correo-contenido").innerHTML=''+
+             '<div class="mailbox-read-message">'+
+               '<legend class="titulos"><b>Correo</b></legend>'+
+               '<br><p> Seleccione un correo de la lista de correos</p><br>'+
+             '</div>';
+
+          */
+          }
+
+          alert('Correo eliminado');
+      };
 
       xhttp.open("GET","php/contacto/contacto_borrar.php?id="+id_correo,true);
       xhttp.send();
-
-      alert('Correo eliminado');
     }
 }
