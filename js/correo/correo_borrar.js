@@ -22,6 +22,7 @@ function borrar_correo(id_correo){
           }
 
           alert('Correo eliminado');
+          window.location='admin_correo.php';
       };
 
       xhttp.open("GET","php/contacto/contacto_borrar.php?id="+id_correo,true);

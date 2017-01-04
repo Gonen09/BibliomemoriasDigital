@@ -15,11 +15,15 @@
 			$fin = $inicio + $TAMANO_PAGINA;
 	}
 
-	//print("Inicio:".$inicio." Fin: ".$fin." Num_pagina: ".$num_pagina);
-
 	//calculo el total de páginas
 	$num_total_registros = correo_contar($conn);
 	$total_paginas = ceil($num_total_registros / $TAMANO_PAGINA);
+
+
+	print('Correos: '.$num_total_registros.' Paginas: '.$total_paginas);
+	print('<br>');
+	print('Inicio: '.$inicio.' Fin: '.$fin.' Num_pagina: '.$num_pagina);
+
 
 	function correo_contar($conexion){
 
@@ -46,7 +50,7 @@
 
 		print ('
 					<td class="mailbox-date">'.$fecha.'</td>
-					<td><a nohref onclick="borrar_correo('.$id.'); listar_correo(0); " class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar correo"></a></td>
+					<td><a nohref onclick="borrar_correo('.$id.')" class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="right" title="Eliminar correo"></a></td>
 				</tr>
 		');
 	}
@@ -73,9 +77,9 @@
 		// Items
 		for ($i=1; $i <= $numero_paginas ; $i++){
 			if($i == $pagina_activa){
-					print('<li class="active"><a nohref onclick="listar_correo('.$i.')">'.$i.'</a></li>');
+					print ('<li class="active"><a nohref">'.$i.'</a></li>');
 			}else{
-					print ('<li><a nohref">'.$i.'</a></li>');
+					print('<li><a nohref onclick="listar_correo('.$i.')">'.$i.'</a></li>');
 			}
 		}
 
@@ -95,30 +99,30 @@
 		');
 	}
 
-  	function correo_cargar($conexion,$inicio,$fin){
+	function correo_cargar($conexion,$inicio,$fin){
 
-	    $stmt = $conexion->prepare('SELECT id,nombre,fecha,motivo,leido FROM contactos ORDER BY id DESC LIMIT '.$inicio.','.$fin);
-			$stmt->execute();
+    $stmt = $conexion->prepare('SELECT id,nombre,fecha,motivo,leido FROM contactos ORDER BY id DESC LIMIT '.$inicio.','.$fin);
+		$stmt->execute();
 
-			print ('<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%">
-							<tbody id="correo-lista">
-			');
+		print ('<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%">
+						<tbody id="correo-lista">
+		');
 
-	    while($row = $stmt->fetch()){
-	      $date = date_create($row['fecha']);
-	      $fecha = date_format($date,'d/m/Y H:i');
-	      correo_lista($row['id'],$row['nombre'],$row['motivo'],$fecha,$row['leido']);
-	    }
+    while($row = $stmt->fetch()){
+      $date = date_create($row['fecha']);
+      $fecha = date_format($date,'d/m/Y H:i');
+      correo_lista($row['id'],$row['nombre'],$row['motivo'],$fecha,$row['leido']);
+    }
 
-			print('				</tbody>
-						</table>
-		  ');
-  	}
+		print('				</tbody>
+					</table>
+	  ');
+	}
 
-  	if($num_total_registros == 0){
-			print ('<p><b><br>Sin correos<br></b><p>');
-  	}else{
-			correo_cargar($conn,$inicio,$fin);
-			correo_paginacion($total_paginas,$num_pagina);
-  	}
+	if($num_total_registros == 0){
+		print ('<p><b><br>Sin correos<br></b><p>');
+	}else{
+		correo_cargar($conn,$inicio,$fin);
+		correo_paginacion($total_paginas,$num_pagina);
+	}
 ?>
