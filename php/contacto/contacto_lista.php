@@ -2,7 +2,7 @@
 
 	require('../conectar.php');
 
-	//Limite la busqueda
+	//Correos por pagina
 	$TAMANO_PAGINA = 10;
 
 	if (!isset($_GET["pagina"]) || $_GET["pagina"] == 0) {
@@ -17,11 +17,8 @@
 	$num_total_registros = correo_contar($conn);
 	$total_paginas = ceil($num_total_registros / $TAMANO_PAGINA);
 
-
-	print('Correos: '.$num_total_registros.' Paginas: '.$total_paginas);
-	print('<br>');
-	print('Inicio: '.$inicio.' Num_pagina: '.$num_pagina);
-
+	print('Correos: '.$num_total_registros.' Paginas: '.$total_paginas.'<br>');
+	print('Inicio: '.$inicio.' Num_pagina: '.$num_pagina.'<br><br>');
 
 	function correo_contar($conexion){
 
@@ -60,6 +57,7 @@
 		');
 
 		// Anterior
+
 		if ($numero_paginas <= 1 || $pagina_activa == 1){
 				print ('<li class="disabled">');
 		}else{
@@ -72,8 +70,54 @@
 							</li>
 		');
 
-		// Items
-		for ($i=1; $i <= $numero_paginas ; $i++){
+		// Numeros de pagina
+
+		$inicial=0;
+		$final=0;
+		$inferior=0;
+		$superior=0;
+
+		//calcular Limite inferior :  << --- Pagina activa
+
+		if($pagina_activa != 1){
+			for ($i=4; $i>0; $i--){
+				$resultado = $pagina_activa-$i;
+
+				if ($resultado>=1){
+						$inicial = $pagina_activa - $i;
+						$i = 0;
+				}else{
+					$superior++;
+				}
+			}
+		}else{
+			$inicial=1;
+			$superior=4;
+		}
+
+		// calcular Limite superior:  Pagina activa --- >>
+
+		if($pagina_activa != $numero_paginas){
+			for ($i=4; $i>0; $i--){
+				$resultado = $pagina_activa+$i;
+
+				if ($resultado<=$numero_paginas){
+						$final = $pagina_activa + $i;
+						$i = 0;
+				}else{
+					$inferior++;
+				}
+			}
+		}else{
+			$final=$numero_paginas;
+			$inferior=4;
+		}
+
+		$start=$inicial-$inferior;
+		$end=$final+$superior;
+
+
+		for ($i=$start; $i <= $end; $i++){
 			if($i == $pagina_activa){
 					print ('<li class="active"><a nohref">'.$i.'</a></li>');
 			}else{
@@ -82,6 +126,7 @@
 		}
 
 		// Siguiente
+
 		if ($numero_paginas <= 1 || $pagina_activa == $numero_paginas){
 				print ('<li class="disabled">');
 		}else{
@@ -95,6 +140,10 @@
 				</ul>
 			</nav>
 		');
+
+		print ('L. Inferior inicial = '.$inicial.' superior = '.$superior.'<br>');
+		print ('L. Superior final = '.$final.' inferior = '.$inferior.'<br>');
+		print ('start = '.$start.' end = '.$end.'<br>');
 	}
 
 	function correo_cargar($conexion,$inicio,$fin){
