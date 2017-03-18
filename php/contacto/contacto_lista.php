@@ -7,12 +7,10 @@
 
 	if (!isset($_GET["pagina"]) || $_GET["pagina"] == 0) {
 	    $inicio = 0;
-	    $fin = $TAMANO_PAGINA;
 	    $num_pagina = 1;
 	}else{
 			$num_pagina = $_GET["pagina"];
 	    $inicio = ($num_pagina - 1) * $TAMANO_PAGINA;
-			$fin = $inicio + $TAMANO_PAGINA;
 	}
 
 	//calculo el total de páginas
@@ -22,7 +20,7 @@
 
 	print('Correos: '.$num_total_registros.' Paginas: '.$total_paginas);
 	print('<br>');
-	print('Inicio: '.$inicio.' Fin: '.$fin.' Num_pagina: '.$num_pagina);
+	print('Inicio: '.$inicio.' Num_pagina: '.$num_pagina);
 
 
 	function correo_contar($conexion){
@@ -122,7 +120,7 @@
 	if($num_total_registros == 0){
 		print ('<p><b><br>Sin correos<br></b><p>');
 	}else{
-		correo_cargar($conn,$inicio,$fin);
+		correo_cargar($conn,$inicio,$TAMANO_PAGINA);
 		correo_paginacion($total_paginas,$num_pagina);
 	}
 ?>
