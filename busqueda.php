@@ -73,16 +73,16 @@
 	  	</div><!-- Modal Gráfico -->
 
 		<div class="container-fluid">
-		  	<div class="row">
+		  <div class="row">
 				<div class="col-sm-9">
 			  		<div class="panel panel-default">
-						<div class="panel-heading" id="cabezera-panel">
-				  			<h4 class="text-center">Búsquedas</h4>
-						</div>
-						<div class="panel-body">
-							<div class="row">
+							<div class="panel-heading" id="cabezera-panel">
+					  			<h4 class="text-center">Búsquedas</h4>
+							</div>
+							<div class="panel-body">
+								<div class="row">
 					  			<div class="col-md-12">
-									<form id="formulario" onsubmit="return false;">
+										<form id="formulario" onsubmit="return false;">
 										<div class="row">
 							  				<div class="col-sm-8">
 												<h3 class="text-primary titulos"><strong>Búsqueda simple</strong></h3>
@@ -107,10 +107,10 @@
 										</div><!-- row -->
 									</form><!-- form -->
 					  			</div><!-- col-md-12-->
-							</div><!--row -->
+								</div><!--row -->
 					  		<hr>
 				  			<div class="panel-group" id="accordion">
-								<div class="panel panel-default">
+									<div class="panel panel-default">
 									<div class="panel-heading" id="busqueda-avanzada">
 										<h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="p_avanzada">
 											<a>Búsqueda avanzada</a>
@@ -119,93 +119,78 @@
 									<div class="panel-collapse collapse" id="collapseOne">
 										<div class="panel-body">
 								  			<div class="row">
-												<div class="col-sm-8" aling="center">
-									  				<h3 class="text-primary titulos text-center"><strong>Búsqueda avanzada</strong></h3>
-									  				<br>
-												  	<div class="form-group row">
-														<label for="example-text-input" class="col-xs-2 col-form-label text-right">Titulo</label>
-														<div class="col-xs-10">
-													 		<div class="input-group">
-																<input class="form-control" type="text" placeholder="Titulo memoria" id="q_titulo">
-																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-bookmark icon-color"></i></span>
-													  		</div>
-														</div>
-												  	</div><!-- form-group row -->
-									  				<div class="form-group row">
-														<label for="example-search-input" class="col-xs-2 col-form-label text-right">Autor</label>
-														<div class="col-xs-10">
-														  	<div class="input-group">
-																<input class="form-control" type="text" placeholder="Autor(es) memoria" id="q_autor">
-																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
-														  	</div>
-														</div>
-									  				</div><!-- form-group row -->
-												  	<div class="form-group row">
-														<label for="example-email-input" class="col-xs-2 col-form-label text-right">Profesor Guía</label>
-														<div class="col-xs-10">
-													  		<div class="input-group">
-																<input class="form-control" type="text" placeholder="Profesor(es) memoria" id="q_profesor">
-																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
-													  		</div>
-														</div>
-												  	</div><!-- form-group row -->
-												  	<div class="form-group row">
-														<label for="example-url-input" class="col-xs-2 col-form-label text-right">Año</label>
-														<div class="col-xs-10">
-													  		<div class="input-group">
-																<input class="form-control" type="number" value="2016" id="q_ano">
-																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
-													  		</div>
-														</div>
-												  	</div><!-- form-group row -->
-												  	<div class="form-group row">
-														<label for="example-tel-input" class="col-xs-2 col-form-label text-right">Abstract</label>
-														<div class="col-xs-10">
-													  		<div class="input-group">
-																<input class="form-control" type="text" placeholder="Resumen memoria" id="q_abstract">
-																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-book icon-color"></i></span>
-													  		</div>
-														</div>
-												  	</div><!-- form-group row -->
-												  	<div class="form-group row">
-														<div class="col-xs-6 col-xs-offset-6">
-													  		<button type="submit" class="btn btn-color text-color" onclick="enviarFormulario()">
-													  			<i class="glyphicon glyphicon-search icon-color icon-margin"></i>
-																Consultar
-													  		</button>
-														</div>
-												  	</div><!-- form-group row -->
-												</div><!-- col-sm-8-->
-												<div class="col-sm-4">
-													<br><br><br>
-													<img class="img-rounded img-responsive" src="image/find-advanced.png" alt="busqueda-avanzada">
-													<br><br><br>
-												</div><!-- col-sm-4-->
+													<div class="col-sm-8" aling="center">
+										  				<h3 class="text-primary titulos text-center"><strong>Búsqueda avanzada</strong></h3>
+										  				<br>
+													  	<div class="form-group row">
+																<label for="example-text-input" class="col-xs-2 col-form-label text-right">Titulo</label>
+																<div class="col-xs-10">
+															 		<div class="input-group">
+																		<input class="form-control" type="text" placeholder="Titulo memoria" id="q_titulo">
+																		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-bookmark icon-color"></i></span>
+															  		</div>
+																</div>
+															</div>
+															<div class="form-group row">
+																<label for="example-search-input" class="col-xs-2 col-form-label text-right">Autor</label>
+																<div class="col-xs-10">
+																  <div class="input-group">
+																	<input class="form-control" type="text" placeholder="Autor(es) memoria, separados por coma" id="q_autor">
+																	<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
+																  </div>
+																</div>
+														  </div>
+															<div class="form-group row">
+																<label for="example-email-input" class="col-xs-2 col-form-label text-right">Profesor</label>
+																<div class="col-xs-10">
+																  <div class="input-group">
+																		<input class="form-control" type="text" placeholder="Profesor(es) memoria, separados por coma" id="q_profesor">
+																		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
+																	</div>
+																</div>
+														  </div>
+															<div class="form-group row">
+																<label for="example-url-input" class="col-xs-2 col-form-label text-right">Año</label>
+																<div class="col-xs-10">
+																  <div class="input-group">
+																	<input class="form-control" type="number" <?php print ('value="'.date("Y").'"'); ?> id="q_ano">
+																	<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
+																  </div>
+																</div>
+														  </div>
+													  	<div class="form-group row">
+																<label for="example-tel-input" class="col-xs-2 col-form-label text-right">Abstract</label>
+																<div class="col-xs-10">
+															  		<div class="input-group">
+																		<input class="form-control" type="text" placeholder="Resumen memoria" id="q_abstract">
+																		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-book icon-color"></i></span>
+															  		</div>
+																</div>
+													  	</div>
+													  	<div class="form-group row">
+																<div class="col-xs-6 col-xs-offset-6">
+															  		<button type="submit" class="btn btn-color text-color" onclick="enviarFormulario()">
+															  			<i class="glyphicon glyphicon-search icon-color icon-margin"></i>
+																		Consultar
+															  		</button>
+																</div>
+													  	</div><!-- form-group row -->
+													</div><!-- col-sm-8-->
+													<div class="col-sm-4">
+														<br><br><br>
+														<img class="img-rounded img-responsive" src="image/find-advanced.png" alt="busqueda-avanzada">
+														<br><br><br>
+													</div><!-- col-sm-4-->
 								  			</div><!-- row -->
 										</div><!-- panel-body -->
 									</div><!-- panel-collapse -->
 								</div><!-- panel-default -->
 				  			</div><!-- panel-group (Acordión) -->
-						</div><!-- panel-body -->
+							</div><!-- panel-body -->
 			  		</div><!-- panel-default -->
 				</div> <!-- col-sm-9 -->
 
 				<div class="col-sm-3">
-					<!-- Blog Categories Well -->
-					<div class="row">
-						<div class="col-lg-12">
-						 	<div class="well">
-								<h4>Categorías</h4>
-								<ul class="list-unstyled">
-									<li><a onclick="enviarFormulario('Ing Software')">Ingeniería de Software</a></li>
-									<li><a onclick="enviarFormulario('Inteligencia Artificial    ')">Inteligencia Artificial</a></li>
-									<li><a onclick="enviarFormulario('Base de datos')">Base de datos</a></li>
-									<li><a onclick="enviarFormulario('Redes')" >Redes</a></li>
-								</ul>
-						 	</div>
-						</div>
-					</div><!-- Blog Categories Well -->
-
 					<div class="row">
 						<div class="col-md-12">
 							<!-- Side Widget Well -->

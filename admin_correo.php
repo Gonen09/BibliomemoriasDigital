@@ -19,10 +19,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 		<?php
-			include_once('php/conectar.php');
+
 			require('php/general.php');
 			require('php/acerca_modal.php');
-			require('php/contacto/contacto_lista.php');
 
 			session_start();
 
@@ -33,7 +32,7 @@
 		?>
 	</head>
 
-	<body>
+	<body onload="listar_correo(0)">
 
 		<?php
 			encabezado();
@@ -65,33 +64,10 @@
 									<legend class="titulos"><b>Bandeja de entrada</b></legend>
 								</div>
 								<!-- Bandeja de Entrada -->
-								<div class="panel-body">
-									<table class="table table-hover display" cellpadding="0" cellspacing="0"  width="100%">
-										<tbody id="correo-lista">
-											<?php correo_cargar($conn); ?>
-										</tbody>
-									</table>
-
-									<!-- Paginación de los correos -->
-									<nav class="text-center" aria-label="Page navigation">
-									  	<ul class="pagination">
-											<li class="disabled">
-										  		<a href="#" aria-label="Previous">
-													<span aria-hidden="true">&laquo;</span>
-										  		</a>
-											</li>
-											<li class="active"><a href="#">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li class="disabled">
-											  	<a href="#" aria-label="Next">
-													<span aria-hidden="true">&raquo;</span>
-											  	</a>
-											</li>
-									  	</ul>
-									</nav><!-- Paginación de los correos -->
-								</div><!-- panel-body -->
-							</div><!-- content-box-large -->
+								<div class="panel-body" id="panel-correo-lista">
+										<!-- Sistema de correo -->
+								</div>
+							</div>
 						</div><!-- col-lg-5 -->
 
 						<div class="col-lg-7">
@@ -117,6 +93,7 @@
 		<!-- Bootstrap Core JavaScript -->
 		<script src="js/bootstrap/bootstrap.min.js"></script>
 		<!-- Correo -->
+		<script src="js/correo/correo_lista.js"></script>
 		<script src="js/correo/correo_leer.js"></script>
 		<script src="js/correo/correo_borrar.js"></script>
 		<!-- Tooltip -->

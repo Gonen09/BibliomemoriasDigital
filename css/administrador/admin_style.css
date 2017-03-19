@@ -132,7 +132,7 @@
 }
 
 .sidebar .nav a:hover .caret {
-	border-top-color: #aaa;
+	border-top-color: #fff;
 }
 
 .panel-heading>.panel-title, .content-box-header .panel-title {

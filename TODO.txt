@@ -34,20 +34,20 @@
     - Agregar componentes [Listo]
     - Alinear botones y texto [Listo]
     - Evitar cierre modal sin boton [Listo]
-    - Motor login
-      - Crear base datos
-      - Poblar base de datos
+    - Motor login [Listo]
+      - Crear base datos [Listo]
+      - Poblar base de datos [Listo]
         - Crear tablas [Listo]
         - Crear usuario [Listo]
-      - Archivos de conexion
-      - Integracion
-        - Validar datos login
+      - Archivos de conexion [Listo]
+      - Integracion [Listo]
+        - Validar datos login [Listo]
         - Direccionar pagina [Listo]
-        - Error login
+        - Error login [Listo][Listo]
         - Iniciar sesion [Listo]
-        - Seguridad login con MD5
-        - Cerrar session
-        - Sesiones php
+        - Seguridad login con MD5 [Listo]
+        - Cerrar session [Listo]
+        - Sesiones php [Listo]
   - Formulario de contacto [Listo]
     - Banner contacto [Listo]
     - Estructura contacto [Listo]
@@ -59,26 +59,26 @@
     - Estructura info inicial [Listo]
       - Agregar info [Listo]
       - Agregar imagen [Listo]
-    - Estructura grafico world-cloud
+    - Estructura grafico world-cloud [Listo]
       - Crear wordl-cloud [Listo]
       - Importar y ordenar dependencias [Listo]
-      - Ajustar tamaño
+      - Ajustar tamaño [Listo]
       - Ajustar valores [Listo]
     - Estructura estadisticas [Listo]
-      - Agregar grafico
+      - Agregar grafico [Listo]
     - Reloj [Listo]
       - Estructura contenedor [Listo]
       - Estructura reloj [Listo]
       - Visual reloj [Listo]
       - Motor reloj [Listo]
       - Fecha [Listo]
-    - Estructura facets
-      - Busqueda
+    - Estructura facets [Listo]
+      - Busqueda [Listo]
         - Contenido [Listo]
-        - Motor busqueda
-      - Categorias
+        - Motor busqueda [Listo]
+      - Categorias [Listo]
         - Contenido [Listo]
-        - Referencias
+        - Referencias [Listo]
       - Sitios de interes [Listo]
         - Contenido [Listo]
         - Referencias [Listo]
@@ -91,17 +91,17 @@
         - Obtener consulta botones de busqueda [Re-Asignado]
         - Enviar datos botones de busqueda [Re-Asignado]
     - facets
-      - Categorias [Listo]
-        - Contenido [Listo]
+      - Categorias lateral [Eliminado]
+        - Contenido
         - Referencias
       - Sitios de interes [Listo]
         - Contenido [Listo]
         - Referencias [Listo]
-    - Estructura panal
+    - Estructura panal [Listo]
       - Estructura panel [Listo]
     - Estructura resultados
       - Estructura panel [Listo]
-      - Estructura tabla
+      - Estructura tabla [Listo]
         - Componentes [Listo]
           - PDF [Listo]
             - Imagen y referencia [Listo]
@@ -136,9 +136,9 @@
         - Ajustar tamaño [Listo]
         - Ajustar componentes [Listo]
         - Insertar en modal reacomodar [Listo]
-    - Crear motor agregar resultados
-    - Hacer paginacion
+    - Crear motor agregar resultados [Listo]
+    - Hacer paginacion [Listo]
       - insertar navegacion [Listo]
       - centrar navegacion [Listo]
-      - ajustar tamaño navegacion
-      - crear moto paginacion
+      - ajustar tamaño navegacion [Listo]
+      - crear motor paginacion [Listo]
