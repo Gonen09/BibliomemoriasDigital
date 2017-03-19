@@ -1,6 +1,6 @@
 function listar_correo(pagina){
 
-  alert("Cargando pagina numero:"+pagina);
+  //alert("Cargando pagina numero:"+pagina);
 
   document.getElementById("panel-correo-lista").innerHTML="";
 
