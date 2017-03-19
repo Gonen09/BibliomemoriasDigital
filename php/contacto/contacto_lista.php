@@ -4,6 +4,8 @@
 
 	//Correos por pagina
 	$TAMANO_PAGINA = 10;
+	//Cantidad de paginas para mostrar por lado
+	$PAGINAS = 4;
 
 	if (!isset($_GET["pagina"]) || $_GET["pagina"] == 0) {
 	    $inicio = 0;
@@ -17,8 +19,8 @@
 	$num_total_registros = correo_contar($conn);
 	$total_paginas = ceil($num_total_registros / $TAMANO_PAGINA);
 
-	print('Correos: '.$num_total_registros.' Paginas: '.$total_paginas.'<br>');
-	print('Inicio: '.$inicio.' Num_pagina: '.$num_pagina.'<br><br>');
+	/*print('Correos: '.$num_total_registros.' Paginas: '.$total_paginas.'<br>');
+	print('Inicio: '.$inicio.' Num_pagina: '.$num_pagina.'<br><br>');*/
 
 	function correo_contar($conexion){
 
@@ -50,7 +52,74 @@
 		');
 	}
 
-	function correo_paginacion($numero_paginas,$pagina_activa){
+	function limite_paginacion($paginas,$pagina_actual,$paginas_ver){
+
+		$primera=1;
+		$inicial=0;
+		$final=0;
+		$inferior=0;
+		$superior=0;
+		$salida = array();
+
+		//calcular Limite inferior :  << --- Pagina activa
+
+		if($pagina_actual != $primera){
+			for ($i=$paginas_ver; $i>0; $i--){
+				if (($pagina_actual-$i) >= $primera){
+						$inicial = $pagina_actual - $i;
+						$i = 0;
+				}else{
+					$superior++;
+				}
+			}
+		}else{
+			$inicial=$primera;
+			$superior=$paginas_ver;
+		}
+
+		// calcular Limite superior:  Pagina activa --- >>
+
+		if($pagina_actual != $paginas){
+			for ($i=$paginas_ver; $i>0; $i--){
+				if (($pagina_actual+$i) <= $paginas){
+						$final = $pagina_actual + $i;
+						$i = 0;
+				}else{
+					$inferior++;
+				}
+			}
+		}else{
+			$final=$paginas;
+			$inferior=$paginas_ver;
+		}
+
+		//Agregar o quitar sobrantes
+
+		if (($inicial-$inferior) >= $primera){
+				$start=$inicial-$inferior;
+		}else{
+				$start=$inicial;
+		}
+
+		if (($final+$superior) <= $paginas){
+				$end=$final+$superior;
+		}else{
+				$end=$final;
+		}
+
+		/*print ('L. Inferior inicial = '.$inicial.' superior = '.$superior.'<br>');
+		print ('L. Superior final = '.$final.' inferior = '.$inferior.'<br>');
+		print ('start = '.$start.' end = '.$end.'<br>');*/
+
+		array_push($salida,$start);
+		array_push($salida,$end);
+
+		//print ('Salida: '.$salida[0].' , '.$salida[1].'<br>');
+
+		return $salida;
+	}
+
+	function correo_paginacion($numero_paginas,$pagina_activa,$paginas_mostrar){
 
 		print ('<nav class="text-center" aria-label="Page navigation">
 							<ul class="pagination" id="paginacion-correo">
@@ -70,54 +139,11 @@
 							</li>
 		');
 
-		// Numeros de pagina
+		// Numeros
 
-		$inicial=0;
-		$final=0;
-		$inferior=0;
-		$superior=0;
+		$limites = limite_paginacion($numero_paginas,$pagina_activa,$paginas_mostrar);
 
-		//calcular Limite inferior :  << --- Pagina activa
-
-		if($pagina_activa != 1){
-			for ($i=4; $i>0; $i--){
-				$resultado = $pagina_activa-$i;
-
-				if ($resultado>=1){
-						$inicial = $pagina_activa - $i;
-						$i = 0;
-				}else{
-					$superior++;
-				}
-			}
-		}else{
-			$inicial=1;
-			$superior=4;
-		}
-
-		// calcular Limite superior:  Pagina activa --- >>
-
-		if($pagina_activa != $numero_paginas){
-			for ($i=4; $i>0; $i--){
-				$resultado = $pagina_activa+$i;
-
-				if ($resultado<=$numero_paginas){
-						$final = $pagina_activa + $i;
-						$i = 0;
-				}else{
-					$inferior++;
-				}
-			}
-		}else{
-			$final=$numero_paginas;
-			$inferior=4;
-		}
-
-		$start=$inicial-$inferior;
-		$end=$final+$superior;
-
-
-		for ($i=$start; $i <= $end; $i++){
+		for ($i=$limites[0]; $i <= $limites[1]; $i++){
 			if($i == $pagina_activa){
 					print ('<li class="active"><a nohref">'.$i.'</a></li>');
 			}else{
@@ -140,10 +166,6 @@
 				</ul>
 			</nav>
 		');
-
-		print ('L. Inferior inicial = '.$inicial.' superior = '.$superior.'<br>');
-		print ('L. Superior final = '.$final.' inferior = '.$inferior.'<br>');
-		print ('start = '.$start.' end = '.$end.'<br>');
 	}
 
 	function correo_cargar($conexion,$inicio,$fin){
@@ -170,6 +192,6 @@
 		print ('<p><b><br>Sin correos<br></b><p>');
 	}else{
 		correo_cargar($conn,$inicio,$TAMANO_PAGINA);
-		correo_paginacion($total_paginas,$num_pagina);
+		correo_paginacion($total_paginas,$num_pagina,$PAGINAS);
 	}
 ?>

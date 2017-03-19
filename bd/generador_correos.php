@@ -1,6 +1,6 @@
 <?php
 
-$correos = 353;
+$correos = 327;
 
 $fp = fopen("correos_paginacion_prueba.sql", "w");
 
