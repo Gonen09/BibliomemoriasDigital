@@ -33,15 +33,17 @@
 	function correo_lista($id,$nombre,$motivo,$fecha,$leido){
 
 		if($leido == 0){
-			print ('				<tr class="correo-cerrado">
-												<td class="mailbox-name"><b><a nohref onclick="leer_correo('.$id.')">'.$nombre.'</a></b></td>
-												<td class="mailbox-subject"><b><a nohref onclick="leer_correo('.$id.')">'.$motivo.'</a></b></td>
+			print ('
+				<tr class="correo-cerrado">
+					<td class="mailbox-name"><b><a nohref onclick="leer_correo('.$id.')">'.$nombre.'</a></b></td>
+					<td class="mailbox-subject"><b><a nohref onclick="leer_correo('.$id.')">'.$motivo.'</a></b></td>
 			');
 
 		}else{
-			print ('				<tr class="correo-abierto">
-												<td class="mailbox-name"><a nohref onclick="leer_correo('.$id.')">'.$nombre.'</a></td>
-												<td class="mailbox-subject"><a nohref onclick="leer_correo('.$id.')">'.$motivo.'</a></td>
+			print ('
+				<tr class="correo-abierto">
+					<td class="mailbox-name"><a nohref onclick="leer_correo('.$id.')">'.$nombre.'</a></td>
+					<td class="mailbox-subject"><a nohref onclick="leer_correo('.$id.')">'.$motivo.'</a></td>
 			');
 		}
 
@@ -51,6 +53,7 @@
 				</tr>
 		');
 	}
+
 
 	function limite_paginacion($paginas,$pagina_actual,$paginas_ver){
 

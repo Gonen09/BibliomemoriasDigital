@@ -1,9 +1,9 @@
 function borrar_correo(id_correo){
 
-    //alert("Eliminando correo numero:"+id_correo);
-    confirmar = confirm("¿ Está seguro de eliminar el correo ?");
+	//alert("Eliminando correo numero:"+id_correo);
+	confirmar = confirm("¿ Está seguro de eliminar el correo ?");
 
-    if (confirmar){
+	if (confirmar){
 
       var xhttp = new XMLHttpRequest();
 

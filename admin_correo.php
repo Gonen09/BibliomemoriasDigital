@@ -16,6 +16,7 @@
 		<!-- Estilo vista admin -->
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
 		<link href="css/administrador/correo.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 		<?php
 
@@ -28,14 +29,13 @@
 				echo("<script>alert('Necesita iniciar sesion como administrador para acceder a este sitio.');</script>");
 				echo("<script>window.location='index.php';</script>");
 			}
- 		?>
-
+		?>
 	</head>
 
 	<body onload="listar_correo(0)">
 
 		<?php
-      encabezado();
+			encabezado();
 			navegacion(3);
 			modal_uni();
 			modal_docente();
@@ -47,13 +47,13 @@
 				<div class="col-md-2">
 					<div class="sidebar content-box">
 							<!-- Menú principal -->
-	            <ul class="nav">
-	                <li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
-	                <li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
-	                <li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Gestión memorias</a></li>
-	                <li class="current"><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
-	            </ul>
-	        </div>
+						<ul class="nav">
+							<li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
+							<li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
+							<li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Gestión memorias</a></li>
+							<li class="current"><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
+						</ul>
+					</div>
 				</div> <!-- col-md-2 -->
 
 				<div class="col-md-10">
@@ -85,13 +85,13 @@
 		</div>
 
 		<?php
-      piePagina();
-    ?>
+		  	piePagina();
+		?>
 
 		<!-- jQuery -->
-    <script src="js/bootstrap/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+		<script src="js/bootstrap/jquery.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
 		<!-- Correo -->
 		<script src="js/correo/correo_lista.js"></script>
 		<script src="js/correo/correo_leer.js"></script>
