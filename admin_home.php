@@ -95,35 +95,41 @@
 											<br>
 							  			<?php
 
-												$versión_solr = solr_get_version();
-												echo "Versión plugin php : ";
-												print $versión_solr;
-												print "<br>";
+												if (!function_exists('solr_get_version')){
 
-												$options = array
-												(
-													'hostname' => 'localhost',
-													'login'    => 'admin',
-													'password' => '',
-													'port'     => 8983,
-													'path'     => 'solr/tesis',
-												);
+													print ('<br><strong>Cliente SOLR no encontrado, por favor instale SOLR o inicie el servicio SOLR
+													con su correspondiente nombre de repositorio (CORE).</strong><br>');
 
-												$client = new SolrClient($options);
-												$query_response = $client->system();
-												$response = $query_response->getResponse();
+												}else{
 
-												/*print_r($response);
-												print_r ($response->lucene);
+													$version_solr = solr_get_version();
+													print ('Versión plugin php: '.$version_solr.'<br>');
 
-												foreach ($response->lucene as $a => $b){
-													echo $a."|".$b."<br>";
-												}*/
+													$options = array
+													(
+														'hostname' => 'localhost',
+														'login'    => 'admin',
+														'password' => '',
+														'port'     => 8983,
+														'path'     => 'solr/tesis',
+													);
 
-												echo "solr-spec-version ".$response->lucene["solr-spec-version"]."<br>";
-												echo "solr-impl-version ".$response->lucene["solr-impl-version"]."<br>";
-												echo "lucene-spec-version ".$response->lucene["lucene-spec-version"]."<br>";
-												echo "lucene-impl-version ".$response->lucene["lucene-impl-version"]."<br>";
+													$client = new SolrClient($options);
+													$query_response = $client->system();
+													$response = $query_response->getResponse();
+
+													/*print_r($response);
+													print_r ($response->lucene);
+
+													foreach ($response->lucene as $a => $b){
+														echo $a."|".$b."<br>";
+													}*/
+
+													echo "solr-spec-version ".$response->lucene["solr-spec-version"]."<br>";
+													echo "solr-impl-version ".$response->lucene["solr-impl-version"]."<br>";
+													echo "lucene-spec-version ".$response->lucene["lucene-spec-version"]."<br>";
+													echo "lucene-impl-version ".$response->lucene["lucene-impl-version"]."<br>";
+												}
 											?>
 										</div>
 				  				</div> <!-- col-md-12 -->
