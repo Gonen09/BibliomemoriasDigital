@@ -90,7 +90,7 @@
 										<div class="panel-title"><h4 class="text-center">Información servidor Solr</h4></div>
 									</div>
 									<div class="content-box-large box-with-header">
-											<img class="img-responsive" src="image/Solr_Logo.png" alt="Solr" id="img-solr">
+											<img class="img-responsive" src="image/admin/Solr_Logo.png" alt="Solr" id="img-solr">
 											<br>
 
 											<?php

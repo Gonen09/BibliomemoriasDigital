@@ -1,5 +1,3 @@
-﻿// Ventana Modal cargando
-//import('modal_cargando.js');
 
 function enviarFormulario(){
 	id = document.getElementById('idMemoria').value;
