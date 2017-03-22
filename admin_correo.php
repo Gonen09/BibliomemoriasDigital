@@ -43,45 +43,47 @@
 		?>
 
 		<div class="page-content">
-			<div class="row">
-				<div class="col-md-2">
-					<div class="sidebar content-box">
-							<!-- Menú principal -->
-						<ul class="nav">
-							<li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
-							<li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
-							<li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Gestión memorias</a></li>
-							<li class="current"><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
-						</ul>
-					</div>
-				</div> <!-- col-md-2 -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="sidebar content-box">
+								<!-- Menú principal -->
+							<ul class="nav">
+								<li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
+								<li><a href="admin_agregar.php"><i class="glyphicon glyphicon-upload"></i> Agregar memorias </a></li>
+								<li><a href="admin_borrar.php"><i class="glyphicon glyphicon-list-alt"></i> Gestión memorias</a></li>
+								<li class="current"><a href="admin_correo.php"><i class="glyphicon glyphicon-envelope"></i> Correo</a></li>
+							</ul>
+						</div>
+					</div> <!-- col-md-2 -->
 
-				<div class="col-md-10">
-					<div class="row">
-						<div class="col-lg-5">
-							<div class="content-box-large">
-								<div class="panel-heading">
-									<legend class="titulos"><b>Bandeja de entrada</b></legend>
+					<div class="col-md-10">
+						<div class="row">
+							<div class="col-lg-5">
+								<div class="content-box-large">
+									<div class="panel-heading">
+										<legend class="titulos"><b>Bandeja de entrada</b></legend>
+									</div>
+									<!-- Bandeja de Entrada -->
+									<div class="panel-body" id="panel-correo-lista">
+											<!-- Sistema de correo -->
+									</div>
 								</div>
-								<!-- Bandeja de Entrada -->
-								<div class="panel-body" id="panel-correo-lista">
-										<!-- Sistema de correo -->
-								</div>
-							</div>
-						</div><!-- col-lg-5 -->
+							</div><!-- col-lg-5 -->
 
-						<div class="col-lg-7">
-							<div class="box box-primary" id="correo-contenido">
-								<!-- Contenido del mensaje -->
-								<div class="mailbox-read-message">
-									<legend class="titulos"><b>Correo</b></legend>
-									<br><p> Seleccione un correo de la lista de correos</p><br>
-								</div>
-							</div><!-- /. box -->
-						</div><!-- col-lg-7 -->
-				  </div><!-- /.row -->
-				</div> <!--col-md-10-->
-			</div> <!-- row -->
+							<div class="col-lg-7">
+								<div class="box box-primary" id="correo-contenido">
+									<!-- Contenido del mensaje -->
+									<div class="mailbox-read-message">
+										<legend class="titulos"><b>Correo</b></legend>
+										<br><p> Seleccione un correo de la lista de correos</p><br>
+									</div>
+								</div><!-- /. box -->
+							</div><!-- col-lg-7 -->
+					  </div><!-- /.row -->
+					</div> <!--col-md-10-->
+				</div> <!-- row -->
+			</div>
 		</div>
 
 		<?php
