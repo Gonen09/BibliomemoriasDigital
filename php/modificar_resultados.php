@@ -34,21 +34,21 @@
 			$campo_filtro = "ano";
 			$filtro_query = $_POST["ano"];
 			$query->addFilterQuery($campo_filtro.":".$filtro_query);
-		}	
+		}
 	}
 	if (isset($_POST["clasificacion"])){
 		if ($_POST["clasificacion"] != ""){
 			$campo_filtro = "clasificacion";
 			$filtro_query = $_POST["clasificacion"];
 			$query->addFilterQuery($campo_filtro.":".$filtro_query);
-		}	
+		}
 	}
 	if (isset($_POST["profesor"])){
 		if ($_POST["profesor"] != ""){
 			$campo_filtro = "profesor";
 			$filtro_query = $_POST["profesor"];
 			$query->addFilterQuery($campo_filtro.":".$filtro_query);
-		}	
+		}
 	}
 
 	$query->setStart($documento_inicial);
@@ -84,13 +84,13 @@
 								<div id="<?php print $documento_actual['id_tesis'];?>" name="publicacion" class="row">
 									<tr>
 										<td class="col-sm-1">
-											<img src="image/pdf.png" alt="pdf" class="img-responsive">
+											<img src="image/busqueda/pdf.png" alt="pdf" class="img-responsive">
 											<input type="hidden" id="<?php print $documento_actual['id_tesis'];?>_score" value="<?php print $documento_actual['score'];?>">
 											<br>
 											<p class="text-center"><a href="pdf/<?php print $documento_actual['id_tesis'];?>.pdf" id="archivo">Ver</a></p>
 										</td>
 										<td class="col-sm-1">
-											<img src="image/chart.png" alt="grafico" class="img-responsive">
+											<img src="image/busqueda/chart.png" alt="grafico" class="img-responsive">
 											<br>
 											<?php
 												$texto_valores_areas = $documento_actual['valores_clasificacion'];
@@ -122,14 +122,14 @@
 													}
 												}
 											?>
-											<p data-toggle="modal" data-target="#modal-grafico" class="text-center"   onclick="datosGraficos (<?php echo $IA; ?>,<?php echo $BDD; ?>,<?php echo $REDES; ?>,<?php echo $SW; ?>)" ><a href="#" id="archivo">Ver</a></p> 
+											<p data-toggle="modal" data-target="#modal-grafico" class="text-center"   onclick="datosGraficos (<?php echo $IA; ?>,<?php echo $BDD; ?>,<?php echo $REDES; ?>,<?php echo $SW; ?>)" ><a href="#" id="archivo">Ver</a></p>
 										</td>
 										<td class="col-sm-1">
 											<hr>
 										</td>
 										<td class="col-sm-9">
 											<?php
-												//titulo 
+												//titulo
 												print  '<h4><strong>Titulo: </strong><i id="titulo">'.$documento_actual['titulo_tesis'].'</i></h4>';
 												//Alumnos
 												$alumnos = $documento_actual['alumno'];
@@ -141,7 +141,7 @@
 												for($ii = 0, $size = count($profesores); $ii < $size; ++$ii) {
 													print '<h4><strong>Profesor: </strong><i id="profesor">'.$profesores[$ii].'</i></h4>';
 												}
-												//año
+												//aï¿½o
 												print '<h4><strong>A&ntildeo: </strong><i id="ano">'.$documento_actual['ano'].'</i></h4>';
 												//Id tesis
 												print '<h4><strong>Id memoria: </strong><i id="id_tesis">'.$documento_actual['id_tesis'].'</i></h4>';
@@ -174,7 +174,7 @@
 								?>
 								<li>
 									<a  aria-label="Previous">
-										<span aria-hidden="true" onclick="<?php 
+										<span aria-hidden="true" onclick="<?php
 											if ($filtro_query == "")
 												echo "cambiarPagina(".($pag_elegida-1).")";
 											else
@@ -223,6 +223,3 @@
 		</div>
 	</div>
 </div> <!-- End resultados -->
-
-
-
