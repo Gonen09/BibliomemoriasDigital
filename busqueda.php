@@ -102,7 +102,7 @@
 												</div><!-- input-group-->
 							  				</div><!-- col-md-8-->
 							  				<div class="col-sm-4" align="center">
-												<img class="img-rounded" src="image/find-simple.png" alt="busqueda-simple"  id="busqueda-simple">
+												<img class="img-rounded" src="image/busqueda/find-simple.png" alt="busqueda-simple"  id="busqueda-simple">
 							  				</div><!-- col-md-4-->
 										</div><!-- row -->
 									</form><!-- form -->
@@ -178,7 +178,7 @@
 													</div><!-- col-sm-8-->
 													<div class="col-sm-4">
 														<br><br><br>
-														<img class="img-rounded img-responsive" src="image/find-advanced.png" alt="busqueda-avanzada">
+														<img class="img-rounded img-responsive" src="image/busqueda/find-advanced.png" alt="busqueda-avanzada">
 														<br><br><br>
 													</div><!-- col-sm-4-->
 								  			</div><!-- row -->
