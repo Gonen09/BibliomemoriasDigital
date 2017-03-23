@@ -17,7 +17,8 @@
 		<link href="css/administrador/admin_style.css" rel="stylesheet">
 		<!-- Modal cargando -->
 		<link href="css/cargando.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<!-- Fuente -->
+   	<link href="css/SourceSansPro.css" rel="stylesheet">
 
 		<?php
 			require('php/general.php');

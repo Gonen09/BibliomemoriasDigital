@@ -18,7 +18,7 @@
     <!-- Reloj -->
     <link href="css/reloj.css" rel="stylesheet">
     <!-- Fuente -->
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="css/SourceSansPro.css" rel="stylesheet">
 
     <?php
       require('php/general.php');

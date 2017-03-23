@@ -10,17 +10,17 @@
 
 		<title>Búsqueda de BiblioMemorias Digital ULS</title>
 
-	    <!-- Bootstrap Core CSS -->
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Estilo pagina CSS -->
-	    <link href="css/general.css" rel="stylesheet">
-	    <link href="css/busqueda.css" rel="stylesheet">
-	    <!-- Reloj -->
-	    <link href="css/reloj.css" rel="stylesheet">
-	    <!-- Panal -->
-	    <link href="css/panal.css" rel="stylesheet">
-	    <!-- Fuente -->
-	    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/busqueda.css" rel="stylesheet">
+    <!-- Reloj -->
+    <link href="css/reloj.css" rel="stylesheet">
+    <!-- Panal -->
+    <link href="css/panal.css" rel="stylesheet">
+    <!-- Fuente -->
+   	<link href="css/SourceSansPro.css" rel="stylesheet">
 
 		<?php
 			require('php/general.php');
