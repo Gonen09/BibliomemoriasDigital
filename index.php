@@ -92,18 +92,6 @@
                   <div class="col-sm-6">
                     <div class="panel panel-default">
                       <div class="panel-heading" id="cabezera-panel">
-                        <h4 class="text-center">BiblioMemorias Digital WorldCloud</h4>
-                      </div>
-                      <div class="panel-body">
-                          <div id="cloud">
-
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="panel panel-default">
-                      <div class="panel-heading" id="cabezera-panel">
                         <h4 class="text-center">Electivo III : Recuperación de la Información</h4>
                       </div>
                       <div class="panel-body text-justify">
@@ -119,6 +107,18 @@
                           <strong>metodologías existentes</strong>. Se llevan a cabo diversas actividades  y proyectos que se derivan de los
                           contenidos.
                         </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading" id="cabezera-panel">
+                        <h4 class="text-center">BiblioMemorias Digital WorldCloud</h4>
+                      </div>
+                      <div class="panel-body">
+                          <div id="cloud">
+
+                          </div>
                       </div>
                     </div>
                   </div>
