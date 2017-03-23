@@ -67,90 +67,96 @@
 														<legend class="titulos"><b>Subir memorias</b></legend>
 											</div><!-- panel-heading -->
 											<div class="panel-body">
-
-												<!--	<form id="formulario" class="form-horizontal" role="form" method="post" action="php/agregar_documento.php" enctype="multipart/form-data">  -->
-												<form id="formulario" class="form-horizontal" role="form" method="post" enctype="multipart/form-data" onsubmit="enviarFormulario();return false; ">
-
-													<div class="form-group row">
-														<label for="idMemoria" class="col-xs-2 col-form-label text-right">ID Memoria</label>
-														<div class="col-xs-10">
-															<div class="input-group">
-																<input class="form-control" id="idMemoria" name="id_tesis" type="text" required>
-																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-barcode icon-color"></i></span>
+														<!--	<form id="formulario" class="form-horizontal" role="form" method="post" action="php/agregar_documento.php" enctype="multipart/form-data">  -->
+														<form id="formulario" class="form-horizontal" role="form" method="post" enctype="multipart/form-data" onsubmit="enviarFormulario();return false; ">
+															<div class="form-group">
+																<label for="idMemoria" class="col-sm-1 col-form-label text-right">ID Memoria</label>
+																<div class="col-sm-10">
+																	<div class="input-group">
+																		<input class="form-control" id="idMemoria" name="id_tesis" type="text" required>
+																		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-barcode icon-color"></i></span>
+																	</div>
+																	<p class="note"><i><small>Formato ID: cXX_año -> cxx = id memoria</small></i></p>
+																</div>
+																<div class="col-md-offset-1"></div>
 															</div>
-															<p class="note"><i><small>Formato ID: cXX_año -> cxx = id memoria</small></i></p>
-														</div>
-													</div>
-													<div class="form-group">
-														<label for="titulo" class="col-sm-2 control-label">Título</label>
-														<div class="col-sm-10">
-															<div class="input-group">
-																<input class="form-control" id="titulo" name="titulo_tesis" required>
-																	<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-bookmark icon-color"></i></span>
+															<div class="form-group">
+																<label for="titulo" class="col-sm-1 control-label">Título</label>
+																<div class="col-sm-10">
+																	<div class="input-group">
+																		<input class="form-control" id="titulo" name="titulo_tesis" required>
+																			<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-bookmark icon-color"></i></span>
+																	</div>
+																</div>
+																<div class="col-md-offset-1"></div>
 															</div>
-														</div>
-													</div>
-													<div class="form-group">
-														<label for="autorMemoria" class="col-sm-2 control-label">Autor(es)</label>
-														<div class="col-sm-10">
-															<div class="input-group">
-																<input class="form-control" id="autorMemoria" name="tesistas" required>
-																	<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
+															<div class="form-group">
+																<label for="autorMemoria" class="col-sm-1 control-label">Autor(es)</label>
+																<div class="col-sm-10">
+																	<div class="input-group">
+																		<input class="form-control" id="autorMemoria" name="tesistas" required>
+																			<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
+																	</div>
+																	<p class="note"><i><small>Si es más de un autor, separados por coma (,)</small></i></p>
+																</div>
+																<div class="col-md-offset-1"></div>
 															</div>
-															<p class="note"><i><small>Si es más de un autor, separados por coma (,)</small></i></p>
-														</div>
-													</div>
-													<div class="form-group">
-														<label for="profesorGuia" class="col-sm-2 control-label">Profesor(es)</label>
-														<div class="col-sm-10">
-															<div class="input-group">
-																<input class="form-control" id="profesorGuia" name="profesores"  required>
-																	<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
+															<div class="form-group">
+																<label for="profesorGuia" class="col-sm-1 control-label">Profesor(es)</label>
+																<div class="col-sm-10">
+																	<div class="input-group">
+																		<input class="form-control" id="profesorGuia" name="profesores"  required>
+																			<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
+																	</div>
+																	<p class="note"><i><small>Si es más de un profesor, separados por coma (,)</small></i></p>
+																</div>
+																<div class="col-md-offset-1"></div>
 															</div>
-															<p class="note"><i><small>Si es más de un profesor, separados por coma (,)</small></i></p>
-														</div>
-													</div>
-													<div class="form-group">
-														<label for="anio" class="col-sm-2 control-label">Año</label>
-														<div class="col-sm-3">
-															<div class="input-group">
-																<input class="form-control" id="anio" type="number" name="ano" value=<?php echo date("Y");?>>
-																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
+															<div class="form-group">
+																<label for="anio" class="col-sm-1 control-label">Año</label>
+																<div class="col-sm-3">
+																	<div class="input-group">
+																		<input class="form-control" id="anio" type="number" name="ano" value=<?php echo date("Y");?>>
+																		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
+																	</div>
+																</div>
+																<div class="col-md-offset-8"></div>
 															</div>
-														</div>
-													</div>
-													<div class="form-group">
-														<label class="col-sm-2 control-label">Abstract</label>
-														<div class="col-sm-10">
-															<textarea class="form-control" placeholder="Ingrese el abstract de la memoria" rows="8" name="abstract"></textarea>
-														</div>
-													</div>
-
-													<div class="form-group">
-														<label class="col-md-2 control-label">Archivo</label>
-														<div class="col-md-10">
-															<div class="input-group">
-																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-open-file icon-color"></i></span>
-																<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis" accept=".pdf" required>
+															<div class="form-group">
+																<label class="col-sm-1 control-label">Abstract</label>
+																<div class="col-sm-10">
+																	<textarea class="form-control" placeholder="Ingrese el abstract de la memoria" rows="8" name="abstract"></textarea>
+																</div>
+																<div class="col-md-offset-1"></div>
 															</div>
-														</div>
-													</div>
-													<div class="form-group">
-														<label class="col-md-6 control-label"></label>
-														<div class="col-md-6">
-															<button class="btn btn-color text-color" type="submit">
-																<i class="glyphicon glyphicon-send icon-color icon-margin"></i>
-																Enviar
-															</button>
-														</div>
-													</div>
-
-												</form><!--form-->
+															<div class="form-group">
+																<label class="col-md-1 control-label">Archivo</label>
+																<div class="col-md-3">
+																	<div class="input-group">
+																		<input type="file" class="btn btn-default" id="exampleInputFile1" name="archivo_tesis" accept=".pdf" required>
+															      <span class="input-group-addon btn-color"><i class="glyphicon glyphicon-open-file icon-color"></i></span>
+																	</div>
+																</div>
+																<div class="col-md-offset-8"></div>
+															</div>
+															<div class="form-group">
+																<label class="col-md-6 control-label"></label>
+																<div class="col-md-6">
+																	<button class="btn-lg btn-color text-color" type="submit">
+																		<i class="glyphicon glyphicon-send icon-color icon-margin"></i>
+																		Enviar
+																	</button>
+																</div>
+															</div>
+														</form><!--form-->
 											</div><!--panel-body-->
 										</div><!-- content-box-large -->
 									</div><!-- col-md-12 -->
 							</div><!-- row -->
 					</div><!-- col-md-10 -->
+
+
+					</div>
 				</div><!-- row -->
 			</div>
 		</div>
