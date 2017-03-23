@@ -46,12 +46,10 @@
     <!-- Page Content -->
     <div class="container-fluid">
         <div class="row content" id="canvas">
-            <div class="container-fluid">
-              <h1 class="page-header text-primary titulos">
-                  Recuperación de la Información
-                  <small> Electivo III</small>
-              </h1>
-            </div>
+            <h1 class="page-header titulos titulo-principal">
+                Recuperación de la Información
+                <small> Electivo III</small>
+            </h1>
             <div class="col-sm-9">
                 <div class="row" id="inicio">
                   <div class="col-sm-12">
