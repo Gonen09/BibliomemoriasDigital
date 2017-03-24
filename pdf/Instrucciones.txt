@@ -1,0 +1,2 @@
+Pegar las memorias de título en esta carpeta.
+Se debe importar el core tesis (repositorio) de SOLR para realizar las búsquedas.
