@@ -105,7 +105,7 @@
 													}else{
 
 														$version_solr = solr_get_version();
-														print ('Versión plugin php: '.$version_solr.'<br>');
+														print ('<strong>Versión plugin php: </strong>'.$version_solr.'<br><br>');
 
 														$options = array
 														(
@@ -127,10 +127,10 @@
 															echo $a."|".$b."<br>";
 														}*/
 
-														echo "solr-spec-version ".$response->lucene["solr-spec-version"]."<br>";
-														echo "solr-impl-version ".$response->lucene["solr-impl-version"]."<br>";
-														echo "lucene-spec-version ".$response->lucene["lucene-spec-version"]."<br>";
-														echo "lucene-impl-version ".$response->lucene["lucene-impl-version"]."<br>";
+														echo "<strong>solr-spec-version: </strong>".$response->lucene["solr-spec-version"]."<br>";
+														echo "<strong>solr-impl-version: </strong>".$response->lucene["solr-impl-version"]."<br><br>";
+														echo "<strong>lucene-spec-version: </strong>".$response->lucene["lucene-spec-version"]."<br>";
+														echo "<strong>lucene-impl-version: </strong>".$response->lucene["lucene-impl-version"]."<br>";
 													}
 												?>
 											</div>
