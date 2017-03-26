@@ -225,7 +225,7 @@
 	  	<script src="js/D3/d3.v3.min.js"></script>
 	  	<script src="js/grafico-arana/RadarChart.js"></script>
 	    <!--Funciones de la pagina -->
-		<script src="js/busqueda/interpretando_ajax.js"></script>
-		<script src="js/busqueda/funciones_busqueda.js"></script>
+		<script src="js/interpretando_ajax.js"></script>
+		<script src="js/funciones_busqueda.js"></script>
 	</body>
 </html>
