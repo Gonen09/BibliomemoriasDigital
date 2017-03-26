@@ -169,7 +169,7 @@
 													</div>
 													<div class="form-group row">
 														<div class="col-xs-6 col-xs-offset-6">
-																<button id="btn-consultar" type="submit" class="btn" onclick="enviarFormulario()">
+																<button id="btn-consultar" type="submit" class="btn btn-color text-color" onclick="enviarFormulario()" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
 																	<i class="glyphicon glyphicon-search icon-color icon-margin"></i>
 																Consultar
 																</button>
