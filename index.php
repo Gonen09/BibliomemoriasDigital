@@ -193,11 +193,8 @@
     <script src="js/bootstrap/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- Login -->
-    <script src="js/iniciar_sesion.js"></script>
     <!-- Tooltip -->
     <script src="js/tooltip.js"></script>
-    <script src="js/fireworks.js"></script>
     <!-- Reloj -->
     <script src="js/reloj.js"></script>
     <!-- Graficos -->
