@@ -15,8 +15,6 @@
 		<!-- Estilo pagina CSS -->
     <link href="css/general.css" rel="stylesheet">
     <link href="css/busqueda.css" rel="stylesheet">
-    <!-- Reloj -->
-    <link href="css/reloj.css" rel="stylesheet">
     <!-- Panal -->
     <link href="css/panal.css" rel="stylesheet">
     <!-- Fuente -->
@@ -171,7 +169,7 @@
 													</div>
 													<div class="form-group row">
 														<div class="col-xs-6 col-xs-offset-6">
-																<button type="submit" class="btn btn-color text-color" onclick="enviarFormulario()">
+																<button id="btn-consultar" type="submit" class="btn" onclick="enviarFormulario()">
 																	<i class="glyphicon glyphicon-search icon-color icon-margin"></i>
 																Consultar
 																</button>
@@ -227,7 +225,7 @@
 	  	<script src="js/D3/d3.v3.min.js"></script>
 	  	<script src="js/grafico-arana/RadarChart.js"></script>
 	    <!--Funciones de la pagina -->
-		<script src="js/interpretando_ajax.js"></script>
-		<script src="js/funciones_busqueda.js"></script>
+		<script src="js/busqueda/interpretando_ajax.js"></script>
+		<script src="js/busqueda/funciones_busqueda.js"></script>
 	</body>
 </html>
