@@ -12,13 +12,13 @@ Electivo III : Recuperación de la Información, es un curso del Ciclo Superior,
 
 Estas instrucciones le ayudarán a obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y pruebas. Consulte el despliegue para obtener notas sobre cómo implementar el proyecto en un sistema activo.
 
-### Requisitos previos
+## Requisitos previos
 
 - Instalar el paquete servidor web XAMPP
 - Instalar maquina virtual JAVA
 - Instalar el servidor de Solr.
 
-### Instalando
+## Instalando
 
 Para instalar la página copiar todo el contenido del proyecto en la carpeta "htdocs" de XAMPP,
 para la configuracion de SOLR, revisar el archivo "Instrucciones utilización SOLR+PHP"
