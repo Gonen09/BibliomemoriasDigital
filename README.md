@@ -20,10 +20,10 @@ Estas instrucciones le ayudarán a obtener una copia del proyecto en funcionamie
 
 ### Instalando
 
-Para instalar la página copiar todo el contenido del proyecto en la carpeta "htdocs",
+Para instalar la página copiar todo el contenido del proyecto en la carpeta "htdocs" de XAMPP,
 para la configuracion de SOLR, revisar el archivo "Instrucciones utilización SOLR+PHP"
-dentro de la carpeta "solr". Para obtener los datos del administrador y datos de pruebas
-seguir las instrucciones de "crear e importar bd" desde la carpeta "bd".
+dentro de la carpeta "solr". Para obtener los datos del administrador y datos de pruebas para
+la base de datos, seguir las instrucciones de "crear e importar bd" desde la carpeta "bd".
 
 ## Uso
 
@@ -63,9 +63,8 @@ para gestionar las memorias (agrega o eliminar memorias) y la información de co
 * Felipe Robledo 
 * Gonzalo Santander 
 
-Vea también sus [cuentas github] (https://github.com/Gonen09/BibliomemoriasDigital/graphs/contributors) 
-de los que participaron en este proyecto.
+Vea también sus [cuentas github] (https://github.com/Gonen09/BibliomemoriasDigital/graphs/contributors) que participaron en este proyecto.
 
 ## Licencia
 
-Sin especificar.
+Este proyecto está licenciado bajo la Licencia MIT
