@@ -17,28 +17,28 @@ function enviarFormulario(clasificacion){
 		}
 		else{
 			var titulo  = document.getElementById("q_titulo").value;
-			var autor  = document.getElementById("q_autor").value;		
-			var profesor  = document.getElementById("q_profesor").value;	
-			var ano  = document.getElementById("q_ano").value;	
-			var abs  = document.getElementById("q_abstract").value;	
+			var autor  = document.getElementById("q_autor").value;
+			var profesor  = document.getElementById("q_profesor").value;
+			var ano  = document.getElementById("q_ano").value;
+			var abs  = document.getElementById("q_abstract").value;
 			if (
 				(contenido	== '') &&
 				(titulo		== '') &&
 				(autor		== '') &&
 				(profesor	== '') &&
-				(abs		== '') 
+				(abs		== '')
 			){
 				alert('No se ha completado ningún criterio campo de búsqueda');
 				return;
 			}
 			adata = {'busqueda':'inicial','contenido':contenido,'titulo':titulo,'autor':autor,'profesor':profesor,'ano':ano,'abs':abs};
-		}	
+		}
 	}
 	else{
 		adata = {'clasificacion':clasificacion};
 	}
-	
-	
+
+
     $.ajax({
            type: "POST",
            url: url,
@@ -47,10 +47,10 @@ function enviarFormulario(clasificacion){
 			success: function(data)
            {
 				document.getElementById("contenedor_panal_y_resultados").innerHTML = data;
-				var scs=data.extractScript();    //capturamos los scripts 
+				var scs=data.extractScript();    //capturamos los scripts
 				scs.___evalScript();       //interpretación  scripts
            }
-    });	
+    });
 }
 
 
@@ -102,7 +102,7 @@ function modificarResultados(facet,pagina){
             {
 			 	document.getElementById("panel_resultados").innerHTML = data;
 			}
-    });	
+    });
 }
 
 
@@ -139,7 +139,7 @@ function mostrarGrafico (datos){
 	  ExtraWidthX: 300
 	}
 	RadarChart.draw("#chart", datos, mi_configuracion);
-	
+
 	var svg = d3.select('#body-chart')
 		.selectAll('svg')
 		.append('svg')
@@ -192,11 +192,3 @@ function mostrarGrafico (datos){
 		  	.text(function(d) { return d; })
 		;
 }
-
-
-
-
-
-
-
-

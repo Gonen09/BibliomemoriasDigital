@@ -18,7 +18,7 @@
     <!-- Reloj -->
     <link href="css/reloj.css" rel="stylesheet">
     <!-- Fuente -->
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="css/SourceSansPro.css" rel="stylesheet">
 
     <?php
       require('php/general.php');
@@ -46,12 +46,10 @@
     <!-- Page Content -->
     <div class="container-fluid">
         <div class="row content" id="canvas">
-            <div class="container-fluid">
-              <h1 class="page-header text-primary titulos">
-                  Recuperación de la Información
-                  <small> Electivo III</small>
-              </h1>
-            </div>
+            <h1 class="page-header titulos titulo-principal">
+                Recuperación de la Información
+                <small> Electivo III</small>
+            </h1>
             <div class="col-sm-9">
                 <div class="row" id="inicio">
                   <div class="col-sm-12">
@@ -60,28 +58,28 @@
                         <h4 class="text-center">BiblioMemorias Digital Universidad de La Serena</h4>
                       </div>
                       <div class="panel-body">
-                        <div class="container-fluid">
                           <div class="row">
-                            <div class="well col-sm-8">
-                              <h3 class="titulos">El Electivo III <strong class="text-primary" data-toggle="tooltip" data-placement="right" title="vivo!!!">esta vivo !!!</strong></h3>
-                              <br>
-                              <p class="text-justify">
-                                Bienvenido a nuestro repositorio de <strong>Memorias de Titulo</strong> de la carrera <strong>Ingeniería en
-                                Computación e Informática</strong> de la <strong>Universidad de La Serena</strong>.
-                              </p>
-                              <p class="text-justify">
-                                El proposito de este repositorio es administrar de manera eficiente las <strong>memorias de titulo</strong>
-                                de la carrera, subiendo de forma digital las memorias de titulo,
-                                con un <strong>formato definido</strong> por la escuela de ingeniería en computación, para que los estudiantes,
-                                academicos u persona interesada en trabajos en el area de <strong>Redes y telecominicaciones</strong>, <strong>Base de Datos</strong>
-                                <strong>Ingeniería de Software</strong> e <strong>Inteligencia Artificial</strong> puedan obtener información para su uso personal.
-                              </p>
+                            <div class="col-sm-8">
+                              <div class="well">
+                                <h3 class="titulos">El Electivo III <strong class="text-primary" data-toggle="tooltip" data-placement="right" title="vivo!!!">está vivo !!!</strong></h3>
+                                <br>
+                                <p class="text-justify">
+                                  Bienvenido a nuestro repositorio de <strong>Memorias de Título</strong> de la carrera <strong>Ingeniería en
+                                  Computación e Informática</strong> de la <strong>Universidad de La Serena</strong>.
+                                </p>
+                                <p class="text-justify">
+                                  El propósito de este repositorio es administrar de manera eficiente las <strong>memorias de título</strong>
+                                  de la carrera, subiéndolas de forma digital, con un <strong>formato definido</strong> por la <strong>Escuela de Ingeniería en Computación</strong>, 
+								  para que los estudiantes, académicos u persona interesada en trabajos en el área de <strong>Redes y Telecomunicaciones</strong>, 
+								  <strong>Base de Datos</strong><strong>Ingeniería de Software</strong> e <strong>Inteligencia Artificial</strong> puedan obtener 
+								  información para su uso personal.
+                                </p>
+                              </div>
                             </div>
                             <div class="col-sm-4">
                                 <img class="img-responsive img-rounded" src="image/index/biblio.png" alt="biblio-digital">
                             </div>
                           </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -172,12 +170,12 @@
                   <div class="col-md-12">
                     <!-- Side Widget Well -->
                     <div class="well">
-                        <h4>Sitios de interes</h4>
+                        <h4>Sitios de interés</h4>
                         <ul class="list-unstyled">
                             <li><a href="http://www.userena.cl">Universidad de La Serena</a></li>
                             <li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
-                            <li><a href="http://dns.uls.cl/~ej/">Docente asignatura</a><li>
-                            <li><a href="http://www.ingecompuls.cl/">Ingenieria en Computación</a></li>
+							<li><a href="http://dns.uls.cl/~ej/">Página web Docente</a><li>
+							<li><a href="http://www.ingecompuls.cl/">Escuela de Ingeniería en Computación</a></li>
                         </ul>
                     </div>
                   </div>
@@ -195,11 +193,8 @@
     <script src="js/bootstrap/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- Login -->
-    <script src="js/iniciar_sesion.js"></script>
     <!-- Tooltip -->
     <script src="js/tooltip.js"></script>
-    <script src="js/fireworks.js"></script>
     <!-- Reloj -->
     <script src="js/reloj.js"></script>
     <!-- Graficos -->

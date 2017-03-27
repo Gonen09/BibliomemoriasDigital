@@ -30,7 +30,7 @@
 								<div class="md-form">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-										<input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Telefono" required>
+										<input id="login-username" type="text" class="form-control" name="telefono" value="" placeholder="Teléfono" required>
 									</div>
 								</div>
 								<br>

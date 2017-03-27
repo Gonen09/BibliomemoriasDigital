@@ -11,7 +11,7 @@
 	{
 		$info_campos = $info_campos."|".$post[0] . " = " . $post[1];
 	}
-	/**/	
+	/**/
 	//}
 
 	function limpiarTexto  ($texto){
@@ -30,14 +30,14 @@
 			if ($p != ""){
 				if (!$primera){
 					$retorno = $retorno." ";
-				}		
+				}
 				$retorno = $retorno.$p;
 				$primera = false;
 			}
 		}
 		return $retorno;
 	}
-	//Formando consulta 
+	//Formando consulta
 	$texto_consulta = "";
 
 
@@ -49,7 +49,7 @@
 			$campo_filtro = "clasificacion";
 			$filtro_query = $_POST["clasificacion"];
 			$texto_consulta = "*:*";
-		}	
+		}
 	}
 	else
 	if ($_POST["busqueda"] == 'inicial' ){
@@ -167,13 +167,13 @@
 									<div id="<?php print $documento_actual['id_tesis'];?>" name="publicacion" class="row">
 										<tr>
 											<td class="col-sm-1">
-												<img src="image/pdf.png" alt="pdf" class="img-responsive">
+												<img src="image/busqueda/pdf.png" alt="pdf" class="img-responsive">
 												<input type="hidden" id="<?php print $documento_actual['id_tesis'];?>_score" value="<?php print $documento_actual['score'];?>">
 												<br>
 												<p class="text-center"><a href="pdf/<?php print $documento_actual['id_tesis'];?>.pdf" id="archivo">Ver</a></p>
 											</td>
 											<td class="col-sm-1">
-												<img src="image/chart.png" alt="grafico" class="img-responsive">
+												<img src="image/busqueda/chart.png" alt="grafico" class="img-responsive">
 												<br>
 												<?php
 													$texto_valores_areas = $documento_actual['valores_clasificacion'];
@@ -285,7 +285,7 @@
 							if ($pag_elegida != $n_pag && $n_pag > 1){
 								?>
 								<li>
-								<a  onclick= "<?php 
+								<a  onclick= "<?php
 								//echo "cambiarPagina(".($pag_elegida+1).")";
 									if ($filtro_query == "")
 										echo "cambiarPagina(".($pag_elegida+1).")";
@@ -308,7 +308,7 @@
 
 
 <script>
-	//GRAFICO PANAL 
+	//GRAFICO PANAL
 
 	//alert('<?php //echo $info_campos; ?>');
 	//
@@ -318,8 +318,8 @@
 				id: "visualization",
 				dataObject: {
 		  			groups: [
-						{   id: "1", 
-							label: "Profesores Guía", 
+						{   id: "1",
+							label: "Profesores Guía",
 							groups: [
 									<?php
 									$facet_profesores = $response->facet_counts->facet_fields->profesor;
@@ -363,8 +363,8 @@
 							]
 						},
 						{
-							id: "3", 
-							label: "Clasificación", 
+							id: "3",
+							label: "Clasificación",
 							groups: [
 									<?php
 									$facet_id = $response->facet_counts->facet_fields->clasificacion;
@@ -382,7 +382,7 @@
 											$i++;
 										}
 									}
-									?>				
+									?>
 
 								  /*
 								  { id: "1.1", label: "Ingeniería de Software" },
@@ -414,34 +414,3 @@
 	}
 	/**/
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -142,3 +142,15 @@
       - centrar navegacion [Listo]
       - ajustar tamaño navegacion [Listo]
       - crear motor paginacion [Listo]
+
+	  
+	6) Detalles
+	
+		- Poner mensaje no hay resultados en busqueda.php
+		- Tiempo mas lento al cargar correos en admin_correo.php
+		- Actualizar en tiempo real color correo leido
+		- Corregir tamaños reloj en index
+		- Corregir resfrescar hora en reloj despues de cambiar o minimizar pagina
+		- Importante, tamaños columnas para dispositivos moviles
+		- Ordenar archivos admin y eliminar archivos innecesarios
+		

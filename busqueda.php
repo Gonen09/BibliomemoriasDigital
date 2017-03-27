@@ -10,17 +10,15 @@
 
 		<title>Búsqueda de BiblioMemorias Digital ULS</title>
 
-	    <!-- Bootstrap Core CSS -->
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Estilo pagina CSS -->
-	    <link href="css/general.css" rel="stylesheet">
-	    <link href="css/busqueda.css" rel="stylesheet">
-	    <!-- Reloj -->
-	    <link href="css/reloj.css" rel="stylesheet">
-	    <!-- Panal -->
-	    <link href="css/panal.css" rel="stylesheet">
-	    <!-- Fuente -->
-	    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/busqueda.css" rel="stylesheet">
+    <!-- Panal -->
+    <link href="css/panal.css" rel="stylesheet">
+    <!-- Fuente -->
+   	<link href="css/SourceSansPro.css" rel="stylesheet">
 
 		<?php
 			require('php/general.php');
@@ -84,7 +82,7 @@
 					  			<div class="col-md-12">
 										<form id="formulario" onsubmit="return false;">
 										<div class="row">
-							  				<div class="col-sm-8">
+							  				<div class="col-sm-offset-1 col-sm-7">
 												<h3 class="text-primary titulos"><strong>Búsqueda simple</strong></h3>
 												<br>
 												<div class="input-group">
@@ -100,94 +98,94 @@
 													  <button class="btn btn-color" type="submit" onclick="enviarFormulario()"><i class="glyphicon glyphicon-search icon-color"></i></button>
 												  	</div>
 												</div><!-- input-group-->
-							  				</div><!-- col-md-8-->
+											</div><!-- col-md-4-->
 							  				<div class="col-sm-4" align="center">
-												<img class="img-rounded" src="image/find-simple.png" alt="busqueda-simple"  id="busqueda-simple">
+												<img class="img-rounded" src="image/busqueda/find-simple.png" alt="busqueda-simple"  id="busqueda-simple">
 							  				</div><!-- col-md-4-->
 										</div><!-- row -->
 									</form><!-- form -->
 					  			</div><!-- col-md-12-->
 								</div><!--row -->
-					  		<hr>
-				  			<div class="panel-group" id="accordion">
-									<div class="panel panel-default">
-									<div class="panel-heading" id="busqueda-avanzada">
-										<h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="p_avanzada">
-											<a>Búsqueda avanzada</a>
-										</h4>
-									</div><!-- panel-heading- -->
-									<div class="panel-collapse collapse" id="collapseOne">
-										<div class="panel-body">
-								  			<div class="row">
-													<div class="col-sm-8" aling="center">
-										  				<h3 class="text-primary titulos text-center"><strong>Búsqueda avanzada</strong></h3>
-										  				<br>
-													  	<div class="form-group row">
-																<label for="example-text-input" class="col-xs-2 col-form-label text-right">Titulo</label>
-																<div class="col-xs-10">
-															 		<div class="input-group">
-																		<input class="form-control" type="text" placeholder="Titulo memoria" id="q_titulo">
-																		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-bookmark icon-color"></i></span>
-															  		</div>
-																</div>
-															</div>
-															<div class="form-group row">
-																<label for="example-search-input" class="col-xs-2 col-form-label text-right">Autor</label>
-																<div class="col-xs-10">
-																  <div class="input-group">
-																	<input class="form-control" type="text" placeholder="Autor(es) memoria, separados por coma" id="q_autor">
-																	<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
-																  </div>
-																</div>
-														  </div>
-															<div class="form-group row">
-																<label for="example-email-input" class="col-xs-2 col-form-label text-right">Profesor</label>
-																<div class="col-xs-10">
-																  <div class="input-group">
-																		<input class="form-control" type="text" placeholder="Profesor(es) memoria, separados por coma" id="q_profesor">
-																		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
-																	</div>
-																</div>
-														  </div>
-															<div class="form-group row">
-																<label for="example-url-input" class="col-xs-2 col-form-label text-right">Año</label>
-																<div class="col-xs-10">
-																  <div class="input-group">
-																	<input class="form-control" type="number" <?php print ('value="'.date("Y").'"'); ?> id="q_ano">
-																	<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
-																  </div>
-																</div>
-														  </div>
-													  	<div class="form-group row">
-																<label for="example-tel-input" class="col-xs-2 col-form-label text-right">Abstract</label>
-																<div class="col-xs-10">
-															  		<div class="input-group">
-																		<input class="form-control" type="text" placeholder="Resumen memoria" id="q_abstract">
-																		<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-book icon-color"></i></span>
-															  		</div>
-																</div>
-													  	</div>
-													  	<div class="form-group row">
-																<div class="col-xs-6 col-xs-offset-6">
-															  		<button type="submit" class="btn btn-color text-color" onclick="enviarFormulario()">
-															  			<i class="glyphicon glyphicon-search icon-color icon-margin"></i>
-																		Consultar
-															  		</button>
-																</div>
-													  	</div><!-- form-group row -->
-													</div><!-- col-sm-8-->
-													<div class="col-sm-4">
-														<br><br><br>
-														<img class="img-rounded img-responsive" src="image/find-advanced.png" alt="busqueda-avanzada">
-														<br><br><br>
-													</div><!-- col-sm-4-->
-								  			</div><!-- row -->
-										</div><!-- panel-body -->
-									</div><!-- panel-collapse -->
-								</div><!-- panel-default -->
-				  			</div><!-- panel-group (Acordión) -->
 							</div><!-- panel-body -->
 			  		</div><!-- panel-default -->
+
+						<div class="panel-group" id="accordion">
+							<div class="panel panel-default">
+							<div class="panel-heading" id="busqueda-avanzada">
+								<h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="p_avanzada">
+									<a>Búsqueda avanzada</a>
+								</h4>
+							</div><!-- panel-heading- -->
+							<div class="panel-collapse collapse" id="collapseOne">
+								<div class="panel-body">
+										<div class="row">
+											<div class="col-sm-8" aling="center">
+													<h3 class="text-primary titulos text-center"><strong>Búsqueda avanzada</strong></h3>
+													<br>
+													<div class="form-group row">
+														<label for="example-text-input" class="col-xs-2 col-form-label text-right">Titulo</label>
+														<div class="col-xs-10">
+															<div class="input-group">
+																<input class="form-control" type="text" placeholder="Titulo memoria" id="q_titulo">
+																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-bookmark icon-color"></i></span>
+																</div>
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="example-search-input" class="col-xs-2 col-form-label text-right">Autor</label>
+														<div class="col-xs-10">
+															<div class="input-group">
+															<input class="form-control" type="text" placeholder="Autor(es) memoria, separados por coma" id="q_autor">
+															<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-user icon-color"></i></span>
+															</div>
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="example-email-input" class="col-xs-2 col-form-label text-right">Profesor</label>
+														<div class="col-xs-10">
+															<div class="input-group">
+																<input class="form-control" type="text" placeholder="Profesor(es) memoria, separados por coma" id="q_profesor">
+																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-education icon-color"></i></span>
+															</div>
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="example-url-input" class="col-xs-2 col-form-label text-right">Año</label>
+														<div class="col-xs-10">
+															<div class="input-group">
+															<input class="form-control" type="number" <?php print ('value="'.date("Y").'"'); ?> id="q_ano">
+															<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-calendar icon-color"></i></span>
+															</div>
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="example-tel-input" class="col-xs-2 col-form-label text-right">Abstract</label>
+														<div class="col-xs-10">
+																<div class="input-group">
+																<input class="form-control" type="text" placeholder="Resumen memoria" id="q_abstract">
+																<span class="input-group-addon btn-color"><i class="glyphicon glyphicon-book icon-color"></i></span>
+																</div>
+														</div>
+													</div>
+													<div class="form-group row">
+														<div class="col-xs-6 col-xs-offset-6">
+																<button id="btn-consultar" type="submit" class="btn btn-color text-color" onclick="enviarFormulario()" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+																	<i class="glyphicon glyphicon-search icon-color icon-margin"></i>
+																Consultar
+																</button>
+														</div>
+													</div><!-- form-group row -->
+											</div><!-- col-sm-8-->
+											<div class="col-sm-4">
+												<br><br><br>
+												<img class="img-rounded img-responsive" src="image/busqueda/find-advanced.png" alt="busqueda-avanzada">
+												<br><br><br>
+											</div><!-- col-sm-4-->
+										</div><!-- row -->
+								</div><!-- panel-body -->
+							</div><!-- panel-collapse -->
+						</div><!-- panel-default -->
+						</div><!-- panel-group (Acordión) -->
 				</div> <!-- col-sm-9 -->
 
 				<div class="col-sm-3">
@@ -200,7 +198,7 @@
 									<li><a href="http://www.userena.cl">Universidad de La Serena</a></li>
 									<li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
 									<li><a href="http://dns.uls.cl/~ej/">Página web Docente</a><li>
-									<li><a href="http://www.ingecompuls.cl/">Escuela de Ingenieria en Computación</a></li>
+									<li><a href="http://www.ingecompuls.cl/">Escuela de Ingeniería en Computación</a></li>
 								</ul>
 							</div>
 						</div><!-- col-md-12 -->
@@ -227,7 +225,7 @@
 	  	<script src="js/D3/d3.v3.min.js"></script>
 	  	<script src="js/grafico-arana/RadarChart.js"></script>
 	    <!--Funciones de la pagina -->
-		<script src="js/interpretando_ajax.js"></script>
-		<script src="js/funciones_busqueda.js"></script>
+			<script src="js/interpretando_ajax.js"></script>
+			<script src="js/funciones_busqueda.js"></script>
 	</body>
 </html>
