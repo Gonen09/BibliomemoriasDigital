@@ -152,4 +152,5 @@
 		- Corregir tamaños reloj en index
 		- Corregir resfrescar hora en reloj despues de cambiar o minimizar pagina
 		- Importante, tamaños columnas para dispositivos moviles
+		- Ordenar archivos admin y eliminar archivos innecesarios
 		

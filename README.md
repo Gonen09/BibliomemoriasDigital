@@ -35,17 +35,17 @@ para gestionar las memorias (agrega o eliminar memorias) y la información de co
 
 ## Construido con (Referencias API's)
 
-* [xampp] (https://www.apachefriends.org/es/index.html) - Servidor web
-* [Solr] (http://lucene.apache.org/solr/) - Indexación y búsquedas
-* [Tika] (https://tika.apache.org/) - Extracción contenido memorias
-* [Pecl] (https://pecl.php.net/) - Conexión Solr con PHP
-* [JQuery] (http://jquery.com/download/) - Librería JavaScript
-* [Bootstrap] (http://getbootstrap.com/getting-started/) - Interfaz gráfica
-* [Jtable] (http://www.jtable.org/) - Tablas de datos
-* [D3] (http://d3js.org/) - Dependencia Gráficos
-* [WorldCloud] (https://github.com/wvengen/d3-wordcloud) - Nube de palabras
-* [RadarChart] (https://www.visualcinnamon.com/2015/10/different-look-d3-radar-chart.html) - Gráfico radar memorias
-* [FoamTree] (https://get.carrotsearch.com/foamtree/demo/api/index.html) - Gráfico panal resultados de búsquedas
+* [xampp](https://www.apachefriends.org/es/index.html) - Servidor web
+* [Solr](http://lucene.apache.org/solr/) - Indexación y búsquedas
+* [Tika](https://tika.apache.org/) - Extracción contenido memorias
+* [Pecl](https://pecl.php.net/) - Conexión Solr con PHP
+* [JQuery](http://jquery.com/download/) - Librería JavaScript
+* [Bootstrap](http://getbootstrap.com/getting-started/) - Interfaz gráfica
+* [Jtable](http://www.jtable.org/) - Tablas de datos
+* [D3](http://d3js.org/) - Dependencia Gráficos
+* [WorldCloud](https://github.com/wvengen/d3-wordcloud) - Nube de palabras
+* [RadarChart](https://www.visualcinnamon.com/2015/10/different-look-d3-radar-chart.html) - Gráfico radar memorias
+* [FoamTree](https://get.carrotsearch.com/foamtree/demo/api/index.html) - Gráfico panal resultados de búsquedas
 
 ## Contribuir
 
@@ -63,8 +63,8 @@ para gestionar las memorias (agrega o eliminar memorias) y la información de co
 * Felipe Robledo 
 * Gonzalo Santander 
 
-Vea también sus [cuentas github] (https://github.com/Gonen09/BibliomemoriasDigital/graphs/contributors) que participaron en este proyecto.
+Vea también sus [cuentas github](https://github.com/Gonen09/BibliomemoriasDigital/graphs/contributors) que participaron en este proyecto.
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT
+Sin especificar.
