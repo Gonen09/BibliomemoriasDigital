@@ -55,7 +55,7 @@ para gestionar las memorias (agrega o eliminar memorias) y la información de co
 4. Conecte la rama: `git push origen mi-nueva-caracteristica`
 5. Envíe una solicitud de union (pull request)
 
-## Autores
+## Desarrolladores
 
 * Gabriela Barrera 
 * Jorge Campos 
@@ -63,7 +63,7 @@ para gestionar las memorias (agrega o eliminar memorias) y la información de co
 * Felipe Robledo 
 * Gonzalo Santander 
 
-Vea también sus [cuentas github](https://github.com/Gonen09/BibliomemoriasDigital/graphs/contributors) que participaron en este proyecto.
+Vea también sus [cuentas github](https://github.com/Gonen09/BibliomemoriasDigital/graphs/contributors) .
 
 ## Licencia
 
