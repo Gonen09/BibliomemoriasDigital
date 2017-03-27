@@ -12,7 +12,7 @@
 						</div>
 						<div class="modal-body text-center">
 							<img src="image/principal/uls-logo.png" class="img-responsive center-block" id ="logo-uls"><br>
-							<p><strong>Universidad de la Serena</strong><br> Departamento de Matematicas<br>
+							<p><strong>Universidad de la Serena</strong><br> Departamento de Matemáticas<br>
 								 Avenida Cisternas Nº 1200<br> La Serena <br> Teléfono: (51) 2 204102 / (51) 2 204103</p>
 						</div>
 						<div class="modal-footer">

@@ -198,7 +198,7 @@
 									<li><a href="http://www.userena.cl">Universidad de La Serena</a></li>
 									<li><a href="http://www.dmatuls.cl/portal/">Departamento de Matemáticas</a></li>
 									<li><a href="http://dns.uls.cl/~ej/">Página web Docente</a><li>
-									<li><a href="http://www.ingecompuls.cl/">Escuela de Ingenieria en Computación</a></li>
+									<li><a href="http://www.ingecompuls.cl/">Escuela de Ingeniería en Computación</a></li>
 								</ul>
 							</div>
 						</div><!-- col-md-12 -->
