@@ -21,16 +21,23 @@ Estas instrucciones le ayudarán a obtener una copia del proyecto en funcionamie
 ## Instalando
 
 Para instalar la página copiar todo el contenido del proyecto en la carpeta "htdocs" de XAMPP,
-para la configuracion de SOLR, revisar el archivo "Instrucciones utilización SOLR+PHP"
+para la configuración de SOLR, revisar el archivo "Instrucciones utilización SOLR+PHP"
 dentro de la carpeta "solr". Para obtener los datos del administrador y datos de pruebas para
 la base de datos, seguir las instrucciones de "crear e importar bd" desde la carpeta "bd".
 
 ## Uso
 
 Navegando la página de inicio encontremos información de la página y del curso,
-en la página de busquedas, podremos encontrar las interfaces de búsquedas para
-encontrar las memorias disponibles y por último la página de administrador
-para gestionar las memorias (agrega o eliminar memorias) y la información de contacto.
+en la página de búsquedas, podremos encontrar las interfaces de búsquedas para
+encontrar las memorias disponibles, además en la página de inicio y de búsquedas 
+encontramos la opción "formulario de contacto" con la cual se puede contactar con
+él administrador del sitio y esta la opción "iniciar sesión" con la cual se puede
+acceder a la sección administrador. Finalmente la página de administrador para 
+gestionar las memorias (agrega o eliminar memorias) y ver la información de contacto.
+
+Observación: La resolución óptima para la visualización correcta de los componentes 
+			 del sitio es "1600 x 900 px", la versión para dispositivos móviles no está
+			 completamente adaptada.
 
 
 ## Construido con (Referencias API's)
