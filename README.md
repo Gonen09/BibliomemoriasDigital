@@ -47,12 +47,13 @@ Observación: La resolución óptima para la visualización correcta de los comp
 * [Tika](https://tika.apache.org/) - Extracción contenido memorias
 * [Pecl](https://pecl.php.net/) - Conexión Solr con PHP
 * [JQuery](http://jquery.com/download/) - Librería JavaScript
-* [Bootstrap](http://getbootstrap.com/getting-started/) - Interfaz gráfica
+* [Bootstrap](http://getbootstrap.com/getting-started/) - Interfaz gráfica web y diseño adaptativo
 * [Jtable](http://www.jtable.org/) - Tablas de datos
 * [D3](http://d3js.org/) - Dependencia Gráficos
 * [WorldCloud](https://github.com/wvengen/d3-wordcloud) - Nube de palabras
 * [RadarChart](https://www.visualcinnamon.com/2015/10/different-look-d3-radar-chart.html) - Gráfico radar memorias
 * [FoamTree](https://get.carrotsearch.com/foamtree/demo/api/index.html) - Gráfico panal resultados de búsquedas
+* [Github](https://github.com/) - Plataforma de desarrollo colaborativo
 
 ## Contribuir
 
